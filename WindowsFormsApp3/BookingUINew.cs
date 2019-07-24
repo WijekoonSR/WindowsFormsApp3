@@ -30,7 +30,7 @@ namespace WindowsFormsApp3
                 dbConnection.startConnection();
 
                 //String query
-                String query = "select customerID From Bookings"; //set query
+                String query = "select BookingID From Bookings"; //set query
 
                 //get sql connection
                 sqlConnection = dbConnection.getDbConnection();
@@ -46,11 +46,14 @@ namespace WindowsFormsApp3
                 {
                     for (int i = 0; i < sqlDataReader.FieldCount; i++)
                     {
-                        dropDownBackhoeTypes1.AddItem(sqlDataReader.GetString(i));
-                        dropDownBackhoeTypes2.AddItem(sqlDataReader.GetString(i));
-                        dropDownBackhoeTypes3.AddItem(sqlDataReader.GetString(i));
+                        //to convert int to string SDR.Gtevalue(i).ToString()
+                        dropDownBackhoeTypes1.AddItem(sqlDataReader.GetValue(i).ToString());
+                        dropDownBackhoeTypes2.AddItem(sqlDataReader.GetValue(i).ToString());
+                        dropDownBackhoeTypes3.AddItem(sqlDataReader.GetValue(i).ToString());
                     }
                 }
+
+
                 String[] arr = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" };
                 foreach (String S in arr)
                 {

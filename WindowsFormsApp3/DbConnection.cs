@@ -12,7 +12,7 @@ namespace WindowsFormsApp3
     {
         private SqlConnection sqlconnection;
         public DbConnection() {
-            sqlconnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\Supun Randima\Desktop\ITP Testing\Recover win 3.3\WindowsFormsApp3\WindowsFormsApp3\Database\Backhoe.mdf;Integrated Security = True; Connect Timeout = 30");
+            sqlconnection = new SqlConnection(@"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Database;Integrated Security=True");
         }
         public SqlConnection getDbConnection() {
             return sqlconnection;
