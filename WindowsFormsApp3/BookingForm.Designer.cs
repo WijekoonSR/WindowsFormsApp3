@@ -32,7 +32,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.AssetsButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.BankLoansButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PayrollButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -54,15 +53,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.UserIcon = new System.Windows.Forms.PictureBox();
-            this.InfoIcon = new System.Windows.Forms.PictureBox();
-            this.minimizedIcon = new System.Windows.Forms.PictureBox();
-            this.maximizedIcon = new System.Windows.Forms.PictureBox();
-            this.ExitIcon = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.userProfile1 = new WindowsFormsApp3.UserProfile();
             this.vehicleUI1 = new WindowsFormsApp3.VehicleUI();
             this.payrollUI1 = new WindowsFormsApp3.PayrollUI();
@@ -72,8 +66,14 @@
             this.bookingUI1 = new WindowsFormsApp3.BookingUI();
             this.bankLoanUI1 = new WindowsFormsApp3.BankLoanUI();
             this.assetsUI1 = new WindowsFormsApp3.AssetsUI();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.UserIcon = new System.Windows.Forms.PictureBox();
+            this.InfoIcon = new System.Windows.Forms.PictureBox();
+            this.minimizedIcon = new System.Windows.Forms.PictureBox();
+            this.maximizedIcon = new System.Windows.Forms.PictureBox();
+            this.ExitIcon = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.BankLoansButton = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
@@ -85,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserIcon)).BeginInit();
@@ -92,7 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimizedIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizedIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -141,34 +141,6 @@
             this.pictureBox6.Size = new System.Drawing.Size(294, 1);
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
-            // 
-            // BankLoansButton
-            // 
-            this.BankLoansButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(180)))), ((int)(((byte)(229)))));
-            this.BankLoansButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
-            this.BankLoansButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BankLoansButton.BorderRadius = 0;
-            this.BankLoansButton.ButtonText = "Bank Loans Management";
-            this.BankLoansButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BankLoansButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BankLoansButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.BankLoansButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("BankLoansButton.Iconimage")));
-            this.BankLoansButton.Iconimage_right = null;
-            this.BankLoansButton.Iconimage_right_Selected = null;
-            this.BankLoansButton.Iconimage_Selected = null;
-            this.BankLoansButton.IconZoom = 90D;
-            this.BankLoansButton.IsTab = false;
-            this.BankLoansButton.Location = new System.Drawing.Point(0, 455);
-            this.BankLoansButton.Name = "BankLoansButton";
-            this.BankLoansButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
-            this.BankLoansButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(85)))), ((int)(((byte)(134)))));
-            this.BankLoansButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.BankLoansButton.selected = false;
-            this.BankLoansButton.Size = new System.Drawing.Size(294, 64);
-            this.BankLoansButton.TabIndex = 17;
-            this.BankLoansButton.Textcolor = System.Drawing.Color.White;
-            this.BankLoansButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BankLoansButton.Click += new System.EventHandler(this.BankLoansButton_Click);
             // 
             // PayrollButton
             // 
@@ -490,6 +462,27 @@
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(20)))), ((int)(((byte)(59)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(294, 63);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(46, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Backhoe Company";
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(20)))), ((int)(((byte)(59)))));
@@ -518,81 +511,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(716, 697);
             this.panel9.TabIndex = 11;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.DarkGray;
-            this.panel11.Controls.Add(this.UserIcon);
-            this.panel11.Controls.Add(this.InfoIcon);
-            this.panel11.Controls.Add(this.minimizedIcon);
-            this.panel11.Controls.Add(this.maximizedIcon);
-            this.panel11.Controls.Add(this.ExitIcon);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 14);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(716, 49);
-            this.panel11.TabIndex = 2;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
-            // 
-            // UserIcon
-            // 
-            this.UserIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.UserIcon.Image = ((System.Drawing.Image)(resources.GetObject("UserIcon.Image")));
-            this.UserIcon.Location = new System.Drawing.Point(429, 0);
-            this.UserIcon.Name = "UserIcon";
-            this.UserIcon.Size = new System.Drawing.Size(65, 49);
-            this.UserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.UserIcon.TabIndex = 3;
-            this.UserIcon.TabStop = false;
-            this.UserIcon.Click += new System.EventHandler(this.UserIcon_Click);
-            // 
-            // InfoIcon
-            // 
-            this.InfoIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.InfoIcon.Image = ((System.Drawing.Image)(resources.GetObject("InfoIcon.Image")));
-            this.InfoIcon.Location = new System.Drawing.Point(494, 0);
-            this.InfoIcon.Name = "InfoIcon";
-            this.InfoIcon.Size = new System.Drawing.Size(59, 49);
-            this.InfoIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.InfoIcon.TabIndex = 11;
-            this.InfoIcon.TabStop = false;
-            this.InfoIcon.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // minimizedIcon
-            // 
-            this.minimizedIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.minimizedIcon.Image = ((System.Drawing.Image)(resources.GetObject("minimizedIcon.Image")));
-            this.minimizedIcon.Location = new System.Drawing.Point(553, 0);
-            this.minimizedIcon.Name = "minimizedIcon";
-            this.minimizedIcon.Size = new System.Drawing.Size(50, 49);
-            this.minimizedIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.minimizedIcon.TabIndex = 12;
-            this.minimizedIcon.TabStop = false;
-            this.minimizedIcon.Click += new System.EventHandler(this.minimizedIcon_Click);
-            // 
-            // maximizedIcon
-            // 
-            this.maximizedIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.maximizedIcon.Image = ((System.Drawing.Image)(resources.GetObject("maximizedIcon.Image")));
-            this.maximizedIcon.Location = new System.Drawing.Point(603, 0);
-            this.maximizedIcon.Name = "maximizedIcon";
-            this.maximizedIcon.Size = new System.Drawing.Size(59, 49);
-            this.maximizedIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.maximizedIcon.TabIndex = 13;
-            this.maximizedIcon.TabStop = false;
-            this.maximizedIcon.Click += new System.EventHandler(this.maximizedIcon_Click);
-            // 
-            // ExitIcon
-            // 
-            this.ExitIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ExitIcon.Image = ((System.Drawing.Image)(resources.GetObject("ExitIcon.Image")));
-            this.ExitIcon.Location = new System.Drawing.Point(662, 0);
-            this.ExitIcon.Name = "ExitIcon";
-            this.ExitIcon.Size = new System.Drawing.Size(54, 49);
-            this.ExitIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ExitIcon.TabIndex = 0;
-            this.ExitIcon.TabStop = false;
-            this.ExitIcon.Click += new System.EventHandler(this.pictureBox8_Click_2);
             // 
             // userProfile1
             // 
@@ -678,26 +596,108 @@
             this.assetsUI1.Size = new System.Drawing.Size(716, 634);
             this.assetsUI1.TabIndex = 3;
             // 
-            // label1
+            // panel11
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Backhoe Company";
+            this.panel11.BackColor = System.Drawing.Color.DarkGray;
+            this.panel11.Controls.Add(this.UserIcon);
+            this.panel11.Controls.Add(this.InfoIcon);
+            this.panel11.Controls.Add(this.minimizedIcon);
+            this.panel11.Controls.Add(this.maximizedIcon);
+            this.panel11.Controls.Add(this.ExitIcon);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 14);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(716, 49);
+            this.panel11.TabIndex = 2;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
-            // panel2
+            // UserIcon
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(20)))), ((int)(((byte)(59)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(294, 63);
-            this.panel2.TabIndex = 0;
+            this.UserIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UserIcon.Image = ((System.Drawing.Image)(resources.GetObject("UserIcon.Image")));
+            this.UserIcon.Location = new System.Drawing.Point(429, 0);
+            this.UserIcon.Name = "UserIcon";
+            this.UserIcon.Size = new System.Drawing.Size(65, 49);
+            this.UserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.UserIcon.TabIndex = 3;
+            this.UserIcon.TabStop = false;
+            this.UserIcon.Click += new System.EventHandler(this.UserIcon_Click);
+            // 
+            // InfoIcon
+            // 
+            this.InfoIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.InfoIcon.Image = ((System.Drawing.Image)(resources.GetObject("InfoIcon.Image")));
+            this.InfoIcon.Location = new System.Drawing.Point(494, 0);
+            this.InfoIcon.Name = "InfoIcon";
+            this.InfoIcon.Size = new System.Drawing.Size(59, 49);
+            this.InfoIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.InfoIcon.TabIndex = 11;
+            this.InfoIcon.TabStop = false;
+            this.InfoIcon.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // minimizedIcon
+            // 
+            this.minimizedIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.minimizedIcon.Image = ((System.Drawing.Image)(resources.GetObject("minimizedIcon.Image")));
+            this.minimizedIcon.Location = new System.Drawing.Point(553, 0);
+            this.minimizedIcon.Name = "minimizedIcon";
+            this.minimizedIcon.Size = new System.Drawing.Size(50, 49);
+            this.minimizedIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.minimizedIcon.TabIndex = 12;
+            this.minimizedIcon.TabStop = false;
+            this.minimizedIcon.Click += new System.EventHandler(this.minimizedIcon_Click);
+            // 
+            // maximizedIcon
+            // 
+            this.maximizedIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.maximizedIcon.Image = ((System.Drawing.Image)(resources.GetObject("maximizedIcon.Image")));
+            this.maximizedIcon.Location = new System.Drawing.Point(603, 0);
+            this.maximizedIcon.Name = "maximizedIcon";
+            this.maximizedIcon.Size = new System.Drawing.Size(59, 49);
+            this.maximizedIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.maximizedIcon.TabIndex = 13;
+            this.maximizedIcon.TabStop = false;
+            this.maximizedIcon.Click += new System.EventHandler(this.maximizedIcon_Click);
+            // 
+            // ExitIcon
+            // 
+            this.ExitIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ExitIcon.Image = ((System.Drawing.Image)(resources.GetObject("ExitIcon.Image")));
+            this.ExitIcon.Location = new System.Drawing.Point(662, 0);
+            this.ExitIcon.Name = "ExitIcon";
+            this.ExitIcon.Size = new System.Drawing.Size(54, 49);
+            this.ExitIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ExitIcon.TabIndex = 0;
+            this.ExitIcon.TabStop = false;
+            this.ExitIcon.Click += new System.EventHandler(this.pictureBox8_Click_2);
+            // 
+            // BankLoansButton
+            // 
+            this.BankLoansButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(180)))), ((int)(((byte)(229)))));
+            this.BankLoansButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
+            this.BankLoansButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BankLoansButton.BorderRadius = 0;
+            this.BankLoansButton.ButtonText = "Vehicle Leasing Management";
+            this.BankLoansButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BankLoansButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BankLoansButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.BankLoansButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("BankLoansButton.Iconimage")));
+            this.BankLoansButton.Iconimage_right = null;
+            this.BankLoansButton.Iconimage_right_Selected = null;
+            this.BankLoansButton.Iconimage_Selected = null;
+            this.BankLoansButton.IconZoom = 90D;
+            this.BankLoansButton.IsTab = false;
+            this.BankLoansButton.Location = new System.Drawing.Point(0, 455);
+            this.BankLoansButton.Name = "BankLoansButton";
+            this.BankLoansButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
+            this.BankLoansButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(85)))), ((int)(((byte)(134)))));
+            this.BankLoansButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.BankLoansButton.selected = false;
+            this.BankLoansButton.Size = new System.Drawing.Size(294, 64);
+            this.BankLoansButton.TabIndex = 17;
+            this.BankLoansButton.Textcolor = System.Drawing.Color.White;
+            this.BankLoansButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BankLoansButton.Click += new System.EventHandler(this.BankLoansButton_Click);
             // 
             // BookingForm
             // 
@@ -729,6 +729,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UserIcon)).EndInit();
@@ -736,8 +738,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimizedIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizedIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -746,7 +746,6 @@
         private System.Windows.Forms.Panel panel5;
         private Bunifu.Framework.UI.BunifuFlatButton AssetsButton;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private Bunifu.Framework.UI.BunifuFlatButton BankLoansButton;
         private Bunifu.Framework.UI.BunifuFlatButton PayrollButton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel7;
@@ -788,6 +787,7 @@
         private EmployeeUI employeeUI1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuFlatButton BankLoansButton;
     }
 }
 
