@@ -36,7 +36,6 @@
             this.databaseDataSet1 = new WindowsFormsApp3.DatabaseDataSet1();
             this.bookingsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bookingsTableAdapter1 = new WindowsFormsApp3.DatabaseDataSet1TableAdapters.BookingsTableAdapter();
-            this.bookingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,11 +59,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookingIdDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bookingsBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(433, 144);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
@@ -83,12 +78,6 @@
             // bookingsTableAdapter1
             // 
             this.bookingsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // bookingIdDataGridViewTextBoxColumn
-            // 
-            this.bookingIdDataGridViewTextBoxColumn.DataPropertyName = "BookingId";
-            this.bookingIdDataGridViewTextBoxColumn.HeaderText = "BookingId";
-            this.bookingIdDataGridViewTextBoxColumn.Name = "bookingIdDataGridViewTextBoxColumn";
             // 
             // BookingUIView
             // 
@@ -111,7 +100,6 @@
         private DatabaseDataSet databaseDataSet;
         private DatabaseDataSetTableAdapters.BookingsTableAdapter bookingsTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookingIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bookingsBindingSource1;
         private DatabaseDataSet1 databaseDataSet1;
         private DatabaseDataSet1TableAdapters.BookingsTableAdapter bookingsTableAdapter1;

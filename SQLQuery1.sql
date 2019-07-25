@@ -1,0 +1,3 @@
+﻿INSERT INTO Bookings VALUES (12);
+INSERT INTO Bookings VALUES (13);
+INSERT INTO Bookings VALUES (14);
