@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class BookingForm : Form
+    public partial class HomeUI : Form
     {
        
         Timer timer1 = new Timer();
 
-        public BookingForm()
+        public HomeUI()
         {
             InitializeComponent();
             

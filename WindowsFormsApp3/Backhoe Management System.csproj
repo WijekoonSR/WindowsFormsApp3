@@ -87,11 +87,11 @@
     <Compile Include="BankLoanUI.Designer.cs">
       <DependentUpon>BankLoanUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="BookingForm.cs">
+    <Compile Include="HomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookingForm.Designer.cs">
-      <DependentUpon>BookingForm.cs</DependentUpon>
+    <Compile Include="HomeUI.Designer.cs">
+      <DependentUpon>HomeUI.cs</DependentUpon>
     </Compile>
     <Compile Include="BookingUI.cs">
       <SubType>UserControl</SubType>
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="BankLoanUI.resx">
       <DependentUpon>BankLoanUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BookingForm.resx">
-      <DependentUpon>BookingForm.cs</DependentUpon>
+    <EmbeddedResource Include="HomeUI.resx">
+      <DependentUpon>HomeUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookingUI.resx">
       <DependentUpon>BookingUI.cs</DependentUpon>

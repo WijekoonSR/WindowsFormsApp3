@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class BookingForm
+    partial class HomeUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeUI));
             this.panel5 = new System.Windows.Forms.Panel();
             this.AssetsButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();

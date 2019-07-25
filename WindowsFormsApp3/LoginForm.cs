@@ -61,7 +61,7 @@ namespace WindowsFormsApp3
             string username = txtUserName.Text;
             string password = txtPassword.Text; 
             if (username == "ABC" && password == "abc") {             
-                BookingForm BF = new BookingForm();
+                HomeUI BF = new HomeUI();
                 BF.Show();
                 this.Hide();
             }
