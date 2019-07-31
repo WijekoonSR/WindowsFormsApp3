@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingUINew));
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.grpBookingPeriod = new System.Windows.Forms.GroupBox();
@@ -65,18 +65,16 @@
             this.txtTotalCharges = new System.Windows.Forms.TextBox();
             this.txtBookingID = new System.Windows.Forms.TextBox();
             this.lblBookingID = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.picSearch = new System.Windows.Forms.PictureBox();
+            this.btnCheckVehicles = new System.Windows.Forms.Button();
             this.grpBookingPeriod.SuspendLayout();
             this.groupBoxbackhoeDetails.SuspendLayout();
             this.groupBoxCallerDetails.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtCustomerID
-            // 
-            this.txtCustomerID.Location = new System.Drawing.Point(220, 42);
-            this.txtCustomerID.MaxLength = 223;
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(223, 20);
-            this.txtCustomerID.TabIndex = 24;
             // 
             // btnClear
             // 
@@ -104,6 +102,7 @@
             // 
             // grpBookingPeriod
             // 
+            this.grpBookingPeriod.Controls.Add(this.btnCheckVehicles);
             this.grpBookingPeriod.Controls.Add(this.txtWorkingHours);
             this.grpBookingPeriod.Controls.Add(this.dateEndDate);
             this.grpBookingPeriod.Controls.Add(this.dateStartDate);
@@ -443,15 +442,59 @@
             this.lblBookingID.TabIndex = 27;
             this.lblBookingID.Text = "Boooking ID ";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtCustomerID);
+            this.panel1.Controls.Add(this.picSearch);
+            this.panel1.Location = new System.Drawing.Point(219, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(243, 20);
+            this.panel1.TabIndex = 38;
+            // 
+            // txtCustomerID
+            // 
+            this.txtCustomerID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtCustomerID.Location = new System.Drawing.Point(0, 0);
+            this.txtCustomerID.MaxLength = 223;
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.Size = new System.Drawing.Size(223, 20);
+            this.txtCustomerID.TabIndex = 33;
+            // 
+            // picSearch
+            // 
+            this.picSearch.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.picSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picSearch.Image = ((System.Drawing.Image)(resources.GetObject("picSearch.Image")));
+            this.picSearch.Location = new System.Drawing.Point(223, 0);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(20, 20);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearch.TabIndex = 36;
+            this.picSearch.TabStop = false;
+            // 
+            // btnCheckVehicles
+            // 
+            this.btnCheckVehicles.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCheckVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(210)))), ((int)(((byte)(238)))));
+            this.btnCheckVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckVehicles.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCheckVehicles.Location = new System.Drawing.Point(101, 174);
+            this.btnCheckVehicles.Name = "btnCheckVehicles";
+            this.btnCheckVehicles.Size = new System.Drawing.Size(198, 34);
+            this.btnCheckVehicles.TabIndex = 39;
+            this.btnCheckVehicles.Text = "Check Vehicles";
+            this.btnCheckVehicles.UseVisualStyleBackColor = false;
+            this.btnCheckVehicles.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BookingUINew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtBookingID);
             this.Controls.Add(this.lblBookingID);
             this.Controls.Add(this.txtTotalCharges);
             this.Controls.Add(this.lblTotalCharge);
-            this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.grpBookingPeriod);
@@ -467,14 +510,15 @@
             this.groupBoxbackhoeDetails.PerformLayout();
             this.groupBoxCallerDetails.ResumeLayout(false);
             this.groupBoxCallerDetails.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox grpBookingPeriod;
@@ -511,5 +555,9 @@
         private System.Windows.Forms.TextBox txtTotalCharges;
         private System.Windows.Forms.TextBox txtBookingID;
         private System.Windows.Forms.Label lblBookingID;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.PictureBox picSearch;
+        private System.Windows.Forms.Button btnCheckVehicles;
     }
 }
