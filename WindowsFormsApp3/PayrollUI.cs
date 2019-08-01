@@ -16,5 +16,16 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
+
+        private void PayrollUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            PayrollUINew payrollUINew = new PayrollUINew();
+            payrollUINew.BringToFront();
+        }
     }
 }
