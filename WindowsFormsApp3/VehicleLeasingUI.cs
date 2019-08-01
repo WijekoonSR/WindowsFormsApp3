@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class BankLoanUI : UserControl
+    public partial class VehicleLeasingUI : UserControl
     {
-        public BankLoanUI()
+        public VehicleLeasingUI()
         {
             InitializeComponent();
         }
