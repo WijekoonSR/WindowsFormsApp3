@@ -84,9 +84,7 @@
     <Compile Include="AssetsUI.Designer.cs">
       <DependentUpon>AssetsUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="BankLoanUI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="BankLoanUI.cs" />
     <Compile Include="BankLoanUI.Designer.cs">
       <DependentUpon>BankLoanUI.cs</DependentUpon>
     </Compile>
@@ -156,6 +154,12 @@
     <Compile Include="PayrollUI.Designer.cs">
       <DependentUpon>PayrollUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIEdit.Designer.cs">
+      <DependentUpon>PayrollUIEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUINew.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +179,12 @@
     </Compile>
     <Compile Include="UserProfile.Designer.cs">
       <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleLeasingUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleLeasingUI.Designer.cs">
+      <DependentUpon>VehicleLeasingUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VehicleUI.cs">
       <SubType>UserControl</SubType>
@@ -215,6 +225,9 @@
     <EmbeddedResource Include="PayrollUI.resx">
       <DependentUpon>PayrollUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIEdit.resx">
+      <DependentUpon>PayrollUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUINew.resx">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleLeasingUI.resx">
+      <DependentUpon>VehicleLeasingUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleUI.resx">
       <DependentUpon>VehicleUI.cs</DependentUpon>
