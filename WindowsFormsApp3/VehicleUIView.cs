@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class VehicleUI : UserControl
+    public partial class VehicleUIView : UserControl
     {
-        public VehicleUI()
+        public VehicleUIView()
         {
             InitializeComponent();
         }
 
-        private void VehicleUI_Load(object sender, EventArgs e)
+        private void VehicleUIView_Load(object sender, EventArgs e)
         {
 
         }

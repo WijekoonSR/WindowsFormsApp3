@@ -181,6 +181,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "VehicleUI";
             this.Size = new System.Drawing.Size(1069, 648);
+            this.Load += new System.EventHandler(this.VehicleUI_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

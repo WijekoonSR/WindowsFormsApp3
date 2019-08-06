@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class VehicleUI : UserControl
+    public partial class VehicleUIEdit : UserControl
     {
-        public VehicleUI()
+        public VehicleUIEdit()
         {
             InitializeComponent();
         }
 
-        private void VehicleUI_Load(object sender, EventArgs e)
+        private void VehicleUIEdit_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

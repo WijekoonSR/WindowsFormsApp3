@@ -173,6 +173,24 @@
     <Compile Include="VehicleUI.Designer.cs">
       <DependentUpon>VehicleUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleUIEdit.Designer.cs">
+      <DependentUpon>VehicleUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUINew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleUINew.Designer.cs">
+      <DependentUpon>VehicleUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleUIView.Designer.cs">
+      <DependentUpon>VehicleUIView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AssetsUI.resx">
       <DependentUpon>AssetsUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +242,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleUI.resx">
       <DependentUpon>VehicleUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUIEdit.resx">
+      <DependentUpon>VehicleUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUINew.resx">
+      <DependentUpon>VehicleUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUIView.resx">
+      <DependentUpon>VehicleUIView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
