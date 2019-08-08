@@ -96,6 +96,36 @@
     <Compile Include="CustomerUINew.Designer.cs">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeUIEditOperator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUIEditOperator.Designer.cs">
+      <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUIEditStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUIEditStaff.Designer.cs">
+      <DependentUpon>EmployeeUIEditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUINewOperator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUINewOperator.Designer.cs">
+      <DependentUpon>EmployeeUINewOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUINewStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUINewStaff.Designer.cs">
+      <DependentUpon>EmployeeUINewStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUIView.Designer.cs">
+      <DependentUpon>EmployeeUIView.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +244,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUIEditOperator.resx">
+      <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUIEditStaff.resx">
+      <DependentUpon>EmployeeUIEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUINewOperator.resx">
+      <DependentUpon>EmployeeUINewOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUINewStaff.resx">
+      <DependentUpon>EmployeeUINewStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUIView.resx">
+      <DependentUpon>EmployeeUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeUI.resx">
       <DependentUpon>HomeUI.cs</DependentUpon>
