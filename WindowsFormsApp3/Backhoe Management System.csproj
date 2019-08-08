@@ -96,6 +96,24 @@
     <Compile Include="CustomerUINew.Designer.cs">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUIEdit.Designer.cs">
+      <DependentUpon>EmployeeUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUINew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUINew.Designer.cs">
+      <DependentUpon>EmployeeUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUIView.Designer.cs">
+      <DependentUpon>EmployeeUIView.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +232,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUIEdit.resx">
+      <DependentUpon>EmployeeUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUINew.resx">
+      <DependentUpon>EmployeeUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUIView.resx">
+      <DependentUpon>EmployeeUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeUI.resx">
       <DependentUpon>HomeUI.cs</DependentUpon>
