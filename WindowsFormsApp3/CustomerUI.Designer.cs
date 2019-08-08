@@ -37,6 +37,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,17 +174,28 @@
             this.panel4.Size = new System.Drawing.Size(1, 63);
             this.panel4.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(268, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerUI";
             this.Size = new System.Drawing.Size(1069, 648);
             this.Load += new System.EventHandler(this.CustomerUI_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -197,5 +209,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelUpper;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
     }
 }

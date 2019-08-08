@@ -53,6 +53,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -151,7 +152,7 @@
             this.btnAdd.Iconimage_Selected = null;
             this.btnAdd.IconZoom = 90D;
             this.btnAdd.IsTab = false;
-            this.btnAdd.Location = new System.Drawing.Point(489, 309);
+            this.btnAdd.Location = new System.Drawing.Point(709, 477);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnAdd.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -258,10 +259,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(920, 67);
+            this.panel2.Size = new System.Drawing.Size(1069, 585);
             this.panel2.TabIndex = 25;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -270,7 +272,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtEmpID);
             this.Controls.Add(this.panel1);
@@ -278,11 +279,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Name = "PayrollUIEdit";
-            this.Size = new System.Drawing.Size(920, 416);
+            this.Size = new System.Drawing.Size(1069, 585);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

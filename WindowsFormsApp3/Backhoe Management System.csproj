@@ -84,6 +84,12 @@
     <Compile Include="AssetsUI.Designer.cs">
       <DependentUpon>AssetsUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="BankLoanUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BankLoanUI.Designer.cs">
+      <DependentUpon>BankLoanUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="AssetsUI.resx">
       <DependentUpon>AssetsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankLoanUI.resx">
+      <DependentUpon>BankLoanUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeUI.resx">
       <DependentUpon>HomeUI.cs</DependentUpon>

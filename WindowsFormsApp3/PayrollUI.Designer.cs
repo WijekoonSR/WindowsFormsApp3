@@ -37,6 +37,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.payrollUIEdit2 = new WindowsFormsApp3.PayrollUIEdit();
+            this.payrollUINew1 = new WindowsFormsApp3.PayrollUINew();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +95,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Textcolor = System.Drawing.Color.Black;
             this.btnEdit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnNew
             // 
@@ -174,11 +177,29 @@
             this.panel4.Size = new System.Drawing.Size(1, 63);
             this.panel4.TabIndex = 4;
             // 
+            // payrollUIEdit2
+            // 
+            this.payrollUIEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.payrollUIEdit2.Location = new System.Drawing.Point(0, 63);
+            this.payrollUIEdit2.Name = "payrollUIEdit2";
+            this.payrollUIEdit2.Size = new System.Drawing.Size(1069, 585);
+            this.payrollUIEdit2.TabIndex = 3;
+            // 
+            // payrollUINew1
+            // 
+            this.payrollUINew1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.payrollUINew1.Location = new System.Drawing.Point(0, 63);
+            this.payrollUINew1.Name = "payrollUINew1";
+            this.payrollUINew1.Size = new System.Drawing.Size(1069, 585);
+            this.payrollUINew1.TabIndex = 4;
+            // 
             // PayrollUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.payrollUINew1);
+            this.Controls.Add(this.payrollUIEdit2);
             this.Controls.Add(this.panel1);
             this.Name = "PayrollUI";
             this.Size = new System.Drawing.Size(1069, 648);
@@ -198,5 +219,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelUpper;
         private System.Windows.Forms.Panel panel4;
+        private PayrollUIEdit payrollUIEdit2;
+        private PayrollUINew payrollUINew1;
     }
 }
