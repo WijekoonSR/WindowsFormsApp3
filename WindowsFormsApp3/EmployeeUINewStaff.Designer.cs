@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class EmployeeUIView
+    partial class EmployeeUINewStaff
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,19 +34,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(513, 315);
+            this.label1.Location = new System.Drawing.Point(123, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "view ";
+            this.label1.Text = "new staff";
             // 
-            // EmployeeUIView
+            // EmployeeUINewStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Name = "EmployeeUIView";
-            this.Size = new System.Drawing.Size(1069, 643);
+            this.Name = "EmployeeUINewStaff";
+            this.Size = new System.Drawing.Size(1069, 648);
             this.ResumeLayout(false);
             this.PerformLayout();
 

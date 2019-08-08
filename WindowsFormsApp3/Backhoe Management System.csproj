@@ -96,17 +96,29 @@
     <Compile Include="CustomerUINew.Designer.cs">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeUIEdit.cs">
+    <Compile Include="EmployeeUIEditOperator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeeUIEdit.Designer.cs">
-      <DependentUpon>EmployeeUIEdit.cs</DependentUpon>
+    <Compile Include="EmployeeUIEditOperator.Designer.cs">
+      <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeUINew.cs">
+    <Compile Include="EmployeeUIEditStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeeUINew.Designer.cs">
-      <DependentUpon>EmployeeUINew.cs</DependentUpon>
+    <Compile Include="EmployeeUIEditStaff.Designer.cs">
+      <DependentUpon>EmployeeUIEditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUINewOperator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUINewOperator.Designer.cs">
+      <DependentUpon>EmployeeUINewOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUINewStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUINewStaff.Designer.cs">
+      <DependentUpon>EmployeeUINewStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeeUIView.cs">
       <SubType>UserControl</SubType>
@@ -233,11 +245,17 @@
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeUIEdit.resx">
-      <DependentUpon>EmployeeUIEdit.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeUIEditOperator.resx">
+      <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeUINew.resx">
-      <DependentUpon>EmployeeUINew.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeUIEditStaff.resx">
+      <DependentUpon>EmployeeUIEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUINewOperator.resx">
+      <DependentUpon>EmployeeUINewOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUINewStaff.resx">
+      <DependentUpon>EmployeeUINewStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUIView.resx">
       <DependentUpon>EmployeeUIView.cs</DependentUpon>

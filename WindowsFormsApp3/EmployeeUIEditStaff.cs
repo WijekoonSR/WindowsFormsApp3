@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class EmployeeUIEdit : UserControl
+    public partial class EmployeeUIEditStaff : UserControl
     {
-        public EmployeeUIEdit()
+        public EmployeeUIEditStaff()
         {
             InitializeComponent();
         }
