@@ -64,7 +64,7 @@
             this.customerUI1 = new WindowsFormsApp3.CustomerUI();
             this.bookingUI2 = new WindowsFormsApp3.BookingUI();
             this.bookingUI1 = new WindowsFormsApp3.BookingUI();
-            this.bankLoanUI1 = new WindowsFormsApp3.BankLoanUI();
+            this.bankLoanUI1 = new WindowsFormsApp3.VehicleLeasingUI();
             this.assetsUI1 = new WindowsFormsApp3.AssetsUI();
             this.panel11 = new System.Windows.Forms.Panel();
             this.UserIcon = new System.Windows.Forms.PictureBox();
@@ -773,7 +773,7 @@
         private CustomerUI customerUI1;
         private BookingUI bookingUI2;
         private BookingUI bookingUI1;
-        private BankLoanUI bankLoanUI1;
+        private VehicleLeasingUI bankLoanUI1;
         private AssetsUI assetsUI1;
         private System.Windows.Forms.Panel SlidePanel;
         private System.Windows.Forms.PictureBox InfoIcon;
