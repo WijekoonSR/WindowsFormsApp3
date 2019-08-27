@@ -71,6 +71,11 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void bookingUINew1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
    }
            
