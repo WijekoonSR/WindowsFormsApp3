@@ -59,11 +59,19 @@
             // 
             // dataGridView1
             // 
+<<<<<<< Updated upstream
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(433, 144);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+=======
+            this.dgvBookingsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBookingsView.Location = new System.Drawing.Point(34, 28);
+            this.dgvBookingsView.Name = "dgvBookingsView";
+            this.dgvBookingsView.Size = new System.Drawing.Size(1005, 498);
+            this.dgvBookingsView.TabIndex = 0;
+>>>>>>> Stashed changes
             // 
             // databaseDataSet1
             // 
