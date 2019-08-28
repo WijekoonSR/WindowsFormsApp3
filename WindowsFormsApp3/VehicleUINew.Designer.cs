@@ -56,8 +56,6 @@
             this.lblRegistrationNo = new System.Windows.Forms.Label();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -308,24 +306,6 @@
             this.lblRegistrationDate.Text = "Registration Date";
             this.lblRegistrationDate.Click += new System.EventHandler(this.label6_Click);
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(472, 528);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(391, 528);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Goldenrod;
@@ -356,8 +336,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bunifuDropdown1);
             this.Controls.Add(this.groupBox1);
@@ -399,8 +377,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lblFuelType;
         private System.Windows.Forms.TextBox txtFuelType;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblSpecialization;
         private System.Windows.Forms.TextBox txtSpecialization;
         private System.Windows.Forms.Button button1;
