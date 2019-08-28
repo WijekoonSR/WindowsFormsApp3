@@ -239,7 +239,9 @@ namespace WindowsFormsApp3
                 int WorkingHours = int.Parse(txtWorkingHours.Text);
 
 
-                String BackhoeType1 = dropDownBackhoeTypes1.Text;
+                String BackhoeType1 = dropDownBackhoeTypes1.Text.ToString();
+
+                MessageBox.Show(BackhoeType1);
                 float BackhoeType1Ratings = float.Parse(txtRatings1.Text);
                 int BackhoeType1Count = int.Parse(dropDownNoOfBackhoes1.Text);
 
