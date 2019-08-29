@@ -85,6 +85,24 @@
     <Compile Include="AssetsUI.Designer.cs">
       <DependentUpon>AssetsUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssetsUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUIEdit.Designer.cs">
+      <DependentUpon>AssetsUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsUINew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUINew.Designer.cs">
+      <DependentUpon>AssetsUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUIView.Designer.cs">
+      <DependentUpon>AssetsUIView.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingUICheckCxValidity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +287,15 @@
     </Compile>
     <EmbeddedResource Include="AssetsUI.resx">
       <DependentUpon>AssetsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsUIEdit.resx">
+      <DependentUpon>AssetsUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsUINew.resx">
+      <DependentUpon>AssetsUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsUIView.resx">
+      <DependentUpon>AssetsUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookingUICheckCxValidity.resx">
       <DependentUpon>BookingUICheckCxValidity.cs</DependentUpon>
