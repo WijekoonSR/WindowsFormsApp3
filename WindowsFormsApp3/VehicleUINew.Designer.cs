@@ -100,9 +100,9 @@
             this.groupBox1.Controls.Add(this.txtModel);
             this.groupBox1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(93, 95);
+            this.groupBox1.Location = new System.Drawing.Point(91, 78);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 463);
+            this.groupBox1.Size = new System.Drawing.Size(398, 412);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vehicle Details";
@@ -110,7 +110,7 @@
             // 
             // txtMachineCat
             // 
-            this.txtMachineCat.Location = new System.Drawing.Point(206, 405);
+            this.txtMachineCat.Location = new System.Drawing.Point(203, 384);
             this.txtMachineCat.Name = "txtMachineCat";
             this.txtMachineCat.Size = new System.Drawing.Size(101, 22);
             this.txtMachineCat.TabIndex = 13;
@@ -119,7 +119,7 @@
             // lblMachineCategory
             // 
             this.lblMachineCategory.AutoSize = true;
-            this.lblMachineCategory.Location = new System.Drawing.Point(28, 408);
+            this.lblMachineCategory.Location = new System.Drawing.Point(28, 393);
             this.lblMachineCategory.Name = "lblMachineCategory";
             this.lblMachineCategory.Size = new System.Drawing.Size(102, 13);
             this.lblMachineCategory.TabIndex = 12;
@@ -128,7 +128,7 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(206, 343);
+            this.txtStatus.Location = new System.Drawing.Point(205, 328);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(99, 22);
             this.txtStatus.TabIndex = 7;
@@ -144,7 +144,7 @@
             // 
             // txtFuelType
             // 
-            this.txtFuelType.Location = new System.Drawing.Point(205, 278);
+            this.txtFuelType.Location = new System.Drawing.Point(204, 269);
             this.txtFuelType.Name = "txtFuelType";
             this.txtFuelType.Size = new System.Drawing.Size(100, 22);
             this.txtFuelType.TabIndex = 10;
@@ -166,7 +166,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(30, 346);
+            this.lblStatus.Location = new System.Drawing.Point(30, 331);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(39, 13);
             this.lblStatus.TabIndex = 3;
@@ -262,7 +262,7 @@
             this.groupBox2.Controls.Add(this.lblRegistrationDate);
             this.groupBox2.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(620, 95);
+            this.groupBox2.Location = new System.Drawing.Point(604, 78);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(353, 222);
             this.groupBox2.TabIndex = 10;
@@ -341,7 +341,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.Goldenrod;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(453, 582);
+            this.btnSave.Location = new System.Drawing.Point(452, 505);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(77, 33);
             this.btnSave.TabIndex = 13;
@@ -353,7 +353,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.Goldenrod;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(555, 582);
+            this.btnClear.Location = new System.Drawing.Point(552, 505);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(77, 33);
             this.btnClear.TabIndex = 14;
@@ -370,16 +370,16 @@
             this.groupBox3.Controls.Add(this.lblHiringRate);
             this.groupBox3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox3.Location = new System.Drawing.Point(620, 336);
+            this.groupBox3.Location = new System.Drawing.Point(604, 319);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(353, 222);
+            this.groupBox3.Size = new System.Drawing.Size(353, 165);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hiring Details";
             // 
             // txtDateOfCom
             // 
-            this.txtDateOfCom.Location = new System.Drawing.Point(163, 87);
+            this.txtDateOfCom.Location = new System.Drawing.Point(194, 87);
             this.txtDateOfCom.Name = "txtDateOfCom";
             this.txtDateOfCom.Size = new System.Drawing.Size(100, 22);
             this.txtDateOfCom.TabIndex = 20;
@@ -395,7 +395,7 @@
             // 
             // txtHiringRate
             // 
-            this.txtHiringRate.Location = new System.Drawing.Point(163, 47);
+            this.txtHiringRate.Location = new System.Drawing.Point(194, 44);
             this.txtHiringRate.Name = "txtHiringRate";
             this.txtHiringRate.Size = new System.Drawing.Size(100, 22);
             this.txtHiringRate.TabIndex = 6;
