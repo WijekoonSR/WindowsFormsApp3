@@ -26,5 +26,10 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void txtRegistrationNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

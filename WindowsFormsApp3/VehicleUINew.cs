@@ -13,17 +13,46 @@ namespace WindowsFormsApp3
 {
     public partial class VehicleUINew : UserControl
     {
+
         public static String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
         SqlConnection con = new SqlConnection(name);
-       
 
-        String VehicleType,VehicleName, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, Specialization, RegDate, RegNo, ChassisNo;
+
+        String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, HiringRate, DateOfCom, VehicleType;
         public VehicleUINew()
         {
             InitializeComponent();
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtChassisNo.Clear();
+            txtDateOfCom.Clear();
+            txtEngineType.Clear();
+            txtFuelType.Clear();
+            txtHiringRate.Clear();
+            txtMachineCat.Clear();
+            txtModel.Clear();
+            txtRegistrationNo.Clear();
+            txtStatus.Clear();
+            txtVehicleCapacity.Clear();
+            txtVehicleClass.Clear();
+            txtYearOfManufacture.Clear();
+           
+
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
@@ -75,22 +104,32 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            VehicleName = txtVehicleName.Text.ToString();
+            try {
+                con.Open();
+                Model = txtModel.Text.ToString();
+                VehicleCapacity = txtVehicleCapacity.Text.ToString();
+                VehicleClass = txtVehicleClass.Text.ToString();
+                EngineType = txtEngineType.Text.ToString();
+                Fueltype = txtFuelType.Text.ToString();
+                Status = txtStatus.Text.ToString();
+                MachineCategory = txtMachineCat.Text.ToString();
+                RegDate = txtDateRegistration.Text.ToString();
+                RegNo = txtRegistrationNo.Text.ToString();
+                ChassisNo = txtChassisNo.Text.ToString();
+                HiringRate = txtHiringRate.Text.ToString();
+                DateOfCom = txtDateOfCom.Text.ToString();
 
-            VehicleCapacity = txtVehicleCapacity.Text.ToString();
-            VehicleClass = txtEngineType.Text.ToString();
-            /*
-             EngineType
-             Fueltype
-             Status
-             Specialization
-             RegDate
-             RegNo
-             ChassisNo;
-             */
-            string  query = "insert into Vehicles values('" + VehicleType + "','" + VehicleName + "','" + VehicleCapacity + "', '" + EngineType +"' ,'" + Fueltype + "','" + Status + "','" +Specialization +"','" +RegDate +"','" + RegNo +"','" +ChassisNo+"')";
-            SqlCommand sqlCommand = new SqlCommand();
-        }
-    }
-}
+
+
+                string query = "insert into Vehicles values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','" + DateOfCom + "','" + RegDate + "','" + RegNo + "','" + ChassisNo + "','" + HiringRate + "','" + YearOfManufac + "')";
+                SqlCommand sqlCommand = new SqlCommand();
+                cmnd.ExecuteNonQuert();
+                MessageBox.Show("Saved Successfully");
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Error While Saving" + ex);
+            }
+            finally {
+                con.Close();
+            }
+        } 
