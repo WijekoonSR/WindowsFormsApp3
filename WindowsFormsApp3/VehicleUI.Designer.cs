@@ -37,6 +37,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.vehicleUIView1 = new WindowsFormsApp3.VehicleUIView();
+            this.vehicleUIView2 = new WindowsFormsApp3.VehicleUIView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,6 +122,7 @@
             this.btnNew.TabIndex = 5;
             this.btnNew.Textcolor = System.Drawing.Color.Black;
             this.btnNew.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // panel1
             // 
@@ -173,11 +176,32 @@
             this.panel4.Size = new System.Drawing.Size(1, 63);
             this.panel4.TabIndex = 4;
             // 
+            // vehicleUIView1
+            // 
+            this.vehicleUIView1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("vehicleUIView1.BackgroundImage")));
+            this.vehicleUIView1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.vehicleUIView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vehicleUIView1.Location = new System.Drawing.Point(0, 63);
+            this.vehicleUIView1.Name = "vehicleUIView1";
+            this.vehicleUIView1.Size = new System.Drawing.Size(1069, 585);
+            this.vehicleUIView1.TabIndex = 2;
+            // 
+            // vehicleUIView2
+            // 
+            this.vehicleUIView2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("vehicleUIView2.BackgroundImage")));
+            this.vehicleUIView2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.vehicleUIView2.Location = new System.Drawing.Point(0, 0);
+            this.vehicleUIView2.Name = "vehicleUIView2";
+            this.vehicleUIView2.Size = new System.Drawing.Size(1069, 648);
+            this.vehicleUIView2.TabIndex = 3;
+            // 
             // VehicleUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.vehicleUIView2);
+            this.Controls.Add(this.vehicleUIView1);
             this.Controls.Add(this.panel1);
             this.Name = "VehicleUI";
             this.Size = new System.Drawing.Size(1069, 648);
@@ -197,5 +221,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelUpper;
         private System.Windows.Forms.Panel panel4;
+        private VehicleUIView vehicleUIView1;
+        private VehicleUIView vehicleUIView2;
     }
 }

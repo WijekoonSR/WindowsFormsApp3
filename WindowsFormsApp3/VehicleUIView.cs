@@ -15,9 +15,16 @@ namespace WindowsFormsApp3
         public VehicleUIView()
         {
             InitializeComponent();
+
+
         }
 
         private void VehicleUIView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
