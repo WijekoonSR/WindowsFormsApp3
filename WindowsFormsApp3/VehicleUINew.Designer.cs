@@ -49,15 +49,15 @@
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateRegistration = new System.Windows.Forms.DateTimePicker();
             this.txtChassisNo = new System.Windows.Forms.TextBox();
             this.txtRegistrationNo = new System.Windows.Forms.TextBox();
-            this.txtRegistrationDate = new System.Windows.Forms.TextBox();
             this.lblChassisNo = new System.Windows.Forms.Label();
             this.lblRegistrationNo = new System.Windows.Forms.Label();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +66,10 @@
             // 
             this.lblVehicleType.AutoSize = true;
             this.lblVehicleType.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.lblVehicleType.Font = new System.Drawing.Font("Bernard MT Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleType.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleType.Location = new System.Drawing.Point(24, 28);
             this.lblVehicleType.Name = "lblVehicleType";
-            this.lblVehicleType.Size = new System.Drawing.Size(108, 22);
+            this.lblVehicleType.Size = new System.Drawing.Size(159, 29);
             this.lblVehicleType.TabIndex = 2;
             this.lblVehicleType.Text = " Vehicle Type";
             // 
@@ -222,11 +222,13 @@
             this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
             this.bunifuDropdown1.Items = new string[] {
-        "Escavator",
-        "Earth Moving Contractors",
+        "Excavators",
+        "Backhoe Loaders",
+        "Bulldozers",
+        "Skid Steer Loaders",
         "Motor Graders",
-        "Trucks"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(151, 28);
+        "Trenchers"};
+            this.bunifuDropdown1.Location = new System.Drawing.Point(208, 28);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.NomalColor = System.Drawing.Color.Goldenrod;
             this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -242,9 +244,9 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.groupBox2.Controls.Add(this.dateRegistration);
             this.groupBox2.Controls.Add(this.txtChassisNo);
             this.groupBox2.Controls.Add(this.txtRegistrationNo);
-            this.groupBox2.Controls.Add(this.txtRegistrationDate);
             this.groupBox2.Controls.Add(this.lblChassisNo);
             this.groupBox2.Controls.Add(this.lblRegistrationNo);
             this.groupBox2.Controls.Add(this.lblRegistrationDate);
@@ -256,6 +258,14 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehicle Registration Details";
+            // 
+            // dateRegistration
+            // 
+            this.dateRegistration.Location = new System.Drawing.Point(114, 36);
+            this.dateRegistration.Name = "dateRegistration";
+            this.dateRegistration.Size = new System.Drawing.Size(219, 22);
+            this.dateRegistration.TabIndex = 18;
+            this.dateRegistration.Value = new System.DateTime(2019, 6, 25, 0, 0, 0, 0);
             // 
             // txtChassisNo
             // 
@@ -270,13 +280,6 @@
             this.txtRegistrationNo.Name = "txtRegistrationNo";
             this.txtRegistrationNo.Size = new System.Drawing.Size(100, 22);
             this.txtRegistrationNo.TabIndex = 5;
-            // 
-            // txtRegistrationDate
-            // 
-            this.txtRegistrationDate.Location = new System.Drawing.Point(128, 39);
-            this.txtRegistrationDate.Name = "txtRegistrationDate";
-            this.txtRegistrationDate.Size = new System.Drawing.Size(100, 22);
-            this.txtRegistrationDate.TabIndex = 4;
             // 
             // lblChassisNo
             // 
@@ -306,27 +309,28 @@
             this.lblRegistrationDate.Text = "Registration Date";
             this.lblRegistrationDate.Click += new System.EventHandler(this.label6_Click);
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.Goldenrod;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(454, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 33);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(454, 454);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(77, 33);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.BackColor = System.Drawing.Color.Goldenrod;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(560, 454);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 33);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(560, 454);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(77, 33);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // VehicleUINew
             // 
@@ -334,8 +338,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bunifuDropdown1);
             this.Controls.Add(this.groupBox1);
@@ -369,7 +373,6 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtChassisNo;
         private System.Windows.Forms.TextBox txtRegistrationNo;
-        private System.Windows.Forms.TextBox txtRegistrationDate;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblChassisNo;
         private System.Windows.Forms.Label lblRegistrationNo;
@@ -379,7 +382,8 @@
         private System.Windows.Forms.TextBox txtFuelType;
         private System.Windows.Forms.Label lblSpecialization;
         private System.Windows.Forms.TextBox txtSpecialization;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DateTimePicker dateRegistration;
     }
 }

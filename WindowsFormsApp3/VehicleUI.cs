@@ -24,7 +24,22 @@ namespace WindowsFormsApp3
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-      
+            vehicleUINew1.BringToFront();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            vehicleUIEdit1.BringToFront();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            vehicleUIView1.BringToFront();
+        }
+
+        private void vehicleUINew1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
