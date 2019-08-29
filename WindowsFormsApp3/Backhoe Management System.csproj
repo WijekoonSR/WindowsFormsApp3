@@ -84,6 +84,18 @@
     <Compile Include="AssetsUI.Designer.cs">
       <DependentUpon>AssetsUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssetsUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUIEdit.Designer.cs" />
+    <Compile Include="AssetsUINew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUINew.Designer.cs" />
+    <Compile Include="AssetsUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUIView.Designer.cs" />
     <Compile Include="CustomerUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
