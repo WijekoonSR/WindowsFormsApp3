@@ -28,8 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+=======
+            this.SuspendLayout();
+            // 
+            // AssetsUIView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "AssetsUIView";
+            this.Size = new System.Drawing.Size(1431, 736);
+            this.ResumeLayout(false);
+
+>>>>>>> ITP-Group
         }
 
         #endregion

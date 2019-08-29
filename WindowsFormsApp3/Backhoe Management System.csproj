@@ -51,7 +51,8 @@
     <StartupObject>WindowsFormsApp3.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
@@ -87,6 +88,7 @@
     <Compile Include="AssetsUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="AssetsUIEdit.Designer.cs" />
     <Compile Include="AssetsUINew.cs">
       <SubType>UserControl</SubType>
@@ -96,6 +98,35 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AssetsUIView.Designer.cs" />
+=======
+    <Compile Include="AssetsUIEdit.Designer.cs">
+      <DependentUpon>AssetsUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsUINew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUINew.Designer.cs">
+      <DependentUpon>AssetsUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssetsUIView.Designer.cs">
+      <DependentUpon>AssetsUIView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingUICheckCxValidity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingUICheckCxValidity.Designer.cs">
+      <DependentUpon>BookingUICheckCxValidity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingUINewCheckVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingUINewCheckVehicles.Designer.cs">
+      <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
+    </Compile>
+>>>>>>> ITP-Group
     <Compile Include="CustomerUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,8 +279,41 @@
     <Compile Include="VehicleUI.Designer.cs">
       <DependentUpon>VehicleUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleUIEdit.Designer.cs">
+      <DependentUpon>VehicleUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUINew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleUINew.Designer.cs">
+      <DependentUpon>VehicleUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleUIView.Designer.cs">
+      <DependentUpon>VehicleUIView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AssetsUI.resx">
       <DependentUpon>AssetsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsUIEdit.resx">
+      <DependentUpon>AssetsUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsUINew.resx">
+      <DependentUpon>AssetsUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsUIView.resx">
+      <DependentUpon>AssetsUIView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingUICheckCxValidity.resx">
+      <DependentUpon>BookingUICheckCxValidity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingUINewCheckVehicles.resx">
+      <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
@@ -330,6 +394,15 @@
     <EmbeddedResource Include="VehicleUI.resx">
       <DependentUpon>VehicleUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUIEdit.resx">
+      <DependentUpon>VehicleUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUINew.resx">
+      <DependentUpon>VehicleUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUIView.resx">
+      <DependentUpon>VehicleUIView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
@@ -378,7 +451,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\logo.ico" />
+    <Content Include="Images\Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
