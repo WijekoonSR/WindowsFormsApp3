@@ -59,5 +59,15 @@ namespace WindowsFormsApp3.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spare_parts_banner_spp {
+            get {
+                object obj = ResourceManager.GetObject("spare-parts-banner-spp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
