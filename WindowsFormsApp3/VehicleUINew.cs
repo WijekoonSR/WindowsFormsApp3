@@ -38,7 +38,7 @@ namespace WindowsFormsApp3
             txtVehicleCapacity.Clear();
             txtVehicleClass.Clear();
             txtYearOfManufacture.Clear();
-           
+
 
         }
 
@@ -104,7 +104,8 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 con.Open();
                 Model = txtModel.Text.ToString();
                 VehicleCapacity = txtVehicleCapacity.Text.ToString();
@@ -122,14 +123,18 @@ namespace WindowsFormsApp3
 
 
                 string query = "insert into Vehicles values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','" + DateOfCom + "','" + RegDate + "','" + RegNo + "','" + ChassisNo + "','" + HiringRate + "','" + YearOfManufac + "')";
-                SqlCommand sqlCommand = new SqlCommand();
-                cmnd.ExecuteNonQuert();
+                SqlCommand sqlCommand = new SqlCommand(query, con);
+                sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Error While Saving" + ex);
             }
-            finally {
+            finally
+            {
                 con.Close();
             }
-        } 
+        }
+    }
+}

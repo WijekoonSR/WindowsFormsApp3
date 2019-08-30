@@ -32,7 +32,7 @@ namespace WindowsFormsApp3
                 richTxtCxName.Text = dataReader["name"].ToString();
                 txtFrom.Text = dataReader["ContractStartDate"].ToString();
                 txtTo.Text = dataReader["ContractEndDate"].ToString();
-                chkDate = Convert.ToDateTime(dataReader["ContractEndDate"]).Date; 
+               // chkDate = Convert.ToDateTime(dataReader["ContractEndDate"]).Date; 
 
             }
 
