@@ -46,12 +46,12 @@
             this.lblVehicleCapacity = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.txtModel = new System.Windows.Forms.TextBox();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.dropdownVehicleType = new Bunifu.Framework.UI.BunifuDropdown();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtYearOfManufacture = new System.Windows.Forms.TextBox();
             this.lblYearOfManufacture = new System.Windows.Forms.Label();
-            this.txtDateRegistration = new System.Windows.Forms.DateTimePicker();
+            this.DateRegistration = new System.Windows.Forms.DateTimePicker();
             this.txtChassisNo = new System.Windows.Forms.TextBox();
             this.txtRegistrationNo = new System.Windows.Forms.TextBox();
             this.lblChassisNo = new System.Windows.Forms.Label();
@@ -225,24 +225,18 @@
             this.txtModel.Size = new System.Drawing.Size(100, 22);
             this.txtModel.TabIndex = 3;
             // 
-            // bunifuDropdown1
+            // dropdownVehicleType
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[] {
-        "Excavators",
-        "Backhoe Loaders",
-        "Bulldozers",
-        "Skid Steer Loaders",
-        "Motor Graders",
-        "Trenchers"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(208, 28);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.Goldenrod;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(217, 35);
-            this.bunifuDropdown1.TabIndex = 4;
+            this.dropdownVehicleType.BackColor = System.Drawing.Color.Transparent;
+            this.dropdownVehicleType.ForeColor = System.Drawing.Color.White;
+            this.dropdownVehicleType.Items = new string[0];
+            this.dropdownVehicleType.Location = new System.Drawing.Point(208, 28);
+            this.dropdownVehicleType.Name = "dropdownVehicleType";
+            this.dropdownVehicleType.NomalColor = System.Drawing.Color.Goldenrod;
+            this.dropdownVehicleType.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.dropdownVehicleType.selectedIndex = -1;
+            this.dropdownVehicleType.Size = new System.Drawing.Size(217, 35);
+            this.dropdownVehicleType.TabIndex = 4;
             // 
             // contextMenuStrip1
             // 
@@ -254,7 +248,7 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox2.Controls.Add(this.txtYearOfManufacture);
             this.groupBox2.Controls.Add(this.lblYearOfManufacture);
-            this.groupBox2.Controls.Add(this.txtDateRegistration);
+            this.groupBox2.Controls.Add(this.DateRegistration);
             this.groupBox2.Controls.Add(this.txtChassisNo);
             this.groupBox2.Controls.Add(this.txtRegistrationNo);
             this.groupBox2.Controls.Add(this.lblChassisNo);
@@ -287,13 +281,13 @@
             this.lblYearOfManufacture.Text = "Year Of Manufacture";
             this.lblYearOfManufacture.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // txtDateRegistration
+            // DateRegistration
             // 
-            this.txtDateRegistration.Location = new System.Drawing.Point(114, 36);
-            this.txtDateRegistration.Name = "txtDateRegistration";
-            this.txtDateRegistration.Size = new System.Drawing.Size(219, 22);
-            this.txtDateRegistration.TabIndex = 18;
-            this.txtDateRegistration.Value = new System.DateTime(2019, 6, 25, 0, 0, 0, 0);
+            this.DateRegistration.Location = new System.Drawing.Point(114, 36);
+            this.DateRegistration.Name = "DateRegistration";
+            this.DateRegistration.Size = new System.Drawing.Size(219, 22);
+            this.DateRegistration.TabIndex = 18;
+            this.DateRegistration.Value = new System.DateTime(2019, 6, 25, 0, 0, 0, 0);
             // 
             // txtChassisNo
             // 
@@ -419,11 +413,11 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.dropdownVehicleType);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblVehicleType);
             this.Name = "VehicleUINew";
-            this.Size = new System.Drawing.Size(1069, 648);
+            this.Size = new System.Drawing.Size(1069, 526);
             this.Load += new System.EventHandler(this.VehicleUINew_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -445,7 +439,7 @@
         private System.Windows.Forms.Label lblVehicleClass;
         private System.Windows.Forms.Label lblEngineType;
         private System.Windows.Forms.Label lblVehicleCapacity;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown dropdownVehicleType;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtVehicleClass;
         private System.Windows.Forms.TextBox txtEngineType;
@@ -464,7 +458,7 @@
         private System.Windows.Forms.TextBox txtMachineCat;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.DateTimePicker txtDateRegistration;
+        private System.Windows.Forms.DateTimePicker DateRegistration;
         private System.Windows.Forms.Label lblYearOfManufacture;
         private System.Windows.Forms.TextBox txtYearOfManufacture;
         private System.Windows.Forms.GroupBox groupBox3;

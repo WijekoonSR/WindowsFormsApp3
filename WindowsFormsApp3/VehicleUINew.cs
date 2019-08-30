@@ -22,6 +22,16 @@ namespace WindowsFormsApp3
         public VehicleUINew()
         {
             InitializeComponent();
+            dropdownVehicleType.AddItem("Excavator");
+            dropdownVehicleType.AddItem("Backhoe Loaders");
+            dropdownVehicleType.AddItem("Bulldozers");
+            dropdownVehicleType.AddItem("Skid Steer Loaders");
+            dropdownVehicleType.AddItem("Motor Grade");
+            dropdownVehicleType.AddItem("Trenchers");
+
+
+
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -107,6 +117,7 @@ namespace WindowsFormsApp3
             try
             {
                 con.Open();
+                VehicleType = dropdownVehicleType.selectedValue.ToString();
                 Model = txtModel.Text.ToString();
                 VehicleCapacity = txtVehicleCapacity.Text.ToString();
                 VehicleClass = txtVehicleClass.Text.ToString();
@@ -114,7 +125,7 @@ namespace WindowsFormsApp3
                 Fueltype = txtFuelType.Text.ToString();
                 Status = txtStatus.Text.ToString();
                 MachineCategory = txtMachineCat.Text.ToString();
-                RegDate = txtDateRegistration.Text.ToString();
+                RegDate = DateRegistration.Value.ToString("yyyy/MM/dd");
                 RegNo = txtRegistrationNo.Text.ToString();
                 ChassisNo = txtChassisNo.Text.ToString();
                 HiringRate = txtHiringRate.Text.ToString();
@@ -122,7 +133,7 @@ namespace WindowsFormsApp3
 
 
 
-                string query = "insert into Vehicles values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','" + DateOfCom + "','" + RegDate + "','" + RegNo + "','" + ChassisNo + "','" + HiringRate + "','" + YearOfManufac + "')";
+                string query = "insert into Vehicles(VehicleType,Model,VehicleCapacity,VehicleClass,EngineType,FuelType,Status,MachineCategory,RegistrationDate,RegistrationNo,ChassisNo,YearOfManufacture,HiringRate,DateOfCommencemnet) values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','" + DateOfCom + "','" + RegDate + "','" + RegNo + "','" + ChassisNo + "','" + HiringRate + "','" + YearOfManufac + "')";
                 SqlCommand sqlCommand = new SqlCommand(query, con);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
