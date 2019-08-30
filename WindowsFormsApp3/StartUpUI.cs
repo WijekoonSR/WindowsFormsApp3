@@ -16,5 +16,10 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
+
+        private void StartUpUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
