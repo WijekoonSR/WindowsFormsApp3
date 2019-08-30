@@ -43,6 +43,7 @@
             this.btnExistingUser.TabIndex = 25;
             this.btnExistingUser.Text = "Existing User";
             this.btnExistingUser.UseVisualStyleBackColor = false;
+            this.btnExistingUser.Click += new System.EventHandler(this.btnExistingUser_Click);
             // 
             // btnNewUser
             // 
