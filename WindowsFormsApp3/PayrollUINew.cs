@@ -36,5 +36,11 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void btnChangeValue_Click(object sender, EventArgs e)
+        {
+            PayrollUIChangeValues changeValues = new PayrollUIChangeValues();
+            changeValues.ShowDialog();
+        }
     }
 }

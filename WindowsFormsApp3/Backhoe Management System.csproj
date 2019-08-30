@@ -223,6 +223,18 @@
     <Compile Include="PayrollUI.Designer.cs">
       <DependentUpon>PayrollUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollUIChangeValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUIChangeValues.Designer.cs">
+      <DependentUpon>PayrollUIChangeValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIChangeValuesAddNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUIChangeValuesAddNew.Designer.cs">
+      <DependentUpon>PayrollUIChangeValuesAddNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -350,6 +362,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUI.resx">
       <DependentUpon>PayrollUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIChangeValues.resx">
+      <DependentUpon>PayrollUIChangeValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIChangeValuesAddNew.resx">
+      <DependentUpon>PayrollUIChangeValuesAddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIEdit.resx">
       <DependentUpon>PayrollUIEdit.cs</DependentUpon>
