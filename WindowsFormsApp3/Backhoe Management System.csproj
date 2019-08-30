@@ -127,6 +127,12 @@
     <Compile Include="CustomerUINew.Designer.cs">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUIView.Designer.cs">
+      <DependentUpon>CustomerUIView.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeUIEditOperator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUIView.resx">
+      <DependentUpon>CustomerUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUIEditOperator.resx">
       <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>

@@ -37,6 +37,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.customerUINew1 = new WindowsFormsApp3.CustomerUINew();
+            this.customerUIEdit1 = new WindowsFormsApp3.CustomerUIEdit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +68,7 @@
             this.btnView.TabIndex = 12;
             this.btnView.Textcolor = System.Drawing.Color.Black;
             this.btnView.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnEdit
             // 
@@ -93,6 +96,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Textcolor = System.Drawing.Color.Black;
             this.btnEdit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnNew
             // 
@@ -120,6 +124,7 @@
             this.btnNew.TabIndex = 5;
             this.btnNew.Textcolor = System.Drawing.Color.Black;
             this.btnNew.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // panel1
             // 
@@ -173,11 +178,28 @@
             this.panel4.Size = new System.Drawing.Size(1, 63);
             this.panel4.TabIndex = 4;
             // 
+            // customerUINew1
+            // 
+            this.customerUINew1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerUINew1.Location = new System.Drawing.Point(0, 63);
+            this.customerUINew1.Name = "customerUINew1";
+            this.customerUINew1.Size = new System.Drawing.Size(1069, 585);
+            this.customerUINew1.TabIndex = 2;
+            // 
+            // customerUIEdit1
+            // 
+            this.customerUIEdit1.Location = new System.Drawing.Point(3, 63);
+            this.customerUIEdit1.Name = "customerUIEdit1";
+            this.customerUIEdit1.Size = new System.Drawing.Size(0, 0);
+            this.customerUIEdit1.TabIndex = 3;
+            // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.customerUIEdit1);
+            this.Controls.Add(this.customerUINew1);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerUI";
             this.Size = new System.Drawing.Size(1069, 648);
@@ -197,5 +219,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelUpper;
         private System.Windows.Forms.Panel panel4;
+        private CustomerUINew customerUINew1;
+        private CustomerUIEdit customerUIEdit1;
     }
 }
