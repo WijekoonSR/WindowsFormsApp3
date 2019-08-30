@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
+    
     public partial class CustomerUIEdit : UserControl
     {
         public CustomerUIEdit()
@@ -33,6 +34,11 @@ namespace WindowsFormsApp3
         }
 
         private void CustomerUIEdit_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }
