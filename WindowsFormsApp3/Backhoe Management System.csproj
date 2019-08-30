@@ -267,6 +267,12 @@
     <Compile Include="StartUpUI.Designer.cs">
       <DependentUpon>StartUpUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserNewUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserNewUI.Designer.cs">
+      <DependentUpon>UserNewUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartUpUI.resx">
       <DependentUpon>StartUpUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserNewUI.resx">
+      <DependentUpon>UserNewUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
