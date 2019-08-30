@@ -247,11 +247,35 @@
     <Compile Include="PayrollUIEdit.Designer.cs">
       <DependentUpon>PayrollUIEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollUIEditOperater.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIEditOperater.Designer.cs">
+      <DependentUpon>PayrollUIEditOperater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIEditStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIEditStaff.Designer.cs">
+      <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUINew.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PayrollUINew.Designer.cs">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIStaffNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIStaffNew.Designer.cs">
+      <DependentUpon>PayrollUIStaffNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIVeiw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIVeiw.Designer.cs">
+      <DependentUpon>PayrollUIVeiw.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -384,8 +408,20 @@
     <EmbeddedResource Include="PayrollUIEdit.resx">
       <DependentUpon>PayrollUIEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIEditOperater.resx">
+      <DependentUpon>PayrollUIEditOperater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIEditStaff.resx">
+      <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUINew.resx">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIStaffNew.resx">
+      <DependentUpon>PayrollUIStaffNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIVeiw.resx">
+      <DependentUpon>PayrollUIVeiw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

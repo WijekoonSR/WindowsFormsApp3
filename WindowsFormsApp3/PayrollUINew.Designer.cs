@@ -67,9 +67,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnChangeValue = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.edtWokingHours = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTimePayroll
@@ -205,7 +209,7 @@
             this.groupBox2.Controls.Add(this.txtEPF);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Location = new System.Drawing.Point(529, 222);
+            this.groupBox2.Location = new System.Drawing.Point(529, 264);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(396, 208);
             this.groupBox2.TabIndex = 34;
@@ -278,8 +282,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bunifuDropdown1);
-            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.textBox5);
@@ -288,13 +290,11 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtAllowance);
-            this.groupBox1.Controls.Add(this.txtOT);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtBSalary);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(31, 222);
+            this.groupBox1.Location = new System.Drawing.Point(31, 264);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(474, 258);
+            this.groupBox1.Size = new System.Drawing.Size(468, 208);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Earnings";
@@ -304,7 +304,7 @@
             this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
             this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(370, 212);
+            this.bunifuDropdown1.Location = new System.Drawing.Point(372, 56);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -315,7 +315,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(314, 218);
+            this.label15.Location = new System.Drawing.Point(316, 62);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 13);
             this.label15.TabIndex = 18;
@@ -387,7 +387,7 @@
             // 
             // txtOT
             // 
-            this.txtOT.Location = new System.Drawing.Point(159, 212);
+            this.txtOT.Location = new System.Drawing.Point(161, 56);
             this.txtOT.Name = "txtOT";
             this.txtOT.Size = new System.Drawing.Size(100, 20);
             this.txtOT.TabIndex = 3;
@@ -395,7 +395,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 215);
+            this.label6.Location = new System.Drawing.Point(57, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 11;
@@ -433,7 +433,7 @@
             this.bunifuFlatButton1.Iconimage_Selected = null;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(710, 501);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(710, 518);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -454,10 +454,41 @@
             this.btnChangeValue.UseVisualStyleBackColor = true;
             this.btnChangeValue.Click += new System.EventHandler(this.btnChangeValue_Click);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(57, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(78, 13);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Working Hours";
+            // 
+            // edtWokingHours
+            // 
+            this.edtWokingHours.Location = new System.Drawing.Point(161, 19);
+            this.edtWokingHours.Name = "edtWokingHours";
+            this.edtWokingHours.Size = new System.Drawing.Size(100, 20);
+            this.edtWokingHours.TabIndex = 38;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.bunifuDropdown1);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.txtOT);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.edtWokingHours);
+            this.groupBox4.Location = new System.Drawing.Point(29, 149);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(474, 87);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            // 
             // PayrollUINew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnChangeValue);
             this.Controls.Add(this.dateTimePayroll);
             this.Controls.Add(this.groupBox3);
@@ -473,6 +504,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,5 +551,8 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Button btnChangeValue;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox edtWokingHours;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
