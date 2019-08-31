@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class AssetsUIEdit : UserControl
+    public partial class VehicleLeasingUIView : UserControl
     {
-        public AssetsUIEdit()
+        public VehicleLeasingUIView()
         {
             InitializeComponent();
-        }
-
-        private void AssetsUIEdit_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnSaveEdit_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

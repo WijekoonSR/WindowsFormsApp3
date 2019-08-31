@@ -17,7 +17,7 @@ namespace WindowsFormsApp3
         public static String nameServer = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
         //get sring db connection
         private SqlConnection sqlConnection = new SqlConnection(nameServer);
-        string Type, ContractStartDate, ContractEndDate, name, address, email, ProjectManagerName, ProjectAddress, ProjectEmail;
+        string  ContractStartDate, ContractEndDate, name, address, email, ProjectManagerName, ProjectAddress, ProjectEmail, EndDate,StartDate;
         int ContactNumber, FaxNumber, ProjectContactNumber;
         SqlCommand command;
         public CustomerUINew()
@@ -39,10 +39,42 @@ namespace WindowsFormsApp3
 
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtEmail2_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want to clear all fields ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.OK) {
+
+                dateEndContract.Value = DateTime.Now;
+                dateStartContract.Value = DateTime.Now;
+                txtName.Clear();
+                txtAddress.Clear();
+                txtContactNumber.Clear();
+                txtEmail1.Clear();
+                txtFaxNumber.Clear();
+                txtProjectManager.Clear();
+                txtAddress1.Clear();
+                txtContactNumber2.Clear();
+                txtEmail2.Clear();
+
+            }
+        }   
+
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -75,15 +107,17 @@ namespace WindowsFormsApp3
             {
                 sqlConnection.Open();
 
-                name = txtName.Text;
-                address = txtAddress.Text;
-                email = txtEmail1.Text;
-                ProjectManagerName = txtProjectManager.Text;
-                ProjectAddress = txtAddress1.Text;
-                ProjectEmail = txtEmail2.Text;
+                name = txtName.Text.ToString();
+                address = txtAddress.Text.ToString();
+                email = txtEmail1.Text.ToString();
+                ProjectManagerName = txtProjectManager.Text.ToString();
+                ProjectAddress = txtAddress1.Text.ToString();
+                ProjectEmail = txtEmail2.Text.ToString();
                 ContactNumber = int.Parse(txtContactNumber.Text);
                 FaxNumber = int.Parse(txtFaxNumber.Text);
                 ProjectContactNumber = int.Parse(txtContactNumber2.Text);
+                EndDate = dateEndContract.Value.ToString("yyyy/MM/DD");
+                StartDate = dateStartContract.Value.ToString("yyyy/MM/DD");
 
                 string query = "insert into Customer(name,address,email,ProjectManagerName,ProjectAddress,ProjectEmail,ContactNumber,FaxNumber,ProjectContactNumber) " +
                     "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "')";

@@ -28,32 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvCustomerDetails = new System.Windows.Forms.DataGridView();
+            this.lblCustomerID = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerDetails)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvCustomerDetails
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(75, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(597, 438);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvCustomerDetails.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvCustomerDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomerDetails.Location = new System.Drawing.Point(51, 70);
+            this.dgvCustomerDetails.Name = "dgvCustomerDetails";
+            this.dgvCustomerDetails.Size = new System.Drawing.Size(903, 440);
+            this.dgvCustomerDetails.TabIndex = 0;
+            this.dgvCustomerDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomerDetails_CellContentClick);
+            // 
+            // lblCustomerID
+            // 
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Location = new System.Drawing.Point(51, 25);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(65, 13);
+            this.lblCustomerID.TabIndex = 1;
+            this.lblCustomerID.Text = "Customer ID";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(165, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Navy;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(340, 15);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 33);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.button1_Click);
             // 
             // CustomerUIView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblCustomerID);
+            this.Controls.Add(this.dgvCustomerDetails);
             this.Name = "CustomerUIView";
-            this.Size = new System.Drawing.Size(1069, 585);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(1010, 585);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerDetails)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCustomerDetails;
+        private System.Windows.Forms.Label lblCustomerID;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
