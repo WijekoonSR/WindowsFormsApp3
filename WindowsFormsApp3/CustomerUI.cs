@@ -21,5 +21,20 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            customerUINew1.BringToFront();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            customerUIEdit1.BringToFront();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            customerUINew1.BringToFront();
+        }
     }
 }

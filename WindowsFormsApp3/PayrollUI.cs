@@ -29,7 +29,48 @@ namespace WindowsFormsApp3
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            payrollUIEdit2.BringToFront();
+           // payrollUIEdit2.BringToFront();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOperater_Click(object sender, EventArgs e)
+        {
+            payrollUINew1.BringToFront();
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+           // payrollUIStaffNew1.BringToFront();
+           
+        }
+
+        private void btnOperator_Click(object sender, EventArgs e)
+        {
+            payrollUINew1.BringToFront();
+        }
+
+        private void btnStaff_Click_1(object sender, EventArgs e)
+        {
+            payrollUIStaffNew1.BringToFront();
+        }
+
+        private void btnEditOperator_Click(object sender, EventArgs e)
+        {
+            payrollUIEditOperater1.BringToFront();
+        }
+
+        private void btnEditStaff_Click(object sender, EventArgs e)
+        {
+            payrollUIEditStaff1.BringToFront();
+        }
+
+        private void btnEmployeeView_Click(object sender, EventArgs e)
+        {
+            payrollUIVeiw1.BringToFront();
         }
     }
 }

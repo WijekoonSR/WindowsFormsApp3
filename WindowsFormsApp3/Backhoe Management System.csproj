@@ -127,6 +127,12 @@
     <Compile Include="CustomerUINew.Designer.cs">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUIView.Designer.cs">
+      <DependentUpon>CustomerUIView.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeUIEditOperator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,11 +253,35 @@
     <Compile Include="PayrollUIEdit.Designer.cs">
       <DependentUpon>PayrollUIEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollUIEditOperater.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIEditOperater.Designer.cs">
+      <DependentUpon>PayrollUIEditOperater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIEditStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIEditStaff.Designer.cs">
+      <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUINew.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PayrollUINew.Designer.cs">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIStaffNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIStaffNew.Designer.cs">
+      <DependentUpon>PayrollUIStaffNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIVeiw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIVeiw.Designer.cs">
+      <DependentUpon>PayrollUIVeiw.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,6 +296,12 @@
     </Compile>
     <Compile Include="StartUpUI.Designer.cs">
       <DependentUpon>StartUpUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserNewUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserNewUI.Designer.cs">
+      <DependentUpon>UserNewUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UserProfile.cs">
       <SubType>UserControl</SubType>
@@ -284,6 +320,18 @@
     </Compile>
     <Compile Include="VehicleLeasingUIAdd.Designer.cs">
       <DependentUpon>VehicleLeasingUIAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleLeasingUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleLeasingUIEdit.Designer.cs">
+      <DependentUpon>VehicleLeasingUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleLeasingUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleLeasingUIView.Designer.cs">
+      <DependentUpon>VehicleLeasingUIView.cs</DependentUpon>
     </Compile>
     <Compile Include="VehicleUI.cs">
       <SubType>UserControl</SubType>
@@ -332,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUIView.resx">
+      <DependentUpon>CustomerUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUIEditOperator.resx">
       <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>
@@ -384,8 +435,20 @@
     <EmbeddedResource Include="PayrollUIEdit.resx">
       <DependentUpon>PayrollUIEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIEditOperater.resx">
+      <DependentUpon>PayrollUIEditOperater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIEditStaff.resx">
+      <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUINew.resx">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIStaffNew.resx">
+      <DependentUpon>PayrollUIStaffNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIVeiw.resx">
+      <DependentUpon>PayrollUIVeiw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -403,6 +466,9 @@
     <EmbeddedResource Include="StartUpUI.resx">
       <DependentUpon>StartUpUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserNewUI.resx">
+      <DependentUpon>UserNewUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUIAdd.resx">
       <DependentUpon>VehicleLeasingUIAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleLeasingUIEdit.resx">
+      <DependentUpon>VehicleLeasingUIEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleUI.resx">
       <DependentUpon>VehicleUI.cs</DependentUpon>
