@@ -7,23 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace WindowsFormsApp3
 {
-    public partial class VehicleLeasingUIAdd : UserControl
+    public partial class VehicleLeasingUIEdit : UserControl
     {
-        public VehicleLeasingUIAdd()
+        public VehicleLeasingUIEdit()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-          
-       }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
