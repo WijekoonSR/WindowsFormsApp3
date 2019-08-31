@@ -31,35 +31,35 @@
             this.lblVehicleID = new System.Windows.Forms.Label();
             this.txtVehicleID = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblBank = new System.Windows.Forms.Label();
-            this.txtBank = new System.Windows.Forms.TextBox();
-            this.lblBranch = new System.Windows.Forms.Label();
-            this.lblBankode = new System.Windows.Forms.Label();
-            this.txtBranch = new System.Windows.Forms.TextBox();
             this.txtBankCode = new System.Windows.Forms.TextBox();
+            this.txtBranch = new System.Windows.Forms.TextBox();
+            this.lblBankode = new System.Windows.Forms.Label();
+            this.lblBranch = new System.Windows.Forms.Label();
+            this.txtBank = new System.Windows.Forms.TextBox();
+            this.lblBank = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.lblTotalLeasingAmount = new System.Windows.Forms.Label();
-            this.lblAnnualInterestRate = new System.Windows.Forms.Label();
-            this.lblLeasingPeriod = new System.Windows.Forms.Label();
-            this.lblStartLeasingDate = new System.Windows.Forms.Label();
-            this.lblMonthlyPayment = new System.Windows.Forms.Label();
-            this.lblEndLeasingDate = new System.Windows.Forms.Label();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.txtLeasingPeriod = new System.Windows.Forms.TextBox();
-            this.txtMonthlyPayment = new System.Windows.Forms.TextBox();
-            this.txtStartLeasingDate = new System.Windows.Forms.TextBox();
-            this.txtAnnualInterestRate = new System.Windows.Forms.TextBox();
             this.txtTotalLeasingAmount = new System.Windows.Forms.TextBox();
-            this.txtEndLeasingDate = new System.Windows.Forms.TextBox();
+            this.txtAnnualInterestRate = new System.Windows.Forms.TextBox();
+            this.txtMonthlyPayment = new System.Windows.Forms.TextBox();
+            this.txtLeasingPeriod = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.lblEndLeasingDate = new System.Windows.Forms.Label();
+            this.lblMonthlyPayment = new System.Windows.Forms.Label();
+            this.lblStartLeasingDate = new System.Windows.Forms.Label();
+            this.lblLeasingPeriod = new System.Windows.Forms.Label();
+            this.lblAnnualInterestRate = new System.Windows.Forms.Label();
+            this.lblTotalLeasingAmount = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblAccountHolder = new System.Windows.Forms.Label();
-            this.lblAccountNumber = new System.Windows.Forms.Label();
-            this.txtAccountHolder = new System.Windows.Forms.TextBox();
             this.txtAccountNumber = new System.Windows.Forms.TextBox();
+            this.txtAccountHolder = new System.Windows.Forms.TextBox();
+            this.lblAccountNumber = new System.Windows.Forms.Label();
+            this.lblAccountHolder = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.DateStartLeasingDate = new System.Windows.Forms.DateTimePicker();
+            this.DateEndLeasingDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -96,30 +96,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bank Details";
             // 
-            // lblBank
+            // txtBankCode
             // 
-            this.lblBank.AutoSize = true;
-            this.lblBank.Location = new System.Drawing.Point(7, 35);
-            this.lblBank.Name = "lblBank";
-            this.lblBank.Size = new System.Drawing.Size(32, 13);
-            this.lblBank.TabIndex = 0;
-            this.lblBank.Text = "Bank";
+            this.txtBankCode.Location = new System.Drawing.Point(78, 127);
+            this.txtBankCode.Name = "txtBankCode";
+            this.txtBankCode.Size = new System.Drawing.Size(100, 20);
+            this.txtBankCode.TabIndex = 6;
             // 
-            // txtBank
+            // txtBranch
             // 
-            this.txtBank.Location = new System.Drawing.Point(78, 35);
-            this.txtBank.Name = "txtBank";
-            this.txtBank.Size = new System.Drawing.Size(100, 20);
-            this.txtBank.TabIndex = 1;
-            // 
-            // lblBranch
-            // 
-            this.lblBranch.AutoSize = true;
-            this.lblBranch.Location = new System.Drawing.Point(6, 81);
-            this.lblBranch.Name = "lblBranch";
-            this.lblBranch.Size = new System.Drawing.Size(41, 13);
-            this.lblBranch.TabIndex = 2;
-            this.lblBranch.Text = "Branch";
+            this.txtBranch.Location = new System.Drawing.Point(78, 81);
+            this.txtBranch.Name = "txtBranch";
+            this.txtBranch.Size = new System.Drawing.Size(100, 20);
+            this.txtBranch.TabIndex = 5;
             // 
             // lblBankode
             // 
@@ -130,26 +119,37 @@
             this.lblBankode.TabIndex = 3;
             this.lblBankode.Text = "Bank Code";
             // 
-            // txtBranch
+            // lblBranch
             // 
-            this.txtBranch.Location = new System.Drawing.Point(78, 81);
-            this.txtBranch.Name = "txtBranch";
-            this.txtBranch.Size = new System.Drawing.Size(100, 20);
-            this.txtBranch.TabIndex = 5;
+            this.lblBranch.AutoSize = true;
+            this.lblBranch.Location = new System.Drawing.Point(6, 81);
+            this.lblBranch.Name = "lblBranch";
+            this.lblBranch.Size = new System.Drawing.Size(41, 13);
+            this.lblBranch.TabIndex = 2;
+            this.lblBranch.Text = "Branch";
             // 
-            // txtBankCode
+            // txtBank
             // 
-            this.txtBankCode.Location = new System.Drawing.Point(78, 127);
-            this.txtBankCode.Name = "txtBankCode";
-            this.txtBankCode.Size = new System.Drawing.Size(100, 20);
-            this.txtBankCode.TabIndex = 6;
+            this.txtBank.Location = new System.Drawing.Point(78, 35);
+            this.txtBank.Name = "txtBank";
+            this.txtBank.Size = new System.Drawing.Size(100, 20);
+            this.txtBank.TabIndex = 1;
+            // 
+            // lblBank
+            // 
+            this.lblBank.AutoSize = true;
+            this.lblBank.Location = new System.Drawing.Point(7, 35);
+            this.lblBank.Name = "lblBank";
+            this.lblBank.Size = new System.Drawing.Size(32, 13);
+            this.lblBank.TabIndex = 0;
+            this.lblBank.Text = "Bank";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtEndLeasingDate);
+            this.groupBox2.Controls.Add(this.DateEndLeasingDate);
+            this.groupBox2.Controls.Add(this.DateStartLeasingDate);
             this.groupBox2.Controls.Add(this.txtTotalLeasingAmount);
             this.groupBox2.Controls.Add(this.txtAnnualInterestRate);
-            this.groupBox2.Controls.Add(this.txtStartLeasingDate);
             this.groupBox2.Controls.Add(this.txtMonthlyPayment);
             this.groupBox2.Controls.Add(this.txtLeasingPeriod);
             this.groupBox2.Controls.Add(this.txtYear);
@@ -167,59 +167,40 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Leasing Details";
             // 
-            // lblYear
+            // txtTotalLeasingAmount
             // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Location = new System.Drawing.Point(7, 34);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(29, 13);
-            this.lblYear.TabIndex = 0;
-            this.lblYear.Text = "Year";
+            this.txtTotalLeasingAmount.Location = new System.Drawing.Point(155, 81);
+            this.txtTotalLeasingAmount.Name = "txtTotalLeasingAmount";
+            this.txtTotalLeasingAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalLeasingAmount.TabIndex = 12;
             // 
-            // lblTotalLeasingAmount
+            // txtAnnualInterestRate
             // 
-            this.lblTotalLeasingAmount.AutoSize = true;
-            this.lblTotalLeasingAmount.Location = new System.Drawing.Point(4, 81);
-            this.lblTotalLeasingAmount.Name = "lblTotalLeasingAmount";
-            this.lblTotalLeasingAmount.Size = new System.Drawing.Size(110, 13);
-            this.lblTotalLeasingAmount.TabIndex = 1;
-            this.lblTotalLeasingAmount.Text = "Total Leasing Amount";
+            this.txtAnnualInterestRate.Location = new System.Drawing.Point(155, 130);
+            this.txtAnnualInterestRate.Name = "txtAnnualInterestRate";
+            this.txtAnnualInterestRate.Size = new System.Drawing.Size(100, 20);
+            this.txtAnnualInterestRate.TabIndex = 11;
             // 
-            // lblAnnualInterestRate
+            // txtMonthlyPayment
             // 
-            this.lblAnnualInterestRate.AutoSize = true;
-            this.lblAnnualInterestRate.Location = new System.Drawing.Point(7, 130);
-            this.lblAnnualInterestRate.Name = "lblAnnualInterestRate";
-            this.lblAnnualInterestRate.Size = new System.Drawing.Size(104, 13);
-            this.lblAnnualInterestRate.TabIndex = 2;
-            this.lblAnnualInterestRate.Text = "Annual Interest Rate";
+            this.txtMonthlyPayment.Location = new System.Drawing.Point(155, 216);
+            this.txtMonthlyPayment.Name = "txtMonthlyPayment";
+            this.txtMonthlyPayment.Size = new System.Drawing.Size(100, 20);
+            this.txtMonthlyPayment.TabIndex = 9;
             // 
-            // lblLeasingPeriod
+            // txtLeasingPeriod
             // 
-            this.lblLeasingPeriod.AutoSize = true;
-            this.lblLeasingPeriod.Location = new System.Drawing.Point(6, 173);
-            this.lblLeasingPeriod.Name = "lblLeasingPeriod";
-            this.lblLeasingPeriod.Size = new System.Drawing.Size(77, 13);
-            this.lblLeasingPeriod.TabIndex = 3;
-            this.lblLeasingPeriod.Text = "Leasing Period";
+            this.txtLeasingPeriod.Location = new System.Drawing.Point(155, 173);
+            this.txtLeasingPeriod.Name = "txtLeasingPeriod";
+            this.txtLeasingPeriod.Size = new System.Drawing.Size(100, 20);
+            this.txtLeasingPeriod.TabIndex = 8;
             // 
-            // lblStartLeasingDate
+            // txtYear
             // 
-            this.lblStartLeasingDate.AutoSize = true;
-            this.lblStartLeasingDate.Location = new System.Drawing.Point(7, 258);
-            this.lblStartLeasingDate.Name = "lblStartLeasingDate";
-            this.lblStartLeasingDate.Size = new System.Drawing.Size(95, 13);
-            this.lblStartLeasingDate.TabIndex = 4;
-            this.lblStartLeasingDate.Text = "Start Leasing Date";
-            // 
-            // lblMonthlyPayment
-            // 
-            this.lblMonthlyPayment.AutoSize = true;
-            this.lblMonthlyPayment.Location = new System.Drawing.Point(7, 216);
-            this.lblMonthlyPayment.Name = "lblMonthlyPayment";
-            this.lblMonthlyPayment.Size = new System.Drawing.Size(88, 13);
-            this.lblMonthlyPayment.TabIndex = 5;
-            this.lblMonthlyPayment.Text = "Monthly Payment";
+            this.txtYear.Location = new System.Drawing.Point(155, 35);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(100, 20);
+            this.txtYear.TabIndex = 7;
             // 
             // lblEndLeasingDate
             // 
@@ -231,54 +212,59 @@
             this.lblEndLeasingDate.Text = "End Leasing Date";
             this.lblEndLeasingDate.Click += new System.EventHandler(this.label7_Click);
             // 
-            // txtYear
+            // lblMonthlyPayment
             // 
-            this.txtYear.Location = new System.Drawing.Point(155, 35);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(100, 20);
-            this.txtYear.TabIndex = 7;
+            this.lblMonthlyPayment.AutoSize = true;
+            this.lblMonthlyPayment.Location = new System.Drawing.Point(7, 216);
+            this.lblMonthlyPayment.Name = "lblMonthlyPayment";
+            this.lblMonthlyPayment.Size = new System.Drawing.Size(88, 13);
+            this.lblMonthlyPayment.TabIndex = 5;
+            this.lblMonthlyPayment.Text = "Monthly Payment";
             // 
-            // txtLeasingPeriod
+            // lblStartLeasingDate
             // 
-            this.txtLeasingPeriod.Location = new System.Drawing.Point(155, 173);
-            this.txtLeasingPeriod.Name = "txtLeasingPeriod";
-            this.txtLeasingPeriod.Size = new System.Drawing.Size(100, 20);
-            this.txtLeasingPeriod.TabIndex = 8;
+            this.lblStartLeasingDate.AutoSize = true;
+            this.lblStartLeasingDate.Location = new System.Drawing.Point(7, 258);
+            this.lblStartLeasingDate.Name = "lblStartLeasingDate";
+            this.lblStartLeasingDate.Size = new System.Drawing.Size(95, 13);
+            this.lblStartLeasingDate.TabIndex = 4;
+            this.lblStartLeasingDate.Text = "Start Leasing Date";
             // 
-            // txtMonthlyPayment
+            // lblLeasingPeriod
             // 
-            this.txtMonthlyPayment.Location = new System.Drawing.Point(155, 216);
-            this.txtMonthlyPayment.Name = "txtMonthlyPayment";
-            this.txtMonthlyPayment.Size = new System.Drawing.Size(100, 20);
-            this.txtMonthlyPayment.TabIndex = 9;
+            this.lblLeasingPeriod.AutoSize = true;
+            this.lblLeasingPeriod.Location = new System.Drawing.Point(6, 173);
+            this.lblLeasingPeriod.Name = "lblLeasingPeriod";
+            this.lblLeasingPeriod.Size = new System.Drawing.Size(77, 13);
+            this.lblLeasingPeriod.TabIndex = 3;
+            this.lblLeasingPeriod.Text = "Leasing Period";
             // 
-            // txtStartLeasingDate
+            // lblAnnualInterestRate
             // 
-            this.txtStartLeasingDate.Location = new System.Drawing.Point(155, 258);
-            this.txtStartLeasingDate.Name = "txtStartLeasingDate";
-            this.txtStartLeasingDate.Size = new System.Drawing.Size(100, 20);
-            this.txtStartLeasingDate.TabIndex = 10;
+            this.lblAnnualInterestRate.AutoSize = true;
+            this.lblAnnualInterestRate.Location = new System.Drawing.Point(7, 130);
+            this.lblAnnualInterestRate.Name = "lblAnnualInterestRate";
+            this.lblAnnualInterestRate.Size = new System.Drawing.Size(104, 13);
+            this.lblAnnualInterestRate.TabIndex = 2;
+            this.lblAnnualInterestRate.Text = "Annual Interest Rate";
             // 
-            // txtAnnualInterestRate
+            // lblTotalLeasingAmount
             // 
-            this.txtAnnualInterestRate.Location = new System.Drawing.Point(155, 130);
-            this.txtAnnualInterestRate.Name = "txtAnnualInterestRate";
-            this.txtAnnualInterestRate.Size = new System.Drawing.Size(100, 20);
-            this.txtAnnualInterestRate.TabIndex = 11;
+            this.lblTotalLeasingAmount.AutoSize = true;
+            this.lblTotalLeasingAmount.Location = new System.Drawing.Point(4, 81);
+            this.lblTotalLeasingAmount.Name = "lblTotalLeasingAmount";
+            this.lblTotalLeasingAmount.Size = new System.Drawing.Size(110, 13);
+            this.lblTotalLeasingAmount.TabIndex = 1;
+            this.lblTotalLeasingAmount.Text = "Total Leasing Amount";
             // 
-            // txtTotalLeasingAmount
+            // lblYear
             // 
-            this.txtTotalLeasingAmount.Location = new System.Drawing.Point(155, 81);
-            this.txtTotalLeasingAmount.Name = "txtTotalLeasingAmount";
-            this.txtTotalLeasingAmount.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalLeasingAmount.TabIndex = 12;
-            // 
-            // txtEndLeasingDate
-            // 
-            this.txtEndLeasingDate.Location = new System.Drawing.Point(155, 300);
-            this.txtEndLeasingDate.Name = "txtEndLeasingDate";
-            this.txtEndLeasingDate.Size = new System.Drawing.Size(100, 20);
-            this.txtEndLeasingDate.TabIndex = 13;
+            this.lblYear.AutoSize = true;
+            this.lblYear.Location = new System.Drawing.Point(7, 34);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(29, 13);
+            this.lblYear.TabIndex = 0;
+            this.lblYear.Text = "Year";
             // 
             // btnSearch
             // 
@@ -304,14 +290,19 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Account Details";
             // 
-            // lblAccountHolder
+            // txtAccountNumber
             // 
-            this.lblAccountHolder.AutoSize = true;
-            this.lblAccountHolder.Location = new System.Drawing.Point(7, 27);
-            this.lblAccountHolder.Name = "lblAccountHolder";
-            this.lblAccountHolder.Size = new System.Drawing.Size(81, 13);
-            this.lblAccountHolder.TabIndex = 0;
-            this.lblAccountHolder.Text = "Account Holder";
+            this.txtAccountNumber.Location = new System.Drawing.Point(122, 66);
+            this.txtAccountNumber.Name = "txtAccountNumber";
+            this.txtAccountNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtAccountNumber.TabIndex = 3;
+            // 
+            // txtAccountHolder
+            // 
+            this.txtAccountHolder.Location = new System.Drawing.Point(122, 23);
+            this.txtAccountHolder.Name = "txtAccountHolder";
+            this.txtAccountHolder.Size = new System.Drawing.Size(100, 20);
+            this.txtAccountHolder.TabIndex = 2;
             // 
             // lblAccountNumber
             // 
@@ -322,19 +313,14 @@
             this.lblAccountNumber.TabIndex = 1;
             this.lblAccountNumber.Text = "Account Number";
             // 
-            // txtAccountHolder
+            // lblAccountHolder
             // 
-            this.txtAccountHolder.Location = new System.Drawing.Point(122, 23);
-            this.txtAccountHolder.Name = "txtAccountHolder";
-            this.txtAccountHolder.Size = new System.Drawing.Size(100, 20);
-            this.txtAccountHolder.TabIndex = 2;
-            // 
-            // txtAccountNumber
-            // 
-            this.txtAccountNumber.Location = new System.Drawing.Point(122, 66);
-            this.txtAccountNumber.Name = "txtAccountNumber";
-            this.txtAccountNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtAccountNumber.TabIndex = 3;
+            this.lblAccountHolder.AutoSize = true;
+            this.lblAccountHolder.Location = new System.Drawing.Point(7, 27);
+            this.lblAccountHolder.Name = "lblAccountHolder";
+            this.lblAccountHolder.Size = new System.Drawing.Size(81, 13);
+            this.lblAccountHolder.TabIndex = 0;
+            this.lblAccountHolder.Text = "Account Holder";
             // 
             // btnSave
             // 
@@ -346,6 +332,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -357,6 +344,20 @@
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // DateStartLeasingDate
+            // 
+            this.DateStartLeasingDate.Location = new System.Drawing.Point(155, 250);
+            this.DateStartLeasingDate.Name = "DateStartLeasingDate";
+            this.DateStartLeasingDate.Size = new System.Drawing.Size(200, 20);
+            this.DateStartLeasingDate.TabIndex = 13;
+            // 
+            // DateEndLeasingDate
+            // 
+            this.DateEndLeasingDate.Location = new System.Drawing.Point(155, 292);
+            this.DateEndLeasingDate.Name = "DateEndLeasingDate";
+            this.DateEndLeasingDate.Size = new System.Drawing.Size(200, 20);
+            this.DateEndLeasingDate.TabIndex = 14;
             // 
             // VehicleLeasingUIAdd
             // 
@@ -402,10 +403,8 @@
         private System.Windows.Forms.Label lblAnnualInterestRate;
         private System.Windows.Forms.Label lblTotalLeasingAmount;
         private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.TextBox txtEndLeasingDate;
         private System.Windows.Forms.TextBox txtTotalLeasingAmount;
         private System.Windows.Forms.TextBox txtAnnualInterestRate;
-        private System.Windows.Forms.TextBox txtStartLeasingDate;
         private System.Windows.Forms.TextBox txtMonthlyPayment;
         private System.Windows.Forms.TextBox txtLeasingPeriod;
         private System.Windows.Forms.TextBox txtYear;
@@ -417,5 +416,7 @@
         private System.Windows.Forms.Label lblAccountHolder;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.DateTimePicker DateEndLeasingDate;
+        private System.Windows.Forms.DateTimePicker DateStartLeasingDate;
     }
 }
