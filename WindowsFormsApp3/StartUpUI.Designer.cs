@@ -56,6 +56,7 @@
             this.btnNewUser.TabIndex = 24;
             this.btnNewUser.Text = "New User";
             this.btnNewUser.UseVisualStyleBackColor = false;
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
             // 
             // StartUpUI
             // 

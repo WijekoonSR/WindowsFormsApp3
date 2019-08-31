@@ -411,6 +411,9 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewUserUI.resx">
+      <DependentUpon>NewUserUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUI.resx">
       <DependentUpon>PayrollUI.cs</DependentUpon>
     </EmbeddedResource>

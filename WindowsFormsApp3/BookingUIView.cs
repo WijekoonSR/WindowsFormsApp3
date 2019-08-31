@@ -34,5 +34,10 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void dgvBookingsView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
