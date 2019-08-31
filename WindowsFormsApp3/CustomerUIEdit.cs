@@ -42,5 +42,15 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void txtEmail2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -79,6 +79,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtContactNumber);
@@ -89,7 +90,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(139, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(583, 281);
+            this.groupBox1.Size = new System.Drawing.Size(335, 294);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project HeadOffice Details";
@@ -161,6 +162,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox2.Controls.Add(this.txtEmail2);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.txtContactNumber2);
@@ -169,24 +171,26 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txtName1);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Location = new System.Drawing.Point(139, 424);
+            this.groupBox2.Location = new System.Drawing.Point(515, 97);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(583, 191);
+            this.groupBox2.Size = new System.Drawing.Size(335, 294);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Project Details";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtEmail2
             // 
-            this.txtEmail2.Location = new System.Drawing.Point(413, 127);
+            this.txtEmail2.Location = new System.Drawing.Point(179, 165);
             this.txtEmail2.Name = "txtEmail2";
             this.txtEmail2.Size = new System.Drawing.Size(100, 20);
             this.txtEmail2.TabIndex = 29;
+            this.txtEmail2.TextChanged += new System.EventHandler(this.txtEmail2_TextChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(344, 127);
+            this.label17.Location = new System.Drawing.Point(73, 165);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(32, 13);
             this.label17.TabIndex = 28;
@@ -242,9 +246,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnSave.BackColor = System.Drawing.Color.Navy;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(580, 645);
+            this.btnSave.Location = new System.Drawing.Point(591, 424);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 37);
             this.btnSave.TabIndex = 15;
@@ -254,9 +258,9 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnClear.BackColor = System.Drawing.Color.Navy;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(671, 645);
+            this.btnClear.Location = new System.Drawing.Point(682, 424);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(86, 37);
             this.btnClear.TabIndex = 14;
@@ -265,9 +269,9 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnPrint.BackColor = System.Drawing.Color.Navy;
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(764, 643);
+            this.btnPrint.Location = new System.Drawing.Point(775, 422);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(86, 37);
             this.btnPrint.TabIndex = 13;
@@ -287,11 +291,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnSearch.BackColor = System.Drawing.Color.Navy;
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(363, 25);
+            this.btnSearch.Location = new System.Drawing.Point(363, 16);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 26);
+            this.btnSearch.Size = new System.Drawing.Size(75, 35);
             this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -346,7 +350,7 @@
             this.Controls.Add(this.txtcutomerID);
             this.Controls.Add(this.label1);
             this.Name = "CustomerUIEdit";
-            this.Size = new System.Drawing.Size(896, 696);
+            this.Size = new System.Drawing.Size(922, 484);
             this.Load += new System.EventHandler(this.CustomerUIEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
