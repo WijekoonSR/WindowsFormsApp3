@@ -36,11 +36,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblQuantityNew = new System.Windows.Forms.Label();
             this.btnAttach = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateIssued = new System.Windows.Forms.DateTimePicker();
             this.lblIssuedDate = new System.Windows.Forms.Label();
             this.txtInvoiceNumber = new System.Windows.Forms.TextBox();
             this.lblInvoiceNumber = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtShopName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -52,7 +51,7 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateNew = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblSpareParts = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -66,9 +65,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picBoxAttachNew = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachNew)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -121,12 +121,12 @@
             this.btnAttach.Text = "Attach";
             this.btnAttach.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dateIssued
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(282, 490);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(282, 29);
-            this.dateTimePicker1.TabIndex = 32;
+            this.dateIssued.Location = new System.Drawing.Point(282, 490);
+            this.dateIssued.Name = "dateIssued";
+            this.dateIssued.Size = new System.Drawing.Size(282, 29);
+            this.dateIssued.TabIndex = 32;
             // 
             // lblIssuedDate
             // 
@@ -152,14 +152,6 @@
             this.lblInvoiceNumber.Size = new System.Drawing.Size(136, 23);
             this.lblInvoiceNumber.TabIndex = 29;
             this.lblInvoiceNumber.Text = "Invoice Number";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(282, 278);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(326, 143);
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
             // 
             // txtShopName
             // 
@@ -246,13 +238,14 @@
             this.btnSave.TabIndex = 42;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dateTimePicker2
+            // dateNew
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(281, 149);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(282, 29);
-            this.dateTimePicker2.TabIndex = 22;
+            this.dateNew.Location = new System.Drawing.Point(281, 149);
+            this.dateNew.Name = "dateNew";
+            this.dateNew.Size = new System.Drawing.Size(282, 29);
+            this.dateNew.TabIndex = 22;
             // 
             // comboBox1
             // 
@@ -352,18 +345,18 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.picBoxAttachNew);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.lblQuantityNew);
             this.groupBox1.Controls.Add(this.btnAttach);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateIssued);
             this.groupBox1.Controls.Add(this.lblIssuedDate);
             this.groupBox1.Controls.Add(this.txtInvoiceNumber);
             this.groupBox1.Controls.Add(this.lblInvoiceNumber);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.lblAttachments);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.lblPrice);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dateNew);
             this.groupBox1.Controls.Add(this.lblDate);
             this.groupBox1.Controls.Add(this.txtSpareParts);
             this.groupBox1.Controls.Add(this.lblSpareParts);
@@ -392,6 +385,16 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Assets maintanance ID";
             // 
+            // picBoxAttachNew
+            // 
+            this.picBoxAttachNew.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBoxAttachNew.Location = new System.Drawing.Point(282, 278);
+            this.picBoxAttachNew.Name = "picBoxAttachNew";
+            this.picBoxAttachNew.Size = new System.Drawing.Size(283, 134);
+            this.picBoxAttachNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxAttachNew.TabIndex = 36;
+            this.picBoxAttachNew.TabStop = false;
+            // 
             // AssetsUINew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,11 +408,11 @@
             this.Controls.Add(this.label1);
             this.Name = "AssetsUINew";
             this.Size = new System.Drawing.Size(1431, 736);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachNew)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,11 +426,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblQuantityNew;
         private System.Windows.Forms.Button btnAttach;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateIssued;
         private System.Windows.Forms.Label lblIssuedDate;
         private System.Windows.Forms.TextBox txtInvoiceNumber;
         private System.Windows.Forms.Label lblInvoiceNumber;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtShopName;
         private System.Windows.Forms.Label label11;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -439,7 +441,7 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateNew;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblSpareParts;
         private System.Windows.Forms.TextBox textBox6;
@@ -453,5 +455,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picBoxAttachNew;
     }
 }

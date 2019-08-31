@@ -73,7 +73,6 @@
             this.lblIssuedDate = new System.Windows.Forms.Label();
             this.txtInvoiceNumberEdit = new System.Windows.Forms.TextBox();
             this.lblInvoiceEdit = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAttachmentsEdit = new System.Windows.Forms.Label();
             this.txtPriceEdit = new System.Windows.Forms.TextBox();
             this.lblPriceEdit = new System.Windows.Forms.Label();
@@ -83,9 +82,10 @@
             this.lblSpareEdit = new System.Windows.Forms.Label();
             this.lblAssetsMaintanceEdit = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.picBoxAttachEdit = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSaveEdit
@@ -376,6 +376,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.groupBox1.Controls.Add(this.picBoxAttachEdit);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.lblQuantityNew);
             this.groupBox1.Controls.Add(this.btnEdit);
@@ -383,7 +384,6 @@
             this.groupBox1.Controls.Add(this.lblIssuedDate);
             this.groupBox1.Controls.Add(this.txtInvoiceNumberEdit);
             this.groupBox1.Controls.Add(this.lblInvoiceEdit);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.lblAttachmentsEdit);
             this.groupBox1.Controls.Add(this.txtPriceEdit);
             this.groupBox1.Controls.Add(this.lblPriceEdit);
@@ -430,14 +430,6 @@
             this.lblInvoiceEdit.Size = new System.Drawing.Size(147, 22);
             this.lblInvoiceEdit.TabIndex = 29;
             this.lblInvoiceEdit.Text = "Invoice Number";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(282, 327);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(306, 144);
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
             // 
             // lblAttachmentsEdit
             // 
@@ -507,6 +499,14 @@
             this.lblAssetsMaintanceEdit.TabIndex = 47;
             this.lblAssetsMaintanceEdit.Text = "Assets maintanance ID";
             // 
+            // picBoxAttachEdit
+            // 
+            this.picBoxAttachEdit.Location = new System.Drawing.Point(282, 327);
+            this.picBoxAttachEdit.Name = "picBoxAttachEdit";
+            this.picBoxAttachEdit.Size = new System.Drawing.Size(306, 136);
+            this.picBoxAttachEdit.TabIndex = 37;
+            this.picBoxAttachEdit.TabStop = false;
+            // 
             // AssetsUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -524,7 +524,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,7 +575,6 @@
         private System.Windows.Forms.Label lblIssuedDate;
         private System.Windows.Forms.TextBox txtInvoiceNumberEdit;
         private System.Windows.Forms.Label lblInvoiceEdit;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblAttachmentsEdit;
         private System.Windows.Forms.TextBox txtPriceEdit;
         private System.Windows.Forms.Label lblPriceEdit;
@@ -585,5 +584,6 @@
         private System.Windows.Forms.Label lblSpareEdit;
         private System.Windows.Forms.Label lblAssetsMaintanceEdit;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox picBoxAttachEdit;
     }
 }
