@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
     public partial class BookingUINew : UserControl
     {
 
-        private SqlCommand sqlCommand;
+        private SqlCommand sqlCommand, sqlComTem;
 
         public static String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
          //get sring db connection
@@ -189,7 +189,9 @@ namespace WindowsFormsApp3
             //prompt BookingUINewCheckVehicles UI
             BookingUINewCheckVehicles bookingUINewCheckVehicles = new BookingUINewCheckVehicles();
             bookingUINewCheckVehicles.Show();
-
+            string queryTemp = "exec procAvailableVehicles '"+startDate+"','"+endDate+"'";
+            sqlComTem = new SqlCommand(queryTemp, sqlConnection);
+            sqlComTem.ExecuteNonQuery();
             string query = "SELECT * FROM ##tblAvailableVehicles";
             sqlCommand = new SqlCommand(query,sqlConnection);
             SqlDataReader reader = sqlCommand.ExecuteReader();
