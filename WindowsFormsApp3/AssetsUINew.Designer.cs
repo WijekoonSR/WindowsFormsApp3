@@ -33,7 +33,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtContactNo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.lblQuantityNew = new System.Windows.Forms.Label();
             this.btnAttach = new System.Windows.Forms.Button();
             this.dateIssued = new System.Windows.Forms.DateTimePicker();
@@ -52,20 +52,20 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.dateNew = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblSpareParts = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtOwnerContactNo = new System.Windows.Forms.Label();
-            this.txtOwnerName = new System.Windows.Forms.Label();
+            this.txtOwnContactNew = new System.Windows.Forms.TextBox();
+            this.txtOwnerName = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblOwnerContactNo = new System.Windows.Forms.Label();
+            this.lblOwnerName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtEmail = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picBoxAttachNew = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.picBoxAttachNew = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachNew)).BeginInit();
@@ -96,12 +96,12 @@
             this.label12.TabIndex = 34;
             this.label12.Text = "Address";
             // 
-            // textBox1
+            // txtQuantity
             // 
-            this.textBox1.Location = new System.Drawing.Point(282, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 29);
-            this.textBox1.TabIndex = 35;
+            this.txtQuantity.Location = new System.Drawing.Point(282, 90);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(283, 29);
+            this.txtQuantity.TabIndex = 35;
             // 
             // lblQuantityNew
             // 
@@ -227,6 +227,7 @@
             this.btnClear.TabIndex = 43;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -247,15 +248,6 @@
             this.dateNew.Size = new System.Drawing.Size(282, 29);
             this.dateNew.TabIndex = 22;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Indigo;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(348, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(326, 24);
-            this.comboBox1.TabIndex = 44;
-            // 
             // lblSpareParts
             // 
             this.lblSpareParts.AutoSize = true;
@@ -265,54 +257,54 @@
             this.lblSpareParts.TabIndex = 20;
             this.lblSpareParts.Text = "Puchased spare parts";
             // 
-            // textBox6
+            // txtOwnContactNew
             // 
-            this.textBox6.Location = new System.Drawing.Point(242, 344);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(209, 29);
-            this.textBox6.TabIndex = 43;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(242, 278);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(209, 29);
-            this.textBox5.TabIndex = 42;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(242, 217);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(209, 29);
-            this.textBox4.TabIndex = 41;
-            // 
-            // txtOwnerContactNo
-            // 
-            this.txtOwnerContactNo.AutoSize = true;
-            this.txtOwnerContactNo.Location = new System.Drawing.Point(22, 350);
-            this.txtOwnerContactNo.Name = "txtOwnerContactNo";
-            this.txtOwnerContactNo.Size = new System.Drawing.Size(196, 23);
-            this.txtOwnerContactNo.TabIndex = 40;
-            this.txtOwnerContactNo.Text = "Owner contact Number";
+            this.txtOwnContactNew.Location = new System.Drawing.Point(242, 344);
+            this.txtOwnContactNew.Name = "txtOwnContactNew";
+            this.txtOwnContactNew.Size = new System.Drawing.Size(209, 29);
+            this.txtOwnContactNew.TabIndex = 43;
             // 
             // txtOwnerName
             // 
-            this.txtOwnerName.AutoSize = true;
-            this.txtOwnerName.Location = new System.Drawing.Point(22, 284);
+            this.txtOwnerName.Location = new System.Drawing.Point(242, 278);
             this.txtOwnerName.Name = "txtOwnerName";
-            this.txtOwnerName.Size = new System.Drawing.Size(112, 23);
-            this.txtOwnerName.TabIndex = 39;
-            this.txtOwnerName.Text = "Owner name";
+            this.txtOwnerName.Size = new System.Drawing.Size(209, 29);
+            this.txtOwnerName.TabIndex = 42;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(242, 217);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(209, 29);
+            this.txtEmail.TabIndex = 41;
+            // 
+            // lblOwnerContactNo
+            // 
+            this.lblOwnerContactNo.AutoSize = true;
+            this.lblOwnerContactNo.Location = new System.Drawing.Point(22, 350);
+            this.lblOwnerContactNo.Name = "lblOwnerContactNo";
+            this.lblOwnerContactNo.Size = new System.Drawing.Size(196, 23);
+            this.lblOwnerContactNo.TabIndex = 40;
+            this.lblOwnerContactNo.Text = "Owner contact Number";
+            // 
+            // lblOwnerName
+            // 
+            this.lblOwnerName.AutoSize = true;
+            this.lblOwnerName.Location = new System.Drawing.Point(22, 284);
+            this.lblOwnerName.Name = "lblOwnerName";
+            this.lblOwnerName.Size = new System.Drawing.Size(112, 23);
+            this.lblOwnerName.TabIndex = 39;
+            this.lblOwnerName.Text = "Owner name";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.txtOwnerContactNo);
+            this.groupBox2.Controls.Add(this.txtOwnContactNew);
             this.groupBox2.Controls.Add(this.txtOwnerName);
             this.groupBox2.Controls.Add(this.txtEmail);
+            this.groupBox2.Controls.Add(this.lblOwnerContactNo);
+            this.groupBox2.Controls.Add(this.lblOwnerName);
+            this.groupBox2.Controls.Add(this.lblEmail);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.txtAddress);
             this.groupBox2.Controls.Add(this.txtContactNo);
@@ -327,14 +319,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Purchased shop Details";
             // 
-            // txtEmail
+            // lblEmail
             // 
-            this.txtEmail.AutoSize = true;
-            this.txtEmail.Location = new System.Drawing.Point(22, 223);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(53, 23);
-            this.txtEmail.TabIndex = 38;
-            this.txtEmail.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(22, 223);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(53, 23);
+            this.lblEmail.TabIndex = 38;
+            this.lblEmail.Text = "Email";
             // 
             // directorySearcher1
             // 
@@ -346,7 +338,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox1.Controls.Add(this.picBoxAttachNew);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtQuantity);
             this.groupBox1.Controls.Add(this.lblQuantityNew);
             this.groupBox1.Controls.Add(this.btnAttach);
             this.groupBox1.Controls.Add(this.dateIssued);
@@ -368,6 +360,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spare Parts Details";
             // 
+            // picBoxAttachNew
+            // 
+            this.picBoxAttachNew.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBoxAttachNew.Location = new System.Drawing.Point(282, 278);
+            this.picBoxAttachNew.Name = "picBoxAttachNew";
+            this.picBoxAttachNew.Size = new System.Drawing.Size(283, 134);
+            this.picBoxAttachNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxAttachNew.TabIndex = 36;
+            this.picBoxAttachNew.TabStop = false;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -385,24 +387,23 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Assets maintanance ID";
             // 
-            // picBoxAttachNew
+            // textBox1
             // 
-            this.picBoxAttachNew.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxAttachNew.Location = new System.Drawing.Point(282, 278);
-            this.picBoxAttachNew.Name = "picBoxAttachNew";
-            this.picBoxAttachNew.Size = new System.Drawing.Size(283, 134);
-            this.picBoxAttachNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxAttachNew.TabIndex = 36;
-            this.picBoxAttachNew.TabStop = false;
+            this.textBox1.Location = new System.Drawing.Point(386, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(282, 22);
+            this.textBox1.TabIndex = 37;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // AssetsUINew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -423,7 +424,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label lblQuantityNew;
         private System.Windows.Forms.Button btnAttach;
         private System.Windows.Forms.DateTimePicker dateIssued;
@@ -442,19 +443,19 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DateTimePicker dateNew;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblSpareParts;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label txtOwnerContactNo;
-        private System.Windows.Forms.Label txtOwnerName;
+        private System.Windows.Forms.TextBox txtOwnContactNew;
+        private System.Windows.Forms.TextBox txtOwnerName;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblOwnerContactNo;
+        private System.Windows.Forms.Label lblOwnerName;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label txtEmail;
+        private System.Windows.Forms.Label lblEmail;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBoxAttachNew;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

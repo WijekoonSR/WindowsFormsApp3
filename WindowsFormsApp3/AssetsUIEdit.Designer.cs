@@ -54,7 +54,6 @@
             this.directorySearcher16 = new System.DirectoryServices.DirectorySearcher();
             this.directorySearcher17 = new System.DirectoryServices.DirectorySearcher();
             this.btnClearEdit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -69,6 +68,7 @@
             this.txtShopNameEdit = new System.Windows.Forms.TextBox();
             this.lblShopNameEdit = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picBoxAttachEdit = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblIssuedDate = new System.Windows.Forms.Label();
             this.txtInvoiceNumberEdit = new System.Windows.Forms.TextBox();
@@ -82,10 +82,14 @@
             this.lblSpareEdit = new System.Windows.Forms.Label();
             this.lblAssetsMaintanceEdit = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.picBoxAttachEdit = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.picSearch = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSaveEdit
@@ -99,6 +103,7 @@
             this.btnSaveEdit.TabIndex = 51;
             this.btnSaveEdit.Text = "Save";
             this.btnSaveEdit.UseVisualStyleBackColor = false;
+            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
             // 
             // textBox2
             // 
@@ -247,13 +252,6 @@
             this.btnClearEdit.Text = "Clear";
             this.btnClearEdit.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(443, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 22);
-            this.textBox1.TabIndex = 50;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DarkGray;
@@ -399,6 +397,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spare Parts Details";
             // 
+            // picBoxAttachEdit
+            // 
+            this.picBoxAttachEdit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBoxAttachEdit.Location = new System.Drawing.Point(282, 317);
+            this.picBoxAttachEdit.Name = "picBoxAttachEdit";
+            this.picBoxAttachEdit.Size = new System.Drawing.Size(306, 147);
+            this.picBoxAttachEdit.TabIndex = 37;
+            this.picBoxAttachEdit.TabStop = false;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(282, 554);
@@ -499,32 +506,61 @@
             this.lblAssetsMaintanceEdit.TabIndex = 47;
             this.lblAssetsMaintanceEdit.Text = "Assets maintanance ID";
             // 
-            // picBoxAttachEdit
+            // panel1
             // 
-            this.picBoxAttachEdit.Location = new System.Drawing.Point(282, 327);
-            this.picBoxAttachEdit.Name = "picBoxAttachEdit";
-            this.picBoxAttachEdit.Size = new System.Drawing.Size(306, 136);
-            this.picBoxAttachEdit.TabIndex = 37;
-            this.picBoxAttachEdit.TabStop = false;
+            this.panel1.Controls.Add(this.txtCustomerID);
+            this.panel1.Controls.Add(this.picSearch);
+            this.panel1.Location = new System.Drawing.Point(474, 33);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(324, 25);
+            this.panel1.TabIndex = 53;
+            // 
+            // txtCustomerID
+            // 
+            this.txtCustomerID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtCustomerID.Location = new System.Drawing.Point(0, 0);
+            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomerID.MaxLength = 223;
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.Size = new System.Drawing.Size(296, 22);
+            this.txtCustomerID.TabIndex = 33;
+            // 
+            // picSearch
+            // 
+            this.picSearch.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.picSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picSearch.Image = ((System.Drawing.Image)(resources.GetObject("picSearch.Image")));
+            this.picSearch.Location = new System.Drawing.Point(297, 0);
+            this.picSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(27, 25);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearch.TabIndex = 36;
+            this.picSearch.TabStop = false;
             // 
             // AssetsUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSaveEdit);
             this.Controls.Add(this.btnClearEdit);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblAssetsMaintanceEdit);
             this.Name = "AssetsUIEdit";
             this.Size = new System.Drawing.Size(1431, 736);
+            this.Load += new System.EventHandler(this.AssetsUIEdit_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,7 +592,6 @@
         private System.DirectoryServices.DirectorySearcher directorySearcher16;
         private System.DirectoryServices.DirectorySearcher directorySearcher17;
         private System.Windows.Forms.Button btnClearEdit;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
@@ -585,5 +620,8 @@
         private System.Windows.Forms.Label lblAssetsMaintanceEdit;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox picBoxAttachEdit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.PictureBox picSearch;
     }
 }
