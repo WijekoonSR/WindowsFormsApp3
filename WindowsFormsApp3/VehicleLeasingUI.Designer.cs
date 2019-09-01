@@ -37,7 +37,12 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.vehicleLeasingUIView1 = new WindowsFormsApp3.VehicleLeasingUIView();
+            this.vehicleLeasingUIEdit1 = new WindowsFormsApp3.VehicleLeasingUIEdit();
+            this.vehicleLeasingUIAdd1 = new WindowsFormsApp3.VehicleLeasingUIAdd();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnView
@@ -66,6 +71,7 @@
             this.btnView.TabIndex = 12;
             this.btnView.Textcolor = System.Drawing.Color.Black;
             this.btnView.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnEdit
             // 
@@ -93,6 +99,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Textcolor = System.Drawing.Color.Black;
             this.btnEdit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnNew
             // 
@@ -120,6 +127,7 @@
             this.btnNew.TabIndex = 5;
             this.btnNew.Textcolor = System.Drawing.Color.Black;
             this.btnNew.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // panel1
             // 
@@ -173,15 +181,52 @@
             this.panel4.Size = new System.Drawing.Size(1, 63);
             this.panel4.TabIndex = 4;
             // 
-            // BankLoanUI
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.vehicleLeasingUIAdd1);
+            this.panel2.Controls.Add(this.vehicleLeasingUIEdit1);
+            this.panel2.Controls.Add(this.vehicleLeasingUIView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1069, 585);
+            this.panel2.TabIndex = 2;
+            // 
+            // vehicleLeasingUIView1
+            // 
+            this.vehicleLeasingUIView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vehicleLeasingUIView1.Location = new System.Drawing.Point(0, 0);
+            this.vehicleLeasingUIView1.Name = "vehicleLeasingUIView1";
+            this.vehicleLeasingUIView1.Size = new System.Drawing.Size(1069, 585);
+            this.vehicleLeasingUIView1.TabIndex = 0;
+            // 
+            // vehicleLeasingUIEdit1
+            // 
+            this.vehicleLeasingUIEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vehicleLeasingUIEdit1.Location = new System.Drawing.Point(0, 0);
+            this.vehicleLeasingUIEdit1.Name = "vehicleLeasingUIEdit1";
+            this.vehicleLeasingUIEdit1.Size = new System.Drawing.Size(1069, 585);
+            this.vehicleLeasingUIEdit1.TabIndex = 1;
+            // 
+            // vehicleLeasingUIAdd1
+            // 
+            this.vehicleLeasingUIAdd1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vehicleLeasingUIAdd1.Location = new System.Drawing.Point(0, 0);
+            this.vehicleLeasingUIAdd1.Name = "vehicleLeasingUIAdd1";
+            this.vehicleLeasingUIAdd1.Size = new System.Drawing.Size(1069, 585);
+            this.vehicleLeasingUIAdd1.TabIndex = 2;
+            // 
+            // VehicleLeasingUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "BankLoanUI";
+            this.Name = "VehicleLeasingUI";
             this.Size = new System.Drawing.Size(1069, 648);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -196,5 +241,9 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelUpper;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel2;
+        private VehicleLeasingUIAdd vehicleLeasingUIAdd1;
+        private VehicleLeasingUIEdit vehicleLeasingUIEdit1;
+        private VehicleLeasingUIView vehicleLeasingUIView1;
     }
 }
