@@ -37,10 +37,8 @@
             this.lblAccountHolder = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtEndLeasingDate = new System.Windows.Forms.TextBox();
             this.txtTotalLeasingAmount = new System.Windows.Forms.TextBox();
             this.txtAnnualInterestRate = new System.Windows.Forms.TextBox();
-            this.txtStartLeasingDate = new System.Windows.Forms.TextBox();
             this.txtMonthlyPayment = new System.Windows.Forms.TextBox();
             this.txtLeasingPeriod = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
@@ -59,7 +57,9 @@
             this.txtBank = new System.Windows.Forms.TextBox();
             this.lblBank = new System.Windows.Forms.Label();
             this.txtVehicleID = new System.Windows.Forms.TextBox();
-            this.lblVehicleID = new System.Windows.Forms.Label();
+            this.lblVehicleLID = new System.Windows.Forms.Label();
+            this.DateEndLeasingDate = new System.Windows.Forms.DateTimePicker();
+            this.DateStartLeasingDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -145,10 +145,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtEndLeasingDate);
+            this.groupBox2.Controls.Add(this.DateEndLeasingDate);
+            this.groupBox2.Controls.Add(this.DateStartLeasingDate);
             this.groupBox2.Controls.Add(this.txtTotalLeasingAmount);
             this.groupBox2.Controls.Add(this.txtAnnualInterestRate);
-            this.groupBox2.Controls.Add(this.txtStartLeasingDate);
             this.groupBox2.Controls.Add(this.txtMonthlyPayment);
             this.groupBox2.Controls.Add(this.txtLeasingPeriod);
             this.groupBox2.Controls.Add(this.txtYear);
@@ -166,13 +166,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Leasing Details";
             // 
-            // txtEndLeasingDate
-            // 
-            this.txtEndLeasingDate.Location = new System.Drawing.Point(155, 300);
-            this.txtEndLeasingDate.Name = "txtEndLeasingDate";
-            this.txtEndLeasingDate.Size = new System.Drawing.Size(100, 20);
-            this.txtEndLeasingDate.TabIndex = 13;
-            // 
             // txtTotalLeasingAmount
             // 
             this.txtTotalLeasingAmount.Location = new System.Drawing.Point(155, 81);
@@ -186,13 +179,6 @@
             this.txtAnnualInterestRate.Name = "txtAnnualInterestRate";
             this.txtAnnualInterestRate.Size = new System.Drawing.Size(100, 20);
             this.txtAnnualInterestRate.TabIndex = 11;
-            // 
-            // txtStartLeasingDate
-            // 
-            this.txtStartLeasingDate.Location = new System.Drawing.Point(155, 258);
-            this.txtStartLeasingDate.Name = "txtStartLeasingDate";
-            this.txtStartLeasingDate.Size = new System.Drawing.Size(100, 20);
-            this.txtStartLeasingDate.TabIndex = 10;
             // 
             // txtMonthlyPayment
             // 
@@ -348,14 +334,29 @@
             this.txtVehicleID.Size = new System.Drawing.Size(100, 20);
             this.txtVehicleID.TabIndex = 9;
             // 
-            // lblVehicleID
+            // lblVehicleLID
             // 
-            this.lblVehicleID.AutoSize = true;
-            this.lblVehicleID.Location = new System.Drawing.Point(103, 57);
-            this.lblVehicleID.Name = "lblVehicleID";
-            this.lblVehicleID.Size = new System.Drawing.Size(59, 13);
-            this.lblVehicleID.TabIndex = 8;
-            this.lblVehicleID.Text = "Vehicle ID ";
+            this.lblVehicleLID.AutoSize = true;
+            this.lblVehicleLID.Location = new System.Drawing.Point(103, 57);
+            this.lblVehicleLID.Name = "lblVehicleLID";
+            this.lblVehicleLID.Size = new System.Drawing.Size(99, 13);
+            this.lblVehicleLID.TabIndex = 8;
+            this.lblVehicleLID.Text = "Vehicle Leasing ID ";
+            // 
+            // DateEndLeasingDate
+            // 
+            this.DateEndLeasingDate.Location = new System.Drawing.Point(155, 294);
+            this.DateEndLeasingDate.Name = "DateEndLeasingDate";
+            this.DateEndLeasingDate.Size = new System.Drawing.Size(200, 20);
+            this.DateEndLeasingDate.TabIndex = 16;
+            // 
+            // DateStartLeasingDate
+            // 
+            this.DateStartLeasingDate.Location = new System.Drawing.Point(155, 252);
+            this.DateStartLeasingDate.Name = "DateStartLeasingDate";
+            this.DateStartLeasingDate.Size = new System.Drawing.Size(200, 20);
+            this.DateStartLeasingDate.TabIndex = 15;
+            this.DateStartLeasingDate.ValueChanged += new System.EventHandler(this.DateStartLeasingDate_ValueChanged);
             // 
             // VehicleLeasingUIEdit
             // 
@@ -368,7 +369,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtVehicleID);
-            this.Controls.Add(this.lblVehicleID);
+            this.Controls.Add(this.lblVehicleLID);
             this.Name = "VehicleLeasingUIEdit";
             this.Size = new System.Drawing.Size(1069, 582);
             this.groupBox3.ResumeLayout(false);
@@ -393,10 +394,8 @@
         private System.Windows.Forms.Label lblAccountHolder;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtEndLeasingDate;
         private System.Windows.Forms.TextBox txtTotalLeasingAmount;
         private System.Windows.Forms.TextBox txtAnnualInterestRate;
-        private System.Windows.Forms.TextBox txtStartLeasingDate;
         private System.Windows.Forms.TextBox txtMonthlyPayment;
         private System.Windows.Forms.TextBox txtLeasingPeriod;
         private System.Windows.Forms.TextBox txtYear;
@@ -415,6 +414,8 @@
         private System.Windows.Forms.TextBox txtBank;
         private System.Windows.Forms.Label lblBank;
         private System.Windows.Forms.TextBox txtVehicleID;
-        private System.Windows.Forms.Label lblVehicleID;
+        private System.Windows.Forms.Label lblVehicleLID;
+        private System.Windows.Forms.DateTimePicker DateEndLeasingDate;
+        private System.Windows.Forms.DateTimePicker DateStartLeasingDate;
     }
 }

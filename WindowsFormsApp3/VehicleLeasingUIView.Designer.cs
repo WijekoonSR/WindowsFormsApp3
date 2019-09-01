@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.dgvVehicleLeasing = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicleLeasing)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvVehicleLeasing
+            // 
+            this.dgvVehicleLeasing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVehicleLeasing.Location = new System.Drawing.Point(173, 120);
+            this.dgvVehicleLeasing.Name = "dgvVehicleLeasing";
+            this.dgvVehicleLeasing.Size = new System.Drawing.Size(635, 395);
+            this.dgvVehicleLeasing.TabIndex = 0;
+            // 
+            // VehicleLeasingUIView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvVehicleLeasing);
+            this.Name = "VehicleLeasingUIView";
+            this.Size = new System.Drawing.Size(1069, 582);
+            this.Load += new System.EventHandler(this.VehicleLeasingUIView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicleLeasing)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvVehicleLeasing;
     }
 }

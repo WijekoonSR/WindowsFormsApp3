@@ -26,5 +26,20 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            vehicleLeasingUIAdd1.BringToFront();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            vehicleLeasingUIEdit1.BringToFront();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            vehicleLeasingUIView1.BringToFront();
+        }
     }
 }
