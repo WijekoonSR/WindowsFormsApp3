@@ -18,7 +18,8 @@ namespace WindowsFormsApp3
         SqlConnection con = new SqlConnection(name);
 
 
-        String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, HiringRate, DateOfCom, VehicleType;
+        String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, DateOfCom, VehicleType;
+        int HiringRate;
         public VehicleUINew()
         {
             InitializeComponent();
@@ -37,7 +38,6 @@ namespace WindowsFormsApp3
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtChassisNo.Clear();
-            txtDateOfCom.Clear();
             txtEngineType.Clear();
             txtFuelType.Clear();
             txtHiringRate.Clear();
@@ -48,7 +48,25 @@ namespace WindowsFormsApp3
             txtVehicleCapacity.Clear();
             txtVehicleClass.Clear();
             txtYearOfManufacture.Clear();
+            dateOfCommencement.Value = DateTime.Now;
+            DateRegistration.Value = DateTime.Now;
+            dropdownVehicleType.Text = null;
 
+
+        }
+
+        private void txtModel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dropdownVehicleType_onItemSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateOfCommencement_ValueChanged(object sender, EventArgs e)
+        {
 
         }
 
@@ -127,13 +145,15 @@ namespace WindowsFormsApp3
                 MachineCategory = txtMachineCat.Text.ToString();
                 RegDate = DateRegistration.Value.ToString("yyyy/MM/dd");
                 RegNo = txtRegistrationNo.Text.ToString();
+                YearOfManufac = txtYearOfManufacture.Text.ToString();
                 ChassisNo = txtChassisNo.Text.ToString();
-                HiringRate = txtHiringRate.Text.ToString();
-                DateOfCom = txtDateOfCom.Text.ToString();
+                HiringRate = int.Parse(txtHiringRate.Text.ToString());
+                DateOfCom = dateOfCommencement.Value.ToString("yyyy/MM/dd");
 
 
 
-                string query = "insert into Vehicles(VehicleType,Model,VehicleCapacity,VehicleClass,EngineType,FuelType,Status,MachineCategory,RegistrationDate,RegistrationNo,ChassisNo,YearOfManufacture,HiringRate,DateOfCommencemnet) values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','" + DateOfCom + "','" + RegDate + "','" + RegNo + "','" + ChassisNo + "','" + HiringRate + "','" + YearOfManufac + "')";
+                string query = "insert into Vehicles(VehicleType,Model,VehicleCapacity,VehicleClass,EngineType,FuelType,Status,MachineCategory,RegistrationDate,RegistrationNo,ChassisNo,YearOfManufacture,HiringRate,DateOfCommencemnet)" +
+                    " values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "','"+ VehicleClass + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','"+MachineCategory+"','" + RegDate + "','"+RegNo+"','" + ChassisNo + "','" + YearOfManufac + "','" + HiringRate + "','" + DateOfCom + "')";
                 SqlCommand sqlCommand = new SqlCommand(query, con);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
@@ -146,6 +166,13 @@ namespace WindowsFormsApp3
             {
                 con.Close();
             }
+
+
+
+
+
+
+
         }
     }
 }
