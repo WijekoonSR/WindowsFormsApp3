@@ -115,6 +115,12 @@
     <Compile Include="BookingUINewCheckVehicles.Designer.cs">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookingUIViewPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingUIViewPrint.Designer.cs">
+      <DependentUpon>BookingUIViewPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingUINewCheckVehicles.resx">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingUIViewPrint.resx">
+      <DependentUpon>BookingUIViewPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>

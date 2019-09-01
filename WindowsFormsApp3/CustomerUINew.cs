@@ -20,9 +20,23 @@ namespace WindowsFormsApp3
         string  ContractStartDate, ContractEndDate, name, address, email, ProjectManagerName, ProjectAddress, ProjectEmail, EndDate,StartDate;
         int ContactNumber, FaxNumber, ProjectContactNumber;
         SqlCommand command;
+        String newCustomerID;
+
         public CustomerUINew()
         {
             InitializeComponent();
+            using (sqlConnection = new SqlConnection(nameServer)) {
+                sqlConnection.Open(); String queryCurrentID = "select IDENT_CURRENT('Bookings') + 1";
+                SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
+                SqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    newCustomerID = dataReader[0].ToString();
+                }
+                txtcutomerID.Text = newCustomerID;
+                sqlConnection.Close();
+
+            }
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -50,6 +64,11 @@ namespace WindowsFormsApp3
         }
 
         private void txtEmail2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcutomerID_TextChanged(object sender, EventArgs e)
         {
 
         }

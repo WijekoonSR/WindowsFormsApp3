@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingUIView));
             this.databaseDataSet = new WindowsFormsApp3.DatabaseDataSet();
             this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookingsTableAdapter = new WindowsFormsApp3.DatabaseDataSetTableAdapters.BookingsTableAdapter();
@@ -44,6 +45,9 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnPrint = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookingsView)).BeginInit();
@@ -83,6 +87,7 @@
             // 
             this.bookingsBindingSource1.DataMember = "Bookings";
             this.bookingsBindingSource1.DataSource = this.databaseDataSet1;
+            this.bookingsBindingSource1.CurrentChanged += new System.EventHandler(this.bookingsBindingSource1_CurrentChanged);
             // 
             // bookingsTableAdapter1
             // 
@@ -161,10 +166,54 @@
             this.button1.Text = "Search By Date";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Activecolor = System.Drawing.Color.Blue;
+            this.btnPrint.BackColor = System.Drawing.Color.Blue;
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrint.BorderRadius = 1;
+            this.btnPrint.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnPrint.ButtonText = "Print";
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPrint.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPrint.Iconimage")));
+            this.btnPrint.Iconimage_right = null;
+            this.btnPrint.Iconimage_right_Selected = null;
+            this.btnPrint.Iconimage_Selected = null;
+            this.btnPrint.IconZoom = 70D;
+            this.btnPrint.IsTab = false;
+            this.btnPrint.Location = new System.Drawing.Point(931, 26);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Normalcolor = System.Drawing.Color.Blue;
+            this.btnPrint.OnHovercolor = System.Drawing.Color.Blue;
+            this.btnPrint.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnPrint.selected = false;
+            this.btnPrint.Size = new System.Drawing.Size(106, 47);
+            this.btnPrint.TabIndex = 9;
+            this.btnPrint.Textcolor = System.Drawing.Color.White;
+            this.btnPrint.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // BookingUIView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dateTimePicker2);
@@ -203,5 +252,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button button1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPrint;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
