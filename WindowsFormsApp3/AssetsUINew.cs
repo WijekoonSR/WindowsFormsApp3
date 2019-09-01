@@ -16,9 +16,28 @@ namespace WindowsFormsApp3
         public static String server = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
 
         SqlConnection sqlConnection = new SqlConnection(server);
-        String spareParts, date, issuedDate, shopName, address,  email, ownerName;
+        String spareParts, date, issuedDate, shopName, address, email, ownerName;
+        string assetsID;
+        public AssetsUINew()
+        {
+            InitializeComponent();
+            sqlConnection.Open();
+            GetCurrentID();
+            sqlConnection.Close();
 
+
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIssuedDate_Click(object sender, EventArgs e)
         {
 
         }
@@ -29,34 +48,20 @@ namespace WindowsFormsApp3
         {
             DialogResult dr = MessageBox.Show("Do you want to clear all fields ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            if (dr == DialogResult.OK) {
-                txtSpareParts.Clear();
-                txtQuantity.Clear();
-                txtPrice.Clear();
-                dateNew.Value = DateTime.Now;
-                txtInvoiceNumber.Clear();
-                dateIssued.Value = DateTime.Now;
-                txtShopName.Clear();
-                txtAddress.Clear();
-                txtContactNo.Clear();
-                txtEmail.Clear();
-                txtOwnerName.Clear();
-                txtOwnContactNew.Clear();
+            if (dr == DialogResult.OK)
+            {
 
+                ClearFields();
             }
         }
 
         SqlCommand sqlCommand;
 
-        public AssetsUINew()
-        {
-            InitializeComponent();
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             sqlConnection.Open();
-            
+
             spareParts = txtSpareParts.Text.ToString();
             quantity = int.Parse(txtQuantity.Text);
             price = float.Parse(txtPrice.Text);
@@ -72,12 +77,56 @@ namespace WindowsFormsApp3
 
 
             String query = "insert into Assets_Maintenance(PurchasedSpareParts,Quantity,PurchaseDate,Price,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)" +
-                " Values('"+spareParts+"','"+quantity+"','"+date+ "','" + price + "','" + invoiceNumber+"', '"+issuedDate+"','"+shopName+"','" + address +"','"+contactNumber+"','"+email+"','" +ownerName+"','"+OwnerContact+ "')";
-            
+                " Values('" + spareParts + "','" + quantity + "','" + date + "','" + price + "','" + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
+
 
             sqlCommand = new SqlCommand(query, sqlConnection);
-            sqlCommand.ExecuteNonQuery();
-            sqlConnection.Close();
+            int m = sqlCommand.ExecuteNonQuery();
+
+            if (m == 0) {
+                MessageBox.Show("Not Updated");
+            }
+            else {
+                DialogResult DR = MessageBox.Show("Successfully Entered");
+                ClearFields();
+                if (DR == DialogResult.OK)
+                {
+                    GetCurrentID();
+                }
+            }
+                sqlConnection.Close();
+            }
+        
+
+
+        public void ClearFields()
+        {
+            
+                txtSpareParts.Clear();
+                txtQuantity.Clear();
+                txtPrice.Clear();
+                dateNew.Value = DateTime.Now;
+                txtInvoiceNumber.Clear();
+                dateIssued.Value = DateTime.Now;
+                txtShopName.Clear();
+                txtAddress.Clear();
+                txtContactNo.Clear();
+                txtEmail.Clear();
+                txtOwnerName.Clear();
+                txtOwnContactNew.Clear();
+            
+        }
+
+        public void GetCurrentID() {
+            String queryCurrentID = "select IDENT_CURRENT('Assets_Maintenance') + 1";
+            SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
+            SqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                assetsID = dataReader[0].ToString();
+            }
+
+            txtAssetsID.Text = "AM" + assetsID;
         }
     }
 }

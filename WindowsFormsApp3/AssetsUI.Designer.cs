@@ -37,10 +37,12 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.assetsUIView1 = new WindowsFormsApp3.AssetsUIView();
             this.assetsUIEdit1 = new WindowsFormsApp3.AssetsUIEdit();
             this.assetsUINew1 = new WindowsFormsApp3.AssetsUINew();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnView
@@ -60,7 +62,7 @@
             this.btnView.IconZoom = 34D;
             this.btnView.IsTab = false;
             this.btnView.Location = new System.Drawing.Point(323, 0);
-            this.btnView.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnView.Margin = new System.Windows.Forms.Padding(5);
             this.btnView.Name = "btnView";
             this.btnView.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnView.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
@@ -89,7 +91,7 @@
             this.btnEdit.IconZoom = 34D;
             this.btnEdit.IsTab = false;
             this.btnEdit.Location = new System.Drawing.Point(162, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnEdit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
@@ -118,7 +120,7 @@
             this.btnNew.IconZoom = 34D;
             this.btnNew.IsTab = false;
             this.btnNew.Location = new System.Drawing.Point(1, 0);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(5);
             this.btnNew.Name = "btnNew";
             this.btnNew.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnNew.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
@@ -142,7 +144,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1425, 78);
             this.panel1.TabIndex = 1;
@@ -152,7 +154,7 @@
             this.panel7.BackColor = System.Drawing.Color.GhostWhite;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(483, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1, 78);
             this.panel7.TabIndex = 13;
@@ -162,7 +164,7 @@
             this.panel8.BackColor = System.Drawing.Color.GhostWhite;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(322, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1, 78);
             this.panel8.TabIndex = 11;
@@ -172,7 +174,7 @@
             this.panelUpper.BackColor = System.Drawing.Color.GhostWhite;
             this.panelUpper.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelUpper.Location = new System.Drawing.Point(161, 0);
-            this.panelUpper.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelUpper.Margin = new System.Windows.Forms.Padding(4);
             this.panelUpper.Name = "panelUpper";
             this.panelUpper.Size = new System.Drawing.Size(1, 78);
             this.panelUpper.TabIndex = 7;
@@ -182,52 +184,62 @@
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 78);
             this.panel4.TabIndex = 4;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.assetsUINew1);
+            this.panel2.Controls.Add(this.assetsUIEdit1);
+            this.panel2.Controls.Add(this.assetsUIView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 78);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1425, 720);
+            this.panel2.TabIndex = 2;
+            // 
             // assetsUIView1
             // 
             this.assetsUIView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.assetsUIView1.Location = new System.Drawing.Point(0, 78);
+            this.assetsUIView1.Location = new System.Drawing.Point(0, 0);
             this.assetsUIView1.Name = "assetsUIView1";
             this.assetsUIView1.Size = new System.Drawing.Size(1425, 720);
-            this.assetsUIView1.TabIndex = 2;
+            this.assetsUIView1.TabIndex = 0;
             // 
             // assetsUIEdit1
             // 
             this.assetsUIEdit1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("assetsUIEdit1.BackgroundImage")));
             this.assetsUIEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.assetsUIEdit1.Location = new System.Drawing.Point(0, 78);
+            this.assetsUIEdit1.Location = new System.Drawing.Point(0, 0);
             this.assetsUIEdit1.Name = "assetsUIEdit1";
             this.assetsUIEdit1.Size = new System.Drawing.Size(1425, 720);
-            this.assetsUIEdit1.TabIndex = 14;
+            this.assetsUIEdit1.TabIndex = 1;
             // 
             // assetsUINew1
             // 
             this.assetsUINew1.BackColor = System.Drawing.SystemColors.Control;
             this.assetsUINew1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("assetsUINew1.BackgroundImage")));
             this.assetsUINew1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.assetsUINew1.Location = new System.Drawing.Point(0, 78);
+            this.assetsUINew1.Location = new System.Drawing.Point(0, 0);
             this.assetsUINew1.Name = "assetsUINew1";
             this.assetsUINew1.Size = new System.Drawing.Size(1425, 720);
-            this.assetsUINew1.TabIndex = 14;
+            this.assetsUINew1.TabIndex = 2;
             // 
             // AssetsUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.Controls.Add(this.assetsUINew1);
-            this.Controls.Add(this.assetsUIEdit1);
-            this.Controls.Add(this.assetsUIView1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AssetsUI";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Size = new System.Drawing.Size(1425, 798);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -242,8 +254,9 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelUpper;
         private System.Windows.Forms.Panel panel4;
-        private AssetsUIView assetsUIView1;
-        private AssetsUIEdit assetsUIEdit1;
+        private System.Windows.Forms.Panel panel2;
         private AssetsUINew assetsUINew1;
+        private AssetsUIEdit assetsUIEdit1;
+        private AssetsUIView assetsUIView1;
     }
 }

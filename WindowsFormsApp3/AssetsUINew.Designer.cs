@@ -65,6 +65,8 @@
             this.picBoxAttachNew = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.txtAssetsID = new System.Windows.Forms.TextBox();
+            this.lblVehicleID = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -106,7 +108,7 @@
             // lblQuantityNew
             // 
             this.lblQuantityNew.AutoSize = true;
-            this.lblQuantityNew.Location = new System.Drawing.Point(103, 96);
+            this.lblQuantityNew.Location = new System.Drawing.Point(61, 96);
             this.lblQuantityNew.Name = "lblQuantityNew";
             this.lblQuantityNew.Size = new System.Drawing.Size(79, 23);
             this.lblQuantityNew.TabIndex = 34;
@@ -131,11 +133,12 @@
             // lblIssuedDate
             // 
             this.lblIssuedDate.AutoSize = true;
-            this.lblIssuedDate.Location = new System.Drawing.Point(103, 495);
+            this.lblIssuedDate.Location = new System.Drawing.Point(63, 495);
             this.lblIssuedDate.Name = "lblIssuedDate";
             this.lblIssuedDate.Size = new System.Drawing.Size(48, 23);
             this.lblIssuedDate.TabIndex = 31;
             this.lblIssuedDate.Text = "Date";
+            this.lblIssuedDate.Click += new System.EventHandler(this.lblIssuedDate_Click);
             // 
             // txtInvoiceNumber
             // 
@@ -147,7 +150,7 @@
             // lblInvoiceNumber
             // 
             this.lblInvoiceNumber.AutoSize = true;
-            this.lblInvoiceNumber.Location = new System.Drawing.Point(103, 448);
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(61, 446);
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
             this.lblInvoiceNumber.Size = new System.Drawing.Size(136, 23);
             this.lblInvoiceNumber.TabIndex = 29;
@@ -172,7 +175,7 @@
             // lblAttachments
             // 
             this.lblAttachments.AutoSize = true;
-            this.lblAttachments.Location = new System.Drawing.Point(103, 278);
+            this.lblAttachments.Location = new System.Drawing.Point(61, 258);
             this.lblAttachments.Name = "lblAttachments";
             this.lblAttachments.Size = new System.Drawing.Size(120, 23);
             this.lblAttachments.TabIndex = 27;
@@ -188,7 +191,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(105, 205);
+            this.lblPrice.Location = new System.Drawing.Point(61, 208);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(50, 23);
             this.lblPrice.TabIndex = 25;
@@ -197,11 +200,12 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(105, 151);
+            this.lblDate.Location = new System.Drawing.Point(61, 151);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(48, 23);
             this.lblDate.TabIndex = 21;
             this.lblDate.Text = "Date";
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // txtSpareParts
             // 
@@ -251,7 +255,7 @@
             // lblSpareParts
             // 
             this.lblSpareParts.AutoSize = true;
-            this.lblSpareParts.Location = new System.Drawing.Point(103, 47);
+            this.lblSpareParts.Location = new System.Drawing.Point(61, 47);
             this.lblSpareParts.Name = "lblSpareParts";
             this.lblSpareParts.Size = new System.Drawing.Size(178, 23);
             this.lblSpareParts.TabIndex = 20;
@@ -387,13 +391,32 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Assets maintanance ID";
             // 
+            // txtAssetsID
+            // 
+            this.txtAssetsID.Location = new System.Drawing.Point(386, 46);
+            this.txtAssetsID.Name = "txtAssetsID";
+            this.txtAssetsID.ReadOnly = true;
+            this.txtAssetsID.Size = new System.Drawing.Size(282, 22);
+            this.txtAssetsID.TabIndex = 37;
+            this.txtAssetsID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblVehicleID
+            // 
+            this.lblVehicleID.AutoSize = true;
+            this.lblVehicleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleID.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblVehicleID.Location = new System.Drawing.Point(846, 39);
+            this.lblVehicleID.Name = "lblVehicleID";
+            this.lblVehicleID.Size = new System.Drawing.Size(132, 29);
+            this.lblVehicleID.TabIndex = 44;
+            this.lblVehicleID.Text = "Vehicle ID";
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(386, 46);
+            this.textBox1.Location = new System.Drawing.Point(1001, 45);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 22);
-            this.textBox1.TabIndex = 37;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Size = new System.Drawing.Size(257, 22);
+            this.textBox1.TabIndex = 45;
             // 
             // AssetsUINew
             // 
@@ -402,6 +425,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblVehicleID);
+            this.Controls.Add(this.txtAssetsID);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
@@ -456,6 +481,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBoxAttachNew;
+        private System.Windows.Forms.TextBox txtAssetsID;
+        private System.Windows.Forms.Label lblVehicleID;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
