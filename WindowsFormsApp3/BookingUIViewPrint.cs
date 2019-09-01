@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class NewUserUI : Form
+    public partial class BookingUIViewPrint : Form
     {
-        public NewUserUI()
+        public BookingUIViewPrint()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
 
         }

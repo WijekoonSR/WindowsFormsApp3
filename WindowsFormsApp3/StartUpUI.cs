@@ -28,5 +28,10 @@ namespace WindowsFormsApp3
             loginForm.Show();
             this.Hide();
         }
+
+        private void btnNewUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

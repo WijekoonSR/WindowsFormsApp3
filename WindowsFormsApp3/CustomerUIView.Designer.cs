@@ -83,6 +83,7 @@
             this.Controls.Add(this.dgvCustomerDetails);
             this.Name = "CustomerUIView";
             this.Size = new System.Drawing.Size(1010, 585);
+            this.Load += new System.EventHandler(this.CustomerUIView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

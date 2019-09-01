@@ -15,6 +15,7 @@ namespace WindowsFormsApp3
         public CustomerUI()
         {
             InitializeComponent();
+
         }
 
         private void CustomerUI_Load(object sender, EventArgs e)
@@ -22,19 +23,23 @@ namespace WindowsFormsApp3
 
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
+        private void btnNew_Click_1(object sender, EventArgs e)
         {
+            Slider.Left = btnNew.Left;
             customerUINew1.BringToFront();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
+            Slider.Left = btnEdit.Left;
             customerUIEdit1.BringToFront();
         }
 
-        private void btnView_Click(object sender, EventArgs e)
+        private void btnView_Click_1(object sender, EventArgs e)
         {
-            customerUINew1.BringToFront();
+            Slider.Left = btnView.Left;
+            customerUIView1.BringToFront();
+
         }
     }
 }

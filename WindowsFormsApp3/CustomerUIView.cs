@@ -31,10 +31,33 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                String customerID = btnSearch.Text;
+                string query_Search = "SELECT * FROM Customer WHERE CustomerID = '" + customerID + "'";
+
+                SqlDataAdapter SDR = new SqlDataAdapter("Select * from Customer", con);
+                DataTable dataTable = new DataTable();
+                SDR.Fill(dataTable);
+                dgvCustomerDetails.DataSource = dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Searching" + ex);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+            
+        private void dgvCustomerDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-        private void dgvCustomerDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void CustomerUIView_Load(object sender, EventArgs e)
         {
 
         }

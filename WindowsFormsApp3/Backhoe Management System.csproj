@@ -115,6 +115,12 @@
     <Compile Include="BookingUINewCheckVehicles.Designer.cs">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookingUIViewPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingUIViewPrint.Designer.cs">
+      <DependentUpon>BookingUIViewPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -376,6 +382,9 @@
     <EmbeddedResource Include="BookingUINewCheckVehicles.resx">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookingUIViewPrint.resx">
+      <DependentUpon>BookingUIViewPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserUI.resx">
+      <DependentUpon>NewUserUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUI.resx">
       <DependentUpon>PayrollUI.cs</DependentUpon>
@@ -481,6 +493,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUIEdit.resx">
       <DependentUpon>VehicleLeasingUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleLeasingUIView.resx">
+      <DependentUpon>VehicleLeasingUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleUI.resx">
       <DependentUpon>VehicleUI.cs</DependentUpon>

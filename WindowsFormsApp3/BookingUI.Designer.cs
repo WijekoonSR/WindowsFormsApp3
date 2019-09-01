@@ -44,6 +44,7 @@
             this.bookingUIView1 = new WindowsFormsApp3.BookingUIView();
             this.bookingUIEdit1 = new WindowsFormsApp3.BookingUIEdit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,6 +188,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.Slider);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 63);
             this.panel2.Name = "panel2";
@@ -196,7 +198,7 @@
             // Slider
             // 
             this.Slider.BackColor = System.Drawing.Color.Black;
-            this.Slider.Location = new System.Drawing.Point(0, 63);
+            this.Slider.Location = new System.Drawing.Point(3, 0);
             this.Slider.Name = "Slider";
             this.Slider.Size = new System.Drawing.Size(121, 3);
             this.Slider.TabIndex = 2;
@@ -243,13 +245,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.Slider);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BookingUI";
             this.Size = new System.Drawing.Size(1069, 648);
             this.Load += new System.EventHandler(this.BookingUI_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
