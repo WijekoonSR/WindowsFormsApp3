@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIDView = new System.Windows.Forms.TextBox();
             this.lblPurchasedDate = new System.Windows.Forms.Label();
             this.lblIssuedDate = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -51,12 +51,12 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Assets maintanance ID";
             // 
-            // textBox1
+            // txtIDView
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 22);
-            this.textBox1.TabIndex = 41;
+            this.txtIDView.Location = new System.Drawing.Point(190, 49);
+            this.txtIDView.Name = "txtIDView";
+            this.txtIDView.Size = new System.Drawing.Size(205, 22);
+            this.txtIDView.TabIndex = 41;
             // 
             // lblPurchasedDate
             // 
@@ -101,6 +101,7 @@
             this.btnSearch.TabIndex = 46;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvAssetsDetails
             // 
@@ -133,10 +134,11 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblIssuedDate);
             this.Controls.Add(this.lblPurchasedDate);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIDView);
             this.Controls.Add(this.label1);
             this.Name = "AssetsUIView";
             this.Size = new System.Drawing.Size(1431, 736);
+            this.Load += new System.EventHandler(this.AssetsUIView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetsDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -146,7 +148,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIDView;
         private System.Windows.Forms.Label lblPurchasedDate;
         private System.Windows.Forms.Label lblIssuedDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

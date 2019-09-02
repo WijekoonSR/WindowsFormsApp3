@@ -41,5 +41,22 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void AssetsUIView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            string searchid = txtIDView.Text;
+            String cmd = "Select * from Assets_Maintenance where AssetsMaintenanceID ='" + searchid + "' ";
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd, sqlConnection);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dgvAssetsDetails.DataSource = dataTable;
+            SqlCommand command = new SqlCommand();
+        }
     }
 }

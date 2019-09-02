@@ -315,6 +315,7 @@
     <Compile Include="UserProfile.Designer.cs">
       <DependentUpon>UserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation.cs" />
     <Compile Include="VehicleLeasingUI.cs">
       <SubType>UserControl</SubType>
     </Compile>

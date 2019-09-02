@@ -140,6 +140,11 @@ namespace WindowsFormsApp3
             bookingUICheckCxValidity.Show();
         }
 
+        private void grpBookingPeriod_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void dropDownBackhoeTypes2_onItemSelected(object sender, EventArgs e)
         {
             Type1 = dropDownBackhoeTypes1.selectedValue;
@@ -289,7 +294,9 @@ namespace WindowsFormsApp3
                 sqlCommandInserted.Parameters.AddWithValue("@TotalCharge", TotalCharge);
                 sqlCommandInserted.Parameters.AddWithValue("@CustomerID", CustomerID);
 
-                sqlCommandInserted.ExecuteNonQuery();
+                int valid = sqlCommandInserted.ExecuteNonQuery();
+                string m = valid.ToString();
+                    MessageBox.Show(m);
 
                 sqlConnection.Close();
                 MessageBox.Show("Entered Succesfully !", "Booking Details", MessageBoxButtons.OK, MessageBoxIcon.Information);

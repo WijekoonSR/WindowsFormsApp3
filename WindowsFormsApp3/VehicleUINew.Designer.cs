@@ -61,10 +61,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtDateOfCom = new System.Windows.Forms.TextBox();
             this.lblDateOfCommencement = new System.Windows.Forms.Label();
             this.txtHiringRate = new System.Windows.Forms.TextBox();
             this.lblHiringRate = new System.Windows.Forms.Label();
+            this.dateOfCommencement = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -224,6 +224,7 @@
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(100, 22);
             this.txtModel.TabIndex = 3;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
             // 
             // dropdownVehicleType
             // 
@@ -237,6 +238,7 @@
             this.dropdownVehicleType.selectedIndex = -1;
             this.dropdownVehicleType.Size = new System.Drawing.Size(217, 35);
             this.dropdownVehicleType.TabIndex = 4;
+            this.dropdownVehicleType.onItemSelected += new System.EventHandler(this.dropdownVehicleType_onItemSelected);
             // 
             // contextMenuStrip1
             // 
@@ -358,7 +360,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.groupBox3.Controls.Add(this.txtDateOfCom);
+            this.groupBox3.Controls.Add(this.dateOfCommencement);
             this.groupBox3.Controls.Add(this.lblDateOfCommencement);
             this.groupBox3.Controls.Add(this.txtHiringRate);
             this.groupBox3.Controls.Add(this.lblHiringRate);
@@ -370,13 +372,6 @@
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hiring Details";
-            // 
-            // txtDateOfCom
-            // 
-            this.txtDateOfCom.Location = new System.Drawing.Point(194, 87);
-            this.txtDateOfCom.Name = "txtDateOfCom";
-            this.txtDateOfCom.Size = new System.Drawing.Size(100, 22);
-            this.txtDateOfCom.TabIndex = 20;
             // 
             // lblDateOfCommencement
             // 
@@ -403,6 +398,15 @@
             this.lblHiringRate.TabIndex = 2;
             this.lblHiringRate.Text = "Hiring Rate";
             // 
+            // dateOfCommencement
+            // 
+            this.dateOfCommencement.Location = new System.Drawing.Point(151, 83);
+            this.dateOfCommencement.Name = "dateOfCommencement";
+            this.dateOfCommencement.Size = new System.Drawing.Size(196, 22);
+            this.dateOfCommencement.TabIndex = 20;
+            this.dateOfCommencement.Value = new System.DateTime(2019, 6, 25, 0, 0, 0, 0);
+            this.dateOfCommencement.ValueChanged += new System.EventHandler(this.dateOfCommencement_ValueChanged);
+            // 
             // VehicleUINew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +421,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblVehicleType);
             this.Name = "VehicleUINew";
-            this.Size = new System.Drawing.Size(1069, 526);
+            this.Size = new System.Drawing.Size(1069, 561);
             this.Load += new System.EventHandler(this.VehicleUINew_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -462,9 +466,9 @@
         private System.Windows.Forms.Label lblYearOfManufacture;
         private System.Windows.Forms.TextBox txtYearOfManufacture;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtDateOfCom;
         private System.Windows.Forms.Label lblDateOfCommencement;
         private System.Windows.Forms.TextBox txtHiringRate;
         private System.Windows.Forms.Label lblHiringRate;
+        private System.Windows.Forms.DateTimePicker dateOfCommencement;
     }
 }

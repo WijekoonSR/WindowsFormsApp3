@@ -17,6 +17,11 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
+        private void AssetsUI_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -29,7 +34,7 @@ namespace WindowsFormsApp3
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            assetsUIEdit1.BringToFront();
+          assetsUIEdit1.BringToFront();
         }
 
         private void btnNew_Click(object sender, EventArgs e)

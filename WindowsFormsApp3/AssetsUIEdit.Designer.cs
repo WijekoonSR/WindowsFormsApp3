@@ -85,6 +85,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.picSearch = new System.Windows.Forms.PictureBox();
+            this.dltbutton = new System.Windows.Forms.Button();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.lblVehicleID = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).BeginInit();
@@ -97,7 +101,7 @@
             this.btnSaveEdit.BackColor = System.Drawing.SystemColors.InfoText;
             this.btnSaveEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSaveEdit.Location = new System.Drawing.Point(916, 573);
+            this.btnSaveEdit.Location = new System.Drawing.Point(828, 591);
             this.btnSaveEdit.Name = "btnSaveEdit";
             this.btnSaveEdit.Size = new System.Drawing.Size(171, 91);
             this.btnSaveEdit.TabIndex = 51;
@@ -115,11 +119,12 @@
             // lblQuantityNew
             // 
             this.lblQuantityNew.AutoSize = true;
-            this.lblQuantityNew.Location = new System.Drawing.Point(73, 101);
+            this.lblQuantityNew.Location = new System.Drawing.Point(52, 104);
             this.lblQuantityNew.Name = "lblQuantityNew";
             this.lblQuantityNew.Size = new System.Drawing.Size(85, 22);
             this.lblQuantityNew.TabIndex = 35;
             this.lblQuantityNew.Text = "Quantity";
+            this.lblQuantityNew.Click += new System.EventHandler(this.lblQuantityNew_Click);
             // 
             // btnEdit
             // 
@@ -245,7 +250,7 @@
             this.btnClearEdit.BackColor = System.Drawing.SystemColors.InfoText;
             this.btnClearEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearEdit.Location = new System.Drawing.Point(1143, 573);
+            this.btnClearEdit.Location = new System.Drawing.Point(1039, 591);
             this.btnClearEdit.Name = "btnClearEdit";
             this.btnClearEdit.Size = new System.Drawing.Size(168, 91);
             this.btnClearEdit.TabIndex = 52;
@@ -416,11 +421,12 @@
             // lblIssuedDate
             // 
             this.lblIssuedDate.AutoSize = true;
-            this.lblIssuedDate.Location = new System.Drawing.Point(73, 554);
+            this.lblIssuedDate.Location = new System.Drawing.Point(52, 554);
             this.lblIssuedDate.Name = "lblIssuedDate";
             this.lblIssuedDate.Size = new System.Drawing.Size(111, 22);
             this.lblIssuedDate.TabIndex = 31;
             this.lblIssuedDate.Text = "Issued Date";
+            this.lblIssuedDate.Click += new System.EventHandler(this.lblIssuedDate_Click);
             // 
             // txtInvoiceNumberEdit
             // 
@@ -432,7 +438,7 @@
             // lblInvoiceEdit
             // 
             this.lblInvoiceEdit.AutoSize = true;
-            this.lblInvoiceEdit.Location = new System.Drawing.Point(73, 502);
+            this.lblInvoiceEdit.Location = new System.Drawing.Point(52, 498);
             this.lblInvoiceEdit.Name = "lblInvoiceEdit";
             this.lblInvoiceEdit.Size = new System.Drawing.Size(147, 22);
             this.lblInvoiceEdit.TabIndex = 29;
@@ -441,11 +447,12 @@
             // lblAttachmentsEdit
             // 
             this.lblAttachmentsEdit.AutoSize = true;
-            this.lblAttachmentsEdit.Location = new System.Drawing.Point(73, 299);
+            this.lblAttachmentsEdit.Location = new System.Drawing.Point(52, 299);
             this.lblAttachmentsEdit.Name = "lblAttachmentsEdit";
             this.lblAttachmentsEdit.Size = new System.Drawing.Size(130, 22);
             this.lblAttachmentsEdit.TabIndex = 27;
             this.lblAttachmentsEdit.Text = "Attachments -";
+            this.lblAttachmentsEdit.Click += new System.EventHandler(this.lblAttachmentsEdit_Click);
             // 
             // txtPriceEdit
             // 
@@ -457,7 +464,7 @@
             // lblPriceEdit
             // 
             this.lblPriceEdit.AutoSize = true;
-            this.lblPriceEdit.Location = new System.Drawing.Point(73, 226);
+            this.lblPriceEdit.Location = new System.Drawing.Point(52, 226);
             this.lblPriceEdit.Name = "lblPriceEdit";
             this.lblPriceEdit.Size = new System.Drawing.Size(56, 22);
             this.lblPriceEdit.TabIndex = 25;
@@ -473,7 +480,7 @@
             // lblDateEdit
             // 
             this.lblDateEdit.AutoSize = true;
-            this.lblDateEdit.Location = new System.Drawing.Point(73, 165);
+            this.lblDateEdit.Location = new System.Drawing.Point(52, 165);
             this.lblDateEdit.Name = "lblDateEdit";
             this.lblDateEdit.Size = new System.Drawing.Size(50, 22);
             this.lblDateEdit.TabIndex = 21;
@@ -489,7 +496,7 @@
             // lblSpareEdit
             // 
             this.lblSpareEdit.AutoSize = true;
-            this.lblSpareEdit.Location = new System.Drawing.Point(73, 45);
+            this.lblSpareEdit.Location = new System.Drawing.Point(52, 45);
             this.lblSpareEdit.Name = "lblSpareEdit";
             this.lblSpareEdit.Size = new System.Drawing.Size(196, 22);
             this.lblSpareEdit.TabIndex = 20;
@@ -539,11 +546,45 @@
             this.picSearch.TabIndex = 36;
             this.picSearch.TabStop = false;
             // 
+            // dltbutton
+            // 
+            this.dltbutton.BackColor = System.Drawing.SystemColors.InfoText;
+            this.dltbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dltbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dltbutton.Location = new System.Drawing.Point(1238, 591);
+            this.dltbutton.Name = "dltbutton";
+            this.dltbutton.Size = new System.Drawing.Size(168, 91);
+            this.dltbutton.TabIndex = 54;
+            this.dltbutton.Text = "Delete";
+            this.dltbutton.UseVisualStyleBackColor = false;
+            this.dltbutton.Click += new System.EventHandler(this.dltbutton_Click);
+            // 
+            // lblVehicleID
+            // 
+            this.lblVehicleID.AutoSize = true;
+            this.lblVehicleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleID.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblVehicleID.Location = new System.Drawing.Point(867, 31);
+            this.lblVehicleID.Name = "lblVehicleID";
+            this.lblVehicleID.Size = new System.Drawing.Size(132, 29);
+            this.lblVehicleID.TabIndex = 55;
+            this.lblVehicleID.Text = "Vehicle ID";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1025, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(257, 22);
+            this.textBox1.TabIndex = 56;
+            // 
             // AssetsUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblVehicleID);
+            this.Controls.Add(this.dltbutton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSaveEdit);
             this.Controls.Add(this.btnClearEdit);
@@ -552,7 +593,6 @@
             this.Controls.Add(this.lblAssetsMaintanceEdit);
             this.Name = "AssetsUIEdit";
             this.Size = new System.Drawing.Size(1431, 736);
-            this.Load += new System.EventHandler(this.AssetsUIEdit_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -623,5 +663,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.PictureBox picSearch;
+        private System.Windows.Forms.Button dltbutton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.Label lblVehicleID;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
