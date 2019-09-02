@@ -192,6 +192,7 @@ namespace WindowsFormsApp3
             string queryTemp = "exec procAvailableVehicles '"+startDate+"','"+endDate+"'";
             sqlComTem = new SqlCommand(queryTemp, sqlConnection);
             sqlComTem.ExecuteNonQuery();
+
             string query = "SELECT * FROM ##tblAvailableVehicles";
             sqlCommand = new SqlCommand(query,sqlConnection);
             SqlDataReader reader = sqlCommand.ExecuteReader();
