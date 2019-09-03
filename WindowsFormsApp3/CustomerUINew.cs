@@ -15,6 +15,7 @@ namespace WindowsFormsApp3
     {
 
         public static String nameServer = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
+        public static string ID;
         //get sring db connection
         private SqlConnection sqlConnection = new SqlConnection(nameServer);
         string  ContractStartDate, ContractEndDate, name, address, email, ProjectManagerName, ProjectAddress, ProjectEmail, EndDate,StartDate;
@@ -26,6 +27,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             getCurrentID();
+            ID = txtcutomerID.Text.ToString();
         }
 
         private void getCurrentID() {
@@ -137,39 +139,87 @@ namespace WindowsFormsApp3
             {
                 using (sqlConnection = new SqlConnection(nameServer))
                 {
-                    sqlConnection.Open();
-
-                    name = txtName.Text.ToString();
-                    address = txtAddress.Text.ToString();
-                    email = txtEmail1.Text.ToString();
-                    ProjectManagerName = txtProjectManager.Text.ToString();
-                    ProjectAddress = txtAddress1.Text.ToString();
-                    ProjectEmail = txtEmail2.Text.ToString();
-                    ContactNumber = int.Parse(txtContactNumber.Text);
-                    FaxNumber = int.Parse(txtFaxNumber.Text);
-                    ProjectContactNumber = int.Parse(txtContactNumber2.Text);
-                    EndDate = dateEndContract.Value.ToString("yyyy/MM/dd");
-                    StartDate = dateStartContract.Value.ToString("yyyy/MM/dd");
-
-                    string query = "insert into Customer(name,address,email,ProjectManagerName,ProjectAddress,ProjectEmail,ContactNumber,FaxNumber,ProjectContactNumber,ContractStartDate,ContractEndDate) " +
-                        "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "','"+ StartDate + "','"+EndDate+"')";
-                    command = new SqlCommand(query, sqlConnection);
-                    int chk = command.ExecuteNonQuery();
-
-                    if (chk == 0)
+                    if (txtName.Text == "")
                     {
-                        MessageBox.Show("Failed to insert data");
+                        MessageBox.Show("Please Enter Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtName.Focus();
+                    }
+                    else if (txtAddress.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtAddress.Focus();
+                    }
+                    else if (txtContactNumber.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtContactNumber.Focus();
+                    }
+                    else if (txtEmail1.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtEmail1.Focus();
+                    }
+                    else if (txtFaxNumber.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Fax Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtFaxNumber.Focus();
+                    }
+                    else if (txtProjectManager.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Project Manager Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtProjectManager.Focus();
+                    }
+                    else if (txtAddress1.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtAddress1.Focus();
+                    }
+                    else if (txtContactNumber2.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtContactNumber2.Focus();
+                    }
+                    else if (txtEmail2.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtEmail2.Focus();
                     }
                     else
                     {
-                        DialogResult DR = MessageBox.Show("succes");
-                        if (DR == DialogResult.OK)
-                        {
-                            getCurrentID();
-                        }
-                    }
-                    sqlConnection.Close();
+                        MessageBox.Show("Saved Successfully");
+                        sqlConnection.Open();
 
+                        name = txtName.Text.ToString();
+                        address = txtAddress.Text.ToString();
+                        email = txtEmail1.Text.ToString();
+                        ProjectManagerName = txtProjectManager.Text.ToString();
+                        ProjectAddress = txtAddress1.Text.ToString();
+                        ProjectEmail = txtEmail2.Text.ToString();
+                        ContactNumber = int.Parse(txtContactNumber.Text);
+                        FaxNumber = int.Parse(txtFaxNumber.Text);
+                        ProjectContactNumber = int.Parse(txtContactNumber2.Text);
+                        EndDate = dateEndContract.Value.ToString("yyyy/MM/dd");
+                        StartDate = dateStartContract.Value.ToString("yyyy/MM/dd");
+
+                        string query = "insert into Customer(name,address,email,ProjectManagerName,ProjectAddress,ProjectEmail,ContactNumber,FaxNumber,ProjectContactNumber,ContractStartDate,ContractEndDate) " +
+                            "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "','" + StartDate + "','" + EndDate + "')";
+                        command = new SqlCommand(query, sqlConnection);
+                        int chk = command.ExecuteNonQuery();
+
+                        if (chk == 0)
+                        {
+                            MessageBox.Show("Failed to insert data");
+                        }
+                        else
+                        {
+                            DialogResult DR = MessageBox.Show("succes");
+                            if (DR == DialogResult.OK)
+                            {
+                                getCurrentID();
+                            }
+                        }
+                        sqlConnection.Close();
+                    }
                 }
             }catch(Exception ex)
             {
