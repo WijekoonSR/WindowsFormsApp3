@@ -51,22 +51,33 @@
     <StartupObject>WindowsFormsApp3.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.4">
       <HintPath>Bunifu\Bunifu_UI_v1.4.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="officesplash_MetroProgressBar">
       <HintPath>Metro\officesplash_MetroProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -103,6 +114,9 @@
     <Compile Include="AssetsUIView.Designer.cs">
       <DependentUpon>AssetsUIView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Assets_Maintenance.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="BookingUICheckCxValidity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,12 +128,6 @@
     </Compile>
     <Compile Include="BookingUINewCheckVehicles.Designer.cs">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BookingUIViewPrint.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BookingUIViewPrint.Designer.cs">
-      <DependentUpon>BookingUIViewPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerUIEdit.cs">
       <SubType>UserControl</SubType>
@@ -229,17 +237,50 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
     <Compile Include="NewUserUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewUserUI.Designer.cs">
       <DependentUpon>NewUserUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewUserUIPage01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewUserUIPage01.Designer.cs">
+      <DependentUpon>NewUserUIPage01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserUIPage02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewUserUIPage02.Designer.cs">
+      <DependentUpon>NewUserUIPage02.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PayrollUI.Designer.cs">
       <DependentUpon>PayrollUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIAddAllowance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIAddAllowance.Designer.cs">
+      <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollUIChangeValues.cs">
       <SubType>Form</SubType>
@@ -252,6 +293,12 @@
     </Compile>
     <Compile Include="PayrollUIChangeValuesAddNew.Designer.cs">
       <DependentUpon>PayrollUIChangeValuesAddNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIDailyRates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIDailyRates.Designer.cs">
+      <DependentUpon>PayrollUIDailyRates.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollUIEdit.cs">
       <SubType>UserControl</SubType>
@@ -271,11 +318,47 @@
     <Compile Include="PayrollUIEditStaff.Designer.cs">
       <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollUIGenaratesSalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIGenaratesSalary.Designer.cs">
+      <DependentUpon>PayrollUIGenaratesSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIGenerateSalaryChangeValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUIGenerateSalaryChangeValues.Designer.cs">
+      <DependentUpon>PayrollUIGenerateSalaryChangeValues.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUINew.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PayrollUINew.Designer.cs">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIOperaterAddOTRates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIOperaterAddOTRates.Designer.cs">
+      <DependentUpon>PayrollUIOperaterAddOTRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIOperaterChangeOTRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUIOperaterChangeOTRates.Designer.cs">
+      <DependentUpon>PayrollUIOperaterChangeOTRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIOperaterSetOTRates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIOperaterSetOTRates.Designer.cs">
+      <DependentUpon>PayrollUIOperaterSetOTRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUISetAllowance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUISetAllowance.Designer.cs">
+      <DependentUpon>PayrollUISetAllowance.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollUIStaffNew.cs">
       <SubType>UserControl</SubType>
@@ -303,17 +386,32 @@
     <Compile Include="StartUpUI.Designer.cs">
       <DependentUpon>StartUpUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserNewUI.cs">
+    <Compile Include="User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserNewUI.Designer.cs">
-      <DependentUpon>UserNewUI.cs</DependentUpon>
+    <Compile Include="UserUI.Designer.cs">
+      <DependentUpon>UserUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UserProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserProfile.Designer.cs">
       <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUIEdit.Designer.cs">
+      <DependentUpon>UserUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUIView.Designer.cs">
+      <DependentUpon>UserUIView.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
     <Compile Include="VehicleLeasingUI.cs">
@@ -382,9 +480,6 @@
     <EmbeddedResource Include="BookingUINewCheckVehicles.resx">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BookingUIViewPrint.resx">
-      <DependentUpon>BookingUIViewPrint.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,14 +531,26 @@
     <EmbeddedResource Include="NewUserUI.resx">
       <DependentUpon>NewUserUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewUserUIPage01.resx">
+      <DependentUpon>NewUserUIPage01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserUIPage02.resx">
+      <DependentUpon>NewUserUIPage02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUI.resx">
       <DependentUpon>PayrollUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIAddAllowance.resx">
+      <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIChangeValues.resx">
       <DependentUpon>PayrollUIChangeValues.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIChangeValuesAddNew.resx">
       <DependentUpon>PayrollUIChangeValuesAddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIDailyRates.resx">
+      <DependentUpon>PayrollUIDailyRates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIEdit.resx">
       <DependentUpon>PayrollUIEdit.cs</DependentUpon>
@@ -454,8 +561,26 @@
     <EmbeddedResource Include="PayrollUIEditStaff.resx">
       <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIGenaratesSalary.resx">
+      <DependentUpon>PayrollUIGenaratesSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIGenerateSalaryChangeValues.resx">
+      <DependentUpon>PayrollUIGenerateSalaryChangeValues.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUINew.resx">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIOperaterAddOTRates.resx">
+      <DependentUpon>PayrollUIOperaterAddOTRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIOperaterChangeOTRates.resx">
+      <DependentUpon>PayrollUIOperaterChangeOTRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIOperaterSetOTRates.resx">
+      <DependentUpon>PayrollUIOperaterSetOTRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUISetAllowance.resx">
+      <DependentUpon>PayrollUISetAllowance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIStaffNew.resx">
       <DependentUpon>PayrollUIStaffNew.cs</DependentUpon>
@@ -479,11 +604,17 @@
     <EmbeddedResource Include="StartUpUI.resx">
       <DependentUpon>StartUpUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserNewUI.resx">
-      <DependentUpon>UserNewUI.cs</DependentUpon>
+    <EmbeddedResource Include="UserUI.resx">
+      <DependentUpon>UserUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUIEdit.resx">
+      <DependentUpon>UserUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUIView.resx">
+      <DependentUpon>UserUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUI.resx">
       <DependentUpon>VehicleLeasingUI.cs</DependentUpon>
@@ -531,6 +662,14 @@
     <None Include="DatabaseDataSet1.xss">
       <DependentUpon>DatabaseDataSet1.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -558,6 +697,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Logo.ico" />
+    <Content Include="logo.ico" />
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

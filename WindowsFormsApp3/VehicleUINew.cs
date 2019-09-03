@@ -16,12 +16,15 @@ namespace WindowsFormsApp3
 
         public static String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
         SqlConnection con = new SqlConnection(name);
+        String vID;
 
 
-        String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, HiringRate, DateOfCom, VehicleType;
+        String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, DateOfCom, VehicleType;
+        int HiringRate;
         public VehicleUINew()
         {
             InitializeComponent();
+            getVehicleID();
             dropdownVehicleType.AddItem("Excavator");
             dropdownVehicleType.AddItem("Backhoe Loaders");
             dropdownVehicleType.AddItem("Bulldozers");
@@ -34,10 +37,38 @@ namespace WindowsFormsApp3
 
         }
 
+        private void getVehicleID()
+        {
+            try { 
+            con.Open();
+            String queryCurrentID = "select IDENT_CURRENT('Vehicles')";
+            SqlCommand command = new SqlCommand(queryCurrentID, con);
+            SqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                vID = dataReader[0].ToString();
+            }
+                con.Close();
+                con.Open();
+                SqlCommand chkExistsData = new SqlCommand("select * from Vehicles where VehicleID = 1", con);
+                SqlDataReader SDR = chkExistsData.ExecuteReader();
+                if (SDR.HasRows) txtVehicleID.Text = "B" + (int.Parse(vID) + 1).ToString();
+                else txtVehicleID.Text = "B1";
+                 con.Close();
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Vehicle UI");
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtChassisNo.Clear();
-            txtDateOfCom.Clear();
             txtEngineType.Clear();
             txtFuelType.Clear();
             txtHiringRate.Clear();
@@ -48,70 +79,14 @@ namespace WindowsFormsApp3
             txtVehicleCapacity.Clear();
             txtVehicleClass.Clear();
             txtYearOfManufacture.Clear();
+            dateOfCommencement.Value = DateTime.Now;
+            DateRegistration.Value = DateTime.Now;
+            dropdownVehicleType.Text = null;
 
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblVehicleCapacity_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VehicleUINew_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -127,16 +102,19 @@ namespace WindowsFormsApp3
                 MachineCategory = txtMachineCat.Text.ToString();
                 RegDate = DateRegistration.Value.ToString("yyyy/MM/dd");
                 RegNo = txtRegistrationNo.Text.ToString();
+                YearOfManufac = txtYearOfManufacture.Text.ToString();
                 ChassisNo = txtChassisNo.Text.ToString();
-                HiringRate = txtHiringRate.Text.ToString();
-                DateOfCom = txtDateOfCom.Text.ToString();
+                HiringRate = int.Parse(txtHiringRate.Text.ToString());
+                DateOfCom = dateOfCommencement.Value.ToString("yyyy/MM/dd");
 
 
 
-                string query = "insert into Vehicles(VehicleType,Model,VehicleCapacity,VehicleClass,EngineType,FuelType,Status,MachineCategory,RegistrationDate,RegistrationNo,ChassisNo,YearOfManufacture,HiringRate,DateOfCommencemnet) values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','" + DateOfCom + "','" + RegDate + "','" + RegNo + "','" + ChassisNo + "','" + HiringRate + "','" + YearOfManufac + "')";
+                string query = "insert into Vehicles(VehicleType,Model,VehicleCapacity,VehicleClass,EngineType,FuelType,Status,MachineCategory,RegistrationDate,RegistrationNo,ChassisNo,YearOfManufacture,HiringRate,DateOfCommencemnet)" +
+                    " values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "','"+ VehicleClass + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','"+MachineCategory+"','" + RegDate + "','"+RegNo+"','" + ChassisNo + "','" + YearOfManufac + "','" + HiringRate + "','" + DateOfCom + "')";
                 SqlCommand sqlCommand = new SqlCommand(query, con);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -146,6 +124,13 @@ namespace WindowsFormsApp3
             {
                 con.Close();
             }
+
+
+
+
+
+
+
         }
     }
 }

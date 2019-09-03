@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayrollUI));
-            this.payrollUINew1 = new WindowsFormsApp3.PayrollUINew();
             this.payrollUIStaffNew1 = new WindowsFormsApp3.PayrollUIStaffNew();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,16 +45,9 @@
             this.payrollUIEditOperater1 = new WindowsFormsApp3.PayrollUIEditOperater();
             this.payrollUIEditStaff1 = new WindowsFormsApp3.PayrollUIEditStaff();
             this.payrollUIVeiw1 = new WindowsFormsApp3.PayrollUIVeiw();
+            this.payrollUINew1 = new WindowsFormsApp3.PayrollUINew();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // payrollUINew1
-            // 
-            this.payrollUINew1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.payrollUINew1.Location = new System.Drawing.Point(0, 0);
-            this.payrollUINew1.Name = "payrollUINew1";
-            this.payrollUINew1.Size = new System.Drawing.Size(1069, 648);
-            this.payrollUINew1.TabIndex = 2;
             // 
             // payrollUIStaffNew1
             // 
@@ -64,6 +56,7 @@
             this.payrollUIStaffNew1.Name = "payrollUIStaffNew1";
             this.payrollUIStaffNew1.Size = new System.Drawing.Size(1069, 648);
             this.payrollUIStaffNew1.TabIndex = 3;
+            this.payrollUIStaffNew1.Load += new System.EventHandler(this.payrollUIStaffNew1_Load);
             // 
             // panel1
             // 
@@ -303,17 +296,26 @@
             this.payrollUIVeiw1.Size = new System.Drawing.Size(1069, 585);
             this.payrollUIVeiw1.TabIndex = 8;
             // 
+            // payrollUINew1
+            // 
+            this.payrollUINew1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.payrollUINew1.Location = new System.Drawing.Point(0, 63);
+            this.payrollUINew1.Name = "payrollUINew1";
+            this.payrollUINew1.Size = new System.Drawing.Size(1069, 585);
+            this.payrollUINew1.TabIndex = 9;
+            this.payrollUINew1.Load += new System.EventHandler(this.payrollUINew1_Load);
+            // 
             // PayrollUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.payrollUINew1);
             this.Controls.Add(this.payrollUIVeiw1);
             this.Controls.Add(this.payrollUIEditStaff1);
             this.Controls.Add(this.payrollUIEditOperater1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.payrollUIStaffNew1);
-            this.Controls.Add(this.payrollUINew1);
             this.Name = "PayrollUI";
             this.Size = new System.Drawing.Size(1069, 648);
             this.Load += new System.EventHandler(this.PayrollUI_Load);
@@ -323,7 +325,6 @@
         }
 
         #endregion
-        private PayrollUINew payrollUINew1;
         private PayrollUIStaffNew payrollUIStaffNew1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
@@ -340,5 +341,6 @@
         private PayrollUIEditOperater payrollUIEditOperater1;
         private PayrollUIEditStaff payrollUIEditStaff1;
         private PayrollUIVeiw payrollUIVeiw1;
+        private PayrollUINew payrollUINew1;
     }
 }

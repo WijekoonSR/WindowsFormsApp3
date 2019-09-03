@@ -38,16 +38,17 @@
             this.bookingsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bookingsTableAdapter1 = new WindowsFormsApp3.DatabaseDataSet1TableAdapters.BookingsTableAdapter();
             this.lblBookingID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBookingID = new System.Windows.Forms.TextBox();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearchByDate = new System.Windows.Forms.Button();
             this.btnPrint = new Bunifu.Framework.UI.BunifuFlatButton();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookingsView)).BeginInit();
@@ -103,12 +104,12 @@
             this.lblBookingID.TabIndex = 1;
             this.lblBookingID.Text = "Booking ID";
             // 
-            // textBox1
+            // txtBookingID
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtBookingID.Location = new System.Drawing.Point(103, 12);
+            this.txtBookingID.Name = "txtBookingID";
+            this.txtBookingID.Size = new System.Drawing.Size(139, 20);
+            this.txtBookingID.TabIndex = 2;
             // 
             // lblStartDate
             // 
@@ -130,19 +131,19 @@
             this.lblEndDate.TabIndex = 4;
             this.lblEndDate.Text = "To";
             // 
-            // dateTimePicker1
+            // dtpStartDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(103, 55);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpStartDate.Location = new System.Drawing.Point(103, 55);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpStartDate.TabIndex = 5;
             // 
-            // dateTimePicker2
+            // dtpEndDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(363, 55);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 6;
+            this.dtpEndDate.Location = new System.Drawing.Point(363, 55);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpEndDate.TabIndex = 6;
             // 
             // btnSearch
             // 
@@ -154,17 +155,19 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Search BookingID";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // button1
+            // btnSearchByDate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(23)))), ((int)(((byte)(247)))));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(592, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 26);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Search By Date";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSearchByDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(23)))), ((int)(((byte)(247)))));
+            this.btnSearchByDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearchByDate.Location = new System.Drawing.Point(592, 53);
+            this.btnSearchByDate.Name = "btnSearchByDate";
+            this.btnSearchByDate.Size = new System.Drawing.Size(117, 26);
+            this.btnSearchByDate.TabIndex = 8;
+            this.btnSearchByDate.Text = "Search By Date";
+            this.btnSearchByDate.UseVisualStyleBackColor = false;
+            this.btnSearchByDate.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPrint
             // 
@@ -199,6 +202,7 @@
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
             this.printPreviewDialog1.Enabled = true;
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
@@ -209,18 +213,32 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRefresh.Location = new System.Drawing.Point(812, 26);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(106, 47);
+            this.btnRefresh.TabIndex = 10;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // BookingUIView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearchByDate);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpEndDate);
+            this.Controls.Add(this.dtpStartDate);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBookingID);
             this.Controls.Add(this.lblBookingID);
             this.Controls.Add(this.dgvBookingsView);
             this.Name = "BookingUIView";
@@ -245,15 +263,16 @@
         private DatabaseDataSet1 databaseDataSet1;
         private DatabaseDataSet1TableAdapters.BookingsTableAdapter bookingsTableAdapter1;
         private System.Windows.Forms.Label lblBookingID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBookingID;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblEndDate;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearchByDate;
         private Bunifu.Framework.UI.BunifuFlatButton btnPrint;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

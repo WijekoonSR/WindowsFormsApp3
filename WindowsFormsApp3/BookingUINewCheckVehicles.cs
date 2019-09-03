@@ -25,7 +25,7 @@ namespace WindowsFormsApp3
                 using (SqlConnection sql = new SqlConnection(BookingUINew.name))
                 {
                     sql.Open();
-                    string queryInit = "exec procAvailableVehicles '"+dateStartDate+"', '"+dateEndDate + "'";
+  //                  string queryInit = "exec procAvailableVehicles '"+dateStartDate+"', '"+dateEndDate + "'";
                     string query = "SELECT * FROM ##tblAvailableVehicles";
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sql);
                     DataTable dataTable = new DataTable();
@@ -43,6 +43,11 @@ namespace WindowsFormsApp3
         private void ExitIcon_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvAvaiableVehicles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

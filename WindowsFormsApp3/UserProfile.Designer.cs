@@ -60,6 +60,7 @@
             this.btnViewprof.TabIndex = 0;
             this.btnViewprof.Textcolor = System.Drawing.Color.Black;
             this.btnViewprof.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewprof.Click += new System.EventHandler(this.btnViewprof_Click);
             // 
             // btnEditProf
             // 
@@ -87,6 +88,7 @@
             this.btnEditProf.TabIndex = 1;
             this.btnEditProf.Textcolor = System.Drawing.Color.Black;
             this.btnEditProf.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProf.Click += new System.EventHandler(this.btnEditProf_Click);
             // 
             // btnLogOut
             // 
@@ -114,7 +116,7 @@
             this.btnLogOut.TabIndex = 2;
             this.btnLogOut.Textcolor = System.Drawing.Color.Black;
             this.btnLogOut.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_2);
             // 
             // UserProfile
             // 

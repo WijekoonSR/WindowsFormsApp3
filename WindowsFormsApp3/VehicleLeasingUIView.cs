@@ -15,11 +15,56 @@ namespace WindowsFormsApp3
         SqlConnection sqlConnection = new SqlConnection(VehicleLeasingUIAdd.serverName);
         public VehicleLeasingUIView()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+                getleasingdetails();
+            }
+            catch (Exception e) {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void getleasingdetails() {
+          try { 
             sqlConnection.Open();
             String name = VehicleLeasingUIAdd.serverName;
-            
-                String query = "Select * from Vehicle_Leasings";
+
+            String query = "Select * from Vehicle_Leasings";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
+            DataTable dtb1 = new DataTable();
+            SDA.Fill(dtb1);
+
+            dgvVehicleLeasing.DataSource = dtb1;
+
+
+            sqlConnection.Close();
+
+           }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
+
+        private void VehicleLeasingUIView_Load(object sender, EventArgs e)
+        {
+            getleasingdetails();
+        }
+
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                String name = VehicleLeasingUIAdd.serverName;
+
+                String query = "Select * from Vehicle_Leasings where VehicleLeasingsID = '" + txtLeasingID + "'";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
                 DataTable dtb1 = new DataTable();
                 SDA.Fill(dtb1);
@@ -27,12 +72,17 @@ namespace WindowsFormsApp3
                 dgvVehicleLeasing.DataSource = dtb1;
 
 
-            sqlConnection.Close();
+                sqlConnection.Close();
+            }           
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
 
-        }
-
-        private void VehicleLeasingUIView_Load(object sender, EventArgs e)
-        {
 
         }
     }

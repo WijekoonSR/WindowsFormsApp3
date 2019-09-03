@@ -35,6 +35,7 @@ namespace WindowsFormsApp3
                // chkDate = Convert.ToDateTime(dataReader["ContractEndDate"]).Date; 
 
             }
+            MessageBox.Show(txtFrom.Text);
 
             string date2 = DateTime.Now.ToString("dd-MM-yyyy");
 
@@ -65,6 +66,11 @@ namespace WindowsFormsApp3
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BookingUICheckCxValidity_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
