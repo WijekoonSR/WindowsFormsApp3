@@ -42,5 +42,20 @@ namespace WindowsFormsApp3
             PayrollUIChangeValues changeValues = new PayrollUIChangeValues();
             changeValues.ShowDialog();
         }
+
+        private void btnGenarsteSalary_Click(object sender, EventArgs e)
+        {
+            payrollUIGenaratesSalary1.BringToFront();
+        }
+
+        private void btnDailyRates_Click(object sender, EventArgs e)
+        {
+            payrollUIDailyRates1.BringToFront();
+        }
+
+        private void payrollUIDailyRates1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

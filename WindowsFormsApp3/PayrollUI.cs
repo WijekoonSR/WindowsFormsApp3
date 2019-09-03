@@ -72,5 +72,15 @@ namespace WindowsFormsApp3
         {
             payrollUIVeiw1.BringToFront();
         }
+
+        private void payrollUIStaffNew1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void payrollUINew1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
