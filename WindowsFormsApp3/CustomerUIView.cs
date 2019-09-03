@@ -18,38 +18,13 @@ namespace WindowsFormsApp3
         public CustomerUIView()
         {
             InitializeComponent();
-            using (con) {
-                con.Open();
-                SqlDataAdapter SDR = new SqlDataAdapter("Select * from Customer", con);
-                DataTable dataTable = new DataTable();
-                SDR.Fill(dataTable);
-                dgvCustomerDetails.DataSource = dataTable;
-                con.Close();
-            }
+            setDataGridView();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                String customerID = btnSearch.Text;
-                string query_Search = "SELECT * FROM Customer WHERE CustomerID = '" + customerID + "'";
-
-                SqlDataAdapter SDR = new SqlDataAdapter("Select * from Customer", con);
-                DataTable dataTable = new DataTable();
-                SDR.Fill(dataTable);
-                dgvCustomerDetails.DataSource = dataTable;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Searching" + ex);
-            }
-            finally
-            {
-                con.Close();
-            }
+          
         }
             
         private void dgvCustomerDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,7 +34,35 @@ namespace WindowsFormsApp3
 
         private void CustomerUIView_Load(object sender, EventArgs e)
         {
+            setDataGridView();
+        }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            setDataGridView();
+        }
+
+        private void setDataGridView() {
+            try
+            {
+                con.Open();
+                String customerID = btnSearch.Text;
+                string query_Search = "SELECT * FROM Customer WHERE CustomerID = '" + customerID + "'";
+
+                SqlDataAdapter SDR = new SqlDataAdapter("Select * from Customer", con);
+                DataTable dataTable = new DataTable();
+                SDR.Fill(dataTable);
+                dgvCustomerDetails.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Searching" + ex);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

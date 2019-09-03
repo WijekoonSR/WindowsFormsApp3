@@ -17,6 +17,11 @@ namespace WindowsFormsApp3
         String Bank, Branch, BankCode, AccountHolder, StartLeasingDate, EndLeasingDate,StartDate,EndDate;
         int AccountNumber, Year, LeasingPeriod;
 
+        private void txtVehicleID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
@@ -29,18 +34,36 @@ namespace WindowsFormsApp3
         public VehicleLeasingUIAdd()
         {
             InitializeComponent();
-            sql.Open();
-            String queryCurrentID = "select IDENT_CURRENT('Vehicle_Leasings') + 1";
-            SqlCommand command = new SqlCommand(queryCurrentID, sql);
-            SqlDataReader dataReader = command.ExecuteReader();
-            while (dataReader.Read())
+ 
+            getCurrentID();
+        }
+
+        private void getCurrentID() {
+            try
             {
-                newVehicleID = dataReader[0].ToString();
+                sql.Open();
+                String queryCurrentID = "select IDENT_CURRENT('Vehicle_Leasings')";
+                SqlCommand command = new SqlCommand(queryCurrentID, sql);
+                SqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    newVehicleID = dataReader[0].ToString();
+                }
+                sql.Close();
+                sql.Open();
+                SqlCommand chkExistsData = new SqlCommand("select * from Vehicle_Leasings where VehicleLeasingsID = 1", sql);
+                SqlDataReader SDR = chkExistsData.ExecuteReader();
+                if (SDR.HasRows) txtVehicleLeasingID.Text = "VL" + (int.Parse(newVehicleID) + 1).ToString();
+                else txtVehicleLeasingID.Text = "VL1";
+                sql.Close();
             }
-
-            txtVehicleID.Text = "VL" + newVehicleID;
-
-
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally {
+                sql.Close();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -55,8 +78,8 @@ namespace WindowsFormsApp3
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-            int vid = int.Parse(txtVehicleID.Text);
+            sql.Open();
+            int vid = int.Parse(txtVid.Text.ToString());
             Bank = txtBank.Text.ToString();
             Branch = txtBranch.Text.ToString();
             BankCode = txtBankCode.Text.ToString();
@@ -70,7 +93,7 @@ namespace WindowsFormsApp3
             StartDate = DateStartLeasingDate.Value.ToString("yyyy/MM/DD");
             EndDate = DateEndLeasingDate.Value.ToString("yyyy/MM/DD");
 
-            string query = "insert into Vehicle_Leasings(VehicleID,Bank,Branch,BankCode,AccountHolder,AccountNumber,Year,TotalLeasingAmount,AnnualInterestRate,LeasingPeriod,MonthlyPayment,StartLeasingDate,EndLeasingDate) " +
+            string query = "insert into Vehicle_Leasings(VehicleID,BankName,Branch,BankCode,AccountHolder,AccountNumber,Year,TotalLeasingAmount,AnnualInterestRate,LeasingPeriod,MonthlyPayment,StartLeasingDate,EndLeasingDate) " +
                 "values('" + vid + "', '" + Bank + "','" + Branch + "','" + BankCode + "','" + AccountHolder + "','" + AccountNumber + "','" + Year + "','" + TotalLeasingAmount + "','" + AnnualInterestRate + "','" + LeasingPeriod + "','" + MonthlyPayment + "','" + StartLeasingDate + "','" + EndLeasingDate + "')";
 
             command = new SqlCommand(query, sql);

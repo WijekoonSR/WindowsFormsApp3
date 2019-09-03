@@ -16,6 +16,7 @@ namespace WindowsFormsApp3
 
         public static String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
         SqlConnection con = new SqlConnection(name);
+        String vID;
 
 
         String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, DateOfCom, VehicleType;
@@ -23,6 +24,7 @@ namespace WindowsFormsApp3
         public VehicleUINew()
         {
             InitializeComponent();
+            getVehicleID();
             dropdownVehicleType.AddItem("Excavator");
             dropdownVehicleType.AddItem("Backhoe Loaders");
             dropdownVehicleType.AddItem("Bulldozers");
@@ -33,6 +35,35 @@ namespace WindowsFormsApp3
 
 
 
+        }
+
+        private void getVehicleID()
+        {
+            try { 
+            con.Open();
+            String queryCurrentID = "select IDENT_CURRENT('Vehicles')";
+            SqlCommand command = new SqlCommand(queryCurrentID, con);
+            SqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                vID = dataReader[0].ToString();
+            }
+                con.Close();
+                con.Open();
+                SqlCommand chkExistsData = new SqlCommand("select * from Vehicles where VehicleID = 1", con);
+                int chk = (int)chkExistsData.ExecuteScalar();
+                if (chk > 0) txtVehicleID.Text = "V" + (int.Parse(vID) + 1).ToString();
+                else txtVehicleID.Text = "V1";
+                con.Close();
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Vehicle UI");
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -55,81 +86,7 @@ namespace WindowsFormsApp3
 
         }
 
-        private void txtModel_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dropdownVehicleType_onItemSelected(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateOfCommencement_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblVehicleCapacity_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VehicleUINew_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             try

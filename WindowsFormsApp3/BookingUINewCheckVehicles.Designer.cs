@@ -45,6 +45,7 @@
             this.dgvAvaiableVehicles.Size = new System.Drawing.Size(416, 269);
             this.dgvAvaiableVehicles.TabIndex = 0;
             this.dgvAvaiableVehicles.UseWaitCursor = true;
+            this.dgvAvaiableVehicles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvaiableVehicles_CellContentClick);
             // 
             // BookingUINewCheckVehicles
             // 

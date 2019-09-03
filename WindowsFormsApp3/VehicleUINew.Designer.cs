@@ -61,10 +61,12 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateOfCommencement = new System.Windows.Forms.DateTimePicker();
             this.lblDateOfCommencement = new System.Windows.Forms.Label();
             this.txtHiringRate = new System.Windows.Forms.TextBox();
             this.lblHiringRate = new System.Windows.Forms.Label();
-            this.dateOfCommencement = new System.Windows.Forms.DateTimePicker();
+            this.txtVehicleID = new System.Windows.Forms.TextBox();
+            this.lblVehicleID = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -106,7 +108,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vehicle Details";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtMachineCat
             // 
@@ -114,7 +115,6 @@
             this.txtMachineCat.Name = "txtMachineCat";
             this.txtMachineCat.Size = new System.Drawing.Size(101, 22);
             this.txtMachineCat.TabIndex = 13;
-            this.txtMachineCat.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblMachineCategory
             // 
@@ -124,7 +124,6 @@
             this.lblMachineCategory.Size = new System.Drawing.Size(102, 13);
             this.lblMachineCategory.TabIndex = 12;
             this.lblMachineCategory.Text = "Machine Category";
-            this.lblMachineCategory.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtStatus
             // 
@@ -171,7 +170,6 @@
             this.lblStatus.Size = new System.Drawing.Size(39, 13);
             this.lblStatus.TabIndex = 3;
             this.lblStatus.Text = "Status";
-            this.lblStatus.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtVehicleCapacity
             // 
@@ -188,7 +186,6 @@
             this.lblVehicleClass.Size = new System.Drawing.Size(70, 13);
             this.lblVehicleClass.TabIndex = 6;
             this.lblVehicleClass.Text = "Vehicle class";
-            this.lblVehicleClass.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblEngineType
             // 
@@ -198,7 +195,6 @@
             this.lblEngineType.Size = new System.Drawing.Size(70, 13);
             this.lblEngineType.TabIndex = 5;
             this.lblEngineType.Text = "Engine Type";
-            this.lblEngineType.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblVehicleCapacity
             // 
@@ -224,7 +220,6 @@
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(100, 22);
             this.txtModel.TabIndex = 3;
-            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
             // 
             // dropdownVehicleType
             // 
@@ -238,7 +233,6 @@
             this.dropdownVehicleType.selectedIndex = -1;
             this.dropdownVehicleType.Size = new System.Drawing.Size(217, 35);
             this.dropdownVehicleType.TabIndex = 4;
-            this.dropdownVehicleType.onItemSelected += new System.EventHandler(this.dropdownVehicleType_onItemSelected);
             // 
             // contextMenuStrip1
             // 
@@ -264,7 +258,6 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehicle Registration Details";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtYearOfManufacture
             // 
@@ -281,7 +274,6 @@
             this.lblYearOfManufacture.Size = new System.Drawing.Size(114, 13);
             this.lblYearOfManufacture.TabIndex = 19;
             this.lblYearOfManufacture.Text = "Year Of Manufacture";
-            this.lblYearOfManufacture.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // DateRegistration
             // 
@@ -331,7 +323,6 @@
             this.lblRegistrationDate.Size = new System.Drawing.Size(97, 13);
             this.lblRegistrationDate.TabIndex = 0;
             this.lblRegistrationDate.Text = "Registration Date";
-            this.lblRegistrationDate.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnSave
             // 
@@ -373,6 +364,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hiring Details";
             // 
+            // dateOfCommencement
+            // 
+            this.dateOfCommencement.Location = new System.Drawing.Point(151, 83);
+            this.dateOfCommencement.Name = "dateOfCommencement";
+            this.dateOfCommencement.Size = new System.Drawing.Size(196, 22);
+            this.dateOfCommencement.TabIndex = 20;
+            this.dateOfCommencement.Value = new System.DateTime(2019, 6, 25, 0, 0, 0, 0);
+            // 
             // lblDateOfCommencement
             // 
             this.lblDateOfCommencement.AutoSize = true;
@@ -398,14 +397,25 @@
             this.lblHiringRate.TabIndex = 2;
             this.lblHiringRate.Text = "Hiring Rate";
             // 
-            // dateOfCommencement
+            // txtVehicleID
             // 
-            this.dateOfCommencement.Location = new System.Drawing.Point(151, 83);
-            this.dateOfCommencement.Name = "dateOfCommencement";
-            this.dateOfCommencement.Size = new System.Drawing.Size(196, 22);
-            this.dateOfCommencement.TabIndex = 20;
-            this.dateOfCommencement.Value = new System.DateTime(2019, 6, 25, 0, 0, 0, 0);
-            this.dateOfCommencement.ValueChanged += new System.EventHandler(this.dateOfCommencement_ValueChanged);
+            this.txtVehicleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVehicleID.Location = new System.Drawing.Point(781, 35);
+            this.txtVehicleID.Name = "txtVehicleID";
+            this.txtVehicleID.Size = new System.Drawing.Size(117, 21);
+            this.txtVehicleID.TabIndex = 16;
+            // 
+            // lblVehicleID
+            // 
+            this.lblVehicleID.AutoSize = true;
+            this.lblVehicleID.BackColor = System.Drawing.Color.Black;
+            this.lblVehicleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblVehicleID.Location = new System.Drawing.Point(682, 41);
+            this.lblVehicleID.Name = "lblVehicleID";
+            this.lblVehicleID.Size = new System.Drawing.Size(79, 16);
+            this.lblVehicleID.TabIndex = 17;
+            this.lblVehicleID.Text = "Vehicle ID";
             // 
             // VehicleUINew
             // 
@@ -413,6 +423,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.lblVehicleID);
+            this.Controls.Add(this.txtVehicleID);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -422,7 +434,6 @@
             this.Controls.Add(this.lblVehicleType);
             this.Name = "VehicleUINew";
             this.Size = new System.Drawing.Size(1069, 561);
-            this.Load += new System.EventHandler(this.VehicleUINew_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -470,5 +481,7 @@
         private System.Windows.Forms.TextBox txtHiringRate;
         private System.Windows.Forms.Label lblHiringRate;
         private System.Windows.Forms.DateTimePicker dateOfCommencement;
+        private System.Windows.Forms.TextBox txtVehicleID;
+        private System.Windows.Forms.Label lblVehicleID;
     }
 }
