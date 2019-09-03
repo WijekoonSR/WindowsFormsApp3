@@ -51,10 +51,10 @@ namespace WindowsFormsApp3
                 con.Close();
                 con.Open();
                 SqlCommand chkExistsData = new SqlCommand("select * from Vehicles where VehicleID = 1", con);
-                int chk = (int)chkExistsData.ExecuteScalar();
-                if (chk > 0) txtVehicleID.Text = "V" + (int.Parse(vID) + 1).ToString();
-                else txtVehicleID.Text = "V1";
-                con.Close();
+                SqlDataReader SDR = chkExistsData.ExecuteReader();
+                if (SDR.HasRows) txtVehicleID.Text = "B" + (int.Parse(vID) + 1).ToString();
+                else txtVehicleID.Text = "B1";
+                 con.Close();
         }
             catch (Exception ex)
             {
@@ -114,6 +114,7 @@ namespace WindowsFormsApp3
                 SqlCommand sqlCommand = new SqlCommand(query, con);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
+                con.Close();
             }
             catch (Exception ex)
             {
