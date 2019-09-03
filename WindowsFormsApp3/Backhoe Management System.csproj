@@ -51,13 +51,18 @@
     <StartupObject>WindowsFormsApp3.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.4">
       <HintPath>Bunifu\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="officesplash_MetroProgressBar">
       <HintPath>Metro\officesplash_MetroProgressBar.dll</HintPath>
@@ -68,8 +73,11 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,6 +113,9 @@
     </Compile>
     <Compile Include="AssetsUIView.Designer.cs">
       <DependentUpon>AssetsUIView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets_Maintenance.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="BookingUICheckCxValidity.cs">
       <SubType>Form</SubType>
@@ -226,6 +237,21 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
     <Compile Include="NewUserUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,17 +338,32 @@
     <Compile Include="StartUpUI.Designer.cs">
       <DependentUpon>StartUpUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserNewUI.cs">
+    <Compile Include="User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserNewUI.Designer.cs">
-      <DependentUpon>UserNewUI.cs</DependentUpon>
+    <Compile Include="UserUI.Designer.cs">
+      <DependentUpon>UserUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UserProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserProfile.Designer.cs">
       <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUIEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUIEdit.Designer.cs">
+      <DependentUpon>UserUIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUIView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUIView.Designer.cs">
+      <DependentUpon>UserUIView.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
     <Compile Include="VehicleLeasingUI.cs">
@@ -491,11 +532,17 @@
     <EmbeddedResource Include="StartUpUI.resx">
       <DependentUpon>StartUpUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserNewUI.resx">
-      <DependentUpon>UserNewUI.cs</DependentUpon>
+    <EmbeddedResource Include="UserUI.resx">
+      <DependentUpon>UserUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUIEdit.resx">
+      <DependentUpon>UserUIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUIView.resx">
+      <DependentUpon>UserUIView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUI.resx">
       <DependentUpon>VehicleLeasingUI.cs</DependentUpon>
@@ -543,6 +590,13 @@
     <None Include="DatabaseDataSet1.xss">
       <DependentUpon>DatabaseDataSet1.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -571,6 +625,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Logo.ico" />
+    <Content Include="logo.ico" />
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

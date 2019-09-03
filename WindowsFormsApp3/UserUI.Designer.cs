@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class NewUserUI
+    partial class UserUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewUserUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserUI));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.newUserUIPage011 = new WindowsFormsApp3.NewUserUIPage01();
+            this.userUIView1 = new WindowsFormsApp3.UserUIView();
+            this.userUIEdit1 = new WindowsFormsApp3.UserUIEdit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.newUserUIPage011);
+            this.panel1.Controls.Add(this.userUIEdit1);
+            this.panel1.Controls.Add(this.userUIView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(323, 316);
+            this.panel1.Size = new System.Drawing.Size(254, 355);
             this.panel1.TabIndex = 0;
             // 
-            // newUserUIPage011
+            // userUIView1
             // 
-            this.newUserUIPage011.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.newUserUIPage011.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.newUserUIPage011.Location = new System.Drawing.Point(0, 0);
-            this.newUserUIPage011.Name = "newUserUIPage011";
-            this.newUserUIPage011.Size = new System.Drawing.Size(323, 316);
-            this.newUserUIPage011.TabIndex = 2;
+            this.userUIView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userUIView1.Location = new System.Drawing.Point(0, 0);
+            this.userUIView1.Name = "userUIView1";
+            this.userUIView1.Size = new System.Drawing.Size(254, 355);
+            this.userUIView1.TabIndex = 0;
             // 
-            // NewUserUI
+            // userUIEdit1
+            // 
+            this.userUIEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userUIEdit1.Location = new System.Drawing.Point(0, 0);
+            this.userUIEdit1.Name = "userUIEdit1";
+            this.userUIEdit1.Size = new System.Drawing.Size(254, 355);
+            this.userUIEdit1.TabIndex = 1;
+            // 
+            // UserUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 316);
+            this.ClientSize = new System.Drawing.Size(254, 355);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "NewUserUI";
-            this.Text = "Register";
+            this.Name = "UserUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Profile";
+            this.Load += new System.EventHandler(this.UserNewUI_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -69,6 +80,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private NewUserUIPage01 newUserUIPage011;
+        private UserUIEdit userUIEdit1;
+        private UserUIView userUIView1;
     }
 }

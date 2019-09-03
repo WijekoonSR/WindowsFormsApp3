@@ -115,6 +115,7 @@
             this.newUserUIPage021.Name = "newUserUIPage021";
             this.newUserUIPage021.Size = new System.Drawing.Size(319, 315);
             this.newUserUIPage021.TabIndex = 8;
+            this.newUserUIPage021.Load += new System.EventHandler(this.newUserUIPage021_Load);
             // 
             // pictureBox1
             // 

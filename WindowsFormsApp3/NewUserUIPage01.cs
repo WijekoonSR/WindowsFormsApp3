@@ -18,6 +18,11 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
+        private void newUserUIPage021_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnNext_Click(object sender, EventArgs e)
         {
             string chkPassword;
