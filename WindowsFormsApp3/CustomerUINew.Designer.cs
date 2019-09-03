@@ -77,6 +77,7 @@
             this.txtcutomerID.Name = "txtcutomerID";
             this.txtcutomerID.Size = new System.Drawing.Size(113, 20);
             this.txtcutomerID.TabIndex = 1;
+            this.txtcutomerID.TextChanged += new System.EventHandler(this.txtcutomerID_TextChanged);
             // 
             // label3
             // 

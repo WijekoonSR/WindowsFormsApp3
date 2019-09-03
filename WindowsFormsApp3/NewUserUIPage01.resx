@@ -118,36 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnView.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAK1JREFUSEvt
-        kk0KwkAMhWdTT1UUvJutXkrQk3Rhf/AKLuKLebOYFoQymY32gwehL6Rh8sJvISIV1EIdpXVFOx8OnNPQ
-        zgfDBpuZMNBW/26fvnJj+xKYo/UkrPnBC7qyfQnM4k8Uj/ykfI9cHGy749Yxpg3kGtMzNOdEOx8M622m
-        HKCjlfKgrX52TCfrkRraW+kb08unLcX1ifTIeocYU98jFwfbbjFVtpj+FyG8Abf3eyeeJCnWAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="btnEdit.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAkRJREFUSEu1
-        ljloFVEUhp9RQyQuiUazmEbsUig2ghu4FraC9naWgiBY2tuJpFJM4Q5uIKiFhdqoiAvuVlqItq4o4vh9
-        13NhGM17857JB1+R8+45f+7MfTOvMVUURbEDr+ARHIny1MLgPfgLM29xeXz8/zBsBnbjWvyIZd7jWCzt
-        HIbMwhN4G+fh9IQxYBV+cxpcxzm4Gb9YKPEae6OtPjR5uXbjbNyAn1Bu4Vzcgl8tlNge7fWgwZDDqZXT
-        FbX1mC9ZDtuK5bCVaUAdWNyFR1NbUTzFQexDD8M6rIZtQ8PGY0RrWGzIMZQcMoTPMd+ff4WtwK4Y0xwW
-        erpOoTxDQ/rxvoXgQKzdhJ9Thd2nAXVgcTXEXQzgIwvBSZyJhnsZ1+ANHIwxzWGhIadRJgvxnzBkGF/g
-        VeyJEa1hsSFnUPwejGI15Dx6xK0/tABvcDTGNIeFhpy1C8oheZjkkBF0J/IKa4fYfM4umCzkAuaQlxbA
-        kzgUY5rDQm/kZbsghyzCViFPsN6NFxaPp7aieIfL0JAHFoIcshRzyGNcEiPqQYO7kI1YDbmI7tgQ74V4
-        MBZHez1oGEutfNPj773oCZJr2IPlkHvYn5rbgab9qb0oDkXJmo+US1jdyV1sP0RovJlG8AiJkrVe9Bnm
-        ocghd7AvlrSHjfgTv2N3lK0vwJ3oW1K8ZwPxcfvQvCuN+cNx3Ic+q35YCDyJC6OlMxgwkUb9zQc02F3N
-        j+WdwxAfmOLPJb8XB3E11nuP1IWBvkP8DTAcpWmg0fgNjHteSpr1V4MAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnNew.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAG9JREFUSEvt
-        0kEKwCAMRFG9/6FtJpkQrEItZNGiD7JR/KHQso/WWpVxlcd5ELW2OgtGiFpbnQUjRK2t3i/Ao4Vxs7tu
-        mA1ymIrZwPM0zAY5m37qbdzsrhtm1/Gh2/E3fYKotdVZMELU2uqHCz6qlAv0jvpYbpRsQAAAAABJRU5E
-        rkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAN9SURBVGhD7ZlLaBNRFIbjY+MDFVQEFVwJIqKLQsPMpDZ1I7ooLuxCQalaZ8Y+RFFE3TQbqwsj
+        uPBRcGsLLZhKydxkGlurXRhbhQqF1kVBpamiVEF8UEvHc8MJxOnpNJnMpCPkhw+Gydz//JPce+fOja+k
+        kkpyS8YSRYzdUCR2BU/8Pzq2O75KlViHIjKDA8fX+Q3hx96W4te3yxIbzoTPIIusXS7rXomXeVMQVAZ+
+        ZQc3MapUaDvxcu9IFbq3ZHeZBfgG1Id8oaXYfPHU5NfWyFLsKgT6nhUwN4TYC2hbhVbFVYMY3aYIrAWC
+        8G+TDpg7SUXUDp8XOlagvbMKBfuW1/m1rarA9quido0aoA7xUxViGgz2s3KABer8iU01NR3LMIZ9gfGs
+        qVAxmcEY9gUm0ybTYvIbY9gXPE2/EsaWXDyYMCL3x4ykPpGmC44vVfeS1y7AFMawLzD5YDK1hId/2TNh
+        DA98+gd+7sKBBNnGgvcYw77ABGYJ0pyEf/Pm8Bke3R0l21iQxBj2BSadJlNLBp+kyPCcwZ4U2caCToxh
+        X2ASNplaMtQ7SYbnDCXyvoEwxrAvWdDOEcbz0tX6lgzPybcL8doYw74UMbqXMp+Py4f6yEGc1FN5D+LT
+        glaJMeyLL4HB7I/Z3IrMNMrHA+82kXtjdmagmfpg32qMUZjA7JXJvBi8wfKFC8zumMzdR2APsHzhUgTt
+        OFmEoPnoc6MtPGL0R94ZyXgqDT9uvzliNB95RrahgMWjguULV0N5Yj2YWo6Dxn265QyUgY+Npiqd9Mhi
+        9qSkb8byzkgV2VOiUJrGyriht4+TgSn0tvF0G8oLGcSyzomv04lCafgsQwW1wvKZ4MZWjFzWsxbMf8wp
+        BlABc4HyAqb5ywyWdVaqpD0kCpLhcoHyAqJYznkpgdgeKODqG5rrL/owFh5ThR1BYgNYxj3Jgagfirny
+        K5yRWDWWcVf8KUkFKAS+I4H27gsfbF/MIQpgWhbiO9C+OIL+eooIYg+BtaBtcQXFW+eEyRtNX7R9Ur4d
+        CCFezw2VIxKbdHzNk69qg5F1EMbGTWgf+X8JaLO4OlGhbYR+PEIHJZniD0Vs7g3xrsC3zImwZlIwZZZj
+        M2+J72TDsvs2ERqJ9cvB7g14uXcFN1ELgT9nhZ+RBXbL8/+RZYsvv9O/BqxvVDG+C0+XVFJJjsrn+wvI
+        uoBlz9l4rgAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

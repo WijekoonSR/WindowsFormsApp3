@@ -17,12 +17,29 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        private void AssetsUIEdit_Load(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void btnSaveEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuantityNew_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAttachmentsEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIssuedDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dltbutton_Click(object sender, EventArgs e)
         {
 
         }

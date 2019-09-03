@@ -15,31 +15,58 @@ namespace WindowsFormsApp3
         SqlConnection sqlConnection = new SqlConnection(AssetsUINew.server);
         public AssetsUIView()
         {
-           
             InitializeComponent();
+            getData();
+        }
+
+
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+          try { 
             sqlConnection.Open();
-            String query = "Select * from Assets_Maintenance";
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query,sqlConnection);
+            string searchid = txtIDView.Text;
+            String cmd = "Select * from Assets_Maintenance where AssetsMaintenanceID ='" + searchid + "' ";
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd, sqlConnection);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dgvAssetsDetails.DataSource = dataTable;
-
-            sqlConnection.Close();
+            SqlCommand command = new SqlCommand();
+          }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
         }
 
-        private void lblIssuedDate_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            getData();
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
+        private void getData() {
+            try {
+                sqlConnection.Open();
+                String query = "Select * from Assets_Maintenance";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                dgvAssetsDetails.DataSource = dataTable;
 
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
         }
     }
 }

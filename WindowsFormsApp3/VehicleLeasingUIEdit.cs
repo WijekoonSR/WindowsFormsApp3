@@ -16,5 +16,10 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
+
+        private void DateStartLeasingDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

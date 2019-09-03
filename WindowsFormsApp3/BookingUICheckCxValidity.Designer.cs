@@ -222,6 +222,7 @@
             this.Name = "BookingUICheckCxValidity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contract Validity";
+            this.Load += new System.EventHandler(this.BookingUICheckCxValidity_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);

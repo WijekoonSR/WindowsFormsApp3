@@ -87,6 +87,7 @@
             this.btnClear.TabIndex = 23;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -130,7 +131,7 @@
             this.btnCheckVehicles.TabIndex = 39;
             this.btnCheckVehicles.Text = "Check Vehicles";
             this.btnCheckVehicles.UseVisualStyleBackColor = false;
-            this.btnCheckVehicles.Click += new System.EventHandler(this.button1_Click);
+            this.btnCheckVehicles.Click += new System.EventHandler(this.btnCheckVehicles_Click);
             // 
             // txtWorkingHours
             // 
@@ -145,7 +146,8 @@
             this.dateEndDate.Name = "dateEndDate";
             this.dateEndDate.Size = new System.Drawing.Size(263, 22);
             this.dateEndDate.TabIndex = 15;
-            this.dateEndDate.Value = new System.DateTime(2019, 6, 25, 0, 0, 0, 0);
+            this.dateEndDate.Value = new System.DateTime(2019, 9, 2, 0, 0, 0, 0);
+            this.dateEndDate.ValueChanged += new System.EventHandler(this.dateEndDate_ValueChanged);
             // 
             // dateStartDate
             // 
@@ -153,6 +155,8 @@
             this.dateStartDate.Name = "dateStartDate";
             this.dateStartDate.Size = new System.Drawing.Size(264, 22);
             this.dateStartDate.TabIndex = 14;
+            this.dateStartDate.Value = new System.DateTime(2019, 9, 2, 12, 43, 59, 0);
+            this.dateStartDate.ValueChanged += new System.EventHandler(this.dateStartDate_ValueChanged);
             // 
             // lblBookingDate
             // 
@@ -209,6 +213,7 @@
             this.txtRatings3.Name = "txtRatings3";
             this.txtRatings3.Size = new System.Drawing.Size(87, 22);
             this.txtRatings3.TabIndex = 24;
+            this.txtRatings3.Text = "0";
             // 
             // txtRatings2
             // 
@@ -216,7 +221,7 @@
             this.txtRatings2.Name = "txtRatings2";
             this.txtRatings2.Size = new System.Drawing.Size(87, 22);
             this.txtRatings2.TabIndex = 23;
-            this.txtRatings2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtRatings2.Text = "0";
             // 
             // txtRatings1
             // 
@@ -224,6 +229,7 @@
             this.txtRatings1.Name = "txtRatings1";
             this.txtRatings1.Size = new System.Drawing.Size(87, 22);
             this.txtRatings1.TabIndex = 22;
+            this.txtRatings1.Text = "0";
             // 
             // lblRatings
             // 
@@ -243,6 +249,8 @@
             this.dropDownNoOfBackhoes3.Name = "dropDownNoOfBackhoes3";
             this.dropDownNoOfBackhoes3.Size = new System.Drawing.Size(35, 24);
             this.dropDownNoOfBackhoes3.TabIndex = 20;
+            this.dropDownNoOfBackhoes3.Text = "0";
+            this.dropDownNoOfBackhoes3.SelectedIndexChanged += new System.EventHandler(this.dropDownNoOfBackhoes3_SelectedIndexChanged);
             // 
             // dropDownNoOfBackhoes2
             // 
@@ -253,6 +261,8 @@
             this.dropDownNoOfBackhoes2.Name = "dropDownNoOfBackhoes2";
             this.dropDownNoOfBackhoes2.Size = new System.Drawing.Size(35, 24);
             this.dropDownNoOfBackhoes2.TabIndex = 19;
+            this.dropDownNoOfBackhoes2.Text = "0";
+            this.dropDownNoOfBackhoes2.SelectedIndexChanged += new System.EventHandler(this.dropDownNoOfBackhoes2_SelectedIndexChanged);
             // 
             // dropDownNoOfBackhoes1
             // 
@@ -263,6 +273,7 @@
             this.dropDownNoOfBackhoes1.Name = "dropDownNoOfBackhoes1";
             this.dropDownNoOfBackhoes1.Size = new System.Drawing.Size(35, 24);
             this.dropDownNoOfBackhoes1.TabIndex = 18;
+            this.dropDownNoOfBackhoes1.Text = "0";
             this.dropDownNoOfBackhoes1.SelectedIndexChanged += new System.EventHandler(this.dropDownNoOfBackhoes1_SelectedIndexChanged);
             // 
             // dropDownBackhoeTypes3
@@ -345,7 +356,6 @@
             this.groupBoxCallerDetails.TabIndex = 19;
             this.groupBoxCallerDetails.TabStop = false;
             this.groupBoxCallerDetails.Text = "Caller Details";
-            this.groupBoxCallerDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtNIC
             // 
@@ -393,7 +403,6 @@
             this.lblCallerName.Size = new System.Drawing.Size(54, 16);
             this.lblCallerName.TabIndex = 1;
             this.lblCallerName.Text = "Name : ";
-            this.lblCallerName.Click += new System.EventHandler(this.lblCallerName_Click);
             // 
             // lblCalledDateTime
             // 
@@ -466,7 +475,6 @@
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(223, 20);
             this.txtCustomerID.TabIndex = 33;
-            this.txtCustomerID.TextChanged += new System.EventHandler(this.txtCustomerID_TextChanged);
             // 
             // picSearch
             // 

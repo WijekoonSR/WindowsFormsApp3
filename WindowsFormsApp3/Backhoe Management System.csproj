@@ -62,6 +62,9 @@
     <Reference Include="officesplash_MetroProgressBar">
       <HintPath>Metro\officesplash_MetroProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -229,6 +232,18 @@
     <Compile Include="NewUserUI.Designer.cs">
       <DependentUpon>NewUserUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewUserUIPage01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewUserUIPage01.Designer.cs">
+      <DependentUpon>NewUserUIPage01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserUIPage02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewUserUIPage02.Designer.cs">
+      <DependentUpon>NewUserUIPage02.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +372,7 @@
     <Compile Include="UserProfile.Designer.cs">
       <DependentUpon>UserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation.cs" />
     <Compile Include="VehicleLeasingUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -474,6 +490,12 @@
     <EmbeddedResource Include="NewUserUI.resx">
       <DependentUpon>NewUserUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewUserUIPage01.resx">
+      <DependentUpon>NewUserUIPage01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserUIPage02.resx">
+      <DependentUpon>NewUserUIPage02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUI.resx">
       <DependentUpon>PayrollUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,6 +578,9 @@
     <EmbeddedResource Include="VehicleLeasingUIEdit.resx">
       <DependentUpon>VehicleLeasingUIEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VehicleLeasingUIView.resx">
+      <DependentUpon>VehicleLeasingUIView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VehicleUI.resx">
       <DependentUpon>VehicleUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -590,6 +615,7 @@
     <None Include="DatabaseDataSet1.xss">
       <DependentUpon>DatabaseDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
