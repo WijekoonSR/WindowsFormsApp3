@@ -23,7 +23,7 @@ namespace WindowsFormsApp3
             DataTable datTable  = new DataTable();
             sqlAdapter.Fill(datTable);
             dgvView.DataSource = datTable;
-
+            sqlConnection.Close();
 
 
 
@@ -38,6 +38,28 @@ namespace WindowsFormsApp3
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                string searchID = txtSearch.Text;
+                String cmd = "Select * from Vehicles where vehicleID = '" + searchID + "'";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd, sqlConnection);
+                DataTable dataTable = new DataTable();
+                dgvView.DataSource = dataTable;
+                sqlConnection.Close();
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Error Searching" + ex);
+             }
+             finally
+             {
+                 sqlConnection.Close();
+             }
         }
     }
 }

@@ -228,7 +228,7 @@
             this.dropdownVehicleType.Items = new string[0];
             this.dropdownVehicleType.Location = new System.Drawing.Point(208, 28);
             this.dropdownVehicleType.Name = "dropdownVehicleType";
-            this.dropdownVehicleType.NomalColor = System.Drawing.Color.Goldenrod;
+            this.dropdownVehicleType.NomalColor = System.Drawing.SystemColors.HotTrack;
             this.dropdownVehicleType.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.dropdownVehicleType.selectedIndex = -1;
             this.dropdownVehicleType.Size = new System.Drawing.Size(217, 35);
@@ -326,7 +326,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(452, 505);
             this.btnSave.Name = "btnSave";
@@ -338,7 +338,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnClear.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(552, 505);
             this.btnClear.Name = "btnClear";
