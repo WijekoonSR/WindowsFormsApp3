@@ -373,6 +373,7 @@
             this.picBoxAttachNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxAttachNew.TabIndex = 36;
             this.picBoxAttachNew.TabStop = false;
+            this.picBoxAttachNew.Click += new System.EventHandler(this.picBoxAttachNew_Click);
             // 
             // contextMenuStrip1
             // 
