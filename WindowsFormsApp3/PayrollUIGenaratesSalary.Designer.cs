@@ -41,9 +41,9 @@
             this.dateTimePayroll = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.edtPosition = new System.Windows.Forms.TextBox();
+            this.edtDepartment = new System.Windows.Forms.TextBox();
+            this.edtName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -175,9 +175,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.bunifuFlatButton2);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.edtPosition);
+            this.groupBox3.Controls.Add(this.edtDepartment);
+            this.groupBox3.Controls.Add(this.edtName);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label1);
@@ -216,26 +216,26 @@
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // textBox3
+            // edtPosition
             // 
-            this.textBox3.Location = new System.Drawing.Point(635, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 29;
+            this.edtPosition.Location = new System.Drawing.Point(635, 19);
+            this.edtPosition.Name = "edtPosition";
+            this.edtPosition.Size = new System.Drawing.Size(100, 20);
+            this.edtPosition.TabIndex = 29;
             // 
-            // textBox2
+            // edtDepartment
             // 
-            this.textBox2.Location = new System.Drawing.Point(903, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 28;
+            this.edtDepartment.Location = new System.Drawing.Point(903, 19);
+            this.edtDepartment.Name = "edtDepartment";
+            this.edtDepartment.Size = new System.Drawing.Size(100, 20);
+            this.edtDepartment.TabIndex = 28;
             // 
-            // textBox1
+            // edtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(376, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 27;
+            this.edtName.Location = new System.Drawing.Point(376, 19);
+            this.edtName.Name = "edtName";
+            this.edtName.Size = new System.Drawing.Size(100, 20);
+            this.edtName.TabIndex = 27;
             // 
             // label8
             // 
@@ -559,9 +559,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePayroll;
         private System.Windows.Forms.GroupBox groupBox3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox edtPosition;
+        private System.Windows.Forms.TextBox edtDepartment;
+        private System.Windows.Forms.TextBox edtName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;

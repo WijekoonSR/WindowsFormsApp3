@@ -75,7 +75,25 @@ namespace WindowsFormsApp3
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-           
+            string Sql = "select * from Employee";
+            SqlCommand cmd = new SqlCommand(Sql, con);
+            try
+            {
+                con.Open();
+
+                using (SqlDataReader read = cmd.ExecuteReader())
+                {
+                    while (read.Read())
+                    {
+                        
+                        edtName.Text = (read["FistName"].ToString());
+                       
+                    }
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
         }
     }
 }
