@@ -36,6 +36,11 @@ namespace WindowsFormsApp3
 
         int quantity, invoiceNumber, contactNumber, OwnerContact;
 
+        private void btnAttach_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void picBoxAttachNew_Click(object sender, EventArgs e)
         {
             Image image = Image.FromFile("Path of file");
@@ -122,7 +127,7 @@ namespace WindowsFormsApp3
         
 
 
-        public void ClearFields()
+        private void ClearFields()
         {
             try
             {
