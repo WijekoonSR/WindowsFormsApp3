@@ -119,7 +119,7 @@ namespace WindowsFormsApp3
         {
             try
             {
-
+                dropDownItemsRemove();
                 Type1 = dropDownBackhoeTypes1.selectedValue;
                 int count = 0;
 
@@ -151,6 +151,7 @@ namespace WindowsFormsApp3
         {
             try
             {
+                dropDownItemsRemove();
                 Type2 = dropDownBackhoeTypes2.selectedValue;
                 int count = 0;
 
@@ -185,13 +186,14 @@ namespace WindowsFormsApp3
         {
             try
             {
+                dropDownItemsRemove();
                 int count = 0;
                 Type3 = dropDownBackhoeTypes2.selectedValue;
                 if (Type3 == "Excavator") count = NoOfExcavator;
                 else if (Type3 == "Backhoe Loaders") count = NoBackhoeLoaders;
                 else if (Type3 == "Bulldozers") count = NoBulldozers;
                 else if (Type3 == "Skid Steer Loaders") count = NoSkidSteerLoaders;
-                else if (Type3 == "Motor Grader") count = NoMotorGraders;
+                else if (Type3 == "Motor Graders") count = NoMotorGraders;
                 else if (Type3 == "Trenchers") count = NoTrenchers;
                 else count = 0;
                 MessageBox.Show("Avaiable : " + count.ToString(), Type3);
@@ -275,6 +277,7 @@ namespace WindowsFormsApp3
         {
             try
             {
+                dropDownItemsRemove();
                 sqlConnection.Open();
                 //get values from inputed date range
                 startDate = dateStartDate.Value.ToString("yyyy/MM/dd");
@@ -297,15 +300,15 @@ namespace WindowsFormsApp3
                     {
                         NoOfExcavator = Convert.ToInt32(reader["count"]);
                     }
-                    else if (reader["Type"].ToString() == "Backhoe Loader")
+                    else if (reader["Type"].ToString() == "Backhoe Loaders")
                     {
                         NoBackhoeLoaders = Convert.ToInt32(reader["count"].ToString());
                     }
-                    else if (reader["Type"].ToString() == "Bulldozer")
+                    else if (reader["Type"].ToString() == "Bulldozers")
                     {
                         NoBulldozers = Convert.ToInt32(reader["count"].ToString());
                     }
-                    else if (reader["Type"].ToString() == "Skid Steer Loader")
+                    else if (reader["Type"].ToString() == "Skid Steer Loaders")
                     {
                         NoSkidSteerLoaders = Convert.ToInt32(reader["count"].ToString());
                     }
@@ -479,6 +482,7 @@ namespace WindowsFormsApp3
             txtTotalCharges.Clear();
             txtNIC.Clear();
             dateCaller.Value = DateTime.Now;
+            dropDownItemsRemove();
         }
 
         private void dropTable() {
@@ -497,6 +501,12 @@ namespace WindowsFormsApp3
             {
                 sqlConnection.Close();
             }
+        }
+
+        private void dropDownItemsRemove() {
+            dropDownNoOfBackhoes1.Items.Clear();
+            dropDownNoOfBackhoes2.Items.Clear();
+            dropDownNoOfBackhoes3.Items.Clear();
         }
     }
 }

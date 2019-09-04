@@ -76,175 +76,169 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(16, 123);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(21, 151);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 18);
+            this.label13.Size = new System.Drawing.Size(140, 23);
             this.label13.TabIndex = 37;
             this.label13.Text = "Contact Number";
             // 
             // txtContactNo
             // 
-            this.txtContactNo.Location = new System.Drawing.Point(182, 123);
-            this.txtContactNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContactNo.Location = new System.Drawing.Point(243, 151);
+            this.txtContactNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContactNo.Name = "txtContactNo";
-            this.txtContactNo.Size = new System.Drawing.Size(158, 25);
+            this.txtContactNo.Size = new System.Drawing.Size(209, 29);
             this.txtContactNo.TabIndex = 35;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(16, 76);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(21, 94);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 18);
+            this.label12.Size = new System.Drawing.Size(75, 23);
             this.label12.TabIndex = 34;
             this.label12.Text = "Address";
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(212, 73);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantity.Location = new System.Drawing.Point(283, 90);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(213, 25);
+            this.txtQuantity.Size = new System.Drawing.Size(283, 29);
             this.txtQuantity.TabIndex = 35;
             // 
             // lblQuantityNew
             // 
             this.lblQuantityNew.AutoSize = true;
-            this.lblQuantityNew.Location = new System.Drawing.Point(46, 78);
-            this.lblQuantityNew.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuantityNew.Location = new System.Drawing.Point(61, 96);
             this.lblQuantityNew.Name = "lblQuantityNew";
-            this.lblQuantityNew.Size = new System.Drawing.Size(62, 18);
+            this.lblQuantityNew.Size = new System.Drawing.Size(79, 23);
             this.lblQuantityNew.TabIndex = 34;
             this.lblQuantityNew.Text = "Quantity";
             // 
             // btnAttach
             // 
-            this.btnAttach.Location = new System.Drawing.Point(212, 199);
-            this.btnAttach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAttach.Location = new System.Drawing.Point(283, 245);
+            this.btnAttach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAttach.Name = "btnAttach";
-            this.btnAttach.Size = new System.Drawing.Size(60, 29);
+            this.btnAttach.Size = new System.Drawing.Size(80, 36);
             this.btnAttach.TabIndex = 33;
             this.btnAttach.Text = "Attach";
             this.btnAttach.UseVisualStyleBackColor = true;
+            this.btnAttach.Visible = false;
+            this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
             // 
             // dateIssued
             // 
-            this.dateIssued.Location = new System.Drawing.Point(212, 398);
-            this.dateIssued.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateIssued.Location = new System.Drawing.Point(283, 490);
+            this.dateIssued.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateIssued.Name = "dateIssued";
-            this.dateIssued.Size = new System.Drawing.Size(212, 25);
+            this.dateIssued.Size = new System.Drawing.Size(281, 29);
             this.dateIssued.TabIndex = 32;
             // 
             // lblIssuedDate
             // 
             this.lblIssuedDate.AutoSize = true;
-            this.lblIssuedDate.Location = new System.Drawing.Point(47, 402);
-            this.lblIssuedDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIssuedDate.Location = new System.Drawing.Point(63, 495);
             this.lblIssuedDate.Name = "lblIssuedDate";
-            this.lblIssuedDate.Size = new System.Drawing.Size(37, 18);
+            this.lblIssuedDate.Size = new System.Drawing.Size(48, 23);
             this.lblIssuedDate.TabIndex = 31;
             this.lblIssuedDate.Text = "Date";
             // 
             // txtInvoiceNumber
             // 
-            this.txtInvoiceNumber.Location = new System.Drawing.Point(212, 360);
-            this.txtInvoiceNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInvoiceNumber.Location = new System.Drawing.Point(283, 443);
+            this.txtInvoiceNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtInvoiceNumber.Name = "txtInvoiceNumber";
-            this.txtInvoiceNumber.Size = new System.Drawing.Size(212, 25);
+            this.txtInvoiceNumber.Size = new System.Drawing.Size(281, 29);
             this.txtInvoiceNumber.TabIndex = 30;
             // 
             // lblInvoiceNumber
             // 
             this.lblInvoiceNumber.AutoSize = true;
-            this.lblInvoiceNumber.Location = new System.Drawing.Point(46, 362);
-            this.lblInvoiceNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(61, 446);
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
-            this.lblInvoiceNumber.Size = new System.Drawing.Size(107, 18);
+            this.lblInvoiceNumber.Size = new System.Drawing.Size(136, 23);
             this.lblInvoiceNumber.TabIndex = 29;
             this.lblInvoiceNumber.Text = "Invoice Number";
             // 
             // txtShopName
             // 
-            this.txtShopName.Location = new System.Drawing.Point(182, 23);
-            this.txtShopName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtShopName.Location = new System.Drawing.Point(243, 28);
+            this.txtShopName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShopName.Name = "txtShopName";
-            this.txtShopName.Size = new System.Drawing.Size(158, 25);
+            this.txtShopName.Size = new System.Drawing.Size(209, 29);
             this.txtShopName.TabIndex = 33;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 28);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(21, 34);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 18);
+            this.label11.Size = new System.Drawing.Size(96, 23);
             this.label11.TabIndex = 33;
             this.label11.Text = "shop name";
             // 
             // lblAttachments
             // 
             this.lblAttachments.AutoSize = true;
-            this.lblAttachments.Location = new System.Drawing.Point(46, 210);
-            this.lblAttachments.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAttachments.Location = new System.Drawing.Point(61, 258);
             this.lblAttachments.Name = "lblAttachments";
-            this.lblAttachments.Size = new System.Drawing.Size(95, 18);
+            this.lblAttachments.Size = new System.Drawing.Size(120, 23);
             this.lblAttachments.TabIndex = 27;
             this.lblAttachments.Text = "Attachments -";
+            this.lblAttachments.Visible = false;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(211, 164);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrice.Location = new System.Drawing.Point(281, 202);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(212, 25);
+            this.txtPrice.Size = new System.Drawing.Size(281, 29);
             this.txtPrice.TabIndex = 26;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(46, 169);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrice.Location = new System.Drawing.Point(61, 208);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(39, 18);
+            this.lblPrice.Size = new System.Drawing.Size(50, 23);
             this.lblPrice.TabIndex = 25;
             this.lblPrice.Text = "Price";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(46, 123);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDate.Location = new System.Drawing.Point(61, 151);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(37, 18);
+            this.lblDate.Size = new System.Drawing.Size(48, 23);
             this.lblDate.TabIndex = 21;
             this.lblDate.Text = "Date";
             // 
             // txtSpareParts
             // 
-            this.txtSpareParts.Location = new System.Drawing.Point(212, 36);
-            this.txtSpareParts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSpareParts.Location = new System.Drawing.Point(283, 44);
+            this.txtSpareParts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSpareParts.Name = "txtSpareParts";
-            this.txtSpareParts.Size = new System.Drawing.Size(212, 25);
+            this.txtSpareParts.Size = new System.Drawing.Size(281, 29);
             this.txtSpareParts.TabIndex = 19;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(182, 73);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Location = new System.Drawing.Point(243, 90);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(158, 25);
+            this.txtAddress.Size = new System.Drawing.Size(209, 29);
             this.txtAddress.TabIndex = 36;
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(853, 488);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(1137, 601);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(126, 74);
+            this.btnClear.Size = new System.Drawing.Size(168, 91);
             this.btnClear.TabIndex = 43;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -254,10 +248,10 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(683, 488);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(911, 601);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(128, 74);
+            this.btnSave.Size = new System.Drawing.Size(171, 91);
             this.btnSave.TabIndex = 42;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -265,63 +259,60 @@
             // 
             // dateNew
             // 
-            this.dateNew.Location = new System.Drawing.Point(211, 121);
-            this.dateNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateNew.Location = new System.Drawing.Point(281, 149);
+            this.dateNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateNew.Name = "dateNew";
-            this.dateNew.Size = new System.Drawing.Size(212, 25);
+            this.dateNew.Size = new System.Drawing.Size(281, 29);
             this.dateNew.TabIndex = 22;
             // 
             // lblSpareParts
             // 
             this.lblSpareParts.AutoSize = true;
-            this.lblSpareParts.Location = new System.Drawing.Point(46, 38);
-            this.lblSpareParts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpareParts.Location = new System.Drawing.Point(61, 47);
             this.lblSpareParts.Name = "lblSpareParts";
-            this.lblSpareParts.Size = new System.Drawing.Size(138, 18);
+            this.lblSpareParts.Size = new System.Drawing.Size(178, 23);
             this.lblSpareParts.TabIndex = 20;
             this.lblSpareParts.Text = "Puchased spare parts";
             // 
             // txtOwnContactNew
             // 
-            this.txtOwnContactNew.Location = new System.Drawing.Point(182, 280);
-            this.txtOwnContactNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOwnContactNew.Location = new System.Drawing.Point(243, 345);
+            this.txtOwnContactNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOwnContactNew.Name = "txtOwnContactNew";
-            this.txtOwnContactNew.Size = new System.Drawing.Size(158, 25);
+            this.txtOwnContactNew.Size = new System.Drawing.Size(209, 29);
             this.txtOwnContactNew.TabIndex = 43;
             // 
             // txtOwnerName
             // 
-            this.txtOwnerName.Location = new System.Drawing.Point(182, 226);
-            this.txtOwnerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOwnerName.Location = new System.Drawing.Point(243, 278);
+            this.txtOwnerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOwnerName.Name = "txtOwnerName";
-            this.txtOwnerName.Size = new System.Drawing.Size(158, 25);
+            this.txtOwnerName.Size = new System.Drawing.Size(209, 29);
             this.txtOwnerName.TabIndex = 42;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(182, 176);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(243, 217);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(158, 25);
+            this.txtEmail.Size = new System.Drawing.Size(209, 29);
             this.txtEmail.TabIndex = 41;
             // 
             // lblOwnerContactNo
             // 
             this.lblOwnerContactNo.AutoSize = true;
-            this.lblOwnerContactNo.Location = new System.Drawing.Point(16, 284);
-            this.lblOwnerContactNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOwnerContactNo.Location = new System.Drawing.Point(21, 350);
             this.lblOwnerContactNo.Name = "lblOwnerContactNo";
-            this.lblOwnerContactNo.Size = new System.Drawing.Size(152, 18);
+            this.lblOwnerContactNo.Size = new System.Drawing.Size(196, 23);
             this.lblOwnerContactNo.TabIndex = 40;
             this.lblOwnerContactNo.Text = "Owner contact Number";
             // 
             // lblOwnerName
             // 
             this.lblOwnerName.AutoSize = true;
-            this.lblOwnerName.Location = new System.Drawing.Point(16, 231);
-            this.lblOwnerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOwnerName.Location = new System.Drawing.Point(21, 284);
             this.lblOwnerName.Name = "lblOwnerName";
-            this.lblOwnerName.Size = new System.Drawing.Size(88, 18);
+            this.lblOwnerName.Size = new System.Drawing.Size(112, 23);
             this.lblOwnerName.TabIndex = 39;
             this.lblOwnerName.Text = "Owner name";
             // 
@@ -341,11 +332,11 @@
             this.groupBox2.Controls.Add(this.txtShopName);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(652, 106);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(869, 130);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(370, 342);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(493, 421);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Purchased shop Details";
@@ -353,10 +344,9 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(16, 181);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Location = new System.Drawing.Point(21, 223);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(42, 18);
+            this.lblEmail.Size = new System.Drawing.Size(53, 23);
             this.lblEmail.TabIndex = 38;
             this.lblEmail.Text = "Email";
             // 
@@ -385,11 +375,11 @@
             this.groupBox1.Controls.Add(this.txtSpareParts);
             this.groupBox1.Controls.Add(this.lblSpareParts);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(50, 106);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(67, 130);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(502, 456);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(669, 561);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spare Parts Details";
@@ -397,13 +387,15 @@
             // picBoxAttachNew
             // 
             this.picBoxAttachNew.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxAttachNew.Location = new System.Drawing.Point(212, 226);
-            this.picBoxAttachNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxAttachNew.Location = new System.Drawing.Point(283, 278);
+            this.picBoxAttachNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBoxAttachNew.Name = "picBoxAttachNew";
-            this.picBoxAttachNew.Size = new System.Drawing.Size(213, 110);
+            this.picBoxAttachNew.Size = new System.Drawing.Size(283, 134);
             this.picBoxAttachNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxAttachNew.TabIndex = 36;
             this.picBoxAttachNew.TabStop = false;
+            this.picBoxAttachNew.Visible = false;
+            this.picBoxAttachNew.Click += new System.EventHandler(this.picBoxAttachNew_Click);
             // 
             // contextMenuStrip1
             // 
@@ -416,20 +408,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(74, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(99, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 17);
+            this.label1.Size = new System.Drawing.Size(243, 21);
             this.label1.TabIndex = 39;
             this.label1.Text = "Assets maintanance ID";
             // 
             // txtAssetsID
             // 
-            this.txtAssetsID.Location = new System.Drawing.Point(290, 37);
-            this.txtAssetsID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAssetsID.Location = new System.Drawing.Point(387, 46);
+            this.txtAssetsID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAssetsID.Name = "txtAssetsID";
             this.txtAssetsID.ReadOnly = true;
-            this.txtAssetsID.Size = new System.Drawing.Size(212, 20);
+            this.txtAssetsID.Size = new System.Drawing.Size(281, 22);
             this.txtAssetsID.TabIndex = 37;
             // 
             // lblVehicleID
@@ -437,24 +428,23 @@
             this.lblVehicleID.AutoSize = true;
             this.lblVehicleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleID.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblVehicleID.Location = new System.Drawing.Point(634, 32);
-            this.lblVehicleID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVehicleID.Location = new System.Drawing.Point(845, 39);
             this.lblVehicleID.Name = "lblVehicleID";
-            this.lblVehicleID.Size = new System.Drawing.Size(106, 24);
+            this.lblVehicleID.Size = new System.Drawing.Size(132, 29);
             this.lblVehicleID.TabIndex = 44;
             this.lblVehicleID.Text = "Vehicle ID";
             // 
             // txtVehicleID
             // 
-            this.txtVehicleID.Location = new System.Drawing.Point(751, 37);
-            this.txtVehicleID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVehicleID.Location = new System.Drawing.Point(1001, 46);
+            this.txtVehicleID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVehicleID.Name = "txtVehicleID";
-            this.txtVehicleID.Size = new System.Drawing.Size(194, 20);
+            this.txtVehicleID.Size = new System.Drawing.Size(257, 22);
             this.txtVehicleID.TabIndex = 45;
             // 
             // AssetsUINew
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -466,9 +456,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AssetsUINew";
-            this.Size = new System.Drawing.Size(1073, 598);
+            this.Size = new System.Drawing.Size(1431, 736);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

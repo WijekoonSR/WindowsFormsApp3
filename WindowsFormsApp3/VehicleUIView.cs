@@ -20,7 +20,7 @@ namespace WindowsFormsApp3
             sqlConnection.Open();
             String query = "Select * from Vehicles";
             SqlDataAdapter sqlAdapter = new SqlDataAdapter(query, sqlConnection);
-            DataTable datTable  = new DataTable();
+            DataTable datTable = new DataTable();
             sqlAdapter.Fill(datTable);
             dgvView.DataSource = datTable;
             sqlConnection.Close();
@@ -49,17 +49,56 @@ namespace WindowsFormsApp3
                 String cmd = "Select * from Vehicles where vehicleID = '" + searchID + "'";
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd, sqlConnection);
                 DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
                 dgvView.DataSource = dataTable;
+                SqlCommand command = new SqlCommand();
                 sqlConnection.Close();
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("Error Searching" + ex);
-             }
-             finally
-             {
-                 sqlConnection.Close();
-             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Searching" + ex);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do You Want Delete selected Row?",
+                "Important",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getData();
+
+        }
+
+        private void getData()
+        {
+            try
+            {
+                sqlConnection.Open();
+                String query = "Select * from Vehicles";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                dgvView.DataSource = dataTable;
+
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
         }
     }
 }
