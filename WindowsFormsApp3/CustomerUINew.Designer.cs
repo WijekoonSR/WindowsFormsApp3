@@ -42,7 +42,7 @@
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEmail2 = new System.Windows.Forms.TextBox();
@@ -124,7 +124,7 @@
             this.groupBox1.Controls.Add(this.lblContactNumber);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblAddress);
             this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(69, 106);
@@ -197,14 +197,14 @@
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 17;
             // 
-            // label5
+            // lblAddress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Address";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(76, 97);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.TabIndex = 16;
+            this.lblAddress.Text = "Address";
             // 
             // lblName
             // 
@@ -375,7 +375,7 @@
         private System.Windows.Forms.Label lblContactNumber;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblpjtEmail;
