@@ -43,5 +43,10 @@ namespace WindowsFormsApp3
         {
             employeeUIView1.BringToFront();
         }
+
+        private void employeeUIView1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
