@@ -25,11 +25,11 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             getVehicleID();
-            dropdownVehicleType.AddItem("Excavator");
+            dropdownVehicleType.AddItem("Excavators");
             dropdownVehicleType.AddItem("Backhoe Loaders");
             dropdownVehicleType.AddItem("Bulldozers");
             dropdownVehicleType.AddItem("Skid Steer Loaders");
-            dropdownVehicleType.AddItem("Motor Grade");
+            dropdownVehicleType.AddItem("Motor Graders");
             dropdownVehicleType.AddItem("Trenchers");
 
 

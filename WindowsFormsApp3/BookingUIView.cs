@@ -114,5 +114,20 @@ namespace WindowsFormsApp3
                 dgvBookingsView.DataSource = dtbl;
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+/*String name = BookingUINew.name;
+            using (sqlConnection = new SqlConnection(name))
+            {
+                string query = "select * from Bookings where StartDate  = '" + startDate + "'";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
+                dtbl = new DataTable();
+                SDA.Fill(dtbl);
+
+                dgvBookingsView.DataSource = dtbl;
+            }
+            */
+        }
     }
 }

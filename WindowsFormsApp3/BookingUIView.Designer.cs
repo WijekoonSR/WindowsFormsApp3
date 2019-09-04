@@ -49,6 +49,7 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookingsView)).BeginInit();
@@ -149,9 +150,9 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(254)))));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSearch.Location = new System.Drawing.Point(262, 9);
+            this.btnSearch.Location = new System.Drawing.Point(263, 8);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(114, 23);
+            this.btnSearch.Size = new System.Drawing.Size(117, 30);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Search BookingID";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -226,10 +227,23 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(23)))), ((int)(((byte)(247)))));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Location = new System.Drawing.Point(408, 8);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(117, 30);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Delete Entry";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // BookingUIView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnSearchByDate);
@@ -274,5 +288,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
