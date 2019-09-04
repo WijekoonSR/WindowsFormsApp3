@@ -35,6 +35,14 @@ namespace WindowsFormsApp3
         }
 
         int quantity, invoiceNumber, contactNumber, OwnerContact;
+
+        private void picBoxAttachNew_Click(object sender, EventArgs e)
+        {
+            Image image = Image.FromFile("Path of file");
+            picBoxAttachNew.Image = image;
+
+        }
+
         float price;
         private void btnClear_Click(object sender, EventArgs e)
         {

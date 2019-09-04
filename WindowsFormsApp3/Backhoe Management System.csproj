@@ -135,6 +135,12 @@
     <Compile Include="CustomerUIEdit.Designer.cs">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUIEditExtendPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUIEditExtendPeriod.Designer.cs">
+      <DependentUpon>CustomerUIEditExtendPeriod.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerUINew.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -276,6 +282,12 @@
     <Compile Include="PayrollUI.Designer.cs">
       <DependentUpon>PayrollUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollUIAddAllowance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIAddAllowance.Designer.cs">
+      <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUIChangeValues.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +299,12 @@
     </Compile>
     <Compile Include="PayrollUIChangeValuesAddNew.Designer.cs">
       <DependentUpon>PayrollUIChangeValuesAddNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIDailyRates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIDailyRates.Designer.cs">
+      <DependentUpon>PayrollUIDailyRates.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollUIEdit.cs">
       <SubType>UserControl</SubType>
@@ -306,11 +324,47 @@
     <Compile Include="PayrollUIEditStaff.Designer.cs">
       <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollUIGenaratesSalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIGenaratesSalary.Designer.cs">
+      <DependentUpon>PayrollUIGenaratesSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIGenerateSalaryChangeValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUIGenerateSalaryChangeValues.Designer.cs">
+      <DependentUpon>PayrollUIGenerateSalaryChangeValues.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollUINew.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PayrollUINew.Designer.cs">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIOperaterAddOTRates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIOperaterAddOTRates.Designer.cs">
+      <DependentUpon>PayrollUIOperaterAddOTRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIOperaterChangeOTRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUIOperaterChangeOTRates.Designer.cs">
+      <DependentUpon>PayrollUIOperaterChangeOTRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUIOperaterSetOTRates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUIOperaterSetOTRates.Designer.cs">
+      <DependentUpon>PayrollUIOperaterSetOTRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUISetAllowance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PayrollUISetAllowance.Designer.cs">
+      <DependentUpon>PayrollUISetAllowance.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollUIStaffNew.cs">
       <SubType>UserControl</SubType>
@@ -435,6 +489,9 @@
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUIEditExtendPeriod.resx">
+      <DependentUpon>CustomerUIEditExtendPeriod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </EmbeddedResource>
@@ -492,11 +549,17 @@
     <EmbeddedResource Include="PayrollUI.resx">
       <DependentUpon>PayrollUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIAddAllowance.resx">
+      <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIChangeValues.resx">
       <DependentUpon>PayrollUIChangeValues.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIChangeValuesAddNew.resx">
       <DependentUpon>PayrollUIChangeValuesAddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIDailyRates.resx">
+      <DependentUpon>PayrollUIDailyRates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIEdit.resx">
       <DependentUpon>PayrollUIEdit.cs</DependentUpon>
@@ -507,8 +570,26 @@
     <EmbeddedResource Include="PayrollUIEditStaff.resx">
       <DependentUpon>PayrollUIEditStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIGenaratesSalary.resx">
+      <DependentUpon>PayrollUIGenaratesSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIGenerateSalaryChangeValues.resx">
+      <DependentUpon>PayrollUIGenerateSalaryChangeValues.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUINew.resx">
       <DependentUpon>PayrollUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIOperaterAddOTRates.resx">
+      <DependentUpon>PayrollUIOperaterAddOTRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIOperaterChangeOTRates.resx">
+      <DependentUpon>PayrollUIOperaterChangeOTRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUIOperaterSetOTRates.resx">
+      <DependentUpon>PayrollUIOperaterSetOTRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUISetAllowance.resx">
+      <DependentUpon>PayrollUISetAllowance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIStaffNew.resx">
       <DependentUpon>PayrollUIStaffNew.cs</DependentUpon>
