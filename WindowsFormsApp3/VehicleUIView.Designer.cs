@@ -36,6 +36,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblVehicleID = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,12 +87,36 @@
             this.lblVehicleID.TabIndex = 6;
             this.lblVehicleID.Text = "Vehicle ID";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRefresh.Location = new System.Drawing.Point(904, 25);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(72, 35);
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDelete.Location = new System.Drawing.Point(811, 25);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(72, 35);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // VehicleUIView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblVehicleID);
@@ -111,5 +137,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblVehicleID;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

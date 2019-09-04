@@ -31,24 +31,26 @@
             this.txtcutomerID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtFaxNumber = new System.Windows.Forms.MaskedTextBox();
+            this.lblFaxNumber = new System.Windows.Forms.Label();
+            this.txtEmail1 = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblContactNumber = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEmail2 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblProjectEmail = new System.Windows.Forms.Label();
             this.txtContactNumber2 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblProjectContactNumber = new System.Windows.Forms.Label();
             this.txtAddress1 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtName1 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.lblProjectAddress = new System.Windows.Forms.Label();
+            this.txtProjectManager = new System.Windows.Forms.TextBox();
+            this.lblProjectManeger = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -58,8 +60,6 @@
             this.lblEndDate = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtFaxNumber = new System.Windows.Forms.MaskedTextBox();
-            this.lblFaxNumber = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -85,14 +85,14 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox1.Controls.Add(this.txtFaxNumber);
             this.groupBox1.Controls.Add(this.lblFaxNumber);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtEmail1);
+            this.groupBox1.Controls.Add(this.lblEmail);
             this.groupBox1.Controls.Add(this.txtContactNumber);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.lblContactNumber);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lblAddress);
+            this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Location = new System.Drawing.Point(139, 97);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(335, 294);
@@ -101,21 +101,38 @@
             this.groupBox1.Text = "Project HeadOffice Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txtEmail
+            // txtFaxNumber
             // 
-            this.txtEmail.Location = new System.Drawing.Point(176, 191);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 37;
+            this.txtFaxNumber.Location = new System.Drawing.Point(176, 239);
+            this.txtFaxNumber.Name = "txtFaxNumber";
+            this.txtFaxNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtFaxNumber.TabIndex = 29;
             // 
-            // label7
+            // lblFaxNumber
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 198);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Email";
+            this.lblFaxNumber.AutoSize = true;
+            this.lblFaxNumber.Location = new System.Drawing.Point(72, 246);
+            this.lblFaxNumber.Name = "lblFaxNumber";
+            this.lblFaxNumber.Size = new System.Drawing.Size(64, 13);
+            this.lblFaxNumber.TabIndex = 28;
+            this.lblFaxNumber.Text = "Fax Number";
+            // 
+            // txtEmail1
+            // 
+            this.txtEmail1.Location = new System.Drawing.Point(176, 191);
+            this.txtEmail1.Name = "txtEmail1";
+            this.txtEmail1.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail1.TabIndex = 37;
+            this.txtEmail1.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(72, 198);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 36;
+            this.lblEmail.Text = "Email";
             // 
             // txtContactNumber
             // 
@@ -124,14 +141,14 @@
             this.txtContactNumber.Size = new System.Drawing.Size(100, 20);
             this.txtContactNumber.TabIndex = 35;
             // 
-            // label6
+            // lblContactNumber
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 143);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Contact Number";
+            this.lblContactNumber.AutoSize = true;
+            this.lblContactNumber.Location = new System.Drawing.Point(72, 143);
+            this.lblContactNumber.Name = "lblContactNumber";
+            this.lblContactNumber.Size = new System.Drawing.Size(84, 13);
+            this.lblContactNumber.TabIndex = 34;
+            this.lblContactNumber.Text = "Contact Number";
             // 
             // txtAddress
             // 
@@ -147,35 +164,35 @@
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 32;
             // 
-            // label5
+            // lblAddress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Address";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(72, 91);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.TabIndex = 31;
+            this.lblAddress.Text = "Address";
             // 
-            // label4
+            // lblName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(72, 37);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 30;
+            this.lblName.Text = "Name";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox2.Controls.Add(this.txtEmail2);
-            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.lblProjectEmail);
             this.groupBox2.Controls.Add(this.txtContactNumber2);
-            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.lblProjectContactNumber);
             this.groupBox2.Controls.Add(this.txtAddress1);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.txtName1);
-            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.lblProjectAddress);
+            this.groupBox2.Controls.Add(this.txtProjectManager);
+            this.groupBox2.Controls.Add(this.lblProjectManeger);
             this.groupBox2.Location = new System.Drawing.Point(515, 97);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(335, 294);
@@ -192,14 +209,14 @@
             this.txtEmail2.TabIndex = 29;
             this.txtEmail2.TextChanged += new System.EventHandler(this.txtEmail2_TextChanged);
             // 
-            // label17
+            // lblProjectEmail
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(73, 165);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(32, 13);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "Email";
+            this.lblProjectEmail.AutoSize = true;
+            this.lblProjectEmail.Location = new System.Drawing.Point(73, 165);
+            this.lblProjectEmail.Name = "lblProjectEmail";
+            this.lblProjectEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblProjectEmail.TabIndex = 28;
+            this.lblProjectEmail.Text = "Email";
             // 
             // txtContactNumber2
             // 
@@ -208,14 +225,14 @@
             this.txtContactNumber2.Size = new System.Drawing.Size(100, 20);
             this.txtContactNumber2.TabIndex = 27;
             // 
-            // label16
+            // lblProjectContactNumber
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(70, 127);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 13);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "Contact Number";
+            this.lblProjectContactNumber.AutoSize = true;
+            this.lblProjectContactNumber.Location = new System.Drawing.Point(70, 127);
+            this.lblProjectContactNumber.Name = "lblProjectContactNumber";
+            this.lblProjectContactNumber.Size = new System.Drawing.Size(84, 13);
+            this.lblProjectContactNumber.TabIndex = 26;
+            this.lblProjectContactNumber.Text = "Contact Number";
             // 
             // txtAddress1
             // 
@@ -224,42 +241,42 @@
             this.txtAddress1.Size = new System.Drawing.Size(100, 20);
             this.txtAddress1.TabIndex = 25;
             // 
-            // label15
+            // lblProjectAddress
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(73, 87);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 13);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "Address";
+            this.lblProjectAddress.AutoSize = true;
+            this.lblProjectAddress.Location = new System.Drawing.Point(73, 87);
+            this.lblProjectAddress.Name = "lblProjectAddress";
+            this.lblProjectAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblProjectAddress.TabIndex = 24;
+            this.lblProjectAddress.Text = "Address";
             // 
-            // txtName1
+            // txtProjectManager
             // 
-            this.txtName1.Location = new System.Drawing.Point(179, 48);
-            this.txtName1.Name = "txtName1";
-            this.txtName1.Size = new System.Drawing.Size(100, 20);
-            this.txtName1.TabIndex = 23;
+            this.txtProjectManager.Location = new System.Drawing.Point(179, 48);
+            this.txtProjectManager.Name = "txtProjectManager";
+            this.txtProjectManager.Size = new System.Drawing.Size(100, 20);
+            this.txtProjectManager.TabIndex = 23;
             // 
-            // label14
+            // lblProjectManeger
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(71, 48);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 13);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Name";
+            this.lblProjectManeger.AutoSize = true;
+            this.lblProjectManeger.Location = new System.Drawing.Point(71, 48);
+            this.lblProjectManeger.Name = "lblProjectManeger";
+            this.lblProjectManeger.Size = new System.Drawing.Size(85, 13);
+            this.lblProjectManeger.TabIndex = 21;
+            this.lblProjectManeger.Text = "Project Manager";
             // 
-            // btnSave
+            // btnUpdate
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Navy;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(591, 424);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 37);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnUpdate.BackColor = System.Drawing.Color.Navy;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(591, 424);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(86, 37);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -352,22 +369,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtFaxNumber
-            // 
-            this.txtFaxNumber.Location = new System.Drawing.Point(176, 239);
-            this.txtFaxNumber.Name = "txtFaxNumber";
-            this.txtFaxNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtFaxNumber.TabIndex = 29;
-            // 
-            // lblFaxNumber
-            // 
-            this.lblFaxNumber.AutoSize = true;
-            this.lblFaxNumber.Location = new System.Drawing.Point(72, 246);
-            this.lblFaxNumber.Name = "lblFaxNumber";
-            this.lblFaxNumber.Size = new System.Drawing.Size(64, 13);
-            this.lblFaxNumber.TabIndex = 28;
-            this.lblFaxNumber.Text = "Fax Number";
-            // 
             // CustomerUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,7 +380,7 @@
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox2);
@@ -402,24 +403,24 @@
         private System.Windows.Forms.TextBox txtcutomerID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtEmail1;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtContactNumber;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblContactNumber;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtEmail2;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblProjectEmail;
         private System.Windows.Forms.TextBox txtContactNumber2;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblProjectContactNumber;
         private System.Windows.Forms.TextBox txtAddress1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtName1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblProjectAddress;
+        private System.Windows.Forms.TextBox txtProjectManager;
+        private System.Windows.Forms.Label lblProjectManeger;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.RadioButton radioButton1;

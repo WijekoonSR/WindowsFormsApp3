@@ -186,7 +186,7 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                        MessageBox.Show("Saved Successfully");
+                       
                         sqlConnection.Open();
 
                         name = txtName.Text.ToString();
@@ -212,7 +212,7 @@ namespace WindowsFormsApp3
                         }
                         else
                         {
-                            DialogResult DR = MessageBox.Show("succes");
+                            DialogResult DR = MessageBox.Show("successfully");
                             if (DR == DialogResult.OK)
                             {
                                 getCurrentID();
