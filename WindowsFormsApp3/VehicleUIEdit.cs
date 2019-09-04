@@ -31,5 +31,13 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do You Want Delete selected Row?",
+                 "Important",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Question);
+        }
     }
 }

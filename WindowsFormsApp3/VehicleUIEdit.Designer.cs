@@ -63,6 +63,9 @@
             this.lblChassisNo = new System.Windows.Forms.Label();
             this.lblRegistrationNo = new System.Windows.Forms.Label();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblVehicleType = new System.Windows.Forms.Label();
+            this.dropdownVehicleType = new Bunifu.Framework.UI.BunifuDropdown();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,21 +79,23 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(400, 477);
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSave.Location = new System.Drawing.Point(392, 539);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(80, 37);
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(493, 477);
+            this.btnCancel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCancel.Location = new System.Drawing.Point(487, 539);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(79, 37);
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // contextMenuStrip1
             // 
@@ -106,7 +111,7 @@
             this.groupBox3.Controls.Add(this.lblHiringRate);
             this.groupBox3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox3.Location = new System.Drawing.Point(510, 281);
+            this.groupBox3.Location = new System.Drawing.Point(510, 323);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(370, 173);
             this.groupBox3.TabIndex = 19;
@@ -164,7 +169,7 @@
             this.groupBox1.Controls.Add(this.txtModel);
             this.groupBox1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(51, 27);
+            this.groupBox1.Location = new System.Drawing.Point(67, 69);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(371, 431);
             this.groupBox1.TabIndex = 20;
@@ -296,7 +301,7 @@
             this.groupBox2.Controls.Add(this.lblRegistrationDate);
             this.groupBox2.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(510, 27);
+            this.groupBox2.Location = new System.Drawing.Point(510, 69);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(370, 222);
             this.groupBox2.TabIndex = 21;
@@ -369,10 +374,48 @@
             this.lblRegistrationDate.TabIndex = 0;
             this.lblRegistrationDate.Text = "Registration Date";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDelete.Location = new System.Drawing.Point(581, 539);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(74, 37);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblVehicleType
+            // 
+            this.lblVehicleType.AutoSize = true;
+            this.lblVehicleType.BackColor = System.Drawing.Color.Transparent;
+            this.lblVehicleType.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleType.Location = new System.Drawing.Point(62, 17);
+            this.lblVehicleType.Name = "lblVehicleType";
+            this.lblVehicleType.Size = new System.Drawing.Size(159, 29);
+            this.lblVehicleType.TabIndex = 23;
+            this.lblVehicleType.Text = " Vehicle Type";
+            // 
+            // dropdownVehicleType
+            // 
+            this.dropdownVehicleType.BackColor = System.Drawing.Color.Transparent;
+            this.dropdownVehicleType.ForeColor = System.Drawing.Color.White;
+            this.dropdownVehicleType.Items = new string[0];
+            this.dropdownVehicleType.Location = new System.Drawing.Point(227, 17);
+            this.dropdownVehicleType.Name = "dropdownVehicleType";
+            this.dropdownVehicleType.NomalColor = System.Drawing.SystemColors.HotTrack;
+            this.dropdownVehicleType.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.dropdownVehicleType.selectedIndex = -1;
+            this.dropdownVehicleType.Size = new System.Drawing.Size(217, 35);
+            this.dropdownVehicleType.TabIndex = 24;
+            // 
             // VehicleUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dropdownVehicleType);
+            this.Controls.Add(this.lblVehicleType);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
@@ -388,6 +431,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -427,5 +471,8 @@
         private System.Windows.Forms.Label lblChassisNo;
         private System.Windows.Forms.Label lblRegistrationNo;
         private System.Windows.Forms.Label lblRegistrationDate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblVehicleType;
+        private Bunifu.Framework.UI.BunifuDropdown dropdownVehicleType;
     }
 }
