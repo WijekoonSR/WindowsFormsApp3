@@ -50,13 +50,16 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dateEndContract = new System.Windows.Forms.DateTimePicker();
             this.dateStartContract = new System.Windows.Forms.DateTimePicker();
             this.lblEndDate = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtFaxNumber = new System.Windows.Forms.MaskedTextBox();
+            this.lblFaxNumber = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +83,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.txtFaxNumber);
+            this.groupBox1.Controls.Add(this.lblFaxNumber);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtContactNumber);
@@ -266,17 +271,19 @@
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnPrint
+            // btnDelete
             // 
-            this.btnPrint.BackColor = System.Drawing.Color.Navy;
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(775, 422);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(86, 37);
-            this.btnPrint.TabIndex = 13;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.Navy;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(775, 422);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(86, 37);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // radioButton1
             // 
@@ -303,22 +310,22 @@
             // 
             // dateEndContract
             // 
-            this.dateEndContract.Location = new System.Drawing.Point(598, 57);
+            this.dateEndContract.Location = new System.Drawing.Point(626, 63);
             this.dateEndContract.Name = "dateEndContract";
-            this.dateEndContract.Size = new System.Drawing.Size(200, 20);
+            this.dateEndContract.Size = new System.Drawing.Size(224, 20);
             this.dateEndContract.TabIndex = 25;
             // 
             // dateStartContract
             // 
-            this.dateStartContract.Location = new System.Drawing.Point(238, 57);
+            this.dateStartContract.Location = new System.Drawing.Point(248, 57);
             this.dateStartContract.Name = "dateStartContract";
-            this.dateStartContract.Size = new System.Drawing.Size(200, 20);
+            this.dateStartContract.Size = new System.Drawing.Size(226, 20);
             this.dateStartContract.TabIndex = 24;
             // 
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(487, 57);
+            this.lblEndDate.Location = new System.Drawing.Point(515, 63);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(95, 13);
             this.lblEndDate.TabIndex = 23;
@@ -333,10 +340,39 @@
             this.lblStartDate.TabIndex = 22;
             this.lblStartDate.Text = "Contract Start Date";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(724, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 35);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Extend Contract Period";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtFaxNumber
+            // 
+            this.txtFaxNumber.Location = new System.Drawing.Point(176, 239);
+            this.txtFaxNumber.Name = "txtFaxNumber";
+            this.txtFaxNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtFaxNumber.TabIndex = 29;
+            // 
+            // lblFaxNumber
+            // 
+            this.lblFaxNumber.AutoSize = true;
+            this.lblFaxNumber.Location = new System.Drawing.Point(72, 246);
+            this.lblFaxNumber.Name = "lblFaxNumber";
+            this.lblFaxNumber.Size = new System.Drawing.Size(64, 13);
+            this.lblFaxNumber.TabIndex = 28;
+            this.lblFaxNumber.Text = "Fax Number";
+            // 
             // CustomerUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateEndContract);
             this.Controls.Add(this.dateStartContract);
             this.Controls.Add(this.lblEndDate);
@@ -345,7 +381,7 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtcutomerID);
@@ -385,12 +421,15 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DateTimePicker dateEndContract;
         private System.Windows.Forms.DateTimePicker dateStartContract;
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Label lblStartDate;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox txtFaxNumber;
+        private System.Windows.Forms.Label lblFaxNumber;
     }
 }

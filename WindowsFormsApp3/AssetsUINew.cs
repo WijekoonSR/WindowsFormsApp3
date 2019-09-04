@@ -35,6 +35,14 @@ namespace WindowsFormsApp3
         }
 
         int quantity, invoiceNumber, contactNumber, OwnerContact;
+
+        private void picBoxAttachNew_Click(object sender, EventArgs e)
+        {
+            Image image = Image.FromFile("Path of file");
+            picBoxAttachNew.Image = image;
+
+        }
+
         float price;
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -86,7 +94,7 @@ namespace WindowsFormsApp3
 
                 sqlCommand = new SqlCommand(query, sqlConnection);
                 int m = sqlCommand.ExecuteNonQuery();
-
+                sqlConnection.Close();
                 if (m == 0)
                 {
                     MessageBox.Show("Not Updated");
@@ -100,7 +108,7 @@ namespace WindowsFormsApp3
                         GetCurrentID();
                     }
                 }
-                sqlConnection.Close();
+              
             }
             catch (Exception ex)
             {
@@ -142,7 +150,8 @@ namespace WindowsFormsApp3
             try
             {
                 sqlConnection.Open();
-                String queryCurrentID = "select IDENT_CURRENT('Assets_Maintenance')";
+                
+                String queryCurrentID = "select  IDENT_CURRENT('Assets_Maintenance')";
                 SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
@@ -156,12 +165,13 @@ namespace WindowsFormsApp3
                 SqlDataReader SDR = chkExistsData.ExecuteReader();
                 if (SDR.HasRows) txtAssetsID.Text = "AM" + (int.Parse(assetsID) + 1).ToString();
                 else txtAssetsID.Text = "AM1";
+
                 sqlConnection.Close();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "AssetsUI 4");
+                    MessageBox.Show(ex.Message, "AssetsUI 4");
             }
             finally
             {

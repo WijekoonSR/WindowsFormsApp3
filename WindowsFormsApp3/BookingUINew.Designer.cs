@@ -299,6 +299,7 @@
             // dropDownBackhoeTypes3
             // 
             this.dropDownBackhoeTypes3.BackColor = System.Drawing.Color.Transparent;
+            this.dropDownBackhoeTypes3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.dropDownBackhoeTypes3.ForeColor = System.Drawing.Color.White;
             this.dropDownBackhoeTypes3.Items = new string[0];
             this.dropDownBackhoeTypes3.Location = new System.Drawing.Point(12, 214);
@@ -314,6 +315,7 @@
             // dropDownBackhoeTypes2
             // 
             this.dropDownBackhoeTypes2.BackColor = System.Drawing.Color.Transparent;
+            this.dropDownBackhoeTypes2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.dropDownBackhoeTypes2.ForeColor = System.Drawing.Color.White;
             this.dropDownBackhoeTypes2.Items = new string[0];
             this.dropDownBackhoeTypes2.Location = new System.Drawing.Point(12, 159);
@@ -329,6 +331,7 @@
             // dropDownBackhoeTypes1
             // 
             this.dropDownBackhoeTypes1.BackColor = System.Drawing.Color.Transparent;
+            this.dropDownBackhoeTypes1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dropDownBackhoeTypes1.ForeColor = System.Drawing.Color.White;
             this.dropDownBackhoeTypes1.Items = new string[0];
             this.dropDownBackhoeTypes1.Location = new System.Drawing.Point(12, 107);
