@@ -101,7 +101,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDelete.Location = new System.Drawing.Point(904, 577);
+            this.btnDelete.Location = new System.Drawing.Point(811, 25);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 35);
             this.btnDelete.TabIndex = 10;
