@@ -20,7 +20,7 @@ namespace WindowsFormsApp3
 
 
         String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, DateOfCom, VehicleType;
-
+        int HiringRate;
         private void VehicleUINew_Load(object sender, EventArgs e)
         {
 
@@ -31,7 +31,7 @@ namespace WindowsFormsApp3
 
         }
 
-        int HiringRate;
+        
         public VehicleUINew()
         {
             InitializeComponent();
