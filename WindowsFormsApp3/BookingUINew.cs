@@ -352,78 +352,80 @@ namespace WindowsFormsApp3
         {
             try
            {
-
-                sqlConnection.Open();
-                string StartDate = dateStartDate.Value.ToString("yyyy/MM/dd");
-                string EndDate = dateEndDate.Value.ToString("yyyy/MM/dd");
-                int WorkingHours = int.Parse(txtWorkingHours.Text);
-
-                float BackhoeType1Ratings = float.Parse(txtRatings1.Text);
-                int BackhoeType1Count = int.Parse(dropDownNoOfBackhoes1.Text);
-
-                float BackhoeType2Ratings = float.Parse(txtRatings2.Text);
-                int BackhoeType2Count = int.Parse(dropDownNoOfBackhoes2.Text);
-
-                float BackhoeType3Ratings = float.Parse(txtRatings3.Text);
-                int BackhoeType3Count = int.Parse(dropDownNoOfBackhoes3.Text);
-                //Caller Details
-                String CallerName = txtCallerName.Text;
-                String CalledDate = dateCaller.Value.ToString("yyyy/MM/dd");
-                String CallerNic = txtNIC.Text;
-                int CallerNumber = int.Parse(txtCallerTpNo.Text);
-                //Fee
-                float fee = TotalCharge;
-
-                //ID Only takes integers convert it into intger format
-                String ID = txtCustomerID.Text;
-                ID = Regex.Replace(ID, "[^0-9]", "");
-                int CustomerID = int.Parse(ID);
-
-                SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
-                    "Values(@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
-                sqlCommandInserted.Parameters.AddWithValue("@startDate", StartDate);
-                sqlCommandInserted.Parameters.AddWithValue("@EndDate", EndDate);
-                sqlCommandInserted.Parameters.AddWithValue("@WorkingHours", WorkingHours);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType1", Type1);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType1Ratings", BackhoeType1Ratings);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType1Count", BackhoeType1Count);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType2", Type2);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType2Ratings", BackhoeType2Ratings);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType2Count", BackhoeType2Count);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3", Type3);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Ratings", BackhoeType3Ratings);
-                sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Count", BackhoeType3Count);
-                sqlCommandInserted.Parameters.AddWithValue("@CallerName", CallerName);
-                sqlCommandInserted.Parameters.AddWithValue("@CalledDate", CalledDate);
-                sqlCommandInserted.Parameters.AddWithValue("@CallerNic", CallerNic);
-                sqlCommandInserted.Parameters.AddWithValue("@CallerNumber", CallerNumber);
-                sqlCommandInserted.Parameters.AddWithValue("@TotalCharge", TotalCharge);
-                sqlCommandInserted.Parameters.AddWithValue("@CustomerID", CustomerID);
-
-
-                //execute sql query
-                int valid = sqlCommandInserted.ExecuteNonQuery();
-
-                sqlConnection.Close();
-
-                //check backhoes whether vehicles have been added to booking
-                if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1);
-                else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2);
-                else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3);
-
-                if (valid > 0)
+                Boolean i = validation();
+                if (i == true)
                 {
-                    MessageBox.Show("Entered Succesfully !", "Booking Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearAllFields();
-                    getBookingID();
-                }
-                else
-                {
-                    MessageBox.Show("Data Inserted Failed", "BookingUI:btnSave_Click ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    sqlConnection.Open();
+                    string StartDate = dateStartDate.Value.ToString("yyyy/MM/dd");
+                    string EndDate = dateEndDate.Value.ToString("yyyy/MM/dd");
+                    int WorkingHours = int.Parse(txtWorkingHours.Text);
 
-                dropTable(); // drop ##tblAvailableVehicles table whenever creating new checks on avaiable vehicles
+                    float BackhoeType1Ratings = float.Parse(txtRatings1.Text);
+                    int BackhoeType1Count = int.Parse(dropDownNoOfBackhoes1.Text);
 
+                    float BackhoeType2Ratings = float.Parse(txtRatings2.Text);
+                    int BackhoeType2Count = int.Parse(dropDownNoOfBackhoes2.Text);
+
+                    float BackhoeType3Ratings = float.Parse(txtRatings3.Text);
+                    int BackhoeType3Count = int.Parse(dropDownNoOfBackhoes3.Text);
+                    //Caller Details
+                    String CallerName = txtCallerName.Text;
+                    String CalledDate = dateCaller.Value.ToString("yyyy/MM/dd");
+                    String CallerNic = txtNIC.Text;
+                    int CallerNumber = int.Parse(txtCallerTpNo.Text);
+                    //Fee
+                    float fee = TotalCharge;
+
+                    //ID Only takes integers convert it into intger format
+                    String ID = txtCustomerID.Text;
+                    ID = Regex.Replace(ID, "[^0-9]", "");
+                    int CustomerID = int.Parse(ID);
+
+                    SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
+                        "Values(@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
+                    sqlCommandInserted.Parameters.AddWithValue("@startDate", StartDate);
+                    sqlCommandInserted.Parameters.AddWithValue("@EndDate", EndDate);
+                    sqlCommandInserted.Parameters.AddWithValue("@WorkingHours", WorkingHours);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType1", Type1);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType1Ratings", BackhoeType1Ratings);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType1Count", BackhoeType1Count);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType2", Type2);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType2Ratings", BackhoeType2Ratings);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType2Count", BackhoeType2Count);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3", Type3);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Ratings", BackhoeType3Ratings);
+                    sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Count", BackhoeType3Count);
+                    sqlCommandInserted.Parameters.AddWithValue("@CallerName", CallerName);
+                    sqlCommandInserted.Parameters.AddWithValue("@CalledDate", CalledDate);
+                    sqlCommandInserted.Parameters.AddWithValue("@CallerNic", CallerNic);
+                    sqlCommandInserted.Parameters.AddWithValue("@CallerNumber", CallerNumber);
+                    sqlCommandInserted.Parameters.AddWithValue("@TotalCharge", TotalCharge);
+                    sqlCommandInserted.Parameters.AddWithValue("@CustomerID", CustomerID);
+
+
+                    //execute sql query
+                    int valid = sqlCommandInserted.ExecuteNonQuery();
+
+                    sqlConnection.Close();
+
+                    //check backhoes whether vehicles have been added to booking
+                    if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1);
+                    else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2);
+                    else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3);
+
+                    if (valid > 0)
+                    {
+                        MessageBox.Show("Entered Succesfully !", "Booking Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearAllFields();
+                        getBookingID();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Inserted Failed", "BookingUI:btnSave_Click ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    dropTable(); // drop ##tblAvailableVehicles table whenever creating new checks on avaiable vehicles
+                }
             }
             catch (Exception e1)
             {
@@ -508,6 +510,55 @@ namespace WindowsFormsApp3
             dropDownNoOfBackhoes1.Items.Clear();
             dropDownNoOfBackhoes2.Items.Clear();
             dropDownNoOfBackhoes3.Items.Clear();
+        }
+
+        private Boolean validation() {
+            if (txtCustomerID.Text.ToString() == "") {
+                MessageBox.Show("Insert Customer ID");
+                txtCustomerID.Focus();
+                return false;
+            }
+
+            else if (txtWorkingHours.Text.ToString() == "") {
+                MessageBox.Show("Insert Working Hours");
+                txtWorkingHours.Focus();
+                return false;
+            }
+            else if (txtCallerName.Text.ToString() == "") {
+                MessageBox.Show("Insert Caller Name");
+                txtCallerName.Focus();
+                return false;
+            }
+           else if (txtNIC.Text.ToString() == "") {
+                MessageBox.Show("Insert NIC");
+                txtNIC.Focus();
+                return false;
+            }
+            else if (txtCallerTpNo.Text.ToString() == "") {
+                MessageBox.Show("Insert Caller Telephone Number");
+                txtCallerTpNo.Focus();
+                return false;
+            }
+            else if (dropDownBackhoeTypes1.selectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Insert at least one vehicle type type to make a booking");
+                dropDownBackhoeTypes1.Focus();
+                return false;
+            }
+            else if (txtRatings1.Text.ToString() == "") {
+                MessageBox.Show("Insert ratings");
+                txtRatings1.Focus();
+                return false;
+            }
+            else if (dropDownNoOfBackhoes1.SelectedIndex.Equals(-1)) {
+
+                MessageBox.Show("Insert at least one vehicle type type to make a booking");
+                dropDownNoOfBackhoes1.Focus();
+                return false;
+            }
+
+
+            return true;
         }
     }
 }
