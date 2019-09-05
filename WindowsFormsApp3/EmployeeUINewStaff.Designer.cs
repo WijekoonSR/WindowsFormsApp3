@@ -43,12 +43,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.lblGender = new System.Windows.Forms.Label();
+            this.lblFName = new System.Windows.Forms.Label();
+            this.txtFName = new System.Windows.Forms.TextBox();
             this.txtLName = new System.Windows.Forms.TextBox();
             this.lblLName = new System.Windows.Forms.Label();
+            this.lblPersonal = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
             this.lblNIC = new System.Windows.Forms.Label();
             this.txtNIC = new System.Windows.Forms.TextBox();
-            this.lblFName = new System.Windows.Forms.Label();
+            this.dateDOB = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmbJobTitle = new System.Windows.Forms.ComboBox();
             this.tblAL = new System.Windows.Forms.TableLayoutPanel();
@@ -62,7 +65,6 @@
             this.cmbSubject02 = new System.Windows.Forms.ComboBox();
             this.txtSubject04 = new System.Windows.Forms.RichTextBox();
             this.cmbSubject03 = new System.Windows.Forms.ComboBox();
-            this.txtFName = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -70,18 +72,16 @@
             this.lblSubjects = new System.Windows.Forms.Label();
             this.cmbALSelect = new System.Windows.Forms.ComboBox();
             this.lblAL = new System.Windows.Forms.Label();
-            this.lblPersonal = new System.Windows.Forms.Label();
             this.lblContactNum = new System.Windows.Forms.Label();
-            this.dateDOB = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblContact = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblJobTitle = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -225,6 +225,7 @@
             // 
             // cmbGender
             // 
+            this.cmbGender.ForeColor = System.Drawing.Color.Black;
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
             "M",
@@ -244,6 +245,25 @@
             this.lblGender.TabIndex = 78;
             this.lblGender.Text = "Gender";
             // 
+            // lblFName
+            // 
+            this.lblFName.AutoSize = true;
+            this.lblFName.Location = new System.Drawing.Point(18, 44);
+            this.lblFName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFName.Name = "lblFName";
+            this.lblFName.Size = new System.Drawing.Size(76, 17);
+            this.lblFName.TabIndex = 77;
+            this.lblFName.Text = "First Name";
+            // 
+            // txtFName
+            // 
+            this.txtFName.Location = new System.Drawing.Point(153, 39);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(265, 22);
+            this.txtFName.TabIndex = 78;
+            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
+            // 
             // txtLName
             // 
             this.txtLName.Location = new System.Drawing.Point(153, 91);
@@ -261,6 +281,17 @@
             this.lblLName.Size = new System.Drawing.Size(76, 17);
             this.lblLName.TabIndex = 3;
             this.lblLName.Text = "Last Name";
+            // 
+            // lblPersonal
+            // 
+            this.lblPersonal.AutoSize = true;
+            this.lblPersonal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPersonal.Location = new System.Drawing.Point(10, 0);
+            this.lblPersonal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPersonal.Name = "lblPersonal";
+            this.lblPersonal.Size = new System.Drawing.Size(140, 19);
+            this.lblPersonal.TabIndex = 90;
+            this.lblPersonal.Text = "Personal Information";
             // 
             // lblDOB
             // 
@@ -290,15 +321,14 @@
             this.txtNIC.Size = new System.Drawing.Size(265, 22);
             this.txtNIC.TabIndex = 40;
             // 
-            // lblFName
+            // dateDOB
             // 
-            this.lblFName.AutoSize = true;
-            this.lblFName.Location = new System.Drawing.Point(18, 44);
-            this.lblFName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFName.Name = "lblFName";
-            this.lblFName.Size = new System.Drawing.Size(76, 17);
-            this.lblFName.TabIndex = 77;
-            this.lblFName.Text = "First Name";
+            this.dateDOB.Location = new System.Drawing.Point(153, 183);
+            this.dateDOB.Margin = new System.Windows.Forms.Padding(4);
+            this.dateDOB.Name = "dateDOB";
+            this.dateDOB.Size = new System.Drawing.Size(265, 22);
+            this.dateDOB.TabIndex = 82;
+            this.dateDOB.ValueChanged += new System.EventHandler(this.dateDOB_ValueChanged);
             // 
             // panel3
             // 
@@ -469,15 +499,6 @@
             this.cmbSubject03.TabIndex = 66;
             this.cmbSubject03.Text = "Please Select";
             // 
-            // txtFName
-            // 
-            this.txtFName.Location = new System.Drawing.Point(153, 39);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(265, 22);
-            this.txtFName.TabIndex = 78;
-            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
@@ -551,17 +572,6 @@
             this.lblAL.TabIndex = 87;
             this.lblAL.Text = "A/L Stream";
             // 
-            // lblPersonal
-            // 
-            this.lblPersonal.AutoSize = true;
-            this.lblPersonal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPersonal.Location = new System.Drawing.Point(10, 0);
-            this.lblPersonal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPersonal.Name = "lblPersonal";
-            this.lblPersonal.Size = new System.Drawing.Size(140, 19);
-            this.lblPersonal.TabIndex = 90;
-            this.lblPersonal.Text = "Personal Information";
-            // 
             // lblContactNum
             // 
             this.lblContactNum.AutoSize = true;
@@ -571,15 +581,6 @@
             this.lblContactNum.Size = new System.Drawing.Size(110, 17);
             this.lblContactNum.TabIndex = 12;
             this.lblContactNum.Text = "Contact Number";
-            // 
-            // dateDOB
-            // 
-            this.dateDOB.Location = new System.Drawing.Point(153, 183);
-            this.dateDOB.Margin = new System.Windows.Forms.Padding(4);
-            this.dateDOB.Name = "dateDOB";
-            this.dateDOB.Size = new System.Drawing.Size(265, 22);
-            this.dateDOB.TabIndex = 82;
-            this.dateDOB.ValueChanged += new System.EventHandler(this.dateDOB_ValueChanged);
             // 
             // panel2
             // 
@@ -619,6 +620,28 @@
             this.panel4.Size = new System.Drawing.Size(392, 183);
             this.panel4.TabIndex = 89;
             // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Items.AddRange(new object[] {
+            "HR Deparment",
+            "Accounting & Finance"});
+            this.cmbDepartment.Location = new System.Drawing.Point(145, 82);
+            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(239, 24);
+            this.cmbDepartment.TabIndex = 70;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.TabIndex = 69;
+            this.label1.Text = "Department";
+            // 
             // lblJobTitle
             // 
             this.lblJobTitle.AutoSize = true;
@@ -654,28 +677,6 @@
             this.lblEmployeeID.Size = new System.Drawing.Size(87, 17);
             this.lblEmployeeID.TabIndex = 98;
             this.lblEmployeeID.Text = "Employee ID";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 89);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Department";
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Items.AddRange(new object[] {
-            "HR Deparment",
-            "Accounting & Finance"});
-            this.cmbDepartment.Location = new System.Drawing.Point(145, 82);
-            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(239, 24);
-            this.cmbDepartment.TabIndex = 70;
             // 
             // EmployeeUINewStaff
             // 

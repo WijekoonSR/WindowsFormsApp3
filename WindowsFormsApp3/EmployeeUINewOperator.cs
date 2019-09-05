@@ -29,43 +29,51 @@ namespace WindowsFormsApp3
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            // Create string variables that contain the patterns   
+            string NICPattern = @"[0-9]{9}[x|X|v|V]$"; //NICpattern  
 
-            
-            sqlConnection.Open();
-            string fname = txtfname.Text;
-            string lname = txtLname.Text;
-            string gender = cmbGender.Text;
-            string dob = dateDOB.Value.ToString("yyyy/MM/dd");
-            string NIC = txtNIC.Text;
-            string licenseNUm = txtLicense.Text;
-            string ContactNum = txtContactNum.Text;
-            string email = txtEmail.Text;
-            string address01 = txtAddress01.Text;
-            string address02 = txtAddress02.Text;
-            string city = txtCity.Text;
-            string postalCode = txtPostalCode.Text;
-            string jobTitle = cmbJobTitle.Text;
+            bool isNICValid = Regex.IsMatch(txtNIC.Text, NICPattern);
 
-            string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
-              "values('" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
+            if (isNICValid)
+            {
+                MessageBox.Show("Please enter a valid NIC Number");
+            }
 
-            SqlCommand cmd = new SqlCommand(query, sqlConnection);
+             sqlConnection.Open();
+             string fname = txtfname.Text;
+             string lname = txtLname.Text;
+             string gender = cmbGender.Text;
+             string dob = dateDOB.Value.ToString("yyyy/MM/dd");
+             string NIC = txtNIC.Text;
+             string licenseNUm = txtLicense.Text;
+             string ContactNum = txtContactNum.Text;
+             string email = txtEmail.Text;
+             string address01 = txtAddress01.Text;
+             string address02 = txtAddress02.Text;
+             string city = txtCity.Text;
+             string postalCode = txtPostalCode.Text;
+             string jobTitle = cmbJobTitle.Text;
 
-         
-            cmd.ExecuteNonQuery();
+             string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
+               "values('" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
 
-            sqlConnection.Close();
-            sqlConnection.Open();
+             SqlCommand cmd = new SqlCommand(query, sqlConnection);
+           // string query02 = "insert into Vehicle_Operators(EmployeeID,LicenseNo)"+ "values('"+
 
-            string query02 = "Exec AsignOperators '" + licenseNUm + "'";
-            SqlCommand cmd2 = new SqlCommand(query02,sqlConnection);
-            cmd2.ExecuteNonQuery();
+             cmd.ExecuteNonQuery();
+
+             sqlConnection.Close();
+             sqlConnection.Open();
+
+            /* string query02 = "Exec AsignOperators '" + licenseNUm + "'";
+             SqlCommand cmd2 = new SqlCommand(query02,sqlConnection);
+             cmd2.ExecuteNonQuery();*/
 
 
-            MessageBox.Show("Data Submitted");
-            clearDet();
-            sqlConnection.Close();
-     
+             MessageBox.Show("Data Submitted");
+             clearDet();
+           //  sqlConnection.Close();
+
         }
         public void clearDet()
         {
