@@ -273,28 +273,35 @@ namespace WindowsFormsApp3
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
-            try
+            if (edtEmployeeID.Text.Equals(""))
             {
-                con.Open();
-                String sql1 = "DELETE FROM Payroll_Operators WHERE EmployeeID ='"+EmployeeID+"'";
-                String sql2 = "DELETE FROM Payroll_Operators_Monthly_Salary WHERE EmployeeID ='" + EmployeeID + "'";
-                
-                SqlCommand cmd2 = new SqlCommand(sql2, con);
-                SqlCommand cmd1 = new SqlCommand(sql1, con);
-                //cmd.ExecuteNonQuery();
-                // MessageBox.Show("Sucsess");
-                cmd2.ExecuteNonQuery();
-                cmd1.ExecuteNonQuery();
-                
-                MessageBox.Show("Data record deleted!", "DB Connection With App.Config", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                con.Close();
-                clear();
-                //DisableButtons();
+                MessageBox.Show("Please Enter EmployeeID");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                try
+                {
+                    con.Open();
+                    String sql1 = "DELETE FROM Payroll_Operators WHERE EmployeeID ='" + EmployeeID + "'";
+                    String sql2 = "DELETE FROM Payroll_Operators_Monthly_Salary WHERE EmployeeID ='" + EmployeeID + "'";
+
+                    SqlCommand cmd2 = new SqlCommand(sql2, con);
+                    SqlCommand cmd1 = new SqlCommand(sql1, con);
+                    //cmd.ExecuteNonQuery();
+                    // MessageBox.Show("Sucsess");
+                    cmd2.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+
+                    MessageBox.Show("Data record deleted!", "DB Connection With App.Config", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    con.Close();
+                    clear();
+                    //DisableButtons();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
