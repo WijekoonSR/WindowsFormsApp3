@@ -161,35 +161,41 @@ namespace WindowsFormsApp3
 
         private void btnSetEmployeeID_Click(object sender, EventArgs e)
         {
-            int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
-            string Sql = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
-            SqlCommand cmd = new SqlCommand(Sql, con);
-            try
+            if (edtEmployeeID.Text.Equals(""))
             {
-                con.Open();
-
-                using (SqlDataReader read = cmd.ExecuteReader())
+                MessageBox.Show("Please Enter EmployeeID");
+            }
+            else
+            {
+                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                string Sql = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
+                SqlCommand cmd = new SqlCommand(Sql, con);
+                try
                 {
-                    while (read.Read())
-                    {
-                        //MessageBox.Show(read["FirstName"].ToString());
-                        //edtName.Text = (read["FistName"].ToString());
-                        edtName.Text = read.GetValue(1).ToString();
-                        edtPossition.Text = read.GetValue(12).ToString();
-                        //edtName.Text = "name";
+                    con.Open();
 
+                    using (SqlDataReader read = cmd.ExecuteReader())
+                    {
+                        while (read.Read())
+                        {
+                            //MessageBox.Show(read["FirstName"].ToString());
+                            //edtName.Text = (read["FistName"].ToString());
+                            edtName.Text = read.GetValue(1).ToString();
+                            edtPossition.Text = read.GetValue(12).ToString();
+                            //edtName.Text = "name";
+
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error" + ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex);
-            }
-            finally
-            {
-                con.Close();
-            }
-
         }
 
         private void PayrollUIStaffNew_Load(object sender, EventArgs e)
