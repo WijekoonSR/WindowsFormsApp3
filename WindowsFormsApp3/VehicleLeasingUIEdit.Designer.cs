@@ -37,6 +37,8 @@
             this.lblAccountHolder = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.DateEndLeasingDate = new System.Windows.Forms.DateTimePicker();
+            this.DateStartLeasingDate = new System.Windows.Forms.DateTimePicker();
             this.txtTotalLeasingAmount = new System.Windows.Forms.TextBox();
             this.txtAnnualInterestRate = new System.Windows.Forms.TextBox();
             this.txtMonthlyPayment = new System.Windows.Forms.TextBox();
@@ -56,10 +58,8 @@
             this.lblBranch = new System.Windows.Forms.Label();
             this.txtBank = new System.Windows.Forms.TextBox();
             this.lblBank = new System.Windows.Forms.Label();
-            this.txtVehicleID = new System.Windows.Forms.TextBox();
+            this.txtLeasingID = new System.Windows.Forms.TextBox();
             this.lblVehicleLID = new System.Windows.Forms.Label();
-            this.DateEndLeasingDate = new System.Windows.Forms.DateTimePicker();
-            this.DateStartLeasingDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -75,6 +75,7 @@
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -86,6 +87,7 @@
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox3
             // 
@@ -142,6 +144,7 @@
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox2
             // 
@@ -165,6 +168,21 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Leasing Details";
+            // 
+            // DateEndLeasingDate
+            // 
+            this.DateEndLeasingDate.Location = new System.Drawing.Point(155, 294);
+            this.DateEndLeasingDate.Name = "DateEndLeasingDate";
+            this.DateEndLeasingDate.Size = new System.Drawing.Size(200, 20);
+            this.DateEndLeasingDate.TabIndex = 16;
+            // 
+            // DateStartLeasingDate
+            // 
+            this.DateStartLeasingDate.Location = new System.Drawing.Point(155, 252);
+            this.DateStartLeasingDate.Name = "DateStartLeasingDate";
+            this.DateStartLeasingDate.Size = new System.Drawing.Size(200, 20);
+            this.DateStartLeasingDate.TabIndex = 15;
+            this.DateStartLeasingDate.ValueChanged += new System.EventHandler(this.DateStartLeasingDate_ValueChanged);
             // 
             // txtTotalLeasingAmount
             // 
@@ -327,12 +345,12 @@
             this.lblBank.TabIndex = 0;
             this.lblBank.Text = "Bank";
             // 
-            // txtVehicleID
+            // txtLeasingID
             // 
-            this.txtVehicleID.Location = new System.Drawing.Point(206, 54);
-            this.txtVehicleID.Name = "txtVehicleID";
-            this.txtVehicleID.Size = new System.Drawing.Size(100, 20);
-            this.txtVehicleID.TabIndex = 9;
+            this.txtLeasingID.Location = new System.Drawing.Point(206, 54);
+            this.txtLeasingID.Name = "txtLeasingID";
+            this.txtLeasingID.Size = new System.Drawing.Size(100, 20);
+            this.txtLeasingID.TabIndex = 9;
             // 
             // lblVehicleLID
             // 
@@ -342,21 +360,6 @@
             this.lblVehicleLID.Size = new System.Drawing.Size(99, 13);
             this.lblVehicleLID.TabIndex = 8;
             this.lblVehicleLID.Text = "Vehicle Leasing ID ";
-            // 
-            // DateEndLeasingDate
-            // 
-            this.DateEndLeasingDate.Location = new System.Drawing.Point(155, 294);
-            this.DateEndLeasingDate.Name = "DateEndLeasingDate";
-            this.DateEndLeasingDate.Size = new System.Drawing.Size(200, 20);
-            this.DateEndLeasingDate.TabIndex = 16;
-            // 
-            // DateStartLeasingDate
-            // 
-            this.DateStartLeasingDate.Location = new System.Drawing.Point(155, 252);
-            this.DateStartLeasingDate.Name = "DateStartLeasingDate";
-            this.DateStartLeasingDate.Size = new System.Drawing.Size(200, 20);
-            this.DateStartLeasingDate.TabIndex = 15;
-            this.DateStartLeasingDate.ValueChanged += new System.EventHandler(this.DateStartLeasingDate_ValueChanged);
             // 
             // VehicleLeasingUIEdit
             // 
@@ -368,7 +371,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtVehicleID);
+            this.Controls.Add(this.txtLeasingID);
             this.Controls.Add(this.lblVehicleLID);
             this.Name = "VehicleLeasingUIEdit";
             this.Size = new System.Drawing.Size(1069, 582);
@@ -413,7 +416,7 @@
         private System.Windows.Forms.Label lblBranch;
         private System.Windows.Forms.TextBox txtBank;
         private System.Windows.Forms.Label lblBank;
-        private System.Windows.Forms.TextBox txtVehicleID;
+        private System.Windows.Forms.TextBox txtLeasingID;
         private System.Windows.Forms.Label lblVehicleLID;
         private System.Windows.Forms.DateTimePicker DateEndLeasingDate;
         private System.Windows.Forms.DateTimePicker DateStartLeasingDate;

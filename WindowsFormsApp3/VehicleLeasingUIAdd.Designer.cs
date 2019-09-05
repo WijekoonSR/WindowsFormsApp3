@@ -363,6 +363,7 @@
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtVid
             // 
@@ -396,6 +397,7 @@
             this.Controls.Add(this.lblVehicleLeasingID);
             this.Name = "VehicleLeasingUIAdd";
             this.Size = new System.Drawing.Size(1069, 582);
+            this.Load += new System.EventHandler(this.VehicleLeasingUIAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerUIEditExtendPeriod));
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
@@ -123,7 +124,9 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.lblCustomerID);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerUIEditExtendPeriod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerUIEditExtendPeriod";
             this.Load += new System.EventHandler(this.CustomerUIEditExtendPeriod_Load);
             this.ResumeLayout(false);

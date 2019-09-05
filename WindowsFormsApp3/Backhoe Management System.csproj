@@ -432,6 +432,12 @@
     <Compile Include="VehicleLeasingUIAdd.Designer.cs">
       <DependentUpon>VehicleLeasingUIAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleLeasingUIAddVehicleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleLeasingUIAddVehicleDetails.Designer.cs">
+      <DependentUpon>VehicleLeasingUIAddVehicleDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehicleLeasingUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -630,6 +636,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUIAdd.resx">
       <DependentUpon>VehicleLeasingUIAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleLeasingUIAddVehicleDetails.resx">
+      <DependentUpon>VehicleLeasingUIAddVehicleDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUIEdit.resx">
       <DependentUpon>VehicleLeasingUIEdit.cs</DependentUpon>

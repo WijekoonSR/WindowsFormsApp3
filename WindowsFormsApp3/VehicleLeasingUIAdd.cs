@@ -16,15 +16,27 @@ namespace WindowsFormsApp3
         SqlConnection sql = new SqlConnection(serverName);
         String Bank, Branch, BankCode, AccountHolder, StartLeasingDate, EndLeasingDate,StartDate,EndDate;
         int AccountNumber, Year, LeasingPeriod;
-
+        public static string search;
         private void txtVehicleID_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void VehicleLeasingUIAdd_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clearAllFields();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            search = txtVid.Text.ToString();
+            VehicleLeasingUIAddVehicleDetails vehicleLeasingUIAddVehicleDetails = new VehicleLeasingUIAddVehicleDetails();
+            vehicleLeasingUIAddVehicleDetails.Show();
         }
 
         float AnnualInterestRate, MonthlyPayment, TotalLeasingAmount;
@@ -66,6 +78,21 @@ namespace WindowsFormsApp3
             }
         }
 
+        public void clearAllFields() {
+            txtVid.Clear();
+            txtBank.Clear();
+            txtBankCode.Clear();
+            txtAccountHolder.Clear();
+            txtAccountNumber.Clear();
+            txtYear.Clear();
+            txtTotalLeasingAmount.Clear();
+            txtAnnualInterestRate.Clear();
+            txtLeasingPeriod.Clear();
+            txtMonthlyPayment.Clear();
+            DateStartLeasingDate.Value = DateTime.Now;
+            DateEndLeasingDate.Value = DateTime.Now;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
           
@@ -100,6 +127,7 @@ namespace WindowsFormsApp3
             command.ExecuteNonQuery();
             MessageBox.Show("success");
             sql.Close();
+            clearAllFields();
         }
 
 

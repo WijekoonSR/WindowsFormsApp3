@@ -39,19 +39,6 @@
             this.lblNIC = new System.Windows.Forms.Label();
             this.txtNIC = new System.Windows.Forms.TextBox();
             this.groupBoxCallerDetails = new System.Windows.Forms.GroupBox();
-            this.lblNoOfBackhoes = new System.Windows.Forms.Label();
-            this.lblBackhoeType = new System.Windows.Forms.Label();
-            this.dropDownBackhoeTypes1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.dropDownBackhoeTypes2 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.dropDownBackhoeTypes3 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.dropDownNoOfBackhoes1 = new System.Windows.Forms.ComboBox();
-            this.dropDownNoOfBackhoes2 = new System.Windows.Forms.ComboBox();
-            this.dropDownNoOfBackhoes3 = new System.Windows.Forms.ComboBox();
-            this.lblRatings = new System.Windows.Forms.Label();
-            this.txtRatings1 = new System.Windows.Forms.TextBox();
-            this.txtRatings2 = new System.Windows.Forms.TextBox();
-            this.txtRatings3 = new System.Windows.Forms.TextBox();
-            this.groupBoxBackhoeDetails = new System.Windows.Forms.GroupBox();
             this.lblWorkingHrs = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblBookingDate = new System.Windows.Forms.Label();
@@ -59,19 +46,37 @@
             this.dateEndDate = new System.Windows.Forms.DateTimePicker();
             this.txtWorkingHours = new System.Windows.Forms.TextBox();
             this.groupBoxBookingPeriod = new System.Windows.Forms.GroupBox();
+            this.btnCheckVehicles = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.lblTotalCharge = new System.Windows.Forms.Label();
             this.txtTotalCharges = new System.Windows.Forms.TextBox();
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.txtBookingID = new System.Windows.Forms.TextBox();
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCheckVehicles = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblNoOfBackhoes = new System.Windows.Forms.Label();
+            this.lblBackhoeType = new System.Windows.Forms.Label();
+            this.lblRatings = new System.Windows.Forms.Label();
+            this.txtRatings1 = new System.Windows.Forms.TextBox();
+            this.txtRatings2 = new System.Windows.Forms.TextBox();
+            this.txtRatings3 = new System.Windows.Forms.TextBox();
+            this.txtBackhoeT1 = new System.Windows.Forms.TextBox();
+            this.txtBackhoeT2 = new System.Windows.Forms.TextBox();
+            this.txtBackhoeT3 = new System.Windows.Forms.TextBox();
+            this.txtNoOfbckhoes1 = new System.Windows.Forms.TextBox();
+            this.txtNoOfbckhoes2 = new System.Windows.Forms.TextBox();
+            this.groupBoxBackhoeDetails = new System.Windows.Forms.GroupBox();
+            this.txtNoOfbckhoes3 = new System.Windows.Forms.TextBox();
             this.groupBoxCallerDetails.SuspendLayout();
-            this.groupBoxBackhoeDetails.SuspendLayout();
             this.groupBoxBookingPeriod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBoxBackhoeDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblID
@@ -167,148 +172,6 @@
             this.groupBoxCallerDetails.TabStop = false;
             this.groupBoxCallerDetails.Text = "Caller Details";
             // 
-            // lblNoOfBackhoes
-            // 
-            this.lblNoOfBackhoes.AutoSize = true;
-            this.lblNoOfBackhoes.Location = new System.Drawing.Point(403, 36);
-            this.lblNoOfBackhoes.Name = "lblNoOfBackhoes";
-            this.lblNoOfBackhoes.Size = new System.Drawing.Size(106, 16);
-            this.lblNoOfBackhoes.TabIndex = 11;
-            this.lblNoOfBackhoes.Text = "No Of Backhoes";
-            // 
-            // lblBackhoeType
-            // 
-            this.lblBackhoeType.AutoSize = true;
-            this.lblBackhoeType.Location = new System.Drawing.Point(6, 36);
-            this.lblBackhoeType.Name = "lblBackhoeType";
-            this.lblBackhoeType.Size = new System.Drawing.Size(97, 16);
-            this.lblBackhoeType.TabIndex = 7;
-            this.lblBackhoeType.Text = "Backhoe Type";
-            // 
-            // dropDownBackhoeTypes1
-            // 
-            this.dropDownBackhoeTypes1.BackColor = System.Drawing.Color.Transparent;
-            this.dropDownBackhoeTypes1.ForeColor = System.Drawing.Color.White;
-            this.dropDownBackhoeTypes1.Items = new string[0];
-            this.dropDownBackhoeTypes1.Location = new System.Drawing.Point(9, 87);
-            this.dropDownBackhoeTypes1.Margin = new System.Windows.Forms.Padding(5);
-            this.dropDownBackhoeTypes1.Name = "dropDownBackhoeTypes1";
-            this.dropDownBackhoeTypes1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dropDownBackhoeTypes1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dropDownBackhoeTypes1.selectedIndex = -1;
-            this.dropDownBackhoeTypes1.Size = new System.Drawing.Size(216, 22);
-            this.dropDownBackhoeTypes1.TabIndex = 12;
-            // 
-            // dropDownBackhoeTypes2
-            // 
-            this.dropDownBackhoeTypes2.BackColor = System.Drawing.Color.Transparent;
-            this.dropDownBackhoeTypes2.ForeColor = System.Drawing.Color.White;
-            this.dropDownBackhoeTypes2.Items = new string[0];
-            this.dropDownBackhoeTypes2.Location = new System.Drawing.Point(9, 129);
-            this.dropDownBackhoeTypes2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.dropDownBackhoeTypes2.Name = "dropDownBackhoeTypes2";
-            this.dropDownBackhoeTypes2.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dropDownBackhoeTypes2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dropDownBackhoeTypes2.selectedIndex = -1;
-            this.dropDownBackhoeTypes2.Size = new System.Drawing.Size(216, 22);
-            this.dropDownBackhoeTypes2.TabIndex = 13;
-            // 
-            // dropDownBackhoeTypes3
-            // 
-            this.dropDownBackhoeTypes3.BackColor = System.Drawing.Color.Transparent;
-            this.dropDownBackhoeTypes3.ForeColor = System.Drawing.Color.White;
-            this.dropDownBackhoeTypes3.Items = new string[0];
-            this.dropDownBackhoeTypes3.Location = new System.Drawing.Point(9, 174);
-            this.dropDownBackhoeTypes3.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
-            this.dropDownBackhoeTypes3.Name = "dropDownBackhoeTypes3";
-            this.dropDownBackhoeTypes3.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dropDownBackhoeTypes3.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dropDownBackhoeTypes3.selectedIndex = -1;
-            this.dropDownBackhoeTypes3.Size = new System.Drawing.Size(216, 22);
-            this.dropDownBackhoeTypes3.TabIndex = 14;
-            // 
-            // dropDownNoOfBackhoes1
-            // 
-            this.dropDownNoOfBackhoes1.BackColor = System.Drawing.Color.White;
-            this.dropDownNoOfBackhoes1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dropDownNoOfBackhoes1.FormattingEnabled = true;
-            this.dropDownNoOfBackhoes1.Location = new System.Drawing.Point(435, 83);
-            this.dropDownNoOfBackhoes1.Name = "dropDownNoOfBackhoes1";
-            this.dropDownNoOfBackhoes1.Size = new System.Drawing.Size(35, 24);
-            this.dropDownNoOfBackhoes1.TabIndex = 18;
-            // 
-            // dropDownNoOfBackhoes2
-            // 
-            this.dropDownNoOfBackhoes2.BackColor = System.Drawing.Color.White;
-            this.dropDownNoOfBackhoes2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dropDownNoOfBackhoes2.FormattingEnabled = true;
-            this.dropDownNoOfBackhoes2.Location = new System.Drawing.Point(435, 127);
-            this.dropDownNoOfBackhoes2.Name = "dropDownNoOfBackhoes2";
-            this.dropDownNoOfBackhoes2.Size = new System.Drawing.Size(35, 24);
-            this.dropDownNoOfBackhoes2.TabIndex = 19;
-            // 
-            // dropDownNoOfBackhoes3
-            // 
-            this.dropDownNoOfBackhoes3.BackColor = System.Drawing.Color.White;
-            this.dropDownNoOfBackhoes3.ForeColor = System.Drawing.Color.Black;
-            this.dropDownNoOfBackhoes3.FormattingEnabled = true;
-            this.dropDownNoOfBackhoes3.Location = new System.Drawing.Point(435, 173);
-            this.dropDownNoOfBackhoes3.Name = "dropDownNoOfBackhoes3";
-            this.dropDownNoOfBackhoes3.Size = new System.Drawing.Size(35, 24);
-            this.dropDownNoOfBackhoes3.TabIndex = 20;
-            // 
-            // lblRatings
-            // 
-            this.lblRatings.AutoSize = true;
-            this.lblRatings.Location = new System.Drawing.Point(269, 36);
-            this.lblRatings.Name = "lblRatings";
-            this.lblRatings.Size = new System.Drawing.Size(118, 16);
-            this.lblRatings.TabIndex = 21;
-            this.lblRatings.Text = "Ratings (Per Hour)";
-            // 
-            // txtRatings1
-            // 
-            this.txtRatings1.Location = new System.Drawing.Point(287, 87);
-            this.txtRatings1.Name = "txtRatings1";
-            this.txtRatings1.Size = new System.Drawing.Size(87, 22);
-            this.txtRatings1.TabIndex = 22;
-            // 
-            // txtRatings2
-            // 
-            this.txtRatings2.Location = new System.Drawing.Point(287, 129);
-            this.txtRatings2.Name = "txtRatings2";
-            this.txtRatings2.Size = new System.Drawing.Size(87, 22);
-            this.txtRatings2.TabIndex = 23;
-            // 
-            // txtRatings3
-            // 
-            this.txtRatings3.Location = new System.Drawing.Point(287, 174);
-            this.txtRatings3.Name = "txtRatings3";
-            this.txtRatings3.Size = new System.Drawing.Size(87, 22);
-            this.txtRatings3.TabIndex = 24;
-            // 
-            // groupBoxBackhoeDetails
-            // 
-            this.groupBoxBackhoeDetails.Controls.Add(this.txtRatings3);
-            this.groupBoxBackhoeDetails.Controls.Add(this.txtRatings2);
-            this.groupBoxBackhoeDetails.Controls.Add(this.txtRatings1);
-            this.groupBoxBackhoeDetails.Controls.Add(this.lblRatings);
-            this.groupBoxBackhoeDetails.Controls.Add(this.dropDownNoOfBackhoes3);
-            this.groupBoxBackhoeDetails.Controls.Add(this.dropDownNoOfBackhoes2);
-            this.groupBoxBackhoeDetails.Controls.Add(this.dropDownNoOfBackhoes1);
-            this.groupBoxBackhoeDetails.Controls.Add(this.dropDownBackhoeTypes3);
-            this.groupBoxBackhoeDetails.Controls.Add(this.dropDownBackhoeTypes2);
-            this.groupBoxBackhoeDetails.Controls.Add(this.dropDownBackhoeTypes1);
-            this.groupBoxBackhoeDetails.Controls.Add(this.lblBackhoeType);
-            this.groupBoxBackhoeDetails.Controls.Add(this.lblNoOfBackhoes);
-            this.groupBoxBackhoeDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxBackhoeDetails.Location = new System.Drawing.Point(516, 78);
-            this.groupBoxBackhoeDetails.Name = "groupBoxBackhoeDetails";
-            this.groupBoxBackhoeDetails.Size = new System.Drawing.Size(515, 234);
-            this.groupBoxBackhoeDetails.TabIndex = 29;
-            this.groupBoxBackhoeDetails.TabStop = false;
-            this.groupBoxBackhoeDetails.Text = "Backhoe Details";
-            // 
             // lblWorkingHrs
             // 
             this.lblWorkingHrs.AutoSize = true;
@@ -375,29 +238,45 @@
             this.groupBoxBookingPeriod.TabStop = false;
             this.groupBoxBookingPeriod.Text = "Booking Period";
             // 
+            // btnCheckVehicles
+            // 
+            this.btnCheckVehicles.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCheckVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(210)))), ((int)(((byte)(238)))));
+            this.btnCheckVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckVehicles.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCheckVehicles.Location = new System.Drawing.Point(101, 174);
+            this.btnCheckVehicles.Name = "btnCheckVehicles";
+            this.btnCheckVehicles.Size = new System.Drawing.Size(198, 34);
+            this.btnCheckVehicles.TabIndex = 40;
+            this.btnCheckVehicles.Text = "Check Vehicles";
+            this.btnCheckVehicles.UseVisualStyleBackColor = false;
+            this.btnCheckVehicles.Click += new System.EventHandler(this.btnCheckVehicles_Click);
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(254)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSave.Location = new System.Drawing.Point(573, 494);
+            this.btnSave.Location = new System.Drawing.Point(413, 494);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(198, 50);
             this.btnSave.TabIndex = 31;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(23)))), ((int)(((byte)(247)))));
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClear.Location = new System.Drawing.Point(788, 494);
+            this.btnClear.Location = new System.Drawing.Point(631, 494);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(198, 50);
             this.btnClear.TabIndex = 32;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblTotalCharge
             // 
@@ -416,14 +295,14 @@
             this.txtTotalCharges.Size = new System.Drawing.Size(140, 20);
             this.txtTotalCharges.TabIndex = 35;
             // 
-            // txtCustomerID
+            // txtBookingID
             // 
-            this.txtCustomerID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtCustomerID.Location = new System.Drawing.Point(0, 0);
-            this.txtCustomerID.MaxLength = 223;
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(223, 20);
-            this.txtCustomerID.TabIndex = 33;
+            this.txtBookingID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtBookingID.Location = new System.Drawing.Point(0, 0);
+            this.txtBookingID.MaxLength = 223;
+            this.txtBookingID.Name = "txtBookingID";
+            this.txtBookingID.Size = new System.Drawing.Size(223, 20);
+            this.txtBookingID.TabIndex = 33;
             // 
             // picSearch
             // 
@@ -436,33 +315,179 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSearch.TabIndex = 36;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click_1);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtCustomerID);
+            this.panel1.Controls.Add(this.txtBookingID);
             this.panel1.Controls.Add(this.picSearch);
             this.panel1.Location = new System.Drawing.Point(148, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 20);
             this.panel1.TabIndex = 37;
             // 
-            // btnCheckVehicles
+            // panel2
             // 
-            this.btnCheckVehicles.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCheckVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(210)))), ((int)(((byte)(238)))));
-            this.btnCheckVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckVehicles.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCheckVehicles.Location = new System.Drawing.Point(101, 174);
-            this.btnCheckVehicles.Name = "btnCheckVehicles";
-            this.btnCheckVehicles.Size = new System.Drawing.Size(198, 34);
-            this.btnCheckVehicles.TabIndex = 40;
-            this.btnCheckVehicles.Text = "Check Vehicles";
-            this.btnCheckVehicles.UseVisualStyleBackColor = false;
+            this.panel2.Controls.Add(this.txtCustomerID);
+            this.panel2.Location = new System.Drawing.Point(703, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(243, 20);
+            this.panel2.TabIndex = 40;
+            // 
+            // txtCustomerID
+            // 
+            this.txtCustomerID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCustomerID.Location = new System.Drawing.Point(0, 0);
+            this.txtCustomerID.MaxLength = 223;
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.ReadOnly = true;
+            this.txtCustomerID.Size = new System.Drawing.Size(243, 20);
+            this.txtCustomerID.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(522, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 16);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Customer NIC / Contract ID ";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Blue;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Location = new System.Drawing.Point(851, 494);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(198, 50);
+            this.btnDelete.TabIndex = 41;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblNoOfBackhoes
+            // 
+            this.lblNoOfBackhoes.AutoSize = true;
+            this.lblNoOfBackhoes.Location = new System.Drawing.Point(403, 36);
+            this.lblNoOfBackhoes.Name = "lblNoOfBackhoes";
+            this.lblNoOfBackhoes.Size = new System.Drawing.Size(106, 16);
+            this.lblNoOfBackhoes.TabIndex = 11;
+            this.lblNoOfBackhoes.Text = "No Of Backhoes";
+            // 
+            // lblBackhoeType
+            // 
+            this.lblBackhoeType.AutoSize = true;
+            this.lblBackhoeType.Location = new System.Drawing.Point(6, 36);
+            this.lblBackhoeType.Name = "lblBackhoeType";
+            this.lblBackhoeType.Size = new System.Drawing.Size(97, 16);
+            this.lblBackhoeType.TabIndex = 7;
+            this.lblBackhoeType.Text = "Backhoe Type";
+            // 
+            // lblRatings
+            // 
+            this.lblRatings.AutoSize = true;
+            this.lblRatings.Location = new System.Drawing.Point(269, 36);
+            this.lblRatings.Name = "lblRatings";
+            this.lblRatings.Size = new System.Drawing.Size(118, 16);
+            this.lblRatings.TabIndex = 21;
+            this.lblRatings.Text = "Ratings (Per Hour)";
+            // 
+            // txtRatings1
+            // 
+            this.txtRatings1.Location = new System.Drawing.Point(287, 87);
+            this.txtRatings1.Name = "txtRatings1";
+            this.txtRatings1.Size = new System.Drawing.Size(87, 22);
+            this.txtRatings1.TabIndex = 22;
+            // 
+            // txtRatings2
+            // 
+            this.txtRatings2.Location = new System.Drawing.Point(287, 129);
+            this.txtRatings2.Name = "txtRatings2";
+            this.txtRatings2.Size = new System.Drawing.Size(87, 22);
+            this.txtRatings2.TabIndex = 23;
+            // 
+            // txtRatings3
+            // 
+            this.txtRatings3.Location = new System.Drawing.Point(287, 174);
+            this.txtRatings3.Name = "txtRatings3";
+            this.txtRatings3.Size = new System.Drawing.Size(87, 22);
+            this.txtRatings3.TabIndex = 24;
+            // 
+            // txtBackhoeT1
+            // 
+            this.txtBackhoeT1.Location = new System.Drawing.Point(9, 84);
+            this.txtBackhoeT1.Name = "txtBackhoeT1";
+            this.txtBackhoeT1.Size = new System.Drawing.Size(168, 22);
+            this.txtBackhoeT1.TabIndex = 25;
+            // 
+            // txtBackhoeT2
+            // 
+            this.txtBackhoeT2.Location = new System.Drawing.Point(9, 129);
+            this.txtBackhoeT2.Name = "txtBackhoeT2";
+            this.txtBackhoeT2.Size = new System.Drawing.Size(168, 22);
+            this.txtBackhoeT2.TabIndex = 26;
+            this.txtBackhoeT2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // txtBackhoeT3
+            // 
+            this.txtBackhoeT3.Location = new System.Drawing.Point(6, 174);
+            this.txtBackhoeT3.Name = "txtBackhoeT3";
+            this.txtBackhoeT3.Size = new System.Drawing.Size(168, 22);
+            this.txtBackhoeT3.TabIndex = 27;
+            this.txtBackhoeT3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // txtNoOfbckhoes1
+            // 
+            this.txtNoOfbckhoes1.Location = new System.Drawing.Point(417, 87);
+            this.txtNoOfbckhoes1.Name = "txtNoOfbckhoes1";
+            this.txtNoOfbckhoes1.Size = new System.Drawing.Size(62, 22);
+            this.txtNoOfbckhoes1.TabIndex = 28;
+            // 
+            // txtNoOfbckhoes2
+            // 
+            this.txtNoOfbckhoes2.Location = new System.Drawing.Point(417, 132);
+            this.txtNoOfbckhoes2.Name = "txtNoOfbckhoes2";
+            this.txtNoOfbckhoes2.Size = new System.Drawing.Size(62, 22);
+            this.txtNoOfbckhoes2.TabIndex = 29;
+            // 
+            // groupBoxBackhoeDetails
+            // 
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtNoOfbckhoes3);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtNoOfbckhoes2);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtNoOfbckhoes1);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtBackhoeT3);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtBackhoeT2);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtBackhoeT1);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtRatings3);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtRatings2);
+            this.groupBoxBackhoeDetails.Controls.Add(this.txtRatings1);
+            this.groupBoxBackhoeDetails.Controls.Add(this.lblRatings);
+            this.groupBoxBackhoeDetails.Controls.Add(this.lblBackhoeType);
+            this.groupBoxBackhoeDetails.Controls.Add(this.lblNoOfBackhoes);
+            this.groupBoxBackhoeDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxBackhoeDetails.Location = new System.Drawing.Point(516, 78);
+            this.groupBoxBackhoeDetails.Name = "groupBoxBackhoeDetails";
+            this.groupBoxBackhoeDetails.Size = new System.Drawing.Size(515, 234);
+            this.groupBoxBackhoeDetails.TabIndex = 29;
+            this.groupBoxBackhoeDetails.TabStop = false;
+            this.groupBoxBackhoeDetails.Text = "Backhoe Details";
+            // 
+            // txtNoOfbckhoes3
+            // 
+            this.txtNoOfbckhoes3.Location = new System.Drawing.Point(417, 174);
+            this.txtNoOfbckhoes3.Name = "txtNoOfbckhoes3";
+            this.txtNoOfbckhoes3.Size = new System.Drawing.Size(62, 22);
+            this.txtNoOfbckhoes3.TabIndex = 30;
             // 
             // BookingUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtTotalCharges);
             this.Controls.Add(this.lblTotalCharge);
@@ -477,13 +502,15 @@
             this.Load += new System.EventHandler(this.BookingUIEdit_Load);
             this.groupBoxCallerDetails.ResumeLayout(false);
             this.groupBoxCallerDetails.PerformLayout();
-            this.groupBoxBackhoeDetails.ResumeLayout(false);
-            this.groupBoxBackhoeDetails.PerformLayout();
             this.groupBoxBookingPeriod.ResumeLayout(false);
             this.groupBoxBookingPeriod.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.groupBoxBackhoeDetails.ResumeLayout(false);
+            this.groupBoxBackhoeDetails.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,19 +528,6 @@
         private System.Windows.Forms.Label lblNIC;
         private System.Windows.Forms.TextBox txtNIC;
         private System.Windows.Forms.GroupBox groupBoxCallerDetails;
-        private System.Windows.Forms.Label lblNoOfBackhoes;
-        private System.Windows.Forms.Label lblBackhoeType;
-        private Bunifu.Framework.UI.BunifuDropdown dropDownBackhoeTypes1;
-        private Bunifu.Framework.UI.BunifuDropdown dropDownBackhoeTypes2;
-        private Bunifu.Framework.UI.BunifuDropdown dropDownBackhoeTypes3;
-        private System.Windows.Forms.ComboBox dropDownNoOfBackhoes1;
-        private System.Windows.Forms.ComboBox dropDownNoOfBackhoes2;
-        private System.Windows.Forms.ComboBox dropDownNoOfBackhoes3;
-        private System.Windows.Forms.Label lblRatings;
-        private System.Windows.Forms.TextBox txtRatings1;
-        private System.Windows.Forms.TextBox txtRatings2;
-        private System.Windows.Forms.TextBox txtRatings3;
-        private System.Windows.Forms.GroupBox groupBoxBackhoeDetails;
         private System.Windows.Forms.Label lblWorkingHrs;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblBookingDate;
@@ -525,9 +539,26 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblTotalCharge;
         private System.Windows.Forms.TextBox txtTotalCharges;
-        private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.TextBox txtBookingID;
         private System.Windows.Forms.PictureBox picSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCheckVehicles;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblNoOfBackhoes;
+        private System.Windows.Forms.Label lblBackhoeType;
+        private System.Windows.Forms.Label lblRatings;
+        private System.Windows.Forms.TextBox txtRatings1;
+        private System.Windows.Forms.TextBox txtRatings2;
+        private System.Windows.Forms.TextBox txtRatings3;
+        private System.Windows.Forms.TextBox txtBackhoeT1;
+        private System.Windows.Forms.TextBox txtBackhoeT2;
+        private System.Windows.Forms.TextBox txtBackhoeT3;
+        private System.Windows.Forms.TextBox txtNoOfbckhoes1;
+        private System.Windows.Forms.TextBox txtNoOfbckhoes2;
+        private System.Windows.Forms.GroupBox groupBoxBackhoeDetails;
+        private System.Windows.Forms.TextBox txtNoOfbckhoes3;
     }
 }

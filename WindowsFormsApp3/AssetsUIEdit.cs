@@ -104,9 +104,9 @@ namespace WindowsFormsApp3
             string deletesql = "delete from Assets_Maintenance where AssetsMaintenanceID = '" + int.Parse(txtAssetsID.Text) + "'";
             SqlCommand command = new SqlCommand(deletesql,sqlConnection);
             command.ExecuteNonQuery();
-            MessageBox.Show("Delete Successfully");
             sqlConnection.Close();
             
+            MessageBox.Show("Delete Successfully");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
