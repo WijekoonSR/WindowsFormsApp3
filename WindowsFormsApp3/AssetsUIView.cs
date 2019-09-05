@@ -68,5 +68,51 @@ namespace WindowsFormsApp3
                 sqlConnection.Close();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                string date = dateIssuedDate.Value.ToString("yyyy/MM/dd");
+                String cmd = "Select * from Assets_Maintenance where IssuedDate ='" + date + "' ";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd, sqlConnection);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                dgvAssetsDetails.DataSource = dataTable;
+                SqlCommand command = new SqlCommand();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
+
+        private void btnSearchIssuedDate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                string date = datePurchaseDate.Value.ToString("yyyy/MM/dd");
+                String cmd = "Select * from Assets_Maintenance where PurchaseDate ='" + date + "' ";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd, sqlConnection);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                dgvAssetsDetails.DataSource = dataTable;
+                SqlCommand command = new SqlCommand();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
     }
 }

@@ -66,7 +66,7 @@ namespace WindowsFormsApp3
 
         private void btnClearEdit_Click(object sender, EventArgs e)
         {
-
+            ClearFields();
 
         }
 
