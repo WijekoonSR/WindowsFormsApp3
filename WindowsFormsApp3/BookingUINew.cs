@@ -438,6 +438,10 @@ namespace WindowsFormsApp3
          }
      }
 
+        public static bool IsNumber(string s)
+        {
+            return s.All(char.IsDigit);
+        }
 
 
         private void insertBooking_vehicle(int count, string Type)
@@ -529,13 +533,19 @@ namespace WindowsFormsApp3
                 txtCallerName.Focus();
                 return false;
             }
-           else if (txtNIC.Text.ToString() == "") {
+            else if (txtNIC.Text.ToString() == "") {
                 MessageBox.Show("Insert NIC");
                 txtNIC.Focus();
                 return false;
             }
             else if (txtCallerTpNo.Text.ToString() == "") {
                 MessageBox.Show("Insert Caller Telephone Number");
+                txtCallerTpNo.Focus();
+                return false;
+            }
+
+            else if (IsNumber(txtCallerTpNo.Text.ToString()) == false) {
+                MessageBox.Show("Invalid Telephone Number");
                 txtCallerTpNo.Focus();
                 return false;
             }
@@ -550,10 +560,28 @@ namespace WindowsFormsApp3
                 txtRatings1.Focus();
                 return false;
             }
+
+            else if (IsNumber(txtRatings1.Text.ToString()) == false) {
+                MessageBox.Show("Invalid input check it..");
+                txtRatings1.Focus();
+                return false;
+            }
             else if (dropDownNoOfBackhoes1.SelectedIndex.Equals(-1)) {
 
                 MessageBox.Show("Insert at least one vehicle type type to make a booking");
                 dropDownNoOfBackhoes1.Focus();
+                return false;
+            }
+            else if (IsNumber(txtRatings2.Text.ToString()) == false)
+            {
+                MessageBox.Show("Invalid input check it..");
+                txtRatings2.Focus();
+                return false;
+            }
+            else if (IsNumber(txtRatings3.Text.ToString()) == false)
+            {
+                MessageBox.Show("Invalid input check it..");
+                txtRatings3.Focus();
                 return false;
             }
 

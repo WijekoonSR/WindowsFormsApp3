@@ -57,11 +57,14 @@ namespace WindowsFormsApp3
             DateEndLeasingDate.Value = Convert.ToDateTime(date2);
             con.Close();
         }
-
+        public static bool IsNumber(string s)
+        {
+            return s.All(char.IsDigit);
+        }
         private void btnSave_Click(object sender, EventArgs e)
         { 
             con.Open();
-            SqlCommand sqlCommand = new SqlCommand("update Vehicle_Leasings set BankName ='" + txtBank.Text.ToString() + "' , Branch = '" + txtBranch.Text.ToString() + "', BankCode = '" + txtBankCode.ToString() + "',AccountHolder= '" + txtAccountHolder.Text.ToString() + "',AccountNumber ='" + txtAccountNumber.Text.ToString() + "',Year ='" + txtYear.Text.ToString() + "', TotalLeasingAmount='" + txtTotalLeasingAmount.Text.ToString() + "',AnnualInterestRate='" + txtAnnualInterestRate.Text.ToString() + "',MonthlyPayment='" + txtMonthlyPayment.Text.ToString() + "',StartLeasingDate='" + DateStartLeasingDate.Value.ToString("yyyy/MM/dd") + "',EndLeasingDate='" + DateEndLeasingDate.Value.ToString("yyyy/MM/dd")+"'",con);
+            SqlCommand sqlCommand = new SqlCommand("update Vehicle_Leasings set BankName ='" + txtBank.Text.ToString() + "' , Branch = '" + txtBranch.Text.ToString() + "', BankCode = '" + txtBankCode.Text.ToString() + "',AccountHolder= '" + txtAccountHolder.Text.ToString() + "',AccountNumber ='" + txtAccountNumber.Text.ToString() + "',Year ='" + txtYear.Text.ToString() + "', TotalLeasingAmount='" + txtTotalLeasingAmount.Text.ToString() + "',AnnualInterestRate='" + txtAnnualInterestRate.Text.ToString() + "',MonthlyPayment='" + txtMonthlyPayment.Text.ToString() + "',StartLeasingDate='" + DateStartLeasingDate.Value.ToString("yyyy/MM/dd") + "',EndLeasingDate='" + DateEndLeasingDate.Value.ToString("yyyy/MM/dd")+ "' where VehicleLeasingsID = '"+int.Parse(txtLeasingID.Text.ToString()) +"'", con);
             sqlCommand.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Updated Succesfully","Updated",MessageBoxButtons.OK);
@@ -69,6 +72,7 @@ namespace WindowsFormsApp3
 
         public void clearAllFields()
         {
+            txtBranch.Clear();
             txtLeasingID.Clear();
             txtBank.Clear();
             txtBankCode.Clear();

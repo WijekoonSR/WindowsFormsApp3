@@ -205,23 +205,30 @@ namespace WindowsFormsApp3
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
-            try
+            if (edtEmployeeID.Text.Equals(""))
             {
-                con.Open();
-                String sql = "DELETE FROM Payroll_Staff WHERE EmployeeID ='" + EmployeeID + "'";
-                SqlCommand cmd = new SqlCommand(sql, con);
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Data record deleted!", "DB Connection With App.Config", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                con.Close();
-                //Clear();
-                //DisableButtons();
+                MessageBox.Show("Please Enter EmployeeID");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                try
+                {
+                    con.Open();
+                    String sql = "DELETE FROM Payroll_Staff WHERE EmployeeID ='" + EmployeeID + "'";
+                    SqlCommand cmd = new SqlCommand(sql, con);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Data record deleted!", "DB Connection With App.Config", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    con.Close();
+                    //Clear();
+                    //DisableButtons();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
