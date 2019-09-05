@@ -35,6 +35,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnEmployeeView = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,12 +43,12 @@
             this.btnEditOperator = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNewStaff = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNewOperator = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.employeeUINewOperator1 = new WindowsFormsApp3.EmployeeUINewOperator();
-            this.employeeUINewStaff1 = new WindowsFormsApp3.EmployeeUINewStaff();
-            this.employeeUIEditOperator1 = new WindowsFormsApp3.EmployeeUIEditOperator();
-            this.employeeUIEditStaff1 = new WindowsFormsApp3.EmployeeUIEditStaff();
             this.employeeUIView1 = new WindowsFormsApp3.EmployeeUIViewOperat();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.employeeUIEditStaff1 = new WindowsFormsApp3.EmployeeUIEditStaff();
+            this.employeeUIEditOperator1 = new WindowsFormsApp3.EmployeeUIEditOperator();
+            this.employeeUINewStaff1 = new WindowsFormsApp3.EmployeeUINewStaff();
+            this.employeeUINewOperator1 = new WindowsFormsApp3.EmployeeUINewOperator();
+            this.employeeUIViewStaff1 = new WindowsFormsApp3.EmployeeUIViewStaff();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 78);
             this.panel4.TabIndex = 4;
@@ -76,7 +77,7 @@
             this.panelUpper.BackColor = System.Drawing.Color.GhostWhite;
             this.panelUpper.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelUpper.Location = new System.Drawing.Point(188, 0);
-            this.panelUpper.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelUpper.Margin = new System.Windows.Forms.Padding(4);
             this.panelUpper.Name = "panelUpper";
             this.panelUpper.Size = new System.Drawing.Size(1, 78);
             this.panelUpper.TabIndex = 7;
@@ -86,7 +87,7 @@
             this.panel8.BackColor = System.Drawing.Color.GhostWhite;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(349, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1, 78);
             this.panel8.TabIndex = 11;
@@ -96,7 +97,7 @@
             this.panel7.BackColor = System.Drawing.Color.GhostWhite;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(523, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1, 78);
             this.panel7.TabIndex = 13;
@@ -118,17 +119,46 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1425, 78);
             this.panel1.TabIndex = 4;
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "   View   ";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconZoom = 34D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(847, 0);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(160, 78);
+            this.bunifuFlatButton1.TabIndex = 18;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.GhostWhite;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(845, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(846, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 78);
             this.panel3.TabIndex = 17;
@@ -150,13 +180,13 @@
             this.btnEmployeeView.IconZoom = 34D;
             this.btnEmployeeView.IsTab = false;
             this.btnEmployeeView.Location = new System.Drawing.Point(685, 0);
-            this.btnEmployeeView.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployeeView.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeeView.Name = "btnEmployeeView";
             this.btnEmployeeView.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnEmployeeView.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.btnEmployeeView.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeView.selected = false;
-            this.btnEmployeeView.Size = new System.Drawing.Size(160, 78);
+            this.btnEmployeeView.Size = new System.Drawing.Size(161, 78);
             this.btnEmployeeView.TabIndex = 16;
             this.btnEmployeeView.Textcolor = System.Drawing.Color.Black;
             this.btnEmployeeView.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,7 +197,7 @@
             this.panel2.BackColor = System.Drawing.Color.GhostWhite;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(684, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1, 78);
             this.panel2.TabIndex = 15;
@@ -189,7 +219,7 @@
             this.btnEditStaff.IconZoom = 34D;
             this.btnEditStaff.IsTab = false;
             this.btnEditStaff.Location = new System.Drawing.Point(524, 0);
-            this.btnEditStaff.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEditStaff.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditStaff.Name = "btnEditStaff";
             this.btnEditStaff.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnEditStaff.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
@@ -218,7 +248,7 @@
             this.btnEditOperator.IconZoom = 34D;
             this.btnEditOperator.IsTab = false;
             this.btnEditOperator.Location = new System.Drawing.Point(350, 0);
-            this.btnEditOperator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEditOperator.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditOperator.Name = "btnEditOperator";
             this.btnEditOperator.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnEditOperator.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
@@ -247,7 +277,7 @@
             this.btnNewStaff.IconZoom = 34D;
             this.btnNewStaff.IsTab = false;
             this.btnNewStaff.Location = new System.Drawing.Point(189, 0);
-            this.btnNewStaff.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnNewStaff.Margin = new System.Windows.Forms.Padding(5);
             this.btnNewStaff.Name = "btnNewStaff";
             this.btnNewStaff.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnNewStaff.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
@@ -276,7 +306,7 @@
             this.btnNewOperator.IconZoom = 34D;
             this.btnNewOperator.IsTab = false;
             this.btnNewOperator.Location = new System.Drawing.Point(1, 0);
-            this.btnNewOperator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnNewOperator.Margin = new System.Windows.Forms.Padding(5);
             this.btnNewOperator.Name = "btnNewOperator";
             this.btnNewOperator.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnNewOperator.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
@@ -288,85 +318,66 @@
             this.btnNewOperator.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewOperator.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // employeeUINewOperator1
-            // 
-            this.employeeUINewOperator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeUINewOperator1.Location = new System.Drawing.Point(0, 78);
-            this.employeeUINewOperator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.employeeUINewOperator1.Name = "employeeUINewOperator1";
-            this.employeeUINewOperator1.Size = new System.Drawing.Size(1425, 720);
-            this.employeeUINewOperator1.TabIndex = 5;
-            // 
-            // employeeUINewStaff1
-            // 
-            this.employeeUINewStaff1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeUINewStaff1.Location = new System.Drawing.Point(0, 78);
-            this.employeeUINewStaff1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.employeeUINewStaff1.Name = "employeeUINewStaff1";
-            this.employeeUINewStaff1.Size = new System.Drawing.Size(1425, 720);
-            this.employeeUINewStaff1.TabIndex = 6;
-            // 
-            // employeeUIEditOperator1
-            // 
-            this.employeeUIEditOperator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeUIEditOperator1.Location = new System.Drawing.Point(0, 78);
-            this.employeeUIEditOperator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.employeeUIEditOperator1.Name = "employeeUIEditOperator1";
-            this.employeeUIEditOperator1.Size = new System.Drawing.Size(1425, 720);
-            this.employeeUIEditOperator1.TabIndex = 7;
-            // 
-            // employeeUIEditStaff1
-            // 
-            this.employeeUIEditStaff1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeUIEditStaff1.Location = new System.Drawing.Point(0, 78);
-            this.employeeUIEditStaff1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.employeeUIEditStaff1.Name = "employeeUIEditStaff1";
-            this.employeeUIEditStaff1.Size = new System.Drawing.Size(1425, 720);
-            this.employeeUIEditStaff1.TabIndex = 8;
-            // 
             // employeeUIView1
             // 
             this.employeeUIView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeeUIView1.Location = new System.Drawing.Point(0, 78);
-            this.employeeUIView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.employeeUIView1.Margin = new System.Windows.Forms.Padding(5);
             this.employeeUIView1.Name = "employeeUIView1";
             this.employeeUIView1.Size = new System.Drawing.Size(1425, 720);
             this.employeeUIView1.TabIndex = 9;
             this.employeeUIView1.Load += new System.EventHandler(this.employeeUIView1_Load);
             // 
-            // bunifuFlatButton1
+            // employeeUIEditStaff1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "   View   ";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconZoom = 34D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(846, 0);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(160, 78);
-            this.bunifuFlatButton1.TabIndex = 18;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeUIEditStaff1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeUIEditStaff1.Location = new System.Drawing.Point(0, 78);
+            this.employeeUIEditStaff1.Margin = new System.Windows.Forms.Padding(5);
+            this.employeeUIEditStaff1.Name = "employeeUIEditStaff1";
+            this.employeeUIEditStaff1.Size = new System.Drawing.Size(1425, 720);
+            this.employeeUIEditStaff1.TabIndex = 8;
+            // 
+            // employeeUIEditOperator1
+            // 
+            this.employeeUIEditOperator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeUIEditOperator1.Location = new System.Drawing.Point(0, 78);
+            this.employeeUIEditOperator1.Margin = new System.Windows.Forms.Padding(5);
+            this.employeeUIEditOperator1.Name = "employeeUIEditOperator1";
+            this.employeeUIEditOperator1.Size = new System.Drawing.Size(1425, 720);
+            this.employeeUIEditOperator1.TabIndex = 7;
+            // 
+            // employeeUINewStaff1
+            // 
+            this.employeeUINewStaff1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeUINewStaff1.Location = new System.Drawing.Point(0, 78);
+            this.employeeUINewStaff1.Margin = new System.Windows.Forms.Padding(5);
+            this.employeeUINewStaff1.Name = "employeeUINewStaff1";
+            this.employeeUINewStaff1.Size = new System.Drawing.Size(1425, 720);
+            this.employeeUINewStaff1.TabIndex = 6;
+            // 
+            // employeeUINewOperator1
+            // 
+            this.employeeUINewOperator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeUINewOperator1.Location = new System.Drawing.Point(0, 78);
+            this.employeeUINewOperator1.Margin = new System.Windows.Forms.Padding(5);
+            this.employeeUINewOperator1.Name = "employeeUINewOperator1";
+            this.employeeUINewOperator1.Size = new System.Drawing.Size(1425, 720);
+            this.employeeUINewOperator1.TabIndex = 5;
+            // 
+            // employeeUIViewStaff1
+            // 
+            this.employeeUIViewStaff1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeUIViewStaff1.Location = new System.Drawing.Point(0, 78);
+            this.employeeUIViewStaff1.Name = "employeeUIViewStaff1";
+            this.employeeUIViewStaff1.Size = new System.Drawing.Size(1425, 720);
+            this.employeeUIViewStaff1.TabIndex = 10;
             // 
             // EmployeeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.employeeUIViewStaff1);
             this.Controls.Add(this.employeeUIView1);
             this.Controls.Add(this.employeeUIEditStaff1);
             this.Controls.Add(this.employeeUIEditOperator1);
@@ -374,7 +385,7 @@
             this.Controls.Add(this.employeeUINewOperator1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmployeeUI";
             this.Size = new System.Drawing.Size(1425, 798);
             this.panel1.ResumeLayout(false);
@@ -403,5 +414,6 @@
         private EmployeeUIEditStaff employeeUIEditStaff1;
         private EmployeeUIViewOperat employeeUIView1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private EmployeeUIViewStaff employeeUIViewStaff1;
     }
 }

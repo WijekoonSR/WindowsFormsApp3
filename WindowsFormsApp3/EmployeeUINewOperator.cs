@@ -30,7 +30,7 @@ namespace WindowsFormsApp3
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             // Create string variables that contain the patterns   
-            string NICPattern = @"[0-9]{9}[x|X|v|V]$"; //NICpattern  
+           /* string NICPattern = @"[0-9]{9}[x|X|v|V]$"; //NICpattern  
 
             bool isNICValid = Regex.IsMatch(txtNIC.Text, NICPattern);
 
@@ -38,7 +38,7 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Please enter a valid NIC Number");
             }
-
+            */
              sqlConnection.Open();
              string fname = txtfname.Text;
              string lname = txtLname.Text;
@@ -54,16 +54,24 @@ namespace WindowsFormsApp3
              string postalCode = txtPostalCode.Text;
              string jobTitle = cmbJobTitle.Text;
 
-             string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
+            String EID = txtEmployeeID.Text;
+            EID = Regex.Replace(EID, "[^0-9]", "");
+            int ID = int.Parse(EID);
+
+          
+
+            string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
                "values('" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
+                SqlCommand cmd = new SqlCommand(query, sqlConnection);
+                cmd.ExecuteNonQuery();
 
-             SqlCommand cmd = new SqlCommand(query, sqlConnection);
-           // string query02 = "insert into Vehicle_Operators(EmployeeID,LicenseNo)"+ "values('"+
-
-             cmd.ExecuteNonQuery();
+            string query02 = "insert into Vehicle_Operators(EmployeeID,LicenseNo)"+ "values('" +ID+ "','" +licenseNUm+ "')";
+                SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
+                 cmd2.ExecuteNonQuery();
+            
 
              sqlConnection.Close();
-             sqlConnection.Open();
+             //sqlConnection.Open();
 
             /* string query02 = "Exec AsignOperators '" + licenseNUm + "'";
              SqlCommand cmd2 = new SqlCommand(query02,sqlConnection);
@@ -72,6 +80,7 @@ namespace WindowsFormsApp3
 
              MessageBox.Show("Data Submitted");
              clearDet();
+            getOpertaorID();
            //  sqlConnection.Close();
 
         }
@@ -97,7 +106,37 @@ namespace WindowsFormsApp3
         {
             clearDet();
         }
+        private void getOpertaorID()
+        {
+            try
+            {
+                sqlConnection.Open();
+                string ID = null;
+                String queryCurrentID = "select IDENT_CURRENT('Employee')";
+                SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
+                SqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    ID = dataReader[0].ToString();
+                }
+                sqlConnection.Close();
+                sqlConnection.Open();
 
+                SqlCommand chkExistsData = new SqlCommand("select * from Employee where EmployeeID = 1", sqlConnection);
+                SqlDataReader SDR = chkExistsData.ExecuteReader();
+                if (SDR.HasRows) txtEmployeeID.Text = "E" + (int.Parse(ID) + 1).ToString();
+                else txtEmployeeID.Text = "E1";
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "BookingUI:getBookingID ");
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -105,7 +144,7 @@ namespace WindowsFormsApp3
 
         private void EmployeeUINewOperator_Load(object sender, EventArgs e)
         {
-
+            getOpertaorID();
         }
     }
     }

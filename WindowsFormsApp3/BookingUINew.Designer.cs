@@ -82,7 +82,7 @@
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClear.Location = new System.Drawing.Point(1051, 608);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(264, 62);
             this.btnClear.TabIndex = 23;
@@ -96,7 +96,7 @@
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSave.Location = new System.Drawing.Point(764, 608);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(264, 62);
             this.btnSave.TabIndex = 22;
@@ -115,9 +115,9 @@
             this.grpBookingPeriod.Controls.Add(this.lblWorkingHrs);
             this.grpBookingPeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBookingPeriod.Location = new System.Drawing.Point(55, 96);
-            this.grpBookingPeriod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpBookingPeriod.Margin = new System.Windows.Forms.Padding(4);
             this.grpBookingPeriod.Name = "grpBookingPeriod";
-            this.grpBookingPeriod.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpBookingPeriod.Padding = new System.Windows.Forms.Padding(4);
             this.grpBookingPeriod.Size = new System.Drawing.Size(597, 288);
             this.grpBookingPeriod.TabIndex = 21;
             this.grpBookingPeriod.TabStop = false;
@@ -130,7 +130,7 @@
             this.btnCheckVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckVehicles.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCheckVehicles.Location = new System.Drawing.Point(135, 214);
-            this.btnCheckVehicles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckVehicles.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckVehicles.Name = "btnCheckVehicles";
             this.btnCheckVehicles.Size = new System.Drawing.Size(264, 42);
             this.btnCheckVehicles.TabIndex = 39;
@@ -141,7 +141,7 @@
             // txtWorkingHours
             // 
             this.txtWorkingHours.Location = new System.Drawing.Point(236, 159);
-            this.txtWorkingHours.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWorkingHours.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorkingHours.Name = "txtWorkingHours";
             this.txtWorkingHours.Size = new System.Drawing.Size(85, 26);
             this.txtWorkingHours.TabIndex = 16;
@@ -149,7 +149,7 @@
             // dateEndDate
             // 
             this.dateEndDate.Location = new System.Drawing.Point(236, 100);
-            this.dateEndDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateEndDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateEndDate.Name = "dateEndDate";
             this.dateEndDate.Size = new System.Drawing.Size(349, 26);
             this.dateEndDate.TabIndex = 15;
@@ -159,7 +159,7 @@
             // dateStartDate
             // 
             this.dateStartDate.Location = new System.Drawing.Point(235, 37);
-            this.dateStartDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateStartDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateStartDate.Name = "dateStartDate";
             this.dateStartDate.Size = new System.Drawing.Size(351, 26);
             this.dateStartDate.TabIndex = 14;
@@ -212,9 +212,9 @@
             this.groupBoxbackhoeDetails.Controls.Add(this.lblNoOfBackhoes);
             this.groupBoxbackhoeDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxbackhoeDetails.Location = new System.Drawing.Point(688, 96);
-            this.groupBoxbackhoeDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxbackhoeDetails.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxbackhoeDetails.Name = "groupBoxbackhoeDetails";
-            this.groupBoxbackhoeDetails.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxbackhoeDetails.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxbackhoeDetails.Size = new System.Drawing.Size(687, 288);
             this.groupBoxbackhoeDetails.TabIndex = 20;
             this.groupBoxbackhoeDetails.TabStop = false;
@@ -223,7 +223,7 @@
             // txtRatings3
             // 
             this.txtRatings3.Location = new System.Drawing.Point(383, 214);
-            this.txtRatings3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRatings3.Margin = new System.Windows.Forms.Padding(4);
             this.txtRatings3.Name = "txtRatings3";
             this.txtRatings3.Size = new System.Drawing.Size(115, 26);
             this.txtRatings3.TabIndex = 24;
@@ -232,7 +232,7 @@
             // txtRatings2
             // 
             this.txtRatings2.Location = new System.Drawing.Point(383, 159);
-            this.txtRatings2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRatings2.Margin = new System.Windows.Forms.Padding(4);
             this.txtRatings2.Name = "txtRatings2";
             this.txtRatings2.Size = new System.Drawing.Size(115, 26);
             this.txtRatings2.TabIndex = 23;
@@ -241,7 +241,7 @@
             // txtRatings1
             // 
             this.txtRatings1.Location = new System.Drawing.Point(383, 107);
-            this.txtRatings1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRatings1.Margin = new System.Windows.Forms.Padding(4);
             this.txtRatings1.Name = "txtRatings1";
             this.txtRatings1.Size = new System.Drawing.Size(115, 26);
             this.txtRatings1.TabIndex = 22;
@@ -263,7 +263,7 @@
             this.dropDownNoOfBackhoes3.ForeColor = System.Drawing.Color.Black;
             this.dropDownNoOfBackhoes3.FormattingEnabled = true;
             this.dropDownNoOfBackhoes3.Location = new System.Drawing.Point(580, 213);
-            this.dropDownNoOfBackhoes3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dropDownNoOfBackhoes3.Margin = new System.Windows.Forms.Padding(4);
             this.dropDownNoOfBackhoes3.Name = "dropDownNoOfBackhoes3";
             this.dropDownNoOfBackhoes3.Size = new System.Drawing.Size(45, 28);
             this.dropDownNoOfBackhoes3.TabIndex = 20;
@@ -276,7 +276,7 @@
             this.dropDownNoOfBackhoes2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dropDownNoOfBackhoes2.FormattingEnabled = true;
             this.dropDownNoOfBackhoes2.Location = new System.Drawing.Point(580, 156);
-            this.dropDownNoOfBackhoes2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dropDownNoOfBackhoes2.Margin = new System.Windows.Forms.Padding(4);
             this.dropDownNoOfBackhoes2.Name = "dropDownNoOfBackhoes2";
             this.dropDownNoOfBackhoes2.Size = new System.Drawing.Size(45, 28);
             this.dropDownNoOfBackhoes2.TabIndex = 19;
@@ -289,7 +289,7 @@
             this.dropDownNoOfBackhoes1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dropDownNoOfBackhoes1.FormattingEnabled = true;
             this.dropDownNoOfBackhoes1.Location = new System.Drawing.Point(580, 102);
-            this.dropDownNoOfBackhoes1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dropDownNoOfBackhoes1.Margin = new System.Windows.Forms.Padding(4);
             this.dropDownNoOfBackhoes1.Name = "dropDownNoOfBackhoes1";
             this.dropDownNoOfBackhoes1.Size = new System.Drawing.Size(45, 28);
             this.dropDownNoOfBackhoes1.TabIndex = 18;
@@ -376,9 +376,9 @@
             this.groupBoxCallerDetails.Controls.Add(this.lblMobileNo);
             this.groupBoxCallerDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCallerDetails.Location = new System.Drawing.Point(55, 438);
-            this.groupBoxCallerDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxCallerDetails.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxCallerDetails.Name = "groupBoxCallerDetails";
-            this.groupBoxCallerDetails.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxCallerDetails.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxCallerDetails.Size = new System.Drawing.Size(1320, 138);
             this.groupBoxCallerDetails.TabIndex = 19;
             this.groupBoxCallerDetails.TabStop = false;
@@ -387,7 +387,7 @@
             // txtNIC
             // 
             this.txtNIC.Location = new System.Drawing.Point(237, 81);
-            this.txtNIC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNIC.Margin = new System.Windows.Forms.Padding(4);
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(297, 26);
             this.txtNIC.TabIndex = 19;
@@ -405,7 +405,7 @@
             // dateCaller
             // 
             this.dateCaller.Location = new System.Drawing.Point(816, 38);
-            this.dateCaller.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateCaller.Margin = new System.Windows.Forms.Padding(4);
             this.dateCaller.Name = "dateCaller";
             this.dateCaller.Size = new System.Drawing.Size(349, 26);
             this.dateCaller.TabIndex = 17;
@@ -414,7 +414,7 @@
             // txtCallerTpNo
             // 
             this.txtCallerTpNo.Location = new System.Drawing.Point(816, 81);
-            this.txtCallerTpNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCallerTpNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCallerTpNo.Name = "txtCallerTpNo";
             this.txtCallerTpNo.Size = new System.Drawing.Size(349, 26);
             this.txtCallerTpNo.TabIndex = 7;
@@ -422,7 +422,7 @@
             // txtCallerName
             // 
             this.txtCallerName.Location = new System.Drawing.Point(237, 38);
-            this.txtCallerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCallerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCallerName.Name = "txtCallerName";
             this.txtCallerName.Size = new System.Drawing.Size(297, 26);
             this.txtCallerName.TabIndex = 6;
@@ -471,7 +471,7 @@
             // txtTotalCharges
             // 
             this.txtTotalCharges.Location = new System.Drawing.Point(292, 628);
-            this.txtTotalCharges.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalCharges.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalCharges.Name = "txtTotalCharges";
             this.txtTotalCharges.Size = new System.Drawing.Size(185, 22);
             this.txtTotalCharges.TabIndex = 26;
@@ -479,7 +479,7 @@
             // txtBookingID
             // 
             this.txtBookingID.Location = new System.Drawing.Point(821, 52);
-            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingID.MaxLength = 223;
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.ReadOnly = true;
@@ -502,7 +502,7 @@
             this.panel1.Controls.Add(this.txtCustomerID);
             this.panel1.Controls.Add(this.picSearch);
             this.panel1.Location = new System.Drawing.Point(292, 52);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 25);
             this.panel1.TabIndex = 38;
@@ -511,7 +511,7 @@
             // 
             this.txtCustomerID.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtCustomerID.Location = new System.Drawing.Point(0, 0);
-            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerID.MaxLength = 223;
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(296, 22);
@@ -523,7 +523,7 @@
             this.picSearch.Dock = System.Windows.Forms.DockStyle.Right;
             this.picSearch.Image = ((System.Drawing.Image)(resources.GetObject("picSearch.Image")));
             this.picSearch.Location = new System.Drawing.Point(297, 0);
-            this.picSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picSearch.Margin = new System.Windows.Forms.Padding(4);
             this.picSearch.Name = "picSearch";
             this.picSearch.Size = new System.Drawing.Size(27, 25);
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -538,7 +538,7 @@
             this.btnTotalCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotalCharge.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnTotalCharge.Location = new System.Drawing.Point(81, 615);
-            this.btnTotalCharge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTotalCharge.Margin = new System.Windows.Forms.Padding(4);
             this.btnTotalCharge.Name = "btnTotalCharge";
             this.btnTotalCharge.Size = new System.Drawing.Size(179, 48);
             this.btnTotalCharge.TabIndex = 40;
@@ -561,7 +561,7 @@
             this.Controls.Add(this.groupBoxbackhoeDetails);
             this.Controls.Add(this.groupBoxCallerDetails);
             this.Controls.Add(this.lblID);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BookingUINew";
             this.Size = new System.Drawing.Size(1425, 716);
             this.Load += new System.EventHandler(this.BookingUINew_Load);

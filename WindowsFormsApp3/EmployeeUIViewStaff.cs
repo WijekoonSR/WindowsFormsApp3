@@ -11,55 +11,45 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp3
 {
-    public partial class EmployeeUIViewOperat : UserControl
+    public partial class EmployeeUIViewStaff : UserControl
     {
         public static String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
         //get sring db connection
         private SqlConnection sqlConnection = new SqlConnection(name);
-        public EmployeeUIViewOperat()
+        public EmployeeUIViewStaff()
         {
             InitializeComponent();
         }
 
-        private void EmployeeUIView_Load(object sender, EventArgs e)
+        private void EmployeeUIViewStaff_Load(object sender, EventArgs e)
         {
             string EmployeeID = btnSearch.Text;
-            string sql = "Select * from  Employee e inner join Vehicle_Operators v on v.EmployeeID = e.EmployeeID ";
+            string sql = "Select * from  Employee e inner join Staff s  on s.EmployeeID = e.EmployeeID ";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            dgvEmployee.DataSource = dt;
+            dgvStaff.DataSource = dt;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int EmployeeID = int.Parse(txtEmployeeID.Text);
-            string sql = "Select * from  Employee e inner join Vehicle_Operators v on v.EmployeeID = e.EmployeeID where e.EmployeeID = '" + EmployeeID + "'";
+            string sql = "Select * from  Employee e inner join Staff s on s.EmployeeID = e.EmployeeID where e.EmployeeID = '" + EmployeeID + "'";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            dgvEmployee.DataSource = dt;
+            dgvStaff.DataSource = dt;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
             string EmployeeID = btnSearch.Text;
-            string sql = "Select * from  Employee e inner join Vehicle_Operators v on v.EmployeeID = e.EmployeeID ";
+            string sql = "Select * from  Employee e inner join Staff s on s.EmployeeID = e.EmployeeID ";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            dgvEmployee.DataSource = dt;
-        }
-
-        private void dgvEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtEmployeeID_TextChanged(object sender, EventArgs e)
-        {
-
+            dgvStaff.DataSource = dt;
         }
     }
-    }
+}
 
