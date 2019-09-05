@@ -24,7 +24,7 @@ namespace WindowsFormsApp3
         private void EmployeeUIView_Load(object sender, EventArgs e)
         {
             string EmployeeID = btnSearch.Text;
-            string sql = "Select * from  Employee e inner join Vehicle_Operators v on v.EmployeeID = e.EmployeeID ";
+            string sql = "Select * from  Employee  ";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -34,7 +34,7 @@ namespace WindowsFormsApp3
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int EmployeeID = int.Parse(txtEmployeeID.Text);
-            string sql = "Select * from  Employee e inner join Vehicle_Operators v on v.EmployeeID = e.EmployeeID where e.EmployeeID = '" + EmployeeID + "'";
+            string sql = "Select * from  Employee where EmployeeID = '" + EmployeeID + "'";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -44,7 +44,7 @@ namespace WindowsFormsApp3
         private void button1_Click(object sender, EventArgs e)
         {
             string EmployeeID = btnSearch.Text;
-            string sql = "Select * from  Employee e inner join Vehicle_Operators v on v.EmployeeID = e.EmployeeID ";
+            string sql = "Select * from  Employee ";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             sda.Fill(dt);

@@ -144,6 +144,7 @@ namespace WindowsFormsApp3
                 CustomerID = SDR["CustomerID"].ToString();
             }
             sql.Close();
+            txtCallerTpNo.Text = CallerNumber;
             dateStartDate.Value =Convert.ToDateTime( StartDate);
             dateEndDate.Value = Convert.ToDateTime(EndDate);
             txtWorkingHours.Text = WorkingHours.ToString();

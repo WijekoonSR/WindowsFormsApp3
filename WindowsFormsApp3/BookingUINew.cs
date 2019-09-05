@@ -31,7 +31,7 @@ namespace WindowsFormsApp3
         protected int NoOfExcavator, NoBackhoeLoaders, NoBulldozers, NoSkidSteerLoaders, NoMotorGraders, NoTrenchers = 0;
 
 
-        protected String Type1 = "Excavator", Type2 = "Excavator", Type3 = "Excavator";
+        protected String Type1 = "Excavators", Type2 = "Excavators", Type3 = "Excavators";
         float TotalCharge;
         public BookingUINew()
         {
@@ -123,7 +123,7 @@ namespace WindowsFormsApp3
                 Type1 = dropDownBackhoeTypes1.selectedValue;
                 int count = 0;
 
-                if (Type1 == "Excavator") count = NoOfExcavator;
+                if (Type1 == "Excavators") count = NoOfExcavator;
                 else if (Type1 == "Backhoe Loaders") count = NoBackhoeLoaders;
                 else if (Type1 == "Bulldozers") count = NoBulldozers;
                 else if (Type1 == "Skid Steer Loaders") count = NoSkidSteerLoaders;
@@ -296,7 +296,7 @@ namespace WindowsFormsApp3
                 //read data from query
                 while (reader.Read())
                 {
-                    if (reader["Type"].ToString() == "Excavator")
+                    if (reader["Type"].ToString() == "Excavators")
                     {
                         NoOfExcavator = Convert.ToInt32(reader["count"]);
                     }
