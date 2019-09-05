@@ -237,5 +237,59 @@ namespace WindowsFormsApp3
             
         }
 
+        private Boolean validation()
+        {
+            if (txtCustomerID.Text.ToString() == "")
+            {
+                MessageBox.Show("Insert Customer ID");
+                txtCustomerID.Focus();
+                return false;
+            }
+
+            else if (txtWorkingHours.Text.ToString() == "")
+            {
+                MessageBox.Show("Insert Working Hours");
+                txtWorkingHours.Focus();
+                return false;
+            }
+            else if (txtCallerName.Text.ToString() == "")
+            {
+                MessageBox.Show("Insert Caller Name");
+                txtCallerName.Focus();
+                return false;
+            }
+            else if (txtNIC.Text.ToString() == "")
+            {
+                MessageBox.Show("Insert NIC");
+                txtNIC.Focus();
+                return false;
+            }
+            else if (txtCallerTpNo.Text.ToString() == "")
+            {
+                MessageBox.Show("Insert Caller Telephone Number");
+                txtCallerTpNo.Focus();
+                return false;
+            }
+                        else if (txtCallerTpNo.Text.ToString() == "") {
+                MessageBox.Show("Insert Caller Telephone Number");
+                txtCallerTpNo.Focus();
+                return false;
+            }
+
+            else if (IsNumber(txtCallerTpNo.Text.ToString()) == false) {
+                MessageBox.Show("Invalid Telephone Number");
+                txtCallerTpNo.Focus();
+                return false;
+            }
+
+
+            return true;
+        }
+
+        public static bool IsNumber(string s)
+        {
+            return s.All(char.IsDigit);
+        }
+
     }
 }

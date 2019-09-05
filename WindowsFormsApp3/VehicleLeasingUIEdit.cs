@@ -57,7 +57,10 @@ namespace WindowsFormsApp3
             DateEndLeasingDate.Value = Convert.ToDateTime(date2);
             con.Close();
         }
-
+        public static bool IsNumber(string s)
+        {
+            return s.All(char.IsDigit);
+        }
         private void btnSave_Click(object sender, EventArgs e)
         { 
             con.Open();
