@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+
 namespace WindowsFormsApp3
 {
     public partial class VehicleLeasingUIView : UserControl
@@ -89,6 +91,21 @@ namespace WindowsFormsApp3
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             getleasingdetails();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            String ID = txtLeasingID.Text;
+            ID = Regex.Replace(ID, "[^0-9]", "");
+            int CustomerID = int.Parse(ID);
+            DialogResult DR = MessageBox.Show("Do you want to Delete query?","Confirm",MessageBoxButtons.OK);
+            if (DR == DialogResult.OK) {
+                string quer = "delete from Vehicle_Leasings where VehicleLeasingsID = '"+ID+"'";
+                SqlCommand sqlCommand = new SqlCommand(quer, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+            }
+            sqlConnection.Close();
         }
     }
 }
