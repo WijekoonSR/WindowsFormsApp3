@@ -75,13 +75,15 @@
             // lblVehicleType
             // 
             this.lblVehicleType.AutoSize = true;
-            this.lblVehicleType.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblVehicleType.BackColor = System.Drawing.Color.Transparent;
             this.lblVehicleType.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblVehicleType.Location = new System.Drawing.Point(24, 28);
             this.lblVehicleType.Name = "lblVehicleType";
             this.lblVehicleType.Size = new System.Drawing.Size(159, 29);
             this.lblVehicleType.TabIndex = 2;
             this.lblVehicleType.Text = " Vehicle Type";
+            this.lblVehicleType.Click += new System.EventHandler(this.lblVehicleType_Click);
             // 
             // groupBox1
             // 
@@ -228,7 +230,7 @@
             this.dropdownVehicleType.Items = new string[0];
             this.dropdownVehicleType.Location = new System.Drawing.Point(208, 28);
             this.dropdownVehicleType.Name = "dropdownVehicleType";
-            this.dropdownVehicleType.NomalColor = System.Drawing.Color.Goldenrod;
+            this.dropdownVehicleType.NomalColor = System.Drawing.SystemColors.HotTrack;
             this.dropdownVehicleType.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.dropdownVehicleType.selectedIndex = -1;
             this.dropdownVehicleType.Size = new System.Drawing.Size(217, 35);
@@ -326,7 +328,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(452, 505);
             this.btnSave.Name = "btnSave";
@@ -338,7 +340,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnClear.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(552, 505);
             this.btnClear.Name = "btnClear";
@@ -434,6 +436,7 @@
             this.Controls.Add(this.lblVehicleType);
             this.Name = "VehicleUINew";
             this.Size = new System.Drawing.Size(1069, 561);
+            this.Load += new System.EventHandler(this.VehicleUINew_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

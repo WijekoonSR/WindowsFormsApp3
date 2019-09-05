@@ -31,7 +31,6 @@
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.txtcutomerID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,7 +42,7 @@
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEmail2 = new System.Windows.Forms.TextBox();
@@ -65,7 +64,7 @@
             // lblCustomerID
             // 
             this.lblCustomerID.AutoSize = true;
-            this.lblCustomerID.Location = new System.Drawing.Point(63, 28);
+            this.lblCustomerID.Location = new System.Drawing.Point(66, 27);
             this.lblCustomerID.Name = "lblCustomerID";
             this.lblCustomerID.Size = new System.Drawing.Size(65, 13);
             this.lblCustomerID.TabIndex = 0;
@@ -73,7 +72,7 @@
             // 
             // txtcutomerID
             // 
-            this.txtcutomerID.Location = new System.Drawing.Point(148, 28);
+            this.txtcutomerID.Location = new System.Drawing.Point(151, 27);
             this.txtcutomerID.Name = "txtcutomerID";
             this.txtcutomerID.Size = new System.Drawing.Size(113, 20);
             this.txtcutomerID.TabIndex = 1;
@@ -88,25 +87,12 @@
             this.label3.TabIndex = 6;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.Navy;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(788, 482);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(90, 37);
-            this.btnPrint.TabIndex = 10;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Navy;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(684, 482);
+            this.btnClear.Location = new System.Drawing.Point(788, 461);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 37);
             this.btnClear.TabIndex = 11;
@@ -119,7 +105,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Navy;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(578, 482);
+            this.btnSave.Location = new System.Drawing.Point(655, 461);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 37);
             this.btnSave.TabIndex = 12;
@@ -138,9 +124,9 @@
             this.groupBox1.Controls.Add(this.lblContactNumber);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblAddress);
             this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(69, 106);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(347, 318);
@@ -161,7 +147,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(79, 185);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(37, 13);
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 28;
             this.lblEmail.Text = "Email";
             // 
@@ -177,7 +163,7 @@
             this.lblFaxNumber.AutoSize = true;
             this.lblFaxNumber.Location = new System.Drawing.Point(76, 233);
             this.lblFaxNumber.Name = "lblFaxNumber";
-            this.lblFaxNumber.Size = new System.Drawing.Size(74, 13);
+            this.lblFaxNumber.Size = new System.Drawing.Size(64, 13);
             this.lblFaxNumber.TabIndex = 25;
             this.lblFaxNumber.Text = "Fax Number";
             // 
@@ -193,7 +179,7 @@
             this.lblContactNumber.AutoSize = true;
             this.lblContactNumber.Location = new System.Drawing.Point(76, 137);
             this.lblContactNumber.Name = "lblContactNumber";
-            this.lblContactNumber.Size = new System.Drawing.Size(98, 13);
+            this.lblContactNumber.Size = new System.Drawing.Size(84, 13);
             this.lblContactNumber.TabIndex = 19;
             this.lblContactNumber.Text = "Contact Number";
             // 
@@ -211,21 +197,21 @@
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 17;
             // 
-            // label5
+            // lblAddress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Address";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(76, 97);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.TabIndex = 16;
+            this.lblAddress.Text = "Address";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(76, 57);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 13);
+            this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 15;
             this.lblName.Text = "Name";
             // 
@@ -240,7 +226,7 @@
             this.groupBox2.Controls.Add(this.lblPjtAddress);
             this.groupBox2.Controls.Add(this.txtProjectManager);
             this.groupBox2.Controls.Add(this.lblProjectMgr);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(470, 106);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(408, 318);
@@ -262,7 +248,7 @@
             this.lblpjtEmail.AutoSize = true;
             this.lblpjtEmail.Location = new System.Drawing.Point(69, 185);
             this.lblpjtEmail.Name = "lblpjtEmail";
-            this.lblpjtEmail.Size = new System.Drawing.Size(37, 13);
+            this.lblpjtEmail.Size = new System.Drawing.Size(32, 13);
             this.lblpjtEmail.TabIndex = 18;
             this.lblpjtEmail.Text = "Email";
             // 
@@ -278,7 +264,7 @@
             this.lblPjtContactNumber.AutoSize = true;
             this.lblPjtContactNumber.Location = new System.Drawing.Point(66, 136);
             this.lblPjtContactNumber.Name = "lblPjtContactNumber";
-            this.lblPjtContactNumber.Size = new System.Drawing.Size(98, 13);
+            this.lblPjtContactNumber.Size = new System.Drawing.Size(84, 13);
             this.lblPjtContactNumber.TabIndex = 16;
             this.lblPjtContactNumber.Text = "Contact Number";
             // 
@@ -294,7 +280,7 @@
             this.lblPjtAddress.AutoSize = true;
             this.lblPjtAddress.Location = new System.Drawing.Point(69, 96);
             this.lblPjtAddress.Name = "lblPjtAddress";
-            this.lblPjtAddress.Size = new System.Drawing.Size(52, 13);
+            this.lblPjtAddress.Size = new System.Drawing.Size(45, 13);
             this.lblPjtAddress.TabIndex = 14;
             this.lblPjtAddress.Text = "Address";
             // 
@@ -310,7 +296,7 @@
             this.lblProjectMgr.AutoSize = true;
             this.lblProjectMgr.Location = new System.Drawing.Point(67, 57);
             this.lblProjectMgr.Name = "lblProjectMgr";
-            this.lblProjectMgr.Size = new System.Drawing.Size(100, 13);
+            this.lblProjectMgr.Size = new System.Drawing.Size(85, 13);
             this.lblProjectMgr.TabIndex = 11;
             this.lblProjectMgr.Text = "Project Manager";
             // 
@@ -326,7 +312,7 @@
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(420, 62);
+            this.lblEndDate.Location = new System.Drawing.Point(467, 62);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(95, 13);
             this.lblEndDate.TabIndex = 19;
@@ -334,14 +320,14 @@
             // 
             // dateStartContract
             // 
-            this.dateStartContract.Location = new System.Drawing.Point(171, 62);
+            this.dateStartContract.Location = new System.Drawing.Point(180, 62);
             this.dateStartContract.Name = "dateStartContract";
-            this.dateStartContract.Size = new System.Drawing.Size(200, 20);
+            this.dateStartContract.Size = new System.Drawing.Size(234, 20);
             this.dateStartContract.TabIndex = 20;
             // 
             // dateEndContract
             // 
-            this.dateEndContract.Location = new System.Drawing.Point(531, 61);
+            this.dateEndContract.Location = new System.Drawing.Point(578, 61);
             this.dateEndContract.Name = "dateEndContract";
             this.dateEndContract.Size = new System.Drawing.Size(200, 20);
             this.dateEndContract.TabIndex = 21;
@@ -358,7 +344,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtcutomerID);
             this.Controls.Add(this.lblCustomerID);
@@ -379,7 +364,6 @@
         private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.TextBox txtcutomerID;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -391,7 +375,7 @@
         private System.Windows.Forms.Label lblContactNumber;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblpjtEmail;

@@ -114,5 +114,20 @@ namespace WindowsFormsApp3
                 dgvBookingsView.DataSource = dtbl;
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
+            using (sqlConnection = new SqlConnection(name))
+            {
+                sqlConnection.Open();
+                string id = txtBookingID.Text.ToString();
+                SqlCommand command1 = new SqlCommand("delete from Booking_Vehicle where BookingID = '" + id + "'", sqlConnection);
+                SqlCommand command2 = new SqlCommand("delete from Bookings where BookingID = '" + id + "'", sqlConnection);
+                command1.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
+                sqlConnection.Close();
+            }
+        }
     }
 }

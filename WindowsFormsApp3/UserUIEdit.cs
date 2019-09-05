@@ -43,7 +43,7 @@ namespace WindowsFormsApp3
                 User user = new User() { FileName = filename, UserPic = ConvertImageToBinary(picUser.Image) };//userpic in db
                 db.Users.Add(user);
                 db.SaveChangesAsync();
-                MessageBox.Show("Picture Saced","Success", MessageBoxButtons.OK);
+                MessageBox.Show("Picture Saved","Success", MessageBoxButtons.OK);
             }
         }
 

@@ -135,6 +135,12 @@
     <Compile Include="CustomerUIEdit.Designer.cs">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUIEditExtendPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUIEditExtendPeriod.Designer.cs">
+      <DependentUpon>CustomerUIEditExtendPeriod.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerUINew.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,11 +177,11 @@
     <Compile Include="EmployeeUINewStaff.Designer.cs">
       <DependentUpon>EmployeeUINewStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeUIView.cs">
+    <Compile Include="EmployeeUIViewOperat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeeUIView.Designer.cs">
-      <DependentUpon>EmployeeUIView.cs</DependentUpon>
+    <Compile Include="EmployeeUIViewOperat.Designer.cs">
+      <DependentUpon>EmployeeUIViewOperat.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeUI.cs">
       <SubType>Form</SubType>
@@ -426,6 +432,12 @@
     <Compile Include="VehicleLeasingUIAdd.Designer.cs">
       <DependentUpon>VehicleLeasingUIAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleLeasingUIAddVehicleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleLeasingUIAddVehicleDetails.Designer.cs">
+      <DependentUpon>VehicleLeasingUIAddVehicleDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehicleLeasingUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -483,6 +495,9 @@
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUIEditExtendPeriod.resx">
+      <DependentUpon>CustomerUIEditExtendPeriod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,8 +516,8 @@
     <EmbeddedResource Include="EmployeeUINewStaff.resx">
       <DependentUpon>EmployeeUINewStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeUIView.resx">
-      <DependentUpon>EmployeeUIView.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeUIViewOperat.resx">
+      <DependentUpon>EmployeeUIViewOperat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeUI.resx">
       <DependentUpon>HomeUI.cs</DependentUpon>
@@ -622,6 +637,9 @@
     <EmbeddedResource Include="VehicleLeasingUIAdd.resx">
       <DependentUpon>VehicleLeasingUIAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VehicleLeasingUIAddVehicleDetails.resx">
+      <DependentUpon>VehicleLeasingUIAddVehicleDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUIEdit.resx">
       <DependentUpon>VehicleLeasingUIEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,6 +726,10 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\Next_lvl.jpg" />
+    <None Include="Resources\icons8-search-48.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -221,6 +221,7 @@
             this.bookingUINew1.Name = "bookingUINew1";
             this.bookingUINew1.Size = new System.Drawing.Size(1069, 582);
             this.bookingUINew1.TabIndex = 3;
+            this.bookingUINew1.Load += new System.EventHandler(this.bookingUINew1_Load_1);
             // 
             // bookingUIView1
             // 
