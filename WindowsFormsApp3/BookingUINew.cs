@@ -406,6 +406,7 @@ namespace WindowsFormsApp3
 
                 sqlConnection.Close();
 
+                //check backhoes whether vehicles have been added to booking
                 if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1);
                 else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2);
                 else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3);

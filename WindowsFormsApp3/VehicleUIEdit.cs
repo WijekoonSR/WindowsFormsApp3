@@ -92,10 +92,16 @@ namespace WindowsFormsApp3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do You Want Delete selected Row?",
-                 "Important",
-                 MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Do You Want Delete selected Row?", "Important", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.OK) {
+                con.Open();
+                string id = txtSearch.Text.ToString();
+                SqlCommand command1 = new SqlCommand("delete from Booking_Vehicle where VehicleID = '" + id + "'", con);
+                SqlCommand command2 = new SqlCommand("delete from Vehicles where VehicleID  = '" + id + "'", con);
+                command1.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
+                con.Close();
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)

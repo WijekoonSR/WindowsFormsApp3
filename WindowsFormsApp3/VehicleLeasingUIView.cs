@@ -64,7 +64,7 @@ namespace WindowsFormsApp3
                 sqlConnection.Open();
                 String name = VehicleLeasingUIAdd.serverName;
 
-                String query = "Select * from Vehicle_Leasings where VehicleLeasingsID = '" + txtLeasingID + "'";
+                String query = "Select * from Vehicle_Leasings where VehicleLeasingsID = '" + int.Parse(txtLeasingID.Text.ToString()) + "'";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
                 DataTable dtb1 = new DataTable();
                 SDA.Fill(dtb1);
@@ -84,6 +84,11 @@ namespace WindowsFormsApp3
             }
 
 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getleasingdetails();
         }
     }
 }

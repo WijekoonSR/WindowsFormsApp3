@@ -34,24 +34,37 @@ namespace WindowsFormsApp3
             {
                 sql.Open();
                 id = int.Parse(txtCustomerID.Text.ToString());
-                string query = "select '" + name + "' = name, '" + endDate + "' = ContractEndDate from Customer where CustomerID = '"+id +"'";
-                SqlCommand sqlCommand = new SqlCommand(query,sql);
-                sqlCommand.ExecuteNonQuery();
+                string query = "select * from Customer where CustomerID = '" + id + "'";
+                SqlCommand sqlCommand = new SqlCommand(query, sql);
+                SqlDataReader sqlData = sqlCommand.ExecuteReader();
+                while (sqlData.Read()) {
+                    name = sqlData["name"].ToString();
+                    endDate =sqlData["ContractEndDate"].ToString();
+                }
                 sql.Close();
+
+                txtName.Text = name;
+                dtpDate.Value = Convert.ToDateTime(endDate);
             }
         }
 
         private void btnExtend_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sql = new SqlConnection(name))
+            using (SqlConnection sql = new SqlConnection(@"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True"))
             {
                 sql.Open();
                 string newEndDate = dtpDate.Value.ToString("yyyy/MM/dd");
                 id = int.Parse(txtCustomerID.Text.ToString());
                 string query = "update Customer set ContractEndDate= '"+newEndDate+"' where CustomerID = '"+id+"'";
                 SqlCommand sqlCommand = new SqlCommand(query, sql);
-                sqlCommand.ExecuteNonQuery();
+                int chk = sqlCommand.ExecuteNonQuery();
                 sql.Close();
+                if (chk > 0) {
+                    DialogResult dr =MessageBox.Show("Extend the customer Contract period to : '"+newEndDate+"'", "Contract Period");
+                    if (dr == DialogResult.OK) {
+                        this.Close();
+                    }
+                }
             }
         }
     }

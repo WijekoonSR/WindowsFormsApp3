@@ -88,7 +88,15 @@ namespace WindowsFormsApp3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            DialogResult DR = MessageBox.Show("Do you want to delete data ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+            if (DR == DialogResult.OK)
+            {
+                sqlConnection.Open();
+                string id = txtCustomerID.Text.ToString();
+                SqlCommand command = new SqlCommand("delete from Customer  where CustomerID  = '" + id + "'",sqlConnection);
+                command.ExecuteNonQuery();
+                sqlConnection.Close();
+            }
         }
     }
 }
