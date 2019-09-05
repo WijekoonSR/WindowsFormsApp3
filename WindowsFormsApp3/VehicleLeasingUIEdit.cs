@@ -69,6 +69,7 @@ namespace WindowsFormsApp3
 
         public void clearAllFields()
         {
+            txtBranch.Clear();
             txtLeasingID.Clear();
             txtBank.Clear();
             txtBankCode.Clear();
