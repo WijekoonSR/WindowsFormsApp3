@@ -48,5 +48,10 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            employeeUIViewStaff1.BringToFront();
+        }
     }
 }

@@ -153,8 +153,8 @@ namespace WindowsFormsApp3
                             //edtName.Text = (read["FistName"].ToString());
                             //edtName.Text = "name";
                             edtName.Text = read.GetValue(1).ToString();
-                            edtPossition.Text = read.GetValue(12).ToString();
-                            edtCity.Text = read.GetValue(10).ToString();
+                            edtPossition.Text = read.GetValue(11).ToString();
+                            edtCity.Text = read.GetValue(9).ToString();
 
                         }
                     }

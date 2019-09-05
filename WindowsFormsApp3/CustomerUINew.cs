@@ -209,11 +209,11 @@ namespace WindowsFormsApp3
                         ContactNumber = int.Parse(txtContactNumber.Text);
                         FaxNumber = int.Parse(txtFaxNumber.Text);
                         ProjectContactNumber = int.Parse(txtContactNumber2.Text);
-                        EndDate = dateEndContract.Value.ToString("yyyy/MM/dd");
-                        StartDate = dateStartContract.Value.ToString("yyyy/MM/dd");
+                        EndDate = dateEndContract.Value.ToString();
+                        StartDate = dateStartContract.Value.ToString();
 
                         string query = "insert into Customer(name,address,email,ProjectManagerName,ProjectAddress,ProjectEmail,ContactNumber,FaxNumber,ProjectContactNumber,ContractStartDate,ContractEndDate) " +
-                            "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "','" + StartDate + "','" + EndDate + "')";
+                            "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "','" + Convert.ToDateTime(StartDate) + "','" + Convert.ToDateTime(EndDate) + "')";
                         command = new SqlCommand(query, sqlConnection);
                         int chk = command.ExecuteNonQuery();
 
