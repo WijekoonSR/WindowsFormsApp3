@@ -29,74 +29,86 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayrollUIEditOperater));
-            this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEdit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btncheck = new Bunifu.Framework.UI.BunifuFlatButton();
             this.edtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmpID = new System.Windows.Forms.TextBox();
+            this.edtEmployeeID = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.edtOtherAllowance = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.edtFoodAllowance = new System.Windows.Forms.TextBox();
             this.dateTimePayroll = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtInsurance = new System.Windows.Forms.TextBox();
+            this.lblInsurance = new System.Windows.Forms.Label();
+            this.edtInsurance = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtSAdvance = new System.Windows.Forms.TextBox();
-            this.txtETF = new System.Windows.Forms.TextBox();
+            this.edtSalaryAdvance = new System.Windows.Forms.TextBox();
+            this.edtETF = new System.Windows.Forms.TextBox();
+            this.lblEPF = new System.Windows.Forms.Label();
+            this.lblETF = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtEPF = new System.Windows.Forms.TextBox();
+            this.edtEPF = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.lblSalaryAdvance = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.edtMedicalAllowance = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAllowance = new System.Windows.Forms.TextBox();
-            this.txtBSalary = new System.Windows.Forms.TextBox();
+            this.edtHousingAllowance = new System.Windows.Forms.TextBox();
+            this.edtBasicSalary = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblFoodAllowance = new System.Windows.Forms.Label();
+            this.lblMedicalAllowance = new System.Windows.Forms.Label();
+            this.lblHousingAllowance = new System.Windows.Forms.Label();
+            this.lblOtherAllowance = new System.Windows.Forms.Label();
+            this.lblBasicSalary = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblTotalOT = new System.Windows.Forms.Label();
+            this.lblTotalWorkingHours = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.edtOT = new System.Windows.Forms.TextBox();
             this.edtWokingHours = new System.Windows.Forms.TextBox();
+            this.btnDelete = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblEmployeeID = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAdd
+            // btnEdit
             // 
-            this.btnAdd.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.BorderRadius = 0;
-            this.btnAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnAdd.ButtonText = "EDIT";
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAdd.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAdd.Iconimage")));
-            this.btnAdd.Iconimage_right = null;
-            this.btnAdd.Iconimage_right_Selected = null;
-            this.btnAdd.Iconimage_Selected = null;
-            this.btnAdd.IconZoom = 90D;
-            this.btnAdd.IsTab = false;
-            this.btnAdd.Location = new System.Drawing.Point(707, 499);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnAdd.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnAdd.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAdd.selected = false;
-            this.btnAdd.Size = new System.Drawing.Size(241, 48);
-            this.btnAdd.TabIndex = 39;
-            this.btnAdd.Textcolor = System.Drawing.Color.White;
-            this.btnAdd.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEdit.BorderRadius = 0;
+            this.btnEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnEdit.ButtonText = "EDIT";
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEdit.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEdit.Iconimage")));
+            this.btnEdit.Iconimage_right = null;
+            this.btnEdit.Iconimage_right_Selected = null;
+            this.btnEdit.Iconimage_Selected = null;
+            this.btnEdit.IconZoom = 90D;
+            this.btnEdit.IsTab = false;
+            this.btnEdit.Location = new System.Drawing.Point(455, 504);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnEdit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnEdit.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEdit.selected = false;
+            this.btnEdit.Size = new System.Drawing.Size(241, 48);
+            this.btnEdit.TabIndex = 39;
+            this.btnEdit.Textcolor = System.Drawing.Color.White;
+            this.btnEdit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btncheck
             // 
@@ -123,6 +135,7 @@
             this.btncheck.TabIndex = 31;
             this.btncheck.Textcolor = System.Drawing.Color.White;
             this.btncheck.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncheck.Click += new System.EventHandler(this.btncheck_Click);
             // 
             // edtName
             // 
@@ -140,19 +153,21 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Name";
             // 
-            // txtEmpID
+            // edtEmployeeID
             // 
-            this.txtEmpID.Location = new System.Drawing.Point(159, 15);
-            this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.Size = new System.Drawing.Size(100, 20);
-            this.txtEmpID.TabIndex = 23;
+            this.edtEmployeeID.Location = new System.Drawing.Point(159, 15);
+            this.edtEmployeeID.Name = "edtEmployeeID";
+            this.edtEmployeeID.Size = new System.Drawing.Size(100, 20);
+            this.edtEmployeeID.TabIndex = 23;
+            this.edtEmployeeID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtEmployeeID_KeyPress);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblEmployeeID);
             this.groupBox3.Controls.Add(this.btncheck);
             this.groupBox3.Controls.Add(this.edtName);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.txtEmpID);
+            this.groupBox3.Controls.Add(this.edtEmployeeID);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(1, 66);
             this.groupBox3.Name = "groupBox3";
@@ -169,12 +184,13 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Employee ID";
             // 
-            // textBox6
+            // edtOtherAllowance
             // 
-            this.textBox6.Location = new System.Drawing.Point(159, 176);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
+            this.edtOtherAllowance.Location = new System.Drawing.Point(159, 176);
+            this.edtOtherAllowance.Name = "edtOtherAllowance";
+            this.edtOtherAllowance.Size = new System.Drawing.Size(100, 20);
+            this.edtOtherAllowance.TabIndex = 16;
+            this.edtOtherAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtOtherAllowance_KeyPress);
             // 
             // label14
             // 
@@ -185,12 +201,13 @@
             this.label14.TabIndex = 17;
             this.label14.Text = "Other Allowance";
             // 
-            // textBox5
+            // edtFoodAllowance
             // 
-            this.textBox5.Location = new System.Drawing.Point(159, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 14;
+            this.edtFoodAllowance.Location = new System.Drawing.Point(159, 141);
+            this.edtFoodAllowance.Name = "edtFoodAllowance";
+            this.edtFoodAllowance.Size = new System.Drawing.Size(100, 20);
+            this.edtFoodAllowance.TabIndex = 14;
+            this.edtFoodAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtFoodAllowance_KeyPress);
             // 
             // dateTimePayroll
             // 
@@ -201,13 +218,17 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtInsurance);
+            this.groupBox2.Controls.Add(this.lblInsurance);
+            this.groupBox2.Controls.Add(this.edtInsurance);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.txtSAdvance);
-            this.groupBox2.Controls.Add(this.txtETF);
+            this.groupBox2.Controls.Add(this.edtSalaryAdvance);
+            this.groupBox2.Controls.Add(this.edtETF);
+            this.groupBox2.Controls.Add(this.lblEPF);
+            this.groupBox2.Controls.Add(this.lblETF);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtEPF);
+            this.groupBox2.Controls.Add(this.edtEPF);
             this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lblSalaryAdvance);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(499, 245);
             this.groupBox2.Name = "groupBox2";
@@ -216,12 +237,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Deductions";
             // 
-            // txtInsurance
+            // lblInsurance
             // 
-            this.txtInsurance.Location = new System.Drawing.Point(136, 150);
-            this.txtInsurance.Name = "txtInsurance";
-            this.txtInsurance.Size = new System.Drawing.Size(100, 20);
-            this.txtInsurance.TabIndex = 13;
+            this.lblInsurance.AutoSize = true;
+            this.lblInsurance.ForeColor = System.Drawing.Color.Red;
+            this.lblInsurance.Location = new System.Drawing.Point(244, 157);
+            this.lblInsurance.Name = "lblInsurance";
+            this.lblInsurance.Size = new System.Drawing.Size(38, 13);
+            this.lblInsurance.TabIndex = 63;
+            this.lblInsurance.Text = "Invalid";
+            // 
+            // edtInsurance
+            // 
+            this.edtInsurance.Location = new System.Drawing.Point(136, 150);
+            this.edtInsurance.Name = "edtInsurance";
+            this.edtInsurance.Size = new System.Drawing.Size(100, 20);
+            this.edtInsurance.TabIndex = 13;
+            this.edtInsurance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtInsurance_KeyPress);
             // 
             // label16
             // 
@@ -232,19 +264,41 @@
             this.label16.TabIndex = 12;
             this.label16.Text = "Insurance";
             // 
-            // txtSAdvance
+            // edtSalaryAdvance
             // 
-            this.txtSAdvance.Location = new System.Drawing.Point(136, 25);
-            this.txtSAdvance.Name = "txtSAdvance";
-            this.txtSAdvance.Size = new System.Drawing.Size(100, 20);
-            this.txtSAdvance.TabIndex = 4;
+            this.edtSalaryAdvance.Location = new System.Drawing.Point(136, 25);
+            this.edtSalaryAdvance.Name = "edtSalaryAdvance";
+            this.edtSalaryAdvance.Size = new System.Drawing.Size(100, 20);
+            this.edtSalaryAdvance.TabIndex = 4;
+            this.edtSalaryAdvance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtSalaryAdvance_KeyPress);
             // 
-            // txtETF
+            // edtETF
             // 
-            this.txtETF.Location = new System.Drawing.Point(136, 109);
-            this.txtETF.Name = "txtETF";
-            this.txtETF.Size = new System.Drawing.Size(100, 20);
-            this.txtETF.TabIndex = 3;
+            this.edtETF.Location = new System.Drawing.Point(136, 109);
+            this.edtETF.Name = "edtETF";
+            this.edtETF.Size = new System.Drawing.Size(100, 20);
+            this.edtETF.TabIndex = 3;
+            this.edtETF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtETF_KeyPress);
+            // 
+            // lblEPF
+            // 
+            this.lblEPF.AutoSize = true;
+            this.lblEPF.ForeColor = System.Drawing.Color.Red;
+            this.lblEPF.Location = new System.Drawing.Point(244, 75);
+            this.lblEPF.Name = "lblEPF";
+            this.lblEPF.Size = new System.Drawing.Size(38, 13);
+            this.lblEPF.TabIndex = 62;
+            this.lblEPF.Text = "Invalid";
+            // 
+            // lblETF
+            // 
+            this.lblETF.AutoSize = true;
+            this.lblETF.ForeColor = System.Drawing.Color.Red;
+            this.lblETF.Location = new System.Drawing.Point(244, 116);
+            this.lblETF.Name = "lblETF";
+            this.lblETF.Size = new System.Drawing.Size(38, 13);
+            this.lblETF.TabIndex = 61;
+            this.lblETF.Text = "Invalid";
             // 
             // label9
             // 
@@ -255,12 +309,13 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Salary Advance";
             // 
-            // txtEPF
+            // edtEPF
             // 
-            this.txtEPF.Location = new System.Drawing.Point(136, 68);
-            this.txtEPF.Name = "txtEPF";
-            this.txtEPF.Size = new System.Drawing.Size(100, 20);
-            this.txtEPF.TabIndex = 5;
+            this.edtEPF.Location = new System.Drawing.Point(136, 68);
+            this.edtEPF.Name = "edtEPF";
+            this.edtEPF.Size = new System.Drawing.Size(100, 20);
+            this.edtEPF.TabIndex = 5;
+            this.edtEPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtEPF_KeyPress);
             // 
             // label11
             // 
@@ -270,6 +325,16 @@
             this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 11;
             this.label11.Text = "ETF";
+            // 
+            // lblSalaryAdvance
+            // 
+            this.lblSalaryAdvance.AutoSize = true;
+            this.lblSalaryAdvance.ForeColor = System.Drawing.Color.Red;
+            this.lblSalaryAdvance.Location = new System.Drawing.Point(242, 28);
+            this.lblSalaryAdvance.Name = "lblSalaryAdvance";
+            this.lblSalaryAdvance.Size = new System.Drawing.Size(38, 13);
+            this.lblSalaryAdvance.TabIndex = 60;
+            this.lblSalaryAdvance.Text = "Invalid";
             // 
             // label10
             // 
@@ -289,12 +354,13 @@
             this.label13.TabIndex = 15;
             this.label13.Text = "Food Allowance";
             // 
-            // textBox4
+            // edtMedicalAllowance
             // 
-            this.textBox4.Location = new System.Drawing.Point(159, 106);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 12;
+            this.edtMedicalAllowance.Location = new System.Drawing.Point(159, 106);
+            this.edtMedicalAllowance.Name = "edtMedicalAllowance";
+            this.edtMedicalAllowance.Size = new System.Drawing.Size(100, 20);
+            this.edtMedicalAllowance.TabIndex = 12;
+            this.edtMedicalAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtMedicalAllowance_KeyPress);
             // 
             // label12
             // 
@@ -314,19 +380,21 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Basic Salary";
             // 
-            // txtAllowance
+            // edtHousingAllowance
             // 
-            this.txtAllowance.Location = new System.Drawing.Point(159, 70);
-            this.txtAllowance.Name = "txtAllowance";
-            this.txtAllowance.Size = new System.Drawing.Size(100, 20);
-            this.txtAllowance.TabIndex = 5;
+            this.edtHousingAllowance.Location = new System.Drawing.Point(159, 70);
+            this.edtHousingAllowance.Name = "edtHousingAllowance";
+            this.edtHousingAllowance.Size = new System.Drawing.Size(100, 20);
+            this.edtHousingAllowance.TabIndex = 5;
+            this.edtHousingAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtHousingAllowance_KeyPress);
             // 
-            // txtBSalary
+            // edtBasicSalary
             // 
-            this.txtBSalary.Location = new System.Drawing.Point(159, 32);
-            this.txtBSalary.Name = "txtBSalary";
-            this.txtBSalary.Size = new System.Drawing.Size(100, 20);
-            this.txtBSalary.TabIndex = 4;
+            this.edtBasicSalary.Location = new System.Drawing.Point(159, 32);
+            this.edtBasicSalary.Name = "edtBasicSalary";
+            this.edtBasicSalary.Size = new System.Drawing.Size(100, 20);
+            this.edtBasicSalary.TabIndex = 4;
+            this.edtBasicSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtBasicSalary_KeyPress);
             // 
             // label4
             // 
@@ -339,15 +407,20 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.lblFoodAllowance);
+            this.groupBox1.Controls.Add(this.lblMedicalAllowance);
+            this.groupBox1.Controls.Add(this.lblHousingAllowance);
+            this.groupBox1.Controls.Add(this.lblOtherAllowance);
+            this.groupBox1.Controls.Add(this.edtOtherAllowance);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.lblBasicSalary);
+            this.groupBox1.Controls.Add(this.edtFoodAllowance);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.edtMedicalAllowance);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtAllowance);
-            this.groupBox1.Controls.Add(this.txtBSalary);
+            this.groupBox1.Controls.Add(this.edtHousingAllowance);
+            this.groupBox1.Controls.Add(this.edtBasicSalary);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(1, 245);
             this.groupBox1.Name = "groupBox1";
@@ -355,6 +428,56 @@
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Earnings";
+            // 
+            // lblFoodAllowance
+            // 
+            this.lblFoodAllowance.AutoSize = true;
+            this.lblFoodAllowance.ForeColor = System.Drawing.Color.Red;
+            this.lblFoodAllowance.Location = new System.Drawing.Point(274, 150);
+            this.lblFoodAllowance.Name = "lblFoodAllowance";
+            this.lblFoodAllowance.Size = new System.Drawing.Size(38, 13);
+            this.lblFoodAllowance.TabIndex = 62;
+            this.lblFoodAllowance.Text = "Invalid";
+            // 
+            // lblMedicalAllowance
+            // 
+            this.lblMedicalAllowance.AutoSize = true;
+            this.lblMedicalAllowance.ForeColor = System.Drawing.Color.Red;
+            this.lblMedicalAllowance.Location = new System.Drawing.Point(274, 112);
+            this.lblMedicalAllowance.Name = "lblMedicalAllowance";
+            this.lblMedicalAllowance.Size = new System.Drawing.Size(38, 13);
+            this.lblMedicalAllowance.TabIndex = 61;
+            this.lblMedicalAllowance.Text = "Invalid";
+            // 
+            // lblHousingAllowance
+            // 
+            this.lblHousingAllowance.AutoSize = true;
+            this.lblHousingAllowance.ForeColor = System.Drawing.Color.Red;
+            this.lblHousingAllowance.Location = new System.Drawing.Point(274, 77);
+            this.lblHousingAllowance.Name = "lblHousingAllowance";
+            this.lblHousingAllowance.Size = new System.Drawing.Size(38, 13);
+            this.lblHousingAllowance.TabIndex = 57;
+            this.lblHousingAllowance.Text = "Invalid";
+            // 
+            // lblOtherAllowance
+            // 
+            this.lblOtherAllowance.AutoSize = true;
+            this.lblOtherAllowance.ForeColor = System.Drawing.Color.Red;
+            this.lblOtherAllowance.Location = new System.Drawing.Point(274, 183);
+            this.lblOtherAllowance.Name = "lblOtherAllowance";
+            this.lblOtherAllowance.Size = new System.Drawing.Size(38, 13);
+            this.lblOtherAllowance.TabIndex = 59;
+            this.lblOtherAllowance.Text = "Invalid";
+            // 
+            // lblBasicSalary
+            // 
+            this.lblBasicSalary.AutoSize = true;
+            this.lblBasicSalary.ForeColor = System.Drawing.Color.Red;
+            this.lblBasicSalary.Location = new System.Drawing.Point(274, 39);
+            this.lblBasicSalary.Name = "lblBasicSalary";
+            this.lblBasicSalary.Size = new System.Drawing.Size(38, 13);
+            this.lblBasicSalary.TabIndex = 58;
+            this.lblBasicSalary.Text = "Invalid";
             // 
             // label2
             // 
@@ -367,11 +490,11 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lblTotalOT);
+            this.groupBox4.Controls.Add(this.lblTotalWorkingHours);
             this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.bunifuDropdown1);
             this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.edtOT);
             this.groupBox4.Controls.Add(this.edtWokingHours);
             this.groupBox4.Location = new System.Drawing.Point(2, 140);
             this.groupBox4.Name = "groupBox4";
@@ -379,66 +502,105 @@
             this.groupBox4.TabIndex = 44;
             this.groupBox4.TabStop = false;
             // 
+            // lblTotalOT
+            // 
+            this.lblTotalOT.AutoSize = true;
+            this.lblTotalOT.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalOT.Location = new System.Drawing.Point(273, 59);
+            this.lblTotalOT.Name = "lblTotalOT";
+            this.lblTotalOT.Size = new System.Drawing.Size(38, 13);
+            this.lblTotalOT.TabIndex = 64;
+            this.lblTotalOT.Text = "Invalid";
+            // 
+            // lblTotalWorkingHours
+            // 
+            this.lblTotalWorkingHours.AutoSize = true;
+            this.lblTotalWorkingHours.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalWorkingHours.Location = new System.Drawing.Point(273, 26);
+            this.lblTotalWorkingHours.Name = "lblTotalWorkingHours";
+            this.lblTotalWorkingHours.Size = new System.Drawing.Size(38, 13);
+            this.lblTotalWorkingHours.TabIndex = 63;
+            this.lblTotalWorkingHours.Text = "Invalid";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(57, 21);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(78, 13);
+            this.label17.Size = new System.Drawing.Size(105, 13);
             this.label17.TabIndex = 39;
-            this.label17.Text = "Working Hours";
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(372, 56);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(98, 20);
-            this.bunifuDropdown1.TabIndex = 19;
+            this.label17.Text = "Total Working Hours";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(57, 59);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(83, 13);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Over Time";
+            this.label7.Text = "Total Over Time";
             // 
-            // textBox1
+            // edtOT
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(316, 62);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "OT Rate";
+            this.edtOT.Location = new System.Drawing.Point(164, 56);
+            this.edtOT.Name = "edtOT";
+            this.edtOT.Size = new System.Drawing.Size(100, 20);
+            this.edtOT.TabIndex = 3;
+            this.edtOT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtOT_KeyPress);
             // 
             // edtWokingHours
             // 
-            this.edtWokingHours.Location = new System.Drawing.Point(161, 19);
+            this.edtWokingHours.Location = new System.Drawing.Point(164, 19);
             this.edtWokingHours.Name = "edtWokingHours";
             this.edtWokingHours.Size = new System.Drawing.Size(100, 20);
             this.edtWokingHours.TabIndex = 38;
+            this.edtWokingHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtWokingHours_KeyPress);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnDelete.ButtonText = "Delete";
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDelete.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDelete.Iconimage")));
+            this.btnDelete.Iconimage_right = null;
+            this.btnDelete.Iconimage_right_Selected = null;
+            this.btnDelete.Iconimage_Selected = null;
+            this.btnDelete.IconZoom = 90D;
+            this.btnDelete.IsTab = false;
+            this.btnDelete.Location = new System.Drawing.Point(726, 504);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDelete.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnDelete.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDelete.selected = false;
+            this.btnDelete.Size = new System.Drawing.Size(241, 48);
+            this.btnDelete.TabIndex = 45;
+            this.btnDelete.Textcolor = System.Drawing.Color.White;
+            this.btnDelete.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblEmployeeID
+            // 
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.ForeColor = System.Drawing.Color.Red;
+            this.lblEmployeeID.Location = new System.Drawing.Point(185, 19);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(38, 13);
+            this.lblEmployeeID.TabIndex = 64;
+            this.lblEmployeeID.Text = "Invalid";
             // 
             // PayrollUIEditOperater
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dateTimePayroll);
             this.Controls.Add(this.groupBox2);
@@ -461,41 +623,52 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEdit;
         private Bunifu.Framework.UI.BunifuFlatButton btncheck;
         private System.Windows.Forms.TextBox edtName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmpID;
+        private System.Windows.Forms.TextBox edtEmployeeID;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox edtOtherAllowance;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox edtFoodAllowance;
         private System.Windows.Forms.DateTimePicker dateTimePayroll;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtInsurance;
+        private System.Windows.Forms.TextBox edtInsurance;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtSAdvance;
-        private System.Windows.Forms.TextBox txtETF;
+        private System.Windows.Forms.TextBox edtSalaryAdvance;
+        private System.Windows.Forms.TextBox edtETF;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtEPF;
+        private System.Windows.Forms.TextBox edtEPF;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox edtMedicalAllowance;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtAllowance;
-        private System.Windows.Forms.TextBox txtBSalary;
+        private System.Windows.Forms.TextBox edtHousingAllowance;
+        private System.Windows.Forms.TextBox edtBasicSalary;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label17;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox edtOT;
         private System.Windows.Forms.TextBox edtWokingHours;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDelete;
+        private System.Windows.Forms.Label lblInsurance;
+        private System.Windows.Forms.Label lblEPF;
+        private System.Windows.Forms.Label lblETF;
+        private System.Windows.Forms.Label lblSalaryAdvance;
+        private System.Windows.Forms.Label lblFoodAllowance;
+        private System.Windows.Forms.Label lblMedicalAllowance;
+        private System.Windows.Forms.Label lblHousingAllowance;
+        private System.Windows.Forms.Label lblOtherAllowance;
+        private System.Windows.Forms.Label lblBasicSalary;
+        private System.Windows.Forms.Label lblTotalOT;
+        private System.Windows.Forms.Label lblTotalWorkingHours;
+        private System.Windows.Forms.Label lblEmployeeID;
     }
 }

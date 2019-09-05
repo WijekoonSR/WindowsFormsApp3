@@ -35,17 +35,19 @@
             this.label17 = new System.Windows.Forms.Label();
             this.edtWokingHours = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblOT = new System.Windows.Forms.Label();
+            this.lblWorkingHours = new System.Windows.Forms.Label();
             this.drpOTRate = new Bunifu.Framework.UI.BunifuDropdown();
             this.dateTimePayroll = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.edtPossition = new System.Windows.Forms.TextBox();
+            this.edtCity = new System.Windows.Forms.TextBox();
+            this.edtName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmpID = new System.Windows.Forms.TextBox();
+            this.edtEmployeeID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSetDailyRates = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -69,6 +71,7 @@
             this.edtOT.Name = "edtOT";
             this.edtOT.Size = new System.Drawing.Size(100, 20);
             this.edtOT.TabIndex = 3;
+            this.edtOT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtOT_KeyPress);
             // 
             // label15
             // 
@@ -95,9 +98,12 @@
             this.edtWokingHours.Size = new System.Drawing.Size(100, 20);
             this.edtWokingHours.TabIndex = 38;
             this.edtWokingHours.TextChanged += new System.EventHandler(this.edtWokingHours_TextChanged);
+            this.edtWokingHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.edtWokingHours_KeyPress);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lblOT);
+            this.groupBox4.Controls.Add(this.lblWorkingHours);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.drpOTRate);
             this.groupBox4.Controls.Add(this.label6);
@@ -109,6 +115,26 @@
             this.groupBox4.Size = new System.Drawing.Size(493, 184);
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
+            // 
+            // lblOT
+            // 
+            this.lblOT.AutoSize = true;
+            this.lblOT.ForeColor = System.Drawing.Color.Red;
+            this.lblOT.Location = new System.Drawing.Point(272, 122);
+            this.lblOT.Name = "lblOT";
+            this.lblOT.Size = new System.Drawing.Size(38, 13);
+            this.lblOT.TabIndex = 41;
+            this.lblOT.Text = "Invalid";
+            // 
+            // lblWorkingHours
+            // 
+            this.lblWorkingHours.AutoSize = true;
+            this.lblWorkingHours.ForeColor = System.Drawing.Color.Red;
+            this.lblWorkingHours.Location = new System.Drawing.Point(272, 54);
+            this.lblWorkingHours.Name = "lblWorkingHours";
+            this.lblWorkingHours.Size = new System.Drawing.Size(38, 13);
+            this.lblWorkingHours.TabIndex = 40;
+            this.lblWorkingHours.Text = "Invalid";
             // 
             // drpOTRate
             // 
@@ -135,13 +161,13 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.bunifuFlatButton2);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.edtPossition);
+            this.groupBox3.Controls.Add(this.edtCity);
+            this.groupBox3.Controls.Add(this.edtName);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.txtEmpID);
+            this.groupBox3.Controls.Add(this.edtEmployeeID);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(1, 44);
             this.groupBox3.Name = "groupBox3";
@@ -174,27 +200,31 @@
             this.bunifuFlatButton2.TabIndex = 30;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // textBox3
+            // edtPossition
             // 
-            this.textBox3.Location = new System.Drawing.Point(635, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 29;
+            this.edtPossition.Location = new System.Drawing.Point(635, 19);
+            this.edtPossition.Name = "edtPossition";
+            this.edtPossition.ReadOnly = true;
+            this.edtPossition.Size = new System.Drawing.Size(100, 20);
+            this.edtPossition.TabIndex = 29;
             // 
-            // textBox2
+            // edtCity
             // 
-            this.textBox2.Location = new System.Drawing.Point(903, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 28;
+            this.edtCity.Location = new System.Drawing.Point(903, 19);
+            this.edtCity.Name = "edtCity";
+            this.edtCity.ReadOnly = true;
+            this.edtCity.Size = new System.Drawing.Size(100, 20);
+            this.edtCity.TabIndex = 28;
             // 
-            // textBox1
+            // edtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(376, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 27;
+            this.edtName.Location = new System.Drawing.Point(376, 19);
+            this.edtName.Name = "edtName";
+            this.edtName.ReadOnly = true;
+            this.edtName.Size = new System.Drawing.Size(100, 20);
+            this.edtName.TabIndex = 27;
             // 
             // label8
             // 
@@ -210,9 +240,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(842, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 25;
-            this.label7.Text = "Department";
+            this.label7.Text = "City";
             // 
             // label1
             // 
@@ -223,12 +253,12 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Name";
             // 
-            // txtEmpID
+            // edtEmployeeID
             // 
-            this.txtEmpID.Location = new System.Drawing.Point(107, 19);
-            this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.Size = new System.Drawing.Size(100, 20);
-            this.txtEmpID.TabIndex = 23;
+            this.edtEmployeeID.Location = new System.Drawing.Point(107, 19);
+            this.edtEmployeeID.Name = "edtEmployeeID";
+            this.edtEmployeeID.Size = new System.Drawing.Size(100, 20);
+            this.edtEmployeeID.TabIndex = 23;
             // 
             // label5
             // 
@@ -279,9 +309,9 @@
             // 
             this.btnChangeOTRates.Location = new System.Drawing.Point(865, 165);
             this.btnChangeOTRates.Name = "btnChangeOTRates";
-            this.btnChangeOTRates.Size = new System.Drawing.Size(75, 23);
+            this.btnChangeOTRates.Size = new System.Drawing.Size(91, 23);
             this.btnChangeOTRates.TabIndex = 56;
-            this.btnChangeOTRates.Text = "...";
+            this.btnChangeOTRates.Text = "change Values";
             this.btnChangeOTRates.UseVisualStyleBackColor = true;
             this.btnChangeOTRates.Click += new System.EventHandler(this.btnChangeOTRates_Click);
             // 
@@ -317,16 +347,18 @@
         private System.Windows.Forms.DateTimePicker dateTimePayroll;
         private System.Windows.Forms.GroupBox groupBox3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox edtPossition;
+        private System.Windows.Forms.TextBox edtCity;
+        private System.Windows.Forms.TextBox edtName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmpID;
+        private System.Windows.Forms.TextBox edtEmployeeID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btnSetDailyRates;
         private System.Windows.Forms.Button btnChangeOTRates;
+        private System.Windows.Forms.Label lblOT;
+        private System.Windows.Forms.Label lblWorkingHours;
     }
 }

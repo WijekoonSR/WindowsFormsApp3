@@ -19,12 +19,17 @@ namespace WindowsFormsApp3
 
         private void btnSetAllowance_Click(object sender, EventArgs e)
         {
-            payrollUISetAllowance1.BringToFront();
+            //payrollUISetAllowance1.BringToFront();
         }
 
         private void btnAddAllowance_Click(object sender, EventArgs e)
         {
-            payrollUIAddAllowance1.BringToFront();
+            //payrollUIAddAllowance1.BringToFront();
+        }
+
+        private void payrollUISetAllowance1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
