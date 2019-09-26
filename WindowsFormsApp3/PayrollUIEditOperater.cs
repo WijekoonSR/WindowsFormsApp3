@@ -174,7 +174,7 @@ namespace WindowsFormsApp3
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+             
 
             if (edtEmployeeID.Text.Equals(""))
             {
