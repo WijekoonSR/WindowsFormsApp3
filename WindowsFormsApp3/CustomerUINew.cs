@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApp3
 {
@@ -159,6 +160,11 @@ namespace WindowsFormsApp3
                         MessageBox.Show("Please Enter Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtEmail1.Focus();
                     }
+                    else if(isValidEmailAddress(txtEmail1.Text.ToString()) == false){
+                        MessageBox.Show("This is not a valid Email Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtEmail1.Focus();
+
+                    }
                     else if (txtFaxNumber.Text == "")
                     {
                         MessageBox.Show("Please Enter Fax Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -184,11 +190,16 @@ namespace WindowsFormsApp3
                         MessageBox.Show("Please Enter Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtEmail2.Focus();
                     }
+                    else if (isValidEmailAddress(txtEmail2.Text.ToString()) == false)
+                    {
+                        MessageBox.Show("This is not a valid Email Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtEmail2.Focus();
+
+                    }
                     else
                     {
-                       
-                        sqlConnection.Open();
 
+                        sqlConnection.Open();
                         name = txtName.Text.ToString();
                         address = txtAddress.Text.ToString();
                         email = txtEmail1.Text.ToString();
@@ -198,11 +209,11 @@ namespace WindowsFormsApp3
                         ContactNumber = int.Parse(txtContactNumber.Text);
                         FaxNumber = int.Parse(txtFaxNumber.Text);
                         ProjectContactNumber = int.Parse(txtContactNumber2.Text);
-                        EndDate = dateEndContract.Value.ToString("yyyy/MM/dd");
-                        StartDate = dateStartContract.Value.ToString("yyyy/MM/dd");
+                        EndDate = dateEndContract.Value.ToString();
+                        StartDate = dateStartContract.Value.ToString();
 
                         string query = "insert into Customer(name,address,email,ProjectManagerName,ProjectAddress,ProjectEmail,ContactNumber,FaxNumber,ProjectContactNumber,ContractStartDate,ContractEndDate) " +
-                            "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "','" + StartDate + "','" + EndDate + "')";
+                            "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "','" + Convert.ToDateTime(StartDate) + "','" + Convert.ToDateTime(EndDate) + "')";
                         command = new SqlCommand(query, sqlConnection);
                         int chk = command.ExecuteNonQuery();
 
@@ -251,6 +262,20 @@ namespace WindowsFormsApp3
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+        }
+        public bool isValidEmailAddress(String s)
+        {
+            if (string.IsNullOrEmpty(s))
+                return false;
+            else
+            {
+                var regex = new Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
+                return regex.IsMatch(s) && !s.EndsWith(".");
+            }
+        }
+        public static bool IsPhoneNumber(string number)
+        {
+            return Regex.Match(number, @"^(\+[0-9]{9})$").Success;
         }
     }
 }

@@ -183,6 +183,12 @@
     <Compile Include="EmployeeUIViewOperat.Designer.cs">
       <DependentUpon>EmployeeUIViewOperat.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeUIViewStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUIViewStaff.Designer.cs">
+      <DependentUpon>EmployeeUIViewStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -518,6 +524,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUIViewOperat.resx">
       <DependentUpon>EmployeeUIViewOperat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUIViewStaff.resx">
+      <DependentUpon>EmployeeUIViewStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeUI.resx">
       <DependentUpon>HomeUI.cs</DependentUpon>

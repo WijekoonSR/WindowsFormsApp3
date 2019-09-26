@@ -24,7 +24,7 @@ namespace WindowsFormsApp3
             sqlAdapter.Fill(datTable);
             dgvView.DataSource = datTable;
             sqlConnection.Close();
-                                 
+
         }
 
         private void VehicleUIView_Load(object sender, EventArgs e)
@@ -67,7 +67,8 @@ namespace WindowsFormsApp3
                 "Important",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if (result == DialogResult.OK) {
+            if (result == DialogResult.OK)
+            {
                 sqlConnection.Open();
                 string id = txtSearch.Text.ToString();
                 SqlCommand command = new SqlCommand("delete from Booking_Vehicle where VehicleID = '" + id + "'", sqlConnection);

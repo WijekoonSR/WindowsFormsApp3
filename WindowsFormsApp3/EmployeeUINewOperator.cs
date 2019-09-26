@@ -30,50 +30,111 @@ namespace WindowsFormsApp3
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             // Create string variables that contain the patterns   
-            string NICPattern = @"[0-9]{9}[x|X|v|V]$"; //NICpattern  
+            /* string NICPattern = @"[0-9]{9}[x|X|v|V]$"; //NICpattern  
 
-            bool isNICValid = Regex.IsMatch(txtNIC.Text, NICPattern);
+             bool isNICValid = Regex.IsMatch(txtNIC.Text, NICPattern);
 
-            if (isNICValid)
+             if (isNICValid)
+             {
+                 MessageBox.Show("Please enter a valid NIC Number");
+             }
+             */
+            if (txtEmployeeID.Text.Equals(""))
             {
-                MessageBox.Show("Please enter a valid NIC Number");
+                MessageBox.Show("please Enter Employee ID");
             }
+            else if (txtfname.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtLname.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtNIC.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtContactNum.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtEmail.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtAddress01.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtAddress02.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtCity.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtPostalCode.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else if (txtVehilceID.Text.Equals(""))
+            {
+                MessageBox.Show("Error");
+            }
+            else
+            {
 
-             sqlConnection.Open();
-             string fname = txtfname.Text;
-             string lname = txtLname.Text;
-             string gender = cmbGender.Text;
-             string dob = dateDOB.Value.ToString("yyyy/MM/dd");
-             string NIC = txtNIC.Text;
-             string licenseNUm = txtLicense.Text;
-             string ContactNum = txtContactNum.Text;
-             string email = txtEmail.Text;
-             string address01 = txtAddress01.Text;
-             string address02 = txtAddress02.Text;
-             string city = txtCity.Text;
-             string postalCode = txtPostalCode.Text;
-             string jobTitle = cmbJobTitle.Text;
+                sqlConnection.Open();
+                String VehicleID = txtVehilceID.Text;
+                string fname = txtfname.Text;
+                string lname = txtLname.Text;
+                string gender = cmbGender.Text;
+                string dob = dateDOB.Value.ToString("yyyy/MM/dd");
+                string NIC = txtNIC.Text;
+                string licenseNUm = txtLicense.Text;
+                string ContactNum = txtContactNum.Text;
+                string email = txtEmail.Text;
+                string address01 = txtAddress01.Text;
+                string address02 = txtAddress02.Text;
+                string city = txtCity.Text;
+                string postalCode = txtPostalCode.Text;
+                string jobTitle = cmbJobTitle.Text;
 
-             string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
-               "values('" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
+                String EID = txtEmployeeID.Text;
+                EID = Regex.Replace(EID, "[^0-9]", "");
+                int ID = int.Parse(EID);
 
-             SqlCommand cmd = new SqlCommand(query, sqlConnection);
-           // string query02 = "insert into Vehicle_Operators(EmployeeID,LicenseNo)"+ "values('"+
-
-             cmd.ExecuteNonQuery();
-
-             sqlConnection.Close();
-             sqlConnection.Open();
-
-            /* string query02 = "Exec AsignOperators '" + licenseNUm + "'";
-             SqlCommand cmd2 = new SqlCommand(query02,sqlConnection);
-             cmd2.ExecuteNonQuery();*/
+                String VID = txtVehilceID.Text;
+                VID = Regex.Replace(VID, "[^0-9]", "");
+                int ID2 = int.Parse(EID);
 
 
-             MessageBox.Show("Data Submitted");
-             clearDet();
-           //  sqlConnection.Close();
+                string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
+                   "values('" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
+                SqlCommand cmd = new SqlCommand(query, sqlConnection);
+                cmd.ExecuteNonQuery();
 
+
+
+                sqlConnection.Close();
+                //          sqlConnection.Open();
+                //          string query02 = "insert into Vehicle_Operators(EmployeeID,LicenseNo, VehilceID)" + "values('" +ID+ "','" +licenseNUm+ "', '" + ID2 + "')";
+                //              SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
+                //               cmd2.ExecuteNonQuery();
+                //sqlConnection.Open();
+
+                /* string query02 = "Exec AsignOperators '" + licenseNUm + "'";
+                 SqlCommand cmd2 = new SqlCommand(query02,sqlConnection);
+                 cmd2.ExecuteNonQuery();*/
+
+
+                MessageBox.Show("Data Submitted");
+                clearDet();
+                getOpertaorID();
+                sqlConnection.Close();
+            }
         }
         public void clearDet()
         {
@@ -97,7 +158,37 @@ namespace WindowsFormsApp3
         {
             clearDet();
         }
+        private void getOpertaorID()
+        {
+            try
+            {
+                sqlConnection.Open();
+                string ID = null;
+                String queryCurrentID = "select IDENT_CURRENT('Employee')";
+                SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
+                SqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    ID = dataReader[0].ToString();
+                }
+                sqlConnection.Close();
+                sqlConnection.Open();
 
+                SqlCommand chkExistsData = new SqlCommand("select * from Employee where EmployeeID = 1", sqlConnection);
+                SqlDataReader SDR = chkExistsData.ExecuteReader();
+                if (SDR.HasRows) txtEmployeeID.Text = "E" + (int.Parse(ID) + 1).ToString();
+                else txtEmployeeID.Text = "E1";
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "BookingUI:getBookingID ");
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -105,7 +196,7 @@ namespace WindowsFormsApp3
 
         private void EmployeeUINewOperator_Load(object sender, EventArgs e)
         {
-
+            getOpertaorID();
         }
     }
     }

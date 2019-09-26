@@ -31,7 +31,7 @@ namespace WindowsFormsApp3
 
         }
 
-        
+
         public VehicleUINew()
         {
             InitializeComponent();
@@ -50,15 +50,16 @@ namespace WindowsFormsApp3
 
         private void getVehicleID()
         {
-            try { 
-            con.Open();
-            String queryCurrentID = "select IDENT_CURRENT('Vehicles')";
-            SqlCommand command = new SqlCommand(queryCurrentID, con);
-            SqlDataReader dataReader = command.ExecuteReader();
-            while (dataReader.Read())
+            try
             {
-                vID = dataReader[0].ToString();
-            }
+                con.Open();
+                String queryCurrentID = "select IDENT_CURRENT('Vehicles')";
+                SqlCommand command = new SqlCommand(queryCurrentID, con);
+                SqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    vID = dataReader[0].ToString();
+                }
                 con.Close();
 
                 con.Open();
@@ -66,8 +67,8 @@ namespace WindowsFormsApp3
                 SqlDataReader SDR = chkExistsData.ExecuteReader();
                 if (SDR.HasRows) txtVehicleID.Text = "B" + (int.Parse(vID) + 1).ToString();
                 else txtVehicleID.Text = "B1";
-                 con.Close();
-        }
+                con.Close();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Vehicle UI");

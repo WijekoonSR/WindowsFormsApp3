@@ -64,6 +64,8 @@
             this.dateDOB = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblEducaation = new System.Windows.Forms.Label();
             this.lblSubjects = new System.Windows.Forms.Label();
@@ -81,8 +83,6 @@
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.tblAL.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -412,6 +412,7 @@
             this.btnDelete.TabIndex = 111;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tblAL
             // 
@@ -486,6 +487,28 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(392, 183);
             this.panel4.TabIndex = 106;
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Items.AddRange(new object[] {
+            "HR Deparment",
+            "Accounting & Finance"});
+            this.cmbDepartment.Location = new System.Drawing.Point(145, 75);
+            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(239, 24);
+            this.cmbDepartment.TabIndex = 72;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "Department";
             // 
             // panel5
             // 
@@ -663,28 +686,6 @@
             this.btnSearch.TabIndex = 114;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Items.AddRange(new object[] {
-            "HR Deparment",
-            "Accounting & Finance"});
-            this.cmbDepartment.Location = new System.Drawing.Point(145, 75);
-            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(239, 24);
-            this.cmbDepartment.TabIndex = 72;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 82);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
-            this.label1.TabIndex = 71;
-            this.label1.Text = "Department";
             // 
             // EmployeeUIEditStaff
             // 

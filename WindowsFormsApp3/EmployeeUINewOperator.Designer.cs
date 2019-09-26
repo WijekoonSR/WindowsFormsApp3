@@ -66,6 +66,8 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
+            this.txtVehilceID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -455,14 +457,33 @@
             // 
             this.txtEmployeeID.Location = new System.Drawing.Point(182, 37);
             this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.ReadOnly = true;
             this.txtEmployeeID.Size = new System.Drawing.Size(273, 22);
             this.txtEmployeeID.TabIndex = 97;
             this.txtEmployeeID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txtVehilceID
+            // 
+            this.txtVehilceID.Location = new System.Drawing.Point(725, 34);
+            this.txtVehilceID.Name = "txtVehilceID";
+            this.txtVehilceID.Size = new System.Drawing.Size(273, 22);
+            this.txtVehilceID.TabIndex = 99;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(611, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Vehilce  ID";
             // 
             // EmployeeUINewOperator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtVehilceID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEmployeeID);
             this.Controls.Add(this.lblEmployeeID);
             this.Controls.Add(this.btnClear);
@@ -528,5 +549,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblEmployeeID;
         private System.Windows.Forms.TextBox txtEmployeeID;
+        private System.Windows.Forms.TextBox txtVehilceID;
+        private System.Windows.Forms.Label label1;
     }
 }
