@@ -44,21 +44,11 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtEmail2 = new System.Windows.Forms.TextBox();
-            this.lblpjtEmail = new System.Windows.Forms.Label();
-            this.txtContactNumber2 = new System.Windows.Forms.TextBox();
-            this.lblPjtContactNumber = new System.Windows.Forms.Label();
-            this.txtAddress1 = new System.Windows.Forms.TextBox();
-            this.lblPjtAddress = new System.Windows.Forms.Label();
-            this.txtProjectManager = new System.Windows.Forms.TextBox();
-            this.lblProjectMgr = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
             this.dateStartContract = new System.Windows.Forms.DateTimePicker();
             this.dateEndContract = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCustomerID
@@ -92,7 +82,7 @@
             this.btnClear.BackColor = System.Drawing.Color.Navy;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(788, 461);
+            this.btnClear.Location = new System.Drawing.Point(227, 461);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 37);
             this.btnClear.TabIndex = 11;
@@ -105,7 +95,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Navy;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(655, 461);
+            this.btnSave.Location = new System.Drawing.Point(69, 461);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 37);
             this.btnSave.TabIndex = 12;
@@ -215,91 +205,6 @@
             this.lblName.TabIndex = 15;
             this.lblName.Text = "Name";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox2.Controls.Add(this.txtEmail2);
-            this.groupBox2.Controls.Add(this.lblpjtEmail);
-            this.groupBox2.Controls.Add(this.txtContactNumber2);
-            this.groupBox2.Controls.Add(this.lblPjtContactNumber);
-            this.groupBox2.Controls.Add(this.txtAddress1);
-            this.groupBox2.Controls.Add(this.lblPjtAddress);
-            this.groupBox2.Controls.Add(this.txtProjectManager);
-            this.groupBox2.Controls.Add(this.lblProjectMgr);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(470, 106);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(408, 318);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Project Details";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // txtEmail2
-            // 
-            this.txtEmail2.Location = new System.Drawing.Point(175, 182);
-            this.txtEmail2.Name = "txtEmail2";
-            this.txtEmail2.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail2.TabIndex = 19;
-            this.txtEmail2.TextChanged += new System.EventHandler(this.txtEmail2_TextChanged);
-            // 
-            // lblpjtEmail
-            // 
-            this.lblpjtEmail.AutoSize = true;
-            this.lblpjtEmail.Location = new System.Drawing.Point(69, 185);
-            this.lblpjtEmail.Name = "lblpjtEmail";
-            this.lblpjtEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblpjtEmail.TabIndex = 18;
-            this.lblpjtEmail.Text = "Email";
-            // 
-            // txtContactNumber2
-            // 
-            this.txtContactNumber2.Location = new System.Drawing.Point(175, 136);
-            this.txtContactNumber2.Name = "txtContactNumber2";
-            this.txtContactNumber2.Size = new System.Drawing.Size(100, 20);
-            this.txtContactNumber2.TabIndex = 17;
-            // 
-            // lblPjtContactNumber
-            // 
-            this.lblPjtContactNumber.AutoSize = true;
-            this.lblPjtContactNumber.Location = new System.Drawing.Point(66, 136);
-            this.lblPjtContactNumber.Name = "lblPjtContactNumber";
-            this.lblPjtContactNumber.Size = new System.Drawing.Size(84, 13);
-            this.lblPjtContactNumber.TabIndex = 16;
-            this.lblPjtContactNumber.Text = "Contact Number";
-            // 
-            // txtAddress1
-            // 
-            this.txtAddress1.Location = new System.Drawing.Point(175, 96);
-            this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(100, 20);
-            this.txtAddress1.TabIndex = 15;
-            // 
-            // lblPjtAddress
-            // 
-            this.lblPjtAddress.AutoSize = true;
-            this.lblPjtAddress.Location = new System.Drawing.Point(69, 96);
-            this.lblPjtAddress.Name = "lblPjtAddress";
-            this.lblPjtAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblPjtAddress.TabIndex = 14;
-            this.lblPjtAddress.Text = "Address";
-            // 
-            // txtProjectManager
-            // 
-            this.txtProjectManager.Location = new System.Drawing.Point(175, 57);
-            this.txtProjectManager.Name = "txtProjectManager";
-            this.txtProjectManager.Size = new System.Drawing.Size(100, 20);
-            this.txtProjectManager.TabIndex = 13;
-            // 
-            // lblProjectMgr
-            // 
-            this.lblProjectMgr.AutoSize = true;
-            this.lblProjectMgr.Location = new System.Drawing.Point(67, 57);
-            this.lblProjectMgr.Name = "lblProjectMgr";
-            this.lblProjectMgr.Size = new System.Drawing.Size(85, 13);
-            this.lblProjectMgr.TabIndex = 11;
-            this.lblProjectMgr.Text = "Project Manager";
-            // 
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
@@ -340,7 +245,6 @@
             this.Controls.Add(this.dateStartContract);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
@@ -352,8 +256,6 @@
             this.Load += new System.EventHandler(this.CustomerUINew_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,18 +279,9 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblpjtEmail;
-        private System.Windows.Forms.TextBox txtContactNumber2;
-        private System.Windows.Forms.Label lblPjtContactNumber;
-        private System.Windows.Forms.TextBox txtAddress1;
-        private System.Windows.Forms.Label lblPjtAddress;
-        private System.Windows.Forms.TextBox txtProjectManager;
-        private System.Windows.Forms.Label lblProjectMgr;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.DateTimePicker dateStartContract;
         private System.Windows.Forms.DateTimePicker dateEndContract;
-        private System.Windows.Forms.TextBox txtEmail2;
     }
 }

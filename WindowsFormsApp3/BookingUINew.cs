@@ -155,7 +155,7 @@ namespace WindowsFormsApp3
                 Type2 = dropDownBackhoeTypes2.selectedValue;
                 int count = 0;
 
-                if (Type2 == "Excavator") count = NoOfExcavator;
+                if (Type2 == "Excavators") count = NoOfExcavator;
                 else if (Type2 == "Backhoe Loaders") count = NoBackhoeLoaders;
                 else if (Type2 == "Bulldozers") count = NoBulldozers;
                 else if (Type2 == "Skid Steer Loaders") count = NoSkidSteerLoaders;
@@ -189,7 +189,7 @@ namespace WindowsFormsApp3
                 dropDownItemsRemove();
                 int count = 0;
                 Type3 = dropDownBackhoeTypes2.selectedValue;
-                if (Type3 == "Excavator") count = NoOfExcavator;
+                if (Type3 == "Excavators") count = NoOfExcavator;
                 else if (Type3 == "Backhoe Loaders") count = NoBackhoeLoaders;
                 else if (Type3 == "Bulldozers") count = NoBulldozers;
                 else if (Type3 == "Skid Steer Loaders") count = NoSkidSteerLoaders;
@@ -368,6 +368,9 @@ namespace WindowsFormsApp3
 
                     float BackhoeType3Ratings = float.Parse(txtRatings3.Text);
                     int BackhoeType3Count = int.Parse(dropDownNoOfBackhoes3.Text);
+
+                    //address
+                    String Address = txtAddress.Text;
                     //Caller Details
                     String CallerName = txtCallerName.Text;
                     String CalledDate = dateCaller.Value.ToString("yyyy/MM/dd");
@@ -381,8 +384,8 @@ namespace WindowsFormsApp3
                     ID = Regex.Replace(ID, "[^0-9]", "");
                     int CustomerID = int.Parse(ID);
 
-                    SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
-                        "Values(@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
+                    SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,Address ,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
+                        "Values(@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count,@Address, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
                     sqlCommandInserted.Parameters.AddWithValue("@startDate", StartDate);
                     sqlCommandInserted.Parameters.AddWithValue("@EndDate", EndDate);
                     sqlCommandInserted.Parameters.AddWithValue("@WorkingHours", WorkingHours);
@@ -395,6 +398,7 @@ namespace WindowsFormsApp3
                     sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3", Type3);
                     sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Ratings", BackhoeType3Ratings);
                     sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Count", BackhoeType3Count);
+                    sqlCommandInserted.Parameters.AddWithValue("@Address", Address);
                     sqlCommandInserted.Parameters.AddWithValue("@CallerName", CallerName);
                     sqlCommandInserted.Parameters.AddWithValue("@CalledDate", CalledDate);
                     sqlCommandInserted.Parameters.AddWithValue("@CallerNic", CallerNic);
@@ -408,7 +412,7 @@ namespace WindowsFormsApp3
 
                     sqlConnection.Close();
 
-                    //check backhoes whether vehicles have been added to booking
+                    //check  whether vehicles have been added to booking
                     if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1);
                     else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2);
                     else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3);

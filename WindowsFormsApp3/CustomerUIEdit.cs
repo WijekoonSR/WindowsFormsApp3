@@ -14,8 +14,8 @@ namespace WindowsFormsApp3
     
     public partial class CustomerUIEdit : UserControl
     {
-        string CustomerID, ContractStartDate, ContractEndDate, name, address, email, ProjectManagerName, ProjectAddress, ProjectEmail, EndDate, StartDate;
-        int ContactNumber, FaxNumber, ProjectContactNumber;
+        string CustomerID, ContractStartDate, ContractEndDate, name, address, email, EndDate, StartDate;
+        string ContactNumber, FaxNumber;
        public static string sqlname = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
         SqlConnection sqlConnection = new SqlConnection(sqlname);
 
@@ -54,17 +54,13 @@ namespace WindowsFormsApp3
             name = txtName.Text.ToString();
             address = txtAddress.Text.ToString();
             email = txtEmail1.Text.ToString();
-            ProjectManagerName = txtProjectManager.Text.ToString();
-            ProjectAddress = txtAddress1.Text.ToString();
-            ProjectEmail = txtEmail2.Text.ToString();
-            ContactNumber = int.Parse(txtContactNumber.Text);
-            FaxNumber = int.Parse(txtFaxNumber.Text);
-            ProjectContactNumber = int.Parse(txtContactNumber2.Text);
+            ContactNumber  = txtContactNumber.Text.ToString();
+            FaxNumber = txtFaxNumber.Text.ToString();
             EndDate = dateEndContract.Value.ToString("yyyy/MM/dd");
             StartDate = dateStartContract.Value.ToString("yyyy/MM/dd");
             try {
                 sqlConnection.Open();
-                string query = "UPDATE Customer set name='" + name + "',address='" + address + "',email='" + email + "',ProjectManagerName='" + ProjectManagerName + "',ProjectAddress='" + ProjectAddress + "',ProjectEmail='" + ProjectEmail + "',ContactNumber='" + ContactNumber + "',FaxNumber='" + FaxNumber + "',ProjectContactNumber='" + ProjectContactNumber + "',ContractStartDate='" + ContractStartDate + "',ContractEndDate='" + ContractEndDate + "' where CustomerID = '" + CustomerID + "'";
+                string query = "UPDATE Customer set name='" + name + "',address='" + address + "',email='" + email + "',ContactNumber='" + ContactNumber + "',FaxNumber='" + FaxNumber + "',ContractStartDate='" + ContractStartDate + "',ContractEndDate='" + ContractEndDate + "' where CustomerID = '" + CustomerID + "'";
 
 
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
@@ -110,11 +106,7 @@ namespace WindowsFormsApp3
                         txtContactNumber.Text = read.GetValue(5).ToString();
                         txtEmail1.Text = read.GetValue(6).ToString();
                         txtFaxNumber.Text = read.GetValue(7).ToString();
-                        txtProjectManager.Text = read.GetValue(8).ToString();
-                        txtAddress1.Text = read.GetValue(9).ToString();
-                        txtContactNumber2.Text = read.GetValue(10).ToString();
-                        txtEmail2.Text = read.GetValue(11).ToString();
-
+                   
                     }
                 }
 
@@ -154,11 +146,7 @@ namespace WindowsFormsApp3
                 txtContactNumber.Clear();
                 txtEmail1.Clear();
                 txtFaxNumber.Clear();
-                txtProjectManager.Clear();
-                txtAddress1.Clear();
-                txtContactNumber2.Clear();
-                txtEmail2.Clear();
-            }
+                 }
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {

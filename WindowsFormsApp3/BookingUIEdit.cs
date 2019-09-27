@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
         protected int NoOfExcavator, NoBackhoeLoaders, NoBulldozers, NoSkidSteerLoaders, NoMotorGraders, NoTrenchers = 0;
         string searchID;
         SqlConnection sql = new SqlConnection(@"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True");
-        string StartDate, EndDate, WorkingHours, BackhoeType1, BackhoeType1Ratings, BackhoeType1Count, BackhoeType2, BackhoeType2Ratings, BackhoeType2Count, BackhoeType3, BackhoeType3Ratings, BackhoeType3Count, CallerName, CalledDate, CallerNic, CallerNumber, TotalCharge, CustomerID;
+        string Address,StartDate, EndDate, WorkingHours, BackhoeType1, BackhoeType1Ratings, BackhoeType1Count, BackhoeType2, BackhoeType2Ratings, BackhoeType2Count, BackhoeType3, BackhoeType3Ratings, BackhoeType3Count, CallerName, CalledDate, CallerNic, CallerNumber, TotalCharge, CustomerID;
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -124,6 +124,7 @@ namespace WindowsFormsApp3
             SqlCommand sqlCommand = new SqlCommand(query, sql);
             SqlDataReader SDR = sqlCommand.ExecuteReader();
             while (SDR.Read()) {
+                Address = SDR["Address"].ToString();
                 StartDate = SDR["StartDate"].ToString();
                 EndDate = SDR["EndDate"].ToString();
                 WorkingHours = SDR["WorkingHours"].ToString();
@@ -172,6 +173,8 @@ namespace WindowsFormsApp3
             txtCustomerID.Text = CustomerID.ToString();
             txtTotalCharges.Text = TotalCharge;
 
+            txtAddress.Text = Address.ToString();
+
         }
 
 
@@ -198,9 +201,9 @@ namespace WindowsFormsApp3
             int CallerNumber = int.Parse(txtCallerTpNo.Text);
             //Fee
             float fee = float.Parse(txtTotalCharges.Text);
-            
+            String address = txtAddress.Text.ToString();
 
-            string query = "update Bookings set  StartDate ='"+StartDate+ "', EndDate = '"+ EndDate + "',WorkingHours='"+WorkingHours+ "',BackhoeType1='"+BackhoeType1+ "', BackhoeType1Ratings ='"+ BackhoeType1Ratings+ "', BackhoeType1Count = '"+BackhoeType1Count+ "', BackhoeType2 ='"+BackhoeType2+ "',BackhoeType2Ratings = '"+BackhoeType2Ratings+ "',BackhoeType2Count ='"+BackhoeType2Count+ "',BackhoeType3= '"+BackhoeType3+ "',BackhoeType3Ratings ='"+BackhoeType3Ratings+ "',BackhoeType3Count =  '"+BackhoeType3Count+ "',CallerName ='"+CallerName+ "',CalledDate ='"+ CalledDate + "',CallerNic = '"+CallerNic+ "', CallerNumber ='"+CallerNumber+ "', TotalCharge = '"+fee+ "' where BookingID = '" + searchID+ "'";
+            string query = "update Bookings set  Address = '"+address +"',StartDate ='"+StartDate+ "', EndDate = '"+ EndDate + "',WorkingHours='"+WorkingHours+ "',BackhoeType1='"+BackhoeType1+ "', BackhoeType1Ratings ='"+ BackhoeType1Ratings+ "', BackhoeType1Count = '"+BackhoeType1Count+ "', BackhoeType2 ='"+BackhoeType2+ "',BackhoeType2Ratings = '"+BackhoeType2Ratings+ "',BackhoeType2Count ='"+BackhoeType2Count+ "',BackhoeType3= '"+BackhoeType3+ "',BackhoeType3Ratings ='"+BackhoeType3Ratings+ "',BackhoeType3Count =  '"+BackhoeType3Count+ "',CallerName ='"+CallerName+ "',CalledDate ='"+ CalledDate + "',CallerNic = '"+CallerNic+ "', CallerNumber ='"+CallerNumber+ "', TotalCharge = '"+fee+ "' where BookingID = '" + searchID+ "'";
             SqlCommand com = new SqlCommand(query,sql);
             int i = com.ExecuteNonQuery();
             if (i > 0)
@@ -235,6 +238,7 @@ namespace WindowsFormsApp3
             txtBackhoeT2.Clear();
             txtBackhoeT3.Clear();
             txtBookingID.Clear();
+            txtAddress.Clear();
             
         }
 
@@ -271,7 +275,8 @@ namespace WindowsFormsApp3
                 txtCallerTpNo.Focus();
                 return false;
             }
-                        else if (txtCallerTpNo.Text.ToString() == "") {
+
+            else if (txtCallerTpNo.Text.ToString() == "") {
                 MessageBox.Show("Insert Caller Telephone Number");
                 txtCallerTpNo.Focus();
                 return false;
@@ -280,6 +285,11 @@ namespace WindowsFormsApp3
             else if (IsNumber(txtCallerTpNo.Text.ToString()) == false) {
                 MessageBox.Show("Invalid Telephone Number");
                 txtCallerTpNo.Focus();
+                return false;
+            }
+            else if (txtAddress.Text.ToString() == " ") {
+                MessageBox.Show("Please Enter Address");
+                txtAddress.Focus();
                 return false;
             }
 

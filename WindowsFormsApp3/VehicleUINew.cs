@@ -19,7 +19,9 @@ namespace WindowsFormsApp3
         String vID;
 
 
-        String Model, VehicleCapacity, VehicleClass, EngineType, Fueltype, Status, MachineCategory, RegDate, RegNo, ChassisNo, YearOfManufac, DateOfCom, VehicleType;
+        String Model, VehicleClass, EngineType, Fueltype, VehicleCapacity, Colour, Weight, RegDate, RegNo, ChassisNo, YearOfManufac, VehicleType;
+        
+
         int HiringRate;
         private void VehicleUINew_Load(object sender, EventArgs e)
         {
@@ -84,15 +86,15 @@ namespace WindowsFormsApp3
             txtChassisNo.Clear();
             txtEngineType.Clear();
             txtFuelType.Clear();
-            txtHiringRate.Clear();
-            txtMachineCat.Clear();
+            
+            txtWeight.Clear();
             txtModel.Clear();
             txtRegistrationNo.Clear();
-            txtStatus.Clear();
+            txtColour.Clear();
             txtVehicleCapacity.Clear();
             txtVehicleClass.Clear();
             txtYearOfManufacture.Clear();
-            dateOfCommencement.Value = DateTime.Now;
+           
             DateRegistration.Value = DateTime.Now;
             dropdownVehicleType.Text = null;
 
@@ -100,7 +102,7 @@ namespace WindowsFormsApp3
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -129,15 +131,15 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Please Enter the Fuel Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtFuelType.Focus();
                 }
-                else if (txtStatus.Text == "")
+                else if (txtColour.Text == "")
                 {
                     MessageBox.Show("Please Enter the Status", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtStatus.Focus();
+                    txtColour.Focus();
                 }
-                else if (txtMachineCat.Text == "")
+                else if (txtWeight.Text == "")
                 {
                     MessageBox.Show("Please Enter the Machine Category", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtMachineCat.Focus();
+                    txtWeight.Focus();
                 }
                 else if (txtRegistrationNo.Text == "")
                 {
@@ -154,11 +156,7 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Please Enter the Year Of Manufacture", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtYearOfManufacture.Focus();
                 }
-                else if (txtHiringRate.Text == "")
-                {
-                    MessageBox.Show("Please Enter the Hiring Rate", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtHiringRate.Focus();
-                }
+               
 
                 else
                 {
@@ -170,19 +168,17 @@ namespace WindowsFormsApp3
                     VehicleClass = txtVehicleClass.Text.ToString();
                     EngineType = txtEngineType.Text.ToString();
                     Fueltype = txtFuelType.Text.ToString();
-                    Status = txtStatus.Text.ToString();
-                    MachineCategory = txtMachineCat.Text.ToString();
+                    Colour = txtColour.Text.ToString();
+                    Weight = txtWeight.Text.ToString();
                     RegDate = DateRegistration.Value.ToString("yyyy/MM/dd");
                     RegNo = txtRegistrationNo.Text.ToString();
                     YearOfManufac = txtYearOfManufacture.Text.ToString();
                     ChassisNo = txtChassisNo.Text.ToString();
-                    HiringRate = int.Parse(txtHiringRate.Text.ToString());
-                    DateOfCom = dateOfCommencement.Value.ToString("yyyy/MM/dd");
+                
 
 
-
-                    string query = "insert into Vehicles(VehicleType,Model,VehicleCapacity,VehicleClass,EngineType,FuelType,Status,MachineCategory,RegistrationDate,RegistrationNo,ChassisNo,YearOfManufacture,HiringRate,DateOfCommencemnet)" +
-                        " values('" + VehicleType + "','" + Model + "','" + VehicleCapacity + "','" + VehicleClass + "', '" + EngineType + "' ,'" + Fueltype + "','" + Status + "','" + MachineCategory + "','" + RegDate + "','" + RegNo + "','" + ChassisNo + "','" + YearOfManufac + "','" + HiringRate + "','" + DateOfCom + "')";
+                    string query = "insert into Vehicles(VehicleType,Model,VehicleClass,EngineNo,FuelType,VehicleCapacity,Colour,Weights,RegistrationDate,RegistrationNo,YearOfManufacture,ChassiNo)" +
+                        " values('" + VehicleType + "','" + Model + "','" + VehicleClass + "','" + EngineType + "', '" + Fueltype + "' ,'" + VehicleCapacity + "','" + Colour + "','" + Weight + "','" + RegDate + "','" + RegNo + "','" + YearOfManufac + "','" + ChassisNo + "')";
                     SqlCommand sqlCommand = new SqlCommand(query, con);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Saved Successfully");
