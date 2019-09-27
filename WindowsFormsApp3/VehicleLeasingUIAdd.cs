@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+
 namespace WindowsFormsApp3
 {
     public partial class VehicleLeasingUIAdd : UserControl
@@ -37,6 +39,11 @@ namespace WindowsFormsApp3
             search = txtVid.Text.ToString();
             VehicleLeasingUIAddVehicleDetails vehicleLeasingUIAddVehicleDetails = new VehicleLeasingUIAddVehicleDetails();
             vehicleLeasingUIAddVehicleDetails.Show();
+        }
+
+        private void txtBranch_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         float AnnualInterestRate, MonthlyPayment, TotalLeasingAmount;
@@ -106,7 +113,11 @@ namespace WindowsFormsApp3
         private void btnSave_Click(object sender, EventArgs e)
         {
             sql.Open();
-            int vid = int.Parse(txtVid.Text.ToString());
+           
+            String ID = txtVid.Text;
+            ID = Regex.Replace(ID, "[^0-9]", "");
+            int vid = int.Parse(ID);
+
             Bank = txtBank.Text.ToString();
             Branch = txtBranch.Text.ToString();
             BankCode = txtBankCode.Text.ToString();

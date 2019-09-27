@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApp3
 {
@@ -18,8 +19,8 @@ namespace WindowsFormsApp3
         public static string ID;
         //get sring db connection
         private SqlConnection sqlConnection = new SqlConnection(nameServer);
-        string  ContractStartDate, ContractEndDate, name, address, email, ProjectManagerName, ProjectAddress, ProjectEmail, EndDate,StartDate;
-        int ContactNumber, FaxNumber, ProjectContactNumber;
+        string   name, address, email,  EndDate, StartDate,ContactNumber, FaxNumber;
+       
         SqlCommand command;
         String newCustomerID;
 
@@ -99,10 +100,7 @@ namespace WindowsFormsApp3
                 txtContactNumber.Clear();
                 txtEmail1.Clear();
                 txtFaxNumber.Clear();
-                txtProjectManager.Clear();
-                txtAddress1.Clear();
-                txtContactNumber2.Clear();
-                txtEmail2.Clear();
+                
 
             }
         }   
@@ -159,50 +157,32 @@ namespace WindowsFormsApp3
                         MessageBox.Show("Please Enter Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtEmail1.Focus();
                     }
+                    else if(isValidEmailAddress(txtEmail1.Text.ToString()) == false){
+                        MessageBox.Show("This is not a valid Email Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtEmail1.Focus();
+
+                    }
                     else if (txtFaxNumber.Text == "")
                     {
                         MessageBox.Show("Please Enter Fax Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtFaxNumber.Focus();
                     }
-                    else if (txtProjectManager.Text == "")
-                    {
-                        MessageBox.Show("Please Enter Project Manager Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtProjectManager.Focus();
-                    }
-                    else if (txtAddress1.Text == "")
-                    {
-                        MessageBox.Show("Please Enter Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtAddress1.Focus();
-                    }
-                    else if (txtContactNumber2.Text == "")
-                    {
-                        MessageBox.Show("Please Enter Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtContactNumber2.Focus();
-                    }
-                    else if (txtEmail2.Text == "")
-                    {
-                        MessageBox.Show("Please Enter Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtEmail2.Focus();
-                    }
+                   
                     else
                     {
-                       
-                        sqlConnection.Open();
 
+                        sqlConnection.Open();
                         name = txtName.Text.ToString();
                         address = txtAddress.Text.ToString();
                         email = txtEmail1.Text.ToString();
-                        ProjectManagerName = txtProjectManager.Text.ToString();
-                        ProjectAddress = txtAddress1.Text.ToString();
-                        ProjectEmail = txtEmail2.Text.ToString();
-                        ContactNumber = int.Parse(txtContactNumber.Text);
-                        FaxNumber = int.Parse(txtFaxNumber.Text);
-                        ProjectContactNumber = int.Parse(txtContactNumber2.Text);
-                        EndDate = dateEndContract.Value.ToString("yyyy/MM/dd");
-                        StartDate = dateStartContract.Value.ToString("yyyy/MM/dd");
+                       
+                        ContactNumber = txtContactNumber.Text.ToString();
+                        FaxNumber = txtFaxNumber.Text.ToString();
+                        EndDate = dateEndContract.Value.ToString();
+                        StartDate = dateStartContract.Value.ToString();
 
-                        string query = "insert into Customer(name,address,email,ProjectManagerName,ProjectAddress,ProjectEmail,ContactNumber,FaxNumber,ProjectContactNumber,ContractStartDate,ContractEndDate) " +
-                            "values('" + name + "','" + address + "','" + email + "','" + ProjectManagerName + "','" + ProjectAddress + "','" + ProjectEmail + "','" + ContactNumber + "','" + FaxNumber + "','" + ProjectContactNumber + "','" + StartDate + "','" + EndDate + "')";
+                        string query = "insert into Customer(name,address,email,ContactNumber,FaxNumber,ContractStartDate,ContractEndDate) " +
+                            "values('" + name + "','" + address + "','" + email + "','" + ContactNumber + "','" + FaxNumber + "','" + Convert.ToDateTime(StartDate) + "','" + Convert.ToDateTime(EndDate) + "')";
                         command = new SqlCommand(query, sqlConnection);
                         int chk = command.ExecuteNonQuery();
 
@@ -251,6 +231,20 @@ namespace WindowsFormsApp3
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+        }
+        public bool isValidEmailAddress(String s)
+        {
+            if (string.IsNullOrEmpty(s))
+                return false;
+            else
+            {
+                var regex = new Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
+                return regex.IsMatch(s) && !s.EndsWith(".");
+            }
+        }
+        public static bool IsPhoneNumber(string number)
+        {
+            return Regex.Match(number, @"^(\+[0-9]{9})$").Success;
         }
     }
 }

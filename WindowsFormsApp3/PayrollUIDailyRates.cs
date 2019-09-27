@@ -70,7 +70,7 @@ namespace WindowsFormsApp3
                         int OT = Convert.ToInt32(edtOT.Text);
                         int OTRate = Convert.ToInt32(drpOTRate.selectedValue.ToString());
                         int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
-                        MessageBox.Show(WokingHours.ToString() + OT.ToString() + OTRate);
+                        //MessageBox.Show(WokingHours.ToString() + OT.ToString() + OTRate);
 
                         String sql = "Insert into Payroll_Operators(SalaryDate, WorkingHours, OT, OTRate, EmployeeID)" + "Values('" + SalaryDate + "','" + WokingHours + "','" + OT + "', '" + OTRate + "', '" + EmployeeID + "')";
                         //String sql = "Insert into Payroll_Operators(SalaryDate, WorkingHours, OT, OTRate, EmpolyeeID) Values('"+dateTimePayroll.Text+"', '"+edtWokingHours.Text+"','"+edtOT.Text+"' , '"+drpOTRate.Text+"',)";
@@ -114,8 +114,8 @@ namespace WindowsFormsApp3
                         {
 
                             edtName.Text = read.GetValue(1).ToString();
-                            edtPossition.Text = read.GetValue(12).ToString();
-                            edtCity.Text = read.GetValue(10).ToString();
+                            edtPossition.Text = read.GetValue(11).ToString();
+                            edtCity.Text = read.GetValue(9).ToString();
 
 
                         }

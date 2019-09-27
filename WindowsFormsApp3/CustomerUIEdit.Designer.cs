@@ -41,15 +41,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtEmail2 = new System.Windows.Forms.TextBox();
-            this.lblProjectEmail = new System.Windows.Forms.Label();
-            this.txtContactNumber2 = new System.Windows.Forms.TextBox();
-            this.lblProjectContactNumber = new System.Windows.Forms.Label();
-            this.txtAddress1 = new System.Windows.Forms.TextBox();
-            this.lblProjectAddress = new System.Windows.Forms.Label();
-            this.txtProjectManager = new System.Windows.Forms.TextBox();
-            this.lblProjectManeger = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -61,7 +52,6 @@
             this.lblStartDate = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtcutomerID
@@ -182,95 +172,11 @@
             this.lblName.TabIndex = 30;
             this.lblName.Text = "Name";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox2.Controls.Add(this.txtEmail2);
-            this.groupBox2.Controls.Add(this.lblProjectEmail);
-            this.groupBox2.Controls.Add(this.txtContactNumber2);
-            this.groupBox2.Controls.Add(this.lblProjectContactNumber);
-            this.groupBox2.Controls.Add(this.txtAddress1);
-            this.groupBox2.Controls.Add(this.lblProjectAddress);
-            this.groupBox2.Controls.Add(this.txtProjectManager);
-            this.groupBox2.Controls.Add(this.lblProjectManeger);
-            this.groupBox2.Location = new System.Drawing.Point(515, 97);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(335, 294);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Project Details";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // txtEmail2
-            // 
-            this.txtEmail2.Location = new System.Drawing.Point(179, 165);
-            this.txtEmail2.Name = "txtEmail2";
-            this.txtEmail2.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail2.TabIndex = 29;
-            this.txtEmail2.TextChanged += new System.EventHandler(this.txtEmail2_TextChanged);
-            // 
-            // lblProjectEmail
-            // 
-            this.lblProjectEmail.AutoSize = true;
-            this.lblProjectEmail.Location = new System.Drawing.Point(73, 165);
-            this.lblProjectEmail.Name = "lblProjectEmail";
-            this.lblProjectEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblProjectEmail.TabIndex = 28;
-            this.lblProjectEmail.Text = "Email";
-            // 
-            // txtContactNumber2
-            // 
-            this.txtContactNumber2.Location = new System.Drawing.Point(179, 127);
-            this.txtContactNumber2.Name = "txtContactNumber2";
-            this.txtContactNumber2.Size = new System.Drawing.Size(100, 20);
-            this.txtContactNumber2.TabIndex = 27;
-            // 
-            // lblProjectContactNumber
-            // 
-            this.lblProjectContactNumber.AutoSize = true;
-            this.lblProjectContactNumber.Location = new System.Drawing.Point(70, 127);
-            this.lblProjectContactNumber.Name = "lblProjectContactNumber";
-            this.lblProjectContactNumber.Size = new System.Drawing.Size(84, 13);
-            this.lblProjectContactNumber.TabIndex = 26;
-            this.lblProjectContactNumber.Text = "Contact Number";
-            // 
-            // txtAddress1
-            // 
-            this.txtAddress1.Location = new System.Drawing.Point(179, 87);
-            this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(100, 20);
-            this.txtAddress1.TabIndex = 25;
-            // 
-            // lblProjectAddress
-            // 
-            this.lblProjectAddress.AutoSize = true;
-            this.lblProjectAddress.Location = new System.Drawing.Point(73, 87);
-            this.lblProjectAddress.Name = "lblProjectAddress";
-            this.lblProjectAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblProjectAddress.TabIndex = 24;
-            this.lblProjectAddress.Text = "Address";
-            // 
-            // txtProjectManager
-            // 
-            this.txtProjectManager.Location = new System.Drawing.Point(179, 48);
-            this.txtProjectManager.Name = "txtProjectManager";
-            this.txtProjectManager.Size = new System.Drawing.Size(100, 20);
-            this.txtProjectManager.TabIndex = 23;
-            // 
-            // lblProjectManeger
-            // 
-            this.lblProjectManeger.AutoSize = true;
-            this.lblProjectManeger.Location = new System.Drawing.Point(71, 48);
-            this.lblProjectManeger.Name = "lblProjectManeger";
-            this.lblProjectManeger.Size = new System.Drawing.Size(85, 13);
-            this.lblProjectManeger.TabIndex = 21;
-            this.lblProjectManeger.Text = "Project Manager";
-            // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Navy;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(591, 424);
+            this.btnUpdate.Location = new System.Drawing.Point(189, 422);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(86, 37);
             this.btnUpdate.TabIndex = 15;
@@ -282,7 +188,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.Navy;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(682, 424);
+            this.btnClear.Location = new System.Drawing.Point(280, 422);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(86, 37);
             this.btnClear.TabIndex = 14;
@@ -294,7 +200,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Navy;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(775, 422);
+            this.btnDelete.Location = new System.Drawing.Point(373, 420);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 37);
             this.btnDelete.TabIndex = 13;
@@ -383,7 +289,6 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtcutomerID);
             this.Controls.Add(this.label1);
@@ -392,8 +297,6 @@
             this.Load += new System.EventHandler(this.CustomerUIEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,15 +314,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtEmail2;
-        private System.Windows.Forms.Label lblProjectEmail;
-        private System.Windows.Forms.TextBox txtContactNumber2;
-        private System.Windows.Forms.Label lblProjectContactNumber;
-        private System.Windows.Forms.TextBox txtAddress1;
-        private System.Windows.Forms.Label lblProjectAddress;
-        private System.Windows.Forms.TextBox txtProjectManager;
-        private System.Windows.Forms.Label lblProjectManeger;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;

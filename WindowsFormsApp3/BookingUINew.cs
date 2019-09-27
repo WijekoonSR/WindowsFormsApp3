@@ -31,7 +31,7 @@ namespace WindowsFormsApp3
         protected int NoOfExcavator, NoBackhoeLoaders, NoBulldozers, NoSkidSteerLoaders, NoMotorGraders, NoTrenchers = 0;
 
 
-        protected String Type1 = "Excavator", Type2 = "Excavator", Type3 = "Excavator";
+        protected String Type1 = "Excavators", Type2 = "Excavators", Type3 = "Excavators";
         float TotalCharge;
         public BookingUINew()
         {
@@ -123,7 +123,7 @@ namespace WindowsFormsApp3
                 Type1 = dropDownBackhoeTypes1.selectedValue;
                 int count = 0;
 
-                if (Type1 == "Excavator") count = NoOfExcavator;
+                if (Type1 == "Excavators") count = NoOfExcavator;
                 else if (Type1 == "Backhoe Loaders") count = NoBackhoeLoaders;
                 else if (Type1 == "Bulldozers") count = NoBulldozers;
                 else if (Type1 == "Skid Steer Loaders") count = NoSkidSteerLoaders;
@@ -155,7 +155,7 @@ namespace WindowsFormsApp3
                 Type2 = dropDownBackhoeTypes2.selectedValue;
                 int count = 0;
 
-                if (Type2 == "Excavator") count = NoOfExcavator;
+                if (Type2 == "Excavators") count = NoOfExcavator;
                 else if (Type2 == "Backhoe Loaders") count = NoBackhoeLoaders;
                 else if (Type2 == "Bulldozers") count = NoBulldozers;
                 else if (Type2 == "Skid Steer Loaders") count = NoSkidSteerLoaders;
@@ -189,7 +189,7 @@ namespace WindowsFormsApp3
                 dropDownItemsRemove();
                 int count = 0;
                 Type3 = dropDownBackhoeTypes2.selectedValue;
-                if (Type3 == "Excavator") count = NoOfExcavator;
+                if (Type3 == "Excavators") count = NoOfExcavator;
                 else if (Type3 == "Backhoe Loaders") count = NoBackhoeLoaders;
                 else if (Type3 == "Bulldozers") count = NoBulldozers;
                 else if (Type3 == "Skid Steer Loaders") count = NoSkidSteerLoaders;
@@ -296,7 +296,7 @@ namespace WindowsFormsApp3
                 //read data from query
                 while (reader.Read())
                 {
-                    if (reader["Type"].ToString() == "Excavator")
+                    if (reader["Type"].ToString() == "Excavators")
                     {
                         NoOfExcavator = Convert.ToInt32(reader["count"]);
                     }
@@ -368,6 +368,9 @@ namespace WindowsFormsApp3
 
                     float BackhoeType3Ratings = float.Parse(txtRatings3.Text);
                     int BackhoeType3Count = int.Parse(dropDownNoOfBackhoes3.Text);
+
+                    //address
+                    String Address = txtAddress.Text;
                     //Caller Details
                     String CallerName = txtCallerName.Text;
                     String CalledDate = dateCaller.Value.ToString("yyyy/MM/dd");
@@ -381,8 +384,8 @@ namespace WindowsFormsApp3
                     ID = Regex.Replace(ID, "[^0-9]", "");
                     int CustomerID = int.Parse(ID);
 
-                    SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
-                        "Values(@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
+                    SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,Address ,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
+                        "Values(@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count,@Address, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
                     sqlCommandInserted.Parameters.AddWithValue("@startDate", StartDate);
                     sqlCommandInserted.Parameters.AddWithValue("@EndDate", EndDate);
                     sqlCommandInserted.Parameters.AddWithValue("@WorkingHours", WorkingHours);
@@ -395,6 +398,7 @@ namespace WindowsFormsApp3
                     sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3", Type3);
                     sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Ratings", BackhoeType3Ratings);
                     sqlCommandInserted.Parameters.AddWithValue("@BackhoeType3Count", BackhoeType3Count);
+                    sqlCommandInserted.Parameters.AddWithValue("@Address", Address);
                     sqlCommandInserted.Parameters.AddWithValue("@CallerName", CallerName);
                     sqlCommandInserted.Parameters.AddWithValue("@CalledDate", CalledDate);
                     sqlCommandInserted.Parameters.AddWithValue("@CallerNic", CallerNic);
@@ -408,7 +412,7 @@ namespace WindowsFormsApp3
 
                     sqlConnection.Close();
 
-                    //check backhoes whether vehicles have been added to booking
+                    //check  whether vehicles have been added to booking
                     if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1);
                     else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2);
                     else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3);
@@ -438,6 +442,10 @@ namespace WindowsFormsApp3
          }
      }
 
+        public static bool IsNumber(string s)
+        {
+            return s.All(char.IsDigit);
+        }
 
 
         private void insertBooking_vehicle(int count, string Type)
@@ -529,13 +537,19 @@ namespace WindowsFormsApp3
                 txtCallerName.Focus();
                 return false;
             }
-           else if (txtNIC.Text.ToString() == "") {
+            else if (txtNIC.Text.ToString() == "") {
                 MessageBox.Show("Insert NIC");
                 txtNIC.Focus();
                 return false;
             }
             else if (txtCallerTpNo.Text.ToString() == "") {
                 MessageBox.Show("Insert Caller Telephone Number");
+                txtCallerTpNo.Focus();
+                return false;
+            }
+
+            else if (IsNumber(txtCallerTpNo.Text.ToString()) == false) {
+                MessageBox.Show("Invalid Telephone Number");
                 txtCallerTpNo.Focus();
                 return false;
             }
@@ -550,10 +564,28 @@ namespace WindowsFormsApp3
                 txtRatings1.Focus();
                 return false;
             }
+
+            else if (IsNumber(txtRatings1.Text.ToString()) == false) {
+                MessageBox.Show("Invalid input check it..");
+                txtRatings1.Focus();
+                return false;
+            }
             else if (dropDownNoOfBackhoes1.SelectedIndex.Equals(-1)) {
 
                 MessageBox.Show("Insert at least one vehicle type type to make a booking");
                 dropDownNoOfBackhoes1.Focus();
+                return false;
+            }
+            else if (IsNumber(txtRatings2.Text.ToString()) == false)
+            {
+                MessageBox.Show("Invalid input check it..");
+                txtRatings2.Focus();
+                return false;
+            }
+            else if (IsNumber(txtRatings3.Text.ToString()) == false)
+            {
+                MessageBox.Show("Invalid input check it..");
+                txtRatings3.Focus();
                 return false;
             }
 

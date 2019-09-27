@@ -133,7 +133,10 @@ namespace WindowsFormsApp3
         SqlCommand sqlCommand;
 
         public object Response { get; private set; }
-
+        public static bool IsNumber(string s)
+        {
+            return s.All(char.IsDigit);
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -146,6 +149,12 @@ namespace WindowsFormsApp3
                 else if (txtQuantity.Text == "")
                 {
                     MessageBox.Show("Please Enter the Quantity", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtQuantity.Focus();
+                }
+
+                else if (IsNumber(txtQuantity.Text.ToString()) == false)
+                {
+                    MessageBox.Show("Invalid Quantity", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtQuantity.Focus();
                 }
                 else if (dateNew.Text == "")
@@ -188,7 +197,11 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Please Enter the Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtContactNo.Focus();
                 }
-                
+                else if (IsNumber(txtContactNo.Text.ToString()) == false)
+                {
+                    MessageBox.Show("Invalid Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtContactNo.Focus();
+                }
                 else if (txtEmail.Text == "")
                 {
                     MessageBox.Show("Please Enter the Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
