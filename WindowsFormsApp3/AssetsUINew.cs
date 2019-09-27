@@ -14,11 +14,13 @@ namespace WindowsFormsApp3
 {
     public partial class AssetsUINew : UserControl
     {
+       
         public static String server = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
 
         SqlConnection sqlConnection = new SqlConnection(server);
         String spareParts, date, issuedDate, shopName, address, email, ownerName;
         string assetsID;
+        Bitmap AttachmentNew;
         public AssetsUINew()
         {
             try
@@ -52,21 +54,62 @@ namespace WindowsFormsApp3
             }
         }
 
+        
+
+
+        public static bool MatchStringFromRegex(string str, string regexstr)
+        {
+            str = str.Trim();
+            System.Text.RegularExpressions.Regex pattern = new System.Text.RegularExpressions.Regex(regexstr);
+            return pattern.IsMatch(str);
+        }
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void btnAttach_Click(object sender, EventArgs e)
+        private void txtContactNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        
+
+        private void txtShopName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        
+
+        private void txtInvoiceNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void btnAttach_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    
+                    picBoxAttachNew.Image = Image.FromFile(ofd.FileName);
+                }
+            }   }
+
         private void picBoxAttachNew_Click(object sender, EventArgs e)
         {
-            Image image = Image.FromFile("Path of file");
-            picBoxAttachNew.Image = image;
-
+            DataGridViewImageColumn dgvImage = new DataGridViewImageColumn();
+            dgvImage.HeaderText = "Attachments";
+            dgvImage.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         float price;
@@ -115,6 +158,11 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Please Enter the Price", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtPrice.Focus();
                 }
+                else if (picBoxAttachNew.Image.Size.IsEmpty)
+                {
+                    MessageBox.Show("Please Attach an Image of Invoice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    picBoxAttachNew.Focus();
+                }
                 else if (txtInvoiceNumber.Text == "")
                 {
                     MessageBox.Show("Please Enter the Invoice Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -140,7 +188,7 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Please Enter the Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtContactNo.Focus();
                 }
-
+                
                 else if (txtEmail.Text == "")
                 {
                     MessageBox.Show("Please Enter the Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -151,6 +199,7 @@ namespace WindowsFormsApp3
                else  if (isValidEmailAddress(txtEmail.Text.ToString()) == false)
                 {
                     MessageBox.Show("This is not a valid Email address ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEmail.Focus();
                 }
 
                 else if (txtOwnerName.Text == "")
@@ -181,13 +230,17 @@ namespace WindowsFormsApp3
                     ownerName = txtOwnerName.Text.ToString();
                     OwnerContact = int.Parse(txtOwnContactNew.Text);
 
+                    PictureBox picBoxAttachNew1 = picBoxAttachNew;
+                    AttachmentNew = (Bitmap)picBoxAttachNew1.Image;
+
                     //ID takes only integer values
                     String ID = txtVehicleID.Text;
                     ID = Regex.Replace(ID, "[^0-9]", "");
                     int VehicleID = int.Parse(ID);
 
-                    String query = "insert into Assets_Maintenance(VehicleID,PurchasedSpareParts,Quantity,PurchaseDate,Price,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)" +
-                        " Values('" + VehicleID + "' ,'" + spareParts + "','" + quantity + "','" + date + "','" + price + "','" + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
+                    String query = "insert into Assets_Maintenance" +
+                        "(VehicleID,PurchasedSpareParts,Quantity,PurchaseDate,Price,AttachmentNew,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)" +
+                        " Values('" + VehicleID + "' ,'" + spareParts + "','" + quantity + "','" + date + "','" + price + "','"+ AttachmentNew+"," + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
 
 
                     sqlCommand = new SqlCommand(query, sqlConnection);
