@@ -40,15 +40,15 @@
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.picUser = new System.Windows.Forms.PictureBox();
             this.btnChangeUserPic = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lblFileName = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.listView = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -73,9 +73,9 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(137, 217);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.ReadOnly = true;
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 29;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUserID
             // 
@@ -138,6 +138,7 @@
             this.btnClear.TabIndex = 31;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // panel1
             // 
@@ -147,6 +148,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 109);
             this.panel1.TabIndex = 33;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.picUser);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(100, 86);
+            this.panel2.TabIndex = 35;
             // 
             // picUser
             // 
@@ -170,15 +180,6 @@
             this.btnChangeUserPic.UseVisualStyleBackColor = true;
             this.btnChangeUserPic.Click += new System.EventHandler(this.btnChangeUserPic_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.picUser);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(100, 86);
-            this.panel2.TabIndex = 35;
-            // 
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
@@ -200,6 +201,7 @@
             // 
             // listView
             // 
+            this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(137, 3);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(114, 109);
@@ -227,9 +229,10 @@
             this.Controls.Add(this.lblEmployeeID);
             this.Name = "UserUIEdit";
             this.Size = new System.Drawing.Size(254, 355);
+            this.Load += new System.EventHandler(this.UserUIEdit_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
