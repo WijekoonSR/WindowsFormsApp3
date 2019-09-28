@@ -114,5 +114,10 @@ namespace WindowsFormsApp3
                 sqlConnection.Close();
             }
         }
+
+        private void dgvAssetsDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
