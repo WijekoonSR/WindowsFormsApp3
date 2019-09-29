@@ -53,9 +53,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(137, 304);
+            this.btnSave.Location = new System.Drawing.Point(183, 374);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 32;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -63,51 +64,59 @@
             // 
             // txtReEnterPasword
             // 
-            this.txtReEnterPasword.Location = new System.Drawing.Point(137, 256);
+            this.txtReEnterPasword.Location = new System.Drawing.Point(183, 315);
+            this.txtReEnterPasword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReEnterPasword.Name = "txtReEnterPasword";
-            this.txtReEnterPasword.Size = new System.Drawing.Size(100, 20);
+            this.txtReEnterPasword.Size = new System.Drawing.Size(132, 22);
             this.txtReEnterPasword.TabIndex = 30;
             this.txtReEnterPasword.Visible = false;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(137, 217);
+            this.txtPassword.Location = new System.Drawing.Point(183, 267);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.ReadOnly = true;
+            this.txtPassword.Size = new System.Drawing.Size(132, 22);
             this.txtPassword.TabIndex = 29;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUserID
             // 
-            this.txtUserID.Location = new System.Drawing.Point(137, 184);
+            this.txtUserID.Location = new System.Drawing.Point(183, 226);
+            this.txtUserID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.ReadOnly = true;
-            this.txtUserID.Size = new System.Drawing.Size(100, 20);
+            this.txtUserID.Size = new System.Drawing.Size(132, 22);
             this.txtUserID.TabIndex = 28;
             // 
             // txtEmployeeID
             // 
-            this.txtEmployeeID.Location = new System.Drawing.Point(137, 146);
+            this.txtEmployeeID.Location = new System.Drawing.Point(183, 180);
+            this.txtEmployeeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.ReadOnly = true;
-            this.txtEmployeeID.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeID.Size = new System.Drawing.Size(132, 22);
             this.txtEmployeeID.TabIndex = 27;
             // 
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(17, 191);
+            this.lblUserID.Location = new System.Drawing.Point(23, 235);
+            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(43, 13);
+            this.lblUserID.Size = new System.Drawing.Size(55, 17);
             this.lblUserID.TabIndex = 25;
             this.lblUserID.Text = "User ID";
             // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(17, 263);
+            this.lbUsername.Location = new System.Drawing.Point(23, 324);
+            this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(98, 13);
+            this.lbUsername.Size = new System.Drawing.Size(130, 17);
             this.lbUsername.TabIndex = 24;
             this.lbUsername.Text = "Re-Enter Password";
             this.lbUsername.Visible = false;
@@ -115,26 +124,29 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(17, 224);
+            this.lblPassword.Location = new System.Drawing.Point(23, 276);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
+            this.lblPassword.Size = new System.Drawing.Size(69, 17);
             this.lblPassword.TabIndex = 23;
             this.lblPassword.Text = "Password";
             // 
             // lblEmployeeID
             // 
             this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.Location = new System.Drawing.Point(17, 153);
+            this.lblEmployeeID.Location = new System.Drawing.Point(23, 188);
+            this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(67, 13);
+            this.lblEmployeeID.Size = new System.Drawing.Size(87, 17);
             this.lblEmployeeID.TabIndex = 22;
             this.lblEmployeeID.Text = "Employee ID";
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(40, 304);
+            this.btnClear.Location = new System.Drawing.Point(53, 374);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.Size = new System.Drawing.Size(100, 28);
             this.btnClear.TabIndex = 31;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -144,9 +156,10 @@
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnChangeUserPic);
-            this.panel1.Location = new System.Drawing.Point(31, 3);
+            this.panel1.Location = new System.Drawing.Point(41, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 109);
+            this.panel1.Size = new System.Drawing.Size(133, 134);
             this.panel1.TabIndex = 33;
             // 
             // panel2
@@ -156,6 +169,9 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(100, 86);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(133, 106);
             this.panel2.TabIndex = 35;
             // 
             // picUser
@@ -163,18 +179,21 @@
             this.picUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
             this.picUser.Location = new System.Drawing.Point(0, 0);
+            this.picUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(100, 86);
+            this.picUser.Size = new System.Drawing.Size(133, 106);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUser.TabIndex = 26;
             this.picUser.TabStop = false;
+            this.picUser.Click += new System.EventHandler(this.picUser_Click);
             // 
             // btnChangeUserPic
             // 
             this.btnChangeUserPic.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnChangeUserPic.Location = new System.Drawing.Point(0, 86);
+            this.btnChangeUserPic.Location = new System.Drawing.Point(0, 106);
+            this.btnChangeUserPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangeUserPic.Name = "btnChangeUserPic";
-            this.btnChangeUserPic.Size = new System.Drawing.Size(100, 23);
+            this.btnChangeUserPic.Size = new System.Drawing.Size(133, 28);
             this.btnChangeUserPic.TabIndex = 34;
             this.btnChangeUserPic.Text = "Change";
             this.btnChangeUserPic.UseVisualStyleBackColor = true;
@@ -183,17 +202,19 @@
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(17, 127);
+            this.lblFileName.Location = new System.Drawing.Point(23, 156);
+            this.lblFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(63, 13);
+            this.lblFileName.Size = new System.Drawing.Size(83, 17);
             this.lblFileName.TabIndex = 34;
             this.lblFileName.Text = "File Name ?";
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(93, 118);
+            this.btnLoad.Location = new System.Drawing.Point(124, 145);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(70, 23);
+            this.btnLoad.Size = new System.Drawing.Size(93, 28);
             this.btnLoad.TabIndex = 35;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -203,15 +224,17 @@
             // 
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(137, 3);
+            this.listView.Location = new System.Drawing.Point(183, 4);
+            this.listView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(114, 109);
+            this.listView.Size = new System.Drawing.Size(151, 133);
             this.listView.TabIndex = 36;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
             // UserUIEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listView);
             this.Controls.Add(this.btnLoad);
@@ -227,9 +250,11 @@
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmployeeID);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserUIEdit";
             this.Size = new System.Drawing.Size(254, 355);
             this.Load += new System.EventHandler(this.UserUIEdit_Load);
+            this.Size = new System.Drawing.Size(339, 437);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();

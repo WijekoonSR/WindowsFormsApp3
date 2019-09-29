@@ -35,7 +35,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.lblQuantityNew = new System.Windows.Forms.Label();
-            this.btnAttach = new System.Windows.Forms.Button();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.dateIssued = new System.Windows.Forms.DateTimePicker();
             this.lblIssuedDate = new System.Windows.Forms.Label();
             this.txtInvoiceNumber = new System.Windows.Forms.TextBox();
@@ -90,6 +90,8 @@
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(158, 25);
             this.txtContactNo.TabIndex = 35;
+            this.txtContactNo.TextChanged += new System.EventHandler(this.txtContactNo_TextChanged);
+            this.txtContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNo_KeyPress);
             // 
             // label12
             // 
@@ -119,7 +121,7 @@
             this.lblQuantityNew.TabIndex = 34;
             this.lblQuantityNew.Text = "Quantity";
             // 
-            // btnAttach
+            // btnBrowse
             // 
             this.btnAttach.Location = new System.Drawing.Point(212, 199);
             this.btnAttach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -130,6 +132,14 @@
             this.btnAttach.UseVisualStyleBackColor = true;
             this.btnAttach.Visible = false;
             this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
+            this.btnBrowse.Location = new System.Drawing.Point(283, 249);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(106, 32);
+            this.btnBrowse.TabIndex = 33;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnAttach_Click);
             // 
             // dateIssued
             // 
@@ -156,6 +166,7 @@
             this.txtInvoiceNumber.Name = "txtInvoiceNumber";
             this.txtInvoiceNumber.Size = new System.Drawing.Size(212, 25);
             this.txtInvoiceNumber.TabIndex = 30;
+            this.txtInvoiceNumber.TextChanged += new System.EventHandler(this.txtInvoiceNumber_TextChanged);
             // 
             // lblInvoiceNumber
             // 
@@ -174,6 +185,7 @@
             this.txtShopName.Name = "txtShopName";
             this.txtShopName.Size = new System.Drawing.Size(158, 25);
             this.txtShopName.TabIndex = 33;
+            this.txtShopName.TextChanged += new System.EventHandler(this.txtShopName_TextChanged);
             // 
             // label11
             // 
@@ -192,9 +204,9 @@
             this.lblAttachments.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAttachments.Name = "lblAttachments";
             this.lblAttachments.Size = new System.Drawing.Size(95, 18);
+            this.lblAttachments.Size = new System.Drawing.Size(114, 23);
             this.lblAttachments.TabIndex = 27;
-            this.lblAttachments.Text = "Attachments -";
-            this.lblAttachments.Visible = false;
+            this.lblAttachments.Text = "Attachments ";
             // 
             // txtPrice
             // 
@@ -376,7 +388,7 @@
             this.groupBox1.Controls.Add(this.picBoxAttachNew);
             this.groupBox1.Controls.Add(this.txtQuantity);
             this.groupBox1.Controls.Add(this.lblQuantityNew);
-            this.groupBox1.Controls.Add(this.btnAttach);
+            this.groupBox1.Controls.Add(this.btnBrowse);
             this.groupBox1.Controls.Add(this.dateIssued);
             this.groupBox1.Controls.Add(this.lblIssuedDate);
             this.groupBox1.Controls.Add(this.txtInvoiceNumber);
@@ -409,7 +421,6 @@
             this.picBoxAttachNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxAttachNew.TabIndex = 36;
             this.picBoxAttachNew.TabStop = false;
-            this.picBoxAttachNew.Visible = false;
             this.picBoxAttachNew.Click += new System.EventHandler(this.picBoxAttachNew_Click);
             // 
             // contextMenuStrip1
@@ -493,7 +504,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label lblQuantityNew;
-        private System.Windows.Forms.Button btnAttach;
+        private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.DateTimePicker dateIssued;
         private System.Windows.Forms.Label lblIssuedDate;
         private System.Windows.Forms.TextBox txtInvoiceNumber;
