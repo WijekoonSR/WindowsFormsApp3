@@ -4,24 +4,24 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BackhoeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="BackhoeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
         <EntityType Name="Assets_Maintenance">
           <Key>
             <PropertyRef Name="AssetsMaintenanceID" />
           </Key>
-          <Property Name="AssetsMaintenanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssetsMaintenanceID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="VehicleID" Type="int" />
-          <Property Name="PurchasedSpareParts" Type="varchar" MaxLength="10" />
+          <Property Name="PurchasedSpareParts" MaxLength="10" Type="varchar" />
           <Property Name="Quantity" Type="int" />
           <Property Name="PurchaseDate" Type="date" />
           <Property Name="Price" Type="float" />
           <Property Name="InvoiceNumber" Type="int" />
           <Property Name="IssuedDate" Type="date" />
-          <Property Name="ShopName" Type="varchar" MaxLength="10" />
-          <Property Name="Address" Type="varchar" MaxLength="20" />
+          <Property Name="ShopName" MaxLength="10" Type="varchar" />
+          <Property Name="Address" MaxLength="20" Type="varchar" />
           <Property Name="ContactNumber" Type="int" />
-          <Property Name="Email" Type="varchar" MaxLength="20" />
-          <Property Name="OwnerName" Type="varchar" MaxLength="10" />
+          <Property Name="Email" MaxLength="20" Type="varchar" />
+          <Property Name="OwnerName" MaxLength="10" Type="varchar" />
           <Property Name="OwnerContact" Type="int" />
           <Property Name="Attachment" Type="image" />
         </EntityType>
@@ -29,11 +29,11 @@
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="UserPic" Type="image" />
-          <Property Name="password" Type="varchar" MaxLength="50" />
+          <Property Name="password" MaxLength="50" Type="varchar" />
           <Property Name="EmployeeID" Type="int" />
-          <Property Name="FileName" Type="varchar" MaxLength="50" />
+          <Property Name="FileName" MaxLength="50" Type="varchar" />
         </EntityType>
         <EntityContainer Name="BackhoeModelStoreContainer">
           <EntitySet Name="Assets_Maintenance" EntityType="Self.Assets_Maintenance" Schema="dbo" store:Type="Tables" />

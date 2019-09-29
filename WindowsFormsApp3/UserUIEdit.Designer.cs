@@ -46,6 +46,8 @@
             this.lblFileName = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.listView = new System.Windows.Forms.ListView();
+            this.lblPicName = new System.Windows.Forms.Label();
+            this.txtPicName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
@@ -53,7 +55,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(137, 304);
+            this.btnSave.Location = new System.Drawing.Point(137, 325);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 32;
@@ -73,7 +75,6 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(137, 217);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.ReadOnly = true;
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 29;
             // 
@@ -120,6 +121,7 @@
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 23;
             this.lblPassword.Text = "Password";
+            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // lblEmployeeID
             // 
@@ -132,7 +134,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(40, 304);
+            this.btnClear.Location = new System.Drawing.Point(40, 325);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 31;
@@ -154,7 +156,7 @@
             this.panel2.Controls.Add(this.picUser);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(100, 86);
             this.panel2.TabIndex = 35;
@@ -192,7 +194,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(93, 118);
+            this.btnLoad.Location = new System.Drawing.Point(137, 89);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(70, 23);
             this.btnLoad.TabIndex = 35;
@@ -202,13 +204,31 @@
             // 
             // listView
             // 
+            this.listView.GridLines = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(137, 3);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(114, 109);
+            this.listView.Size = new System.Drawing.Size(114, 86);
             this.listView.TabIndex = 36;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
+            // 
+            // lblPicName
+            // 
+            this.lblPicName.AutoSize = true;
+            this.lblPicName.Location = new System.Drawing.Point(17, 297);
+            this.lblPicName.Name = "lblPicName";
+            this.lblPicName.Size = new System.Drawing.Size(99, 13);
+            this.lblPicName.TabIndex = 23;
+            this.lblPicName.Text = "Enter Picture Name";
+            this.lblPicName.Click += new System.EventHandler(this.lblPassword_Click);
+            // 
+            // txtPicName
+            // 
+            this.txtPicName.Location = new System.Drawing.Point(137, 290);
+            this.txtPicName.Name = "txtPicName";
+            this.txtPicName.Size = new System.Drawing.Size(100, 20);
+            this.txtPicName.TabIndex = 29;
             // 
             // UserUIEdit
             // 
@@ -221,15 +241,17 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtReEnterPasword);
+            this.Controls.Add(this.txtPicName);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.txtEmployeeID);
             this.Controls.Add(this.lblUserID);
             this.Controls.Add(this.lbUsername);
+            this.Controls.Add(this.lblPicName);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmployeeID);
             this.Name = "UserUIEdit";
-            this.Size = new System.Drawing.Size(272, 360);
+            this.Size = new System.Drawing.Size(279, 383);
             this.Load += new System.EventHandler(this.UserUIEdit_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -258,5 +280,7 @@
         private System.Windows.Forms.Label lblFileName;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.Label lblPicName;
+        private System.Windows.Forms.TextBox txtPicName;
     }
 }

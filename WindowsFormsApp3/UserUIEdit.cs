@@ -45,24 +45,16 @@ namespace WindowsFormsApp3
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            /*using (BackhoeEntities db = new BackhoeEntities() ) {
-                 User user = new User() { FileName = filename, UserPic = ConvertImageToBinary(picUser.Image) };//userpic in db
+            using (BackhoeEntities db = new BackhoeEntities() ) {
+                 User user = new User() { FileName = txtPicName.Text.ToString(), UserPic = ConvertImageToBinary(picUser.Image) };//userpic in db
                  db.Users.Add(user);
                  db.SaveChangesAsync();
                  MessageBox.Show("Picture Saved","Success", MessageBoxButtons.OK);
              }
-            */
-            String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
-            SqlConnection sql = new SqlConnection(name);
-            sql.Open();
-            string query = "insert into Users(UserPic) values(@id)";
-            SqlCommand sqlCommand = new SqlCommand(query, sql);
-            sqlCommand.Parameters.AddWithValue("@id", ConvertImageToBinary(picUser.Image));
-            sqlCommand.ExecuteNonQuery();
-            sql.Close();
+            
         }
 
-        public static Bitmap ByteToImage(byte[] blob)
+    /*    public static Bitmap ByteToImage(byte[] blob)
         {
             MemoryStream mStream = new MemoryStream();
             byte[] pData = blob;
@@ -71,6 +63,7 @@ namespace WindowsFormsApp3
             mStream.Dispose();
             return bm;
         }
+      */
         private void btnLoad_Click(object sender, EventArgs e)
         {
             listView.Items.Clear();
@@ -139,6 +132,9 @@ namespace WindowsFormsApp3
 
         }
 
-       
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
