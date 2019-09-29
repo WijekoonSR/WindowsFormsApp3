@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserUI));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.userUIEdit1 = new WindowsFormsApp3.UserUIEdit();
             this.userUIView1 = new WindowsFormsApp3.UserUIView();
+            this.userUIEdit1 = new WindowsFormsApp3.UserUIEdit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,15 +45,6 @@
             this.panel1.Size = new System.Drawing.Size(254, 355);
             this.panel1.TabIndex = 0;
             // 
-            // userUIEdit1
-            // 
-            this.userUIEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userUIEdit1.Location = new System.Drawing.Point(0, 0);
-            this.userUIEdit1.Name = "userUIEdit1";
-            this.userUIEdit1.Size = new System.Drawing.Size(254, 355);
-            this.userUIEdit1.TabIndex = 1;
-            this.userUIEdit1.Load += new System.EventHandler(this.userUIEdit1_Load);
-            // 
             // userUIView1
             // 
             this.userUIView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -61,6 +52,14 @@
             this.userUIView1.Name = "userUIView1";
             this.userUIView1.Size = new System.Drawing.Size(254, 355);
             this.userUIView1.TabIndex = 0;
+            // 
+            // userUIEdit1
+            // 
+            this.userUIEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userUIEdit1.Location = new System.Drawing.Point(0, 0);
+            this.userUIEdit1.Name = "userUIEdit1";
+            this.userUIEdit1.Size = new System.Drawing.Size(254, 355);
+            this.userUIEdit1.TabIndex = 1;
             // 
             // UserUI
             // 

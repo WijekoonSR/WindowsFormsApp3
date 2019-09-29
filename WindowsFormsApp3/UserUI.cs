@@ -19,7 +19,6 @@ namespace WindowsFormsApp3
 
         private void UserNewUI_Load(object sender, EventArgs e)
         {
-            //Below values are come from chkViewOrEdit UI for checking whether user wants to view or edit user profile
             if (UserProfile.chkViewOrEdit == 0)
             {
                 userUIView1.BringToFront();
@@ -31,11 +30,6 @@ namespace WindowsFormsApp3
          }
 
         private void lblUserID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userUIEdit1_Load(object sender, EventArgs e)
         {
 
         }
