@@ -82,7 +82,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="officesplash_MetroProgressBar">
       <HintPath>Metro\officesplash_MetroProgressBar.dll</HintPath>
@@ -160,6 +160,12 @@
     </Compile>
     <Compile Include="BookingUINewCheckVehicles.Designer.cs">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsMaintenanceGenerateReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetsMaintenanceGenerateReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CurrentUser.cs" />
     <Compile Include="CustomerUIEdit.cs">
@@ -522,6 +528,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingUINewCheckVehicles.resx">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsMaintenanceGenerateReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AssetsMaintenanceGenerateReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
