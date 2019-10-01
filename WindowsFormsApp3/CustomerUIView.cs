@@ -98,5 +98,11 @@ namespace WindowsFormsApp3
                 sqlConnection.Close();
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            CustomerUIGenerateReport customerUIGenerateReport = new CustomerUIGenerateReport();
+            customerUIGenerateReport.ShowDialog();
+        }
     }
 }
