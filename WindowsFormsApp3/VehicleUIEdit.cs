@@ -111,9 +111,9 @@ namespace WindowsFormsApp3
                  SqlCommand cmd3 = new SqlCommand(sql3, con);
                 SqlCommand cmd4 = new SqlCommand(sql4, con);
 
-                cmd1.ExecuteNonQuery();
-                 cmd2.ExecuteNonQuery();
-                 cmd3.ExecuteNonQuery();
+                //cmd1.ExecuteNonQuery();
+                // cmd2.ExecuteNonQuery();
+               //  cmd3.ExecuteNonQuery();
                 cmd4.ExecuteNonQuery();
 
 

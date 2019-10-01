@@ -449,6 +449,12 @@
       <DependentUpon>UserUIView.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
+    <Compile Include="VehicleDetailsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleDetailsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="VehicleLeasingUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -668,6 +674,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserUIView.resx">
       <DependentUpon>UserUIView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleDetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VehicleDetailsReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUI.resx">
       <DependentUpon>VehicleLeasingUI.cs</DependentUpon>

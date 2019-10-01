@@ -254,7 +254,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnDelete.Location = new System.Drawing.Point(591, 571);
+            this.btnDelete.Location = new System.Drawing.Point(816, 509);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(74, 37);
             this.btnDelete.TabIndex = 33;
@@ -289,7 +289,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnUpdate.Location = new System.Drawing.Point(402, 571);
+            this.btnUpdate.Location = new System.Drawing.Point(586, 509);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(80, 37);
             this.btnUpdate.TabIndex = 29;
@@ -300,7 +300,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(497, 571);
+            this.btnCancel.Location = new System.Drawing.Point(701, 509);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(79, 37);
             this.btnCancel.TabIndex = 28;
