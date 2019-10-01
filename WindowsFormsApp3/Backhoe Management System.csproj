@@ -168,12 +168,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CurrentUser.cs" />
-    <Compile Include="CustomerReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CustomerReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CustomerUIEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,12 +179,6 @@
     </Compile>
     <Compile Include="CustomerUIEditExtendPeriod.Designer.cs">
       <DependentUpon>CustomerUIEditExtendPeriod.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerUIGenerateReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerUIGenerateReport.Designer.cs">
-      <DependentUpon>CustomerUIGenerateReport.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerUINew.cs">
       <SubType>UserControl</SubType>
@@ -461,12 +449,6 @@
       <DependentUpon>UserUIView.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
-    <Compile Include="VehicleDetailsReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VehicleDetailsReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="VehicleLeasingUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -547,24 +529,15 @@
     <EmbeddedResource Include="BookingUINewCheckVehicles.resx">
       <DependentUpon>BookingUINewCheckVehicles.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="AssetsMaintenanceGenerateReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AssetsMaintenanceGenerateReport.cs</LastGenOutput>
-=======
-    <EmbeddedResource Include="CustomerReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CustomerReport.cs</LastGenOutput>
->>>>>>> 30cba164aba0812ff1f3929cbdceead3e0779172
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIEdit.resx">
       <DependentUpon>CustomerUIEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIEditExtendPeriod.resx">
       <DependentUpon>CustomerUIEditExtendPeriod.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerUIGenerateReport.resx">
-      <DependentUpon>CustomerUIGenerateReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUINew.resx">
       <DependentUpon>CustomerUINew.cs</DependentUpon>
@@ -695,10 +668,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserUIView.resx">
       <DependentUpon>UserUIView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VehicleDetailsReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>VehicleDetailsReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUI.resx">
       <DependentUpon>VehicleLeasingUI.cs</DependentUpon>
