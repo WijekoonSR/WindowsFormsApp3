@@ -33,14 +33,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtFaxNumber = new System.Windows.Forms.MaskedTextBox();
             this.lblFaxNumber = new System.Windows.Forms.Label();
-            this.txtEmail1 = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmailAddress = new System.Windows.Forms.TextBox();
+            this.lblEmailAddress = new System.Windows.Forms.Label();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
             this.lblContactNumber = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
+            this.txtCompanyAddress = new System.Windows.Forms.TextBox();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.lblCompanyAddress = new System.Windows.Forms.Label();
+            this.lblCompanyName = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -75,17 +75,17 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox1.Controls.Add(this.txtFaxNumber);
             this.groupBox1.Controls.Add(this.lblFaxNumber);
-            this.groupBox1.Controls.Add(this.txtEmail1);
-            this.groupBox1.Controls.Add(this.lblEmail);
+            this.groupBox1.Controls.Add(this.txtEmailAddress);
+            this.groupBox1.Controls.Add(this.lblEmailAddress);
             this.groupBox1.Controls.Add(this.txtContactNumber);
             this.groupBox1.Controls.Add(this.lblContactNumber);
-            this.groupBox1.Controls.Add(this.txtAddress);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.lblAddress);
-            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.txtCompanyAddress);
+            this.groupBox1.Controls.Add(this.txtCompanyName);
+            this.groupBox1.Controls.Add(this.lblCompanyAddress);
+            this.groupBox1.Controls.Add(this.lblCompanyName);
             this.groupBox1.Location = new System.Drawing.Point(139, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 294);
+            this.groupBox1.Size = new System.Drawing.Size(507, 293);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project HeadOffice Details";
@@ -93,7 +93,7 @@
             // 
             // txtFaxNumber
             // 
-            this.txtFaxNumber.Location = new System.Drawing.Point(176, 239);
+            this.txtFaxNumber.Location = new System.Drawing.Point(262, 242);
             this.txtFaxNumber.Name = "txtFaxNumber";
             this.txtFaxNumber.Size = new System.Drawing.Size(100, 20);
             this.txtFaxNumber.TabIndex = 29;
@@ -107,26 +107,26 @@
             this.lblFaxNumber.TabIndex = 28;
             this.lblFaxNumber.Text = "Fax Number";
             // 
-            // txtEmail1
+            // txtEmailAddress
             // 
-            this.txtEmail1.Location = new System.Drawing.Point(176, 191);
-            this.txtEmail1.Name = "txtEmail1";
-            this.txtEmail1.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail1.TabIndex = 37;
-            this.txtEmail1.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmailAddress.Location = new System.Drawing.Point(262, 194);
+            this.txtEmailAddress.Name = "txtEmailAddress";
+            this.txtEmailAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtEmailAddress.TabIndex = 37;
+            this.txtEmailAddress.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
-            // lblEmail
+            // lblEmailAddress
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(72, 198);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblEmail.TabIndex = 36;
-            this.lblEmail.Text = "Email";
+            this.lblEmailAddress.AutoSize = true;
+            this.lblEmailAddress.Location = new System.Drawing.Point(72, 198);
+            this.lblEmailAddress.Name = "lblEmailAddress";
+            this.lblEmailAddress.Size = new System.Drawing.Size(73, 13);
+            this.lblEmailAddress.TabIndex = 36;
+            this.lblEmailAddress.Text = "Email Address";
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Location = new System.Drawing.Point(176, 140);
+            this.txtContactNumber.Location = new System.Drawing.Point(262, 143);
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(100, 20);
             this.txtContactNumber.TabIndex = 35;
@@ -140,37 +140,38 @@
             this.lblContactNumber.TabIndex = 34;
             this.lblContactNumber.Text = "Contact Number";
             // 
-            // txtAddress
+            // txtCompanyAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(176, 88);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtAddress.TabIndex = 33;
+            this.txtCompanyAddress.Location = new System.Drawing.Point(262, 91);
+            this.txtCompanyAddress.Name = "txtCompanyAddress";
+            this.txtCompanyAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtCompanyAddress.TabIndex = 33;
+            this.txtCompanyAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
-            // txtName
+            // txtCompanyName
             // 
-            this.txtName.Location = new System.Drawing.Point(176, 34);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 32;
+            this.txtCompanyName.Location = new System.Drawing.Point(262, 37);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(100, 20);
+            this.txtCompanyName.TabIndex = 32;
             // 
-            // lblAddress
+            // lblCompanyAddress
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(72, 91);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblAddress.TabIndex = 31;
-            this.lblAddress.Text = "Address";
+            this.lblCompanyAddress.AutoSize = true;
+            this.lblCompanyAddress.Location = new System.Drawing.Point(72, 91);
+            this.lblCompanyAddress.Name = "lblCompanyAddress";
+            this.lblCompanyAddress.Size = new System.Drawing.Size(92, 13);
+            this.lblCompanyAddress.TabIndex = 31;
+            this.lblCompanyAddress.Text = "Company Address";
             // 
-            // lblName
+            // lblCompanyName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(72, 37);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
-            this.lblName.TabIndex = 30;
-            this.lblName.Text = "Name";
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.Location = new System.Drawing.Point(72, 37);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(82, 13);
+            this.lblCompanyName.TabIndex = 30;
+            this.lblCompanyName.Text = "Company Name";
             // 
             // btnUpdate
             // 
@@ -306,14 +307,14 @@
         private System.Windows.Forms.TextBox txtcutomerID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtEmail1;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmailAddress;
+        private System.Windows.Forms.Label lblEmailAddress;
         private System.Windows.Forms.TextBox txtContactNumber;
         private System.Windows.Forms.Label lblContactNumber;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtCompanyAddress;
+        private System.Windows.Forms.TextBox txtCompanyName;
+        private System.Windows.Forms.Label lblCompanyAddress;
+        private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;

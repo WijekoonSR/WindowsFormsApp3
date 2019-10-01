@@ -46,14 +46,19 @@ namespace WindowsFormsApp3
 
         }
 
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
 
             CustomerID = txtcutomerID.Text;
-            name = txtName.Text.ToString();
-            address = txtAddress.Text.ToString();
-            email = txtEmail1.Text.ToString();
+            name = txtCompanyName.Text.ToString();
+            address = txtCompanyAddress.Text.ToString();
+            email = txtEmailAddress.Text.ToString();
             ContactNumber  = txtContactNumber.Text.ToString();
             FaxNumber = txtFaxNumber.Text.ToString();
             EndDate = dateEndContract.Value.ToString("yyyy/MM/dd");
@@ -101,10 +106,10 @@ namespace WindowsFormsApp3
                 {
                     while (read.Read())
                     {
-                        txtName.Text = read.GetValue(3).ToString();
-                        txtAddress.Text = read.GetValue(4).ToString();
+                        txtCompanyName.Text = read.GetValue(3).ToString();
+                        txtCompanyAddress.Text = read.GetValue(4).ToString();
                         txtContactNumber.Text = read.GetValue(5).ToString();
-                        txtEmail1.Text = read.GetValue(6).ToString();
+                        txtEmailAddress.Text = read.GetValue(6).ToString();
                         txtFaxNumber.Text = read.GetValue(7).ToString();
                    
                     }
@@ -141,10 +146,10 @@ namespace WindowsFormsApp3
 
                 dateEndContract.Value = DateTime.Now;
                 dateStartContract.Value = DateTime.Now;
-                txtName.Clear();
-                txtAddress.Clear();
+                txtCompanyName.Clear();
+                txtCompanyAddress.Clear();
                 txtContactNumber.Clear();
-                txtEmail1.Clear();
+                txtEmailAddress.Clear();
                 txtFaxNumber.Clear();
                  }
         }

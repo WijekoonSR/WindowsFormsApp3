@@ -95,10 +95,10 @@ namespace WindowsFormsApp3
 
                 dateEndContract.Value = DateTime.Now;
                 dateStartContract.Value = DateTime.Now;
-                txtName.Clear();
-                txtAddress.Clear();
+                txtCompanyName.Clear();
+                txtCompanyAddress.Clear();
                 txtContactNumber.Clear();
-                txtEmail1.Clear();
+                txtEmaiAddress.Clear();
                 txtFaxNumber.Clear();
                 
 
@@ -137,29 +137,29 @@ namespace WindowsFormsApp3
             {
                 using (sqlConnection = new SqlConnection(nameServer))
                 {
-                    if (txtName.Text == "")
+                    if (txtCompanyName.Text == "")
                     {
                         MessageBox.Show("Please Enter Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtName.Focus();
+                        txtCompanyName.Focus();
                     }
-                    else if (txtAddress.Text == "")
+                    else if (txtCompanyAddress.Text == "")
                     {
                         MessageBox.Show("Please Enter Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtAddress.Focus();
+                        txtCompanyAddress.Focus();
                     }
                     else if (txtContactNumber.Text == "")
                     {
                         MessageBox.Show("Please Enter Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtContactNumber.Focus();
                     }
-                    else if (txtEmail1.Text == "")
+                    else if (txtEmaiAddress.Text == "")
                     {
                         MessageBox.Show("Please Enter Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtEmail1.Focus();
+                        txtEmaiAddress.Focus();
                     }
-                    else if(isValidEmailAddress(txtEmail1.Text.ToString()) == false){
+                    else if(isValidEmailAddress(txtEmaiAddress.Text.ToString()) == false){
                         MessageBox.Show("This is not a valid Email Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtEmail1.Focus();
+                        txtEmaiAddress.Focus();
 
                     }
                     else if (txtFaxNumber.Text == "")
@@ -172,9 +172,9 @@ namespace WindowsFormsApp3
                     {
 
                         sqlConnection.Open();
-                        name = txtName.Text.ToString();
-                        address = txtAddress.Text.ToString();
-                        email = txtEmail1.Text.ToString();
+                        name = txtCompanyName.Text.ToString();
+                        address = txtCompanyAddress.Text.ToString();
+                        email = txtEmaiAddress.Text.ToString();
                        
                         ContactNumber = txtContactNumber.Text.ToString();
                         FaxNumber = txtFaxNumber.Text.ToString();
