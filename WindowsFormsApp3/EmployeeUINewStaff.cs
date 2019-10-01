@@ -200,5 +200,15 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void txtSubject02_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbJobTitle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -146,7 +146,7 @@ namespace WindowsFormsApp3
             }
             sql.Close();
             txtCallerTpNo.Text = CallerNumber;
-            dateStartDate.Value =Convert.ToDateTime( StartDate);
+            dateStartDate.Value =Convert.ToDateTime(StartDate);
             dateEndDate.Value = Convert.ToDateTime(EndDate);
             txtWorkingHours.Text = WorkingHours.ToString();
             txtWorkingHours.Text = WorkingHours.ToString();

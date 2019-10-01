@@ -55,7 +55,6 @@
             this.BankLoansButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -74,6 +73,7 @@
             this.bookingUI1 = new WindowsFormsApp3.BookingUI();
             this.bankLoanUI1 = new WindowsFormsApp3.VehicleLeasingUI();
             this.assetsUI1 = new WindowsFormsApp3.AssetsUI();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
@@ -500,17 +500,6 @@
             this.panel2.Size = new System.Drawing.Size(294, 63);
             this.panel2.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Backhoe Company";
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(20)))), ((int)(((byte)(59)))));
@@ -699,6 +688,18 @@
             this.assetsUI1.Size = new System.Drawing.Size(716, 634);
             this.assetsUI1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(46, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Thiseni Enterprises";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // HomeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -786,8 +787,8 @@
         private PayrollUI payrollUI1;
         private EmployeeUI employeeUI1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton BankLoansButton;
+        private System.Windows.Forms.Label label1;
     }
 }
 

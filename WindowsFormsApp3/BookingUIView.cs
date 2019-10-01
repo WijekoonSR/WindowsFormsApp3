@@ -49,7 +49,7 @@ namespace WindowsFormsApp3
 
  
 
-        void setDatagridView(){
+        public void setDatagridView(){
             String name = BookingUINew.name;
             using (sqlConnection = new SqlConnection(name))
             {
@@ -101,17 +101,23 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String name = BookingUINew.name;
-            using (sqlConnection = new SqlConnection(name))
+            try
             {
-                string startDate = dtpStartDate.Value.ToString("dd/MM/yyyy");
-                string endDate = dtpEndDate.Value.ToString("dd/MM/yyyy");
-                string query = "select * from Bookings where StartDate  = '" + startDate + "'and EndDate = '" + endDate + "'";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
-                dtbl = new DataTable();
-                SDA.Fill(dtbl);
+                String name = BookingUINew.name;
+                using (sqlConnection = new SqlConnection(name))
+                {
+                    string startDate = dtpStartDate.Value.ToString("dd/MM/yyyy");
+                    string endDate = dtpEndDate.Value.ToString("dd/MM/yyyy");
+                    string query = "select * from Bookings where StartDate  = '" + startDate + "'and EndDate = '" + endDate + "'";
+                    SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
+                    dtbl = new DataTable();
+                    SDA.Fill(dtbl);
 
-                dgvBookingsView.DataSource = dtbl;
+                    dgvBookingsView.DataSource = dtbl;
+                }
+            }
+            catch(Exception eb) {
+                MessageBox.Show(eb.Message);
             }
         }
 
@@ -128,6 +134,13 @@ namespace WindowsFormsApp3
                 command2.ExecuteNonQuery();
                 sqlConnection.Close();
             }
+        }
+
+        private void btnreport_Click(object sender, EventArgs e)
+        {
+            BookingUIGenerateReport b = new BookingUIGenerateReport();
+            b.Show();
+            
         }
     }
 }

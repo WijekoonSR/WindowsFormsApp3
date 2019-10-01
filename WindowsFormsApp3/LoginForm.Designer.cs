@@ -41,6 +41,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.linkForgotPassword = new System.Windows.Forms.LinkLabel();
             this.picClose = new System.Windows.Forms.PictureBox();
+            this.linkRegister = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -160,6 +161,7 @@
             this.linkForgotPassword.TabIndex = 17;
             this.linkForgotPassword.TabStop = true;
             this.linkForgotPassword.Text = "Forgot Password ";
+            this.linkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgotPassword_LinkClicked);
             // 
             // picClose
             // 
@@ -172,12 +174,25 @@
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // linkRegister
+            // 
+            this.linkRegister.AutoSize = true;
+            this.linkRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRegister.Location = new System.Drawing.Point(225, 362);
+            this.linkRegister.Name = "linkRegister";
+            this.linkRegister.Size = new System.Drawing.Size(59, 16);
+            this.linkRegister.TabIndex = 19;
+            this.linkRegister.TabStop = true;
+            this.linkRegister.Text = "Register";
+            this.linkRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegister_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(341, 426);
+            this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.picClose);
             this.Controls.Add(this.linkForgotPassword);
             this.Controls.Add(this.btnLogin);
@@ -216,5 +231,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linkForgotPassword;
         private System.Windows.Forms.PictureBox picClose;
+        private System.Windows.Forms.LinkLabel linkRegister;
     }
 }

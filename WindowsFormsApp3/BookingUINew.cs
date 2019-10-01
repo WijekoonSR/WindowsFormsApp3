@@ -259,6 +259,7 @@ namespace WindowsFormsApp3
             }
         }
 
+        //serach customer contract period
         private void picSearch_Click(object sender, EventArgs e)
         {
             customerID = txtCustomerID.Text.ToString();
@@ -266,13 +267,20 @@ namespace WindowsFormsApp3
             bookingUICheckCxValidity.Show();
         }
 
-
+        //below 2 methoda are calling whenever user tries to change start and end date
         private void dateStartDate_ValueChanged(object sender, EventArgs e)
         {
             dropTable(); // drop ##tblAvailableVehicles table whenever creating new checks on avaiable vehicles
 
         }
 
+        private void dateEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            dropTable(); // drop ##tblAvailableVehicles table whenever creating new checks on avaiable vehicles
+        }
+
+
+        //Check avaiability of vehicles 
         private void btnCheckVehicles_Click(object sender, EventArgs e)
         {
             try
@@ -341,13 +349,11 @@ namespace WindowsFormsApp3
             }
         }
 
-        private void dateEndDate_ValueChanged(object sender, EventArgs e)
-        {
-            dropTable(); // drop ##tblAvailableVehicles table whenever creating new checks on avaiable vehicles
-        }
+        
 
 
 
+        // save inputed values to Booking database
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -442,12 +448,9 @@ namespace WindowsFormsApp3
          }
      }
 
-        public static bool IsNumber(string s)
-        {
-            return s.All(char.IsDigit);
-        }
 
-
+        // create relation with vehicles and booking database 
+        // use assignBooking_Vehicle process to assign values
         private void insertBooking_vehicle(int count, string Type)
         {
             try
@@ -476,6 +479,7 @@ namespace WindowsFormsApp3
 
         }
 
+        //clear inputed fields
         private void clearAllFields()
         {
             txtNIC.Clear();
@@ -494,8 +498,11 @@ namespace WindowsFormsApp3
             txtNIC.Clear();
             dateCaller.Value = DateTime.Now;
             dropDownItemsRemove();
+            txtAddress.Clear();
+
         }
 
+        //drop temporray database 
         private void dropTable() {
             try
             {
@@ -514,12 +521,21 @@ namespace WindowsFormsApp3
             }
         }
 
+        //delete drop down items
         private void dropDownItemsRemove() {
             dropDownNoOfBackhoes1.Items.Clear();
             dropDownNoOfBackhoes2.Items.Clear();
             dropDownNoOfBackhoes3.Items.Clear();
         }
 
+
+        //check inputed values are numerical values
+        public static bool IsNumber(string s)
+        {
+            return s.All(char.IsDigit);
+        }
+
+        // check blank fileds
         private Boolean validation() {
             if (txtCustomerID.Text.ToString() == "") {
                 MessageBox.Show("Insert Customer ID");

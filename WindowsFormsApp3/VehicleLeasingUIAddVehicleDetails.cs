@@ -33,7 +33,7 @@ namespace WindowsFormsApp3
 
                 Model = SDR["Model"].ToString();
                 VehicleCapacity = SDR["VehicleCapacity"].ToString();
-                EngineType = SDR["EngineType"].ToString();
+                EngineType = SDR["VehicleType"].ToString();
                 Fueltype = SDR["FuelType"].ToString();
             }
             con.Close();

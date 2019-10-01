@@ -44,8 +44,6 @@
             this.picUser = new System.Windows.Forms.PictureBox();
             this.btnChangeUserPic = new System.Windows.Forms.Button();
             this.lblFileName = new System.Windows.Forms.Label();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.listView = new System.Windows.Forms.ListView();
             this.lblPicName = new System.Windows.Forms.Label();
             this.txtPicName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -69,7 +67,6 @@
             this.txtReEnterPasword.Name = "txtReEnterPasword";
             this.txtReEnterPasword.Size = new System.Drawing.Size(100, 20);
             this.txtReEnterPasword.TabIndex = 30;
-            this.txtReEnterPasword.Visible = false;
             // 
             // txtPassword
             // 
@@ -111,7 +108,6 @@
             this.lbUsername.Size = new System.Drawing.Size(98, 13);
             this.lbUsername.TabIndex = 24;
             this.lbUsername.Text = "Re-Enter Password";
-            this.lbUsername.Visible = false;
             // 
             // lblPassword
             // 
@@ -146,7 +142,7 @@
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnChangeUserPic);
-            this.panel1.Location = new System.Drawing.Point(31, 3);
+            this.panel1.Location = new System.Drawing.Point(91, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 109);
             this.panel1.TabIndex = 33;
@@ -171,6 +167,7 @@
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUser.TabIndex = 26;
             this.picUser.TabStop = false;
+            this.picUser.Click += new System.EventHandler(this.picUser_Click);
             // 
             // btnChangeUserPic
             // 
@@ -191,27 +188,6 @@
             this.lblFileName.Size = new System.Drawing.Size(63, 13);
             this.lblFileName.TabIndex = 34;
             this.lblFileName.Text = "File Name ?";
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(137, 89);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(70, 23);
-            this.btnLoad.TabIndex = 35;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // listView
-            // 
-            this.listView.GridLines = true;
-            this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(137, 3);
-            this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(114, 86);
-            this.listView.TabIndex = 36;
-            this.listView.UseCompatibleStateImageBehavior = false;
-            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
             // lblPicName
             // 
@@ -234,8 +210,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listView);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
@@ -278,8 +252,6 @@
         private System.Windows.Forms.PictureBox picUser;
         private System.Windows.Forms.Button btnChangeUserPic;
         private System.Windows.Forms.Label lblFileName;
-        private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.Label lblPicName;
         private System.Windows.Forms.TextBox txtPicName;
     }

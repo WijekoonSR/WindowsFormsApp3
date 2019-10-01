@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp3
 {
     public partial class LoginForm : Form
     {
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True");
+
         public LoginForm()
         {
 
@@ -59,14 +63,36 @@ namespace WindowsFormsApp3
 
         private void loginHandler() {
             string username = txtUserName.Text;
-            string password = txtPassword.Text; 
-            if (username == "ABC" && password == "abc") {             
+            string password = txtPassword.Text;
+            if (username == "admin" && password == "@!1A2dCvI" || checkUser(username,password)) {
+                MessageBox.Show("Login Successfully!");
                 HomeUI BF = new HomeUI();
                 BF.Show();
                 this.Hide();
             }
             else
-                MessageBox.Show("Wrong User Name Or Password","Invalid !",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Wrong User Name Or Password", "Invalid !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private bool checkUser(String userID, String password) {
+            int EmployeeID = 0;
+            int UserID = int.Parse(Regex.Replace(userID, "[^0-9]", ""));
+            string query = "select * from Users where UserID = @uid and password = @pw";
+            SqlCommand com = new SqlCommand(query,sqlConnection);
+            com.Parameters.AddWithValue("@uid", UserID);
+            com.Parameters.AddWithValue("@pw", password);
+            if (com.ExecuteNonQuery() < 0)
+            {
+                return false;
+            }
+            else
+            {
+                SqlDataReader sdr = com.ExecuteReader();
+                while (sdr.Read()) {
+                    EmployeeID = int.Parse(sdr["EmployeeID"].ToString());
+                }
+                CurrentUser.setID(EmployeeID, UserID);
+                return true;
+            }
         }
 
         public void splash() {
@@ -132,6 +158,18 @@ namespace WindowsFormsApp3
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            NewUserUI newUserUI = new NewUserUI();
+            newUserUI.Show();
+            this.Hide();
         }
     }
 }

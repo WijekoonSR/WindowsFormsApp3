@@ -14,11 +14,29 @@ namespace WindowsFormsApp3
 {
     public partial class UserUIEdit : UserControl
     {
+        String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
+        int userID = CurrentUser.userID;
+        int employeeId = CurrentUser.employeeID;
         string filename;
-        List<User> list;
         public UserUIEdit()
         {
             InitializeComponent();
+            txtEmployeeID.Text = employeeId.ToString();
+            txtUserID.Text = userID.ToString();
+
+            SqlConnection sql = new SqlConnection(name);
+            sql.Open();
+            String query = "select * from Users where UserID = @uId";
+            SqlCommand com = new SqlCommand(query,sql);
+            com.Parameters.AddWithValue("@uId", 1);
+            SqlDataReader sdr = com.ExecuteReader();
+            while (sdr.Read()) {
+                txtPassword.Text = sdr["password"].ToString();
+                txtReEnterPasword.Text = sdr["password"].ToString();
+                txtPicName.Text = sdr["FileName"].ToString();
+                picUser.Image = ConvertBinaryToIamge((byte[])sdr["UserPic"]);
+            }
+            sql.Close();
         }
 
 
@@ -35,6 +53,14 @@ namespace WindowsFormsApp3
             }
         }
 
+        Image ConvertBinaryToIamge(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
         byte[] ConvertImageToBinary(Image img)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -45,15 +71,62 @@ namespace WindowsFormsApp3
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            using (BackhoeEntities db = new BackhoeEntities() ) {
-                 User user = new User() { FileName = txtPicName.Text.ToString(), UserPic = ConvertImageToBinary(picUser.Image) };//userpic in db
-                 db.Users.Add(user);
-                 db.SaveChangesAsync();
-                 MessageBox.Show("Picture Saved","Success", MessageBoxButtons.OK);
-             }
-            
+            if (checkInputs() == true)
+            {
+               /* using (BackhoeEntities db = new BackhoeEntities())
+                {
+                    //userdetail store in model entity
+                    UserDetail user = new UserDetail() { FileName = txtPicName.Text.ToString(), UserPic = ConvertImageToBinary(picUser.Image), ALLUsersID = userID };//userpic in db
+                    db.UserDetails.Add(user);
+                    db.SaveChangesAsync();
+                    MessageBox.Show("Picture Saved", "Success", MessageBoxButtons.OK);
+                }
+                */
+
+                SqlConnection sql = new SqlConnection(name);
+                sql.Open();
+                String query = "update Users set password = @pw,UserPic = @pic,FileName = @fname where EmployeeID = @eId ";
+                SqlCommand sqlCommand = new SqlCommand(query, sql);
+                sqlCommand.Parameters.AddWithValue("@pw", txtPassword.Text.ToString());
+                sqlCommand.Parameters.AddWithValue("@pic", ConvertImageToBinary(picUser.Image));
+                sqlCommand.Parameters.AddWithValue("@fname", txtPassword.Text.ToString());
+                sqlCommand.Parameters.AddWithValue("@eId",int.Parse(txtEmployeeID.Text.ToString()));
+                sqlCommand.ExecuteNonQuery();
+                sql.Close();
+            }
         }
 
+        private bool checkInputs()
+        {
+            if (txtPicName.Text == " ")
+            {
+                MessageBox.Show("Enter Picture Name");
+                txtPicName.Focus();
+                return false;
+            }
+            else if (txtPassword.Text == " ")
+            {
+                MessageBox.Show("Enter Password");
+                txtPassword.Focus();
+                return false;
+            }
+            else if (txtReEnterPasword.Text == " ")
+            {
+                MessageBox.Show("Enter re-Password");
+                txtReEnterPasword.Focus();
+                return false;
+            }
+           else if (txtPassword.Text == txtReEnterPasword.Text)
+            {
+                MessageBox.Show("Password are not matching");
+                txtReEnterPasword.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     /*    public static Bitmap ByteToImage(byte[] blob)
         {
             MemoryStream mStream = new MemoryStream();
@@ -64,38 +137,10 @@ namespace WindowsFormsApp3
             return bm;
         }
       */
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-            listView.Items.Clear();
-            using (BackhoeEntities DB = new BackhoeEntities())
-            {
-                list = DB.Users.ToList();
-                foreach (User user in list)
-                {
-                    ListViewItem item = new ListViewItem(user.FileName);
-                    listView.Items.Add(item);
-                }
-            }
-        }
-        Image ConvertBinaryToIamge(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
-        private void listView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listView.FocusedItem != null)
-            {
-                picUser.Image = ConvertBinaryToIamge(list[listView.FocusedItem.Index].UserPic);
-            }
-        }
+      
+        
+        
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void UserUIEdit_Load(object sender, EventArgs e)
         {
@@ -104,12 +149,14 @@ namespace WindowsFormsApp3
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
+            txtPassword.Text = " ";
+            txtPicName.Text = " ";
+            txtReEnterPasword.Text = " ";
 
-            SqlConnection sql = new SqlConnection(name);
+   /*         SqlConnection sql = new SqlConnection(name);
             sql.Open();
 
-            String query = "select * from Users where UserID = 3";
+            String query = "select * from UserDetails where UserID = 3";
             SqlCommand sqlCommand = new SqlCommand(query, sql);
 
             SqlDataReader reader = sqlCommand.ExecuteReader();
@@ -125,14 +172,16 @@ namespace WindowsFormsApp3
             }
 
             sql.Close();
-        }
+    */ 
+    }
 
-        private void UserUIEdit_Load_1(object sender, EventArgs e)
+
+        private void lblPassword_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblPassword_Click(object sender, EventArgs e)
+        private void picUser_Click(object sender, EventArgs e)
         {
 
         }

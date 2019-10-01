@@ -44,5 +44,16 @@ namespace WindowsFormsApp3.Properties {
                 return ((string)(this["DatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localDB)\\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True" +
+            "")]
+        public string BackhoeConnectionString1 {
+            get {
+                return ((string)(this["BackhoeConnectionString1"]));
+            }
+        }
     }
 }

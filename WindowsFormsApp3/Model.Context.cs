@@ -25,7 +25,5 @@ namespace WindowsFormsApp3
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Assets_Maintenance> Assets_Maintenance { get; set; }
-        public virtual DbSet<User> Users { get; set; }
     }
 }

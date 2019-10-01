@@ -5,8 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="32ae35f9273546fb9723fd428ecfb202" Name="Diagram1" ZoomLevel="81">
-        <EntityTypeShape EntityType="BackhoeModel.Assets_Maintenance" PointX="6.25" PointY="1.375" Width="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BackhoeModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

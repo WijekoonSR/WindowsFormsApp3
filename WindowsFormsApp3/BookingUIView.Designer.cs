@@ -34,9 +34,7 @@
             this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookingsTableAdapter = new WindowsFormsApp3.DatabaseDataSetTableAdapters.BookingsTableAdapter();
             this.dgvBookingsView = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet1 = new WindowsFormsApp3.DatabaseDataSet1();
             this.bookingsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bookingsTableAdapter1 = new WindowsFormsApp3.DatabaseDataSet1TableAdapters.BookingsTableAdapter();
             this.lblBookingID = new System.Windows.Forms.Label();
             this.txtBookingID = new System.Windows.Forms.TextBox();
             this.lblStartDate = new System.Windows.Forms.Label();
@@ -50,10 +48,10 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnreport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookingsView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,20 +78,10 @@
             this.dgvBookingsView.TabIndex = 0;
             this.dgvBookingsView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookingsView_CellContentClick);
             // 
-            // databaseDataSet1
-            // 
-            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
-            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bookingsBindingSource1
             // 
             this.bookingsBindingSource1.DataMember = "Bookings";
-            this.bookingsBindingSource1.DataSource = this.databaseDataSet1;
             this.bookingsBindingSource1.CurrentChanged += new System.EventHandler(this.bookingsBindingSource1_CurrentChanged);
-            // 
-            // bookingsTableAdapter1
-            // 
-            this.bookingsTableAdapter1.ClearBeforeFill = true;
             // 
             // lblBookingID
             // 
@@ -239,10 +227,21 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnreport
+            // 
+            this.btnreport.Location = new System.Drawing.Point(665, 15);
+            this.btnreport.Name = "btnreport";
+            this.btnreport.Size = new System.Drawing.Size(75, 23);
+            this.btnreport.TabIndex = 12;
+            this.btnreport.Text = "button1";
+            this.btnreport.UseVisualStyleBackColor = true;
+            this.btnreport.Click += new System.EventHandler(this.btnreport_Click);
+            // 
             // BookingUIView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnreport);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnPrint);
@@ -261,7 +260,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookingsView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -274,8 +272,8 @@
         private DatabaseDataSetTableAdapters.BookingsTableAdapter bookingsTableAdapter;
         private System.Windows.Forms.DataGridView dgvBookingsView;
         private System.Windows.Forms.BindingSource bookingsBindingSource1;
-        private DatabaseDataSet1 databaseDataSet1;
-        private DatabaseDataSet1TableAdapters.BookingsTableAdapter bookingsTableAdapter1;
+   //     private DatabaseDataSet1 databaseDataSet1;
+     //   private DatabaseDataSet1TableAdapters.BookingsTableAdapter bookingsTableAdapter1;
         private System.Windows.Forms.Label lblBookingID;
         private System.Windows.Forms.TextBox txtBookingID;
         private System.Windows.Forms.Label lblStartDate;
@@ -289,5 +287,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnreport;
     }
 }

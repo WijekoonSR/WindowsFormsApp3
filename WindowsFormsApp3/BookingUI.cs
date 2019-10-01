@@ -64,6 +64,7 @@ namespace WindowsFormsApp3
         private void btnView_Click(object sender, EventArgs e)
         {
             Slider.Left = btnView.Left;
+            BookingUIView uIView = new BookingUIView();
             bookingUIView1.BringToFront();
         }
 
