@@ -41,5 +41,15 @@ namespace WindowsFormsApp3
         {
             assetsUINew1.BringToFront();
         }
+
+        private void assetsUINew1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
