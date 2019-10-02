@@ -33,7 +33,7 @@ namespace WindowsFormsApp3
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int EmployeeID = int.Parse(txtEmployeeID.Text);
+            string EmployeeID = (txtEmployeeID.Text).ToString();
             string sql = "Select * from  Employee where EmployeeID = '" + EmployeeID + "'";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
