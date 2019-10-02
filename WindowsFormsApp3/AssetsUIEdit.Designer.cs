@@ -54,11 +54,15 @@
             this.directorySearcher17 = new System.DirectoryServices.DirectorySearcher();
             this.btnClearEdit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picBoxAttachEdit = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.lblAttachment = new System.Windows.Forms.Label();
             this.dateIssuedEdit = new System.Windows.Forms.DateTimePicker();
             this.lblIssuedDate = new System.Windows.Forms.Label();
             this.txtInvoiceNumberEdit = new System.Windows.Forms.TextBox();
             this.lblInvoiceEdit = new System.Windows.Forms.Label();
             this.txtPriceEdit = new System.Windows.Forms.TextBox();
+            this.lblPriceEdit = new System.Windows.Forms.Label();
             this.dateEdit = new System.Windows.Forms.DateTimePicker();
             this.lblDateEdit = new System.Windows.Forms.Label();
             this.txtSpareEdit = new System.Windows.Forms.TextBox();
@@ -72,10 +76,7 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.lblVehicleID = new System.Windows.Forms.Label();
             this.txtVehicleIDEdit = new System.Windows.Forms.TextBox();
-            this.lblPriceEdit = new System.Windows.Forms.Label();
-            this.lblAttachment = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.lblShopNameEdit = new System.Windows.Forms.Label();
             this.txtShopNameEdit = new System.Windows.Forms.TextBox();
             this.lblAddressEdit = new System.Windows.Forms.Label();
@@ -89,12 +90,11 @@
             this.txtOwnerEdit = new System.Windows.Forms.TextBox();
             this.txtOwnContactEdit = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.picBoxAttachEdit = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -277,6 +277,38 @@
             this.groupBox1.Text = "Spare Parts Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // picBoxAttachEdit
+            // 
+            this.picBoxAttachEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picBoxAttachEdit.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAttachEdit.Image")));
+            this.picBoxAttachEdit.Location = new System.Drawing.Point(280, 317);
+            this.picBoxAttachEdit.Name = "picBoxAttachEdit";
+            this.picBoxAttachEdit.Size = new System.Drawing.Size(308, 144);
+            this.picBoxAttachEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxAttachEdit.TabIndex = 40;
+            this.picBoxAttachEdit.TabStop = false;
+            this.picBoxAttachEdit.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(280, 275);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 36);
+            this.btnEdit.TabIndex = 39;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // lblAttachment
+            // 
+            this.lblAttachment.AutoSize = true;
+            this.lblAttachment.Location = new System.Drawing.Point(46, 272);
+            this.lblAttachment.Name = "lblAttachment";
+            this.lblAttachment.Size = new System.Drawing.Size(111, 22);
+            this.lblAttachment.TabIndex = 38;
+            this.lblAttachment.Text = "Attachment";
+            // 
             // dateIssuedEdit
             // 
             this.dateIssuedEdit.Location = new System.Drawing.Point(282, 554);
@@ -317,6 +349,15 @@
             this.txtPriceEdit.Size = new System.Drawing.Size(306, 29);
             this.txtPriceEdit.TabIndex = 26;
             this.txtPriceEdit.TextChanged += new System.EventHandler(this.txtPriceEdit_TextChanged);
+            // 
+            // lblPriceEdit
+            // 
+            this.lblPriceEdit.AutoSize = true;
+            this.lblPriceEdit.Location = new System.Drawing.Point(52, 226);
+            this.lblPriceEdit.Name = "lblPriceEdit";
+            this.lblPriceEdit.Size = new System.Drawing.Size(56, 22);
+            this.lblPriceEdit.TabIndex = 25;
+            this.lblPriceEdit.Text = "Price";
             // 
             // dateEdit
             // 
@@ -426,24 +467,6 @@
             this.txtVehicleIDEdit.Size = new System.Drawing.Size(257, 22);
             this.txtVehicleIDEdit.TabIndex = 56;
             // 
-            // lblPriceEdit
-            // 
-            this.lblPriceEdit.AutoSize = true;
-            this.lblPriceEdit.Location = new System.Drawing.Point(52, 226);
-            this.lblPriceEdit.Name = "lblPriceEdit";
-            this.lblPriceEdit.Size = new System.Drawing.Size(56, 22);
-            this.lblPriceEdit.TabIndex = 25;
-            this.lblPriceEdit.Text = "Price";
-            // 
-            // lblAttachment
-            // 
-            this.lblAttachment.AutoSize = true;
-            this.lblAttachment.Location = new System.Drawing.Point(46, 272);
-            this.lblAttachment.Name = "lblAttachment";
-            this.lblAttachment.Size = new System.Drawing.Size(111, 22);
-            this.lblAttachment.TabIndex = 38;
-            this.lblAttachment.Text = "Attachment";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(0, 0);
@@ -452,17 +475,6 @@
             this.button1.TabIndex = 57;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(280, 275);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 36);
-            this.btnEdit.TabIndex = 39;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblShopNameEdit
             // 
@@ -584,17 +596,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Purchased shop Details";
             // 
-            // picBoxAttachEdit
-            // 
-            this.picBoxAttachEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.picBoxAttachEdit.Location = new System.Drawing.Point(280, 317);
-            this.picBoxAttachEdit.Name = "picBoxAttachEdit";
-            this.picBoxAttachEdit.Size = new System.Drawing.Size(308, 144);
-            this.picBoxAttachEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxAttachEdit.TabIndex = 40;
-            this.picBoxAttachEdit.TabStop = false;
-            this.picBoxAttachEdit.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // AssetsUIEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -615,12 +616,12 @@
             this.Load += new System.EventHandler(this.AssetsUIEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxAttachEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

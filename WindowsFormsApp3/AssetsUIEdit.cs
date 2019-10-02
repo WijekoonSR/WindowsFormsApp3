@@ -97,7 +97,7 @@ namespace WindowsFormsApp3
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -165,7 +165,7 @@ namespace WindowsFormsApp3
                 
 
                 String query = "Update Assets_Maintenance set PurchasedSpareParts = '" + spareParts + "', Quantity = '" + quantity + "',PurchaseDate = '" + date + "',Price = '" + price 
-                    + "',InvoiceNumber = '" + invoiceNumber + "', IssuedDate = '" + issuedDate + "', ShopName = '" + shopName + "', Address = '" + address + "',ContactNumber = '" + contactNumber + "', Email ='" + email + "', OwnerName = '" + ownerName + "', OwnerContact = '" + OwnerContact + "',AttachmentNew = '" + ( ConvertImageToBinary( picBoxAttachEdit.Image))+"' where AssetsMaintenanceID = '" + ID1+"'";
+                    + "',InvoiceNumber = '" + invoiceNumber + "', IssuedDate = '" + issuedDate + "', ShopName = '" + shopName + "', Address = '" + address + "',ContactNumber = '" + contactNumber + "', Email ='" + email + "', OwnerName = '" + ownerName + "', OwnerContact = '" + OwnerContact + "' where AssetsMaintenanceID = '" + ID1+"'";
 
 
 
