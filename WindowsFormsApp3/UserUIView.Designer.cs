@@ -30,33 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserUIView));
             this.btnOk = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.picUser = new System.Windows.Forms.PictureBox();
             this.lblUserID = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmployeeID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(136, 293);
+            this.btnOk.Location = new System.Drawing.Point(76, 248);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 21;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(136, 206);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 18;
             // 
             // txtUserID
             // 
@@ -93,15 +83,6 @@
             this.lblUserID.TabIndex = 14;
             this.lblUserID.Text = "User ID";
             // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(16, 213);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
-            this.lblPassword.TabIndex = 12;
-            this.lblPassword.Text = "Password";
-            // 
             // lblEmployeeID
             // 
             this.lblEmployeeID.AutoSize = true;
@@ -116,15 +97,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.txtEmployeeID);
             this.Controls.Add(this.picUser);
             this.Controls.Add(this.lblUserID);
-            this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmployeeID);
             this.Name = "UserUIView";
-            this.Size = new System.Drawing.Size(254, 355);
+            this.Size = new System.Drawing.Size(254, 311);
+            this.Load += new System.EventHandler(this.UserUIView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,12 +114,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.TextBox txtEmployeeID;
         private System.Windows.Forms.PictureBox picUser;
         private System.Windows.Forms.Label lblUserID;
-        private System.Windows.Forms.Label lblPassword;
         public System.Windows.Forms.Label lblEmployeeID;
     }
 }
