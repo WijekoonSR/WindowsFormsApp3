@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayrollUIVeiw));
             this.dgvParollUI = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.edtEmployeeID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnRefresh = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblEmployeeID = new System.Windows.Forms.Label();
+            this.btnRefresh = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSearch = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPrint = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParollUI)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,33 +46,6 @@
             this.dgvParollUI.Name = "dgvParollUI";
             this.dgvParollUI.Size = new System.Drawing.Size(791, 281);
             this.dgvParollUI.TabIndex = 0;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.BorderRadius = 0;
-            this.btnSearch.ButtonText = "Search";
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSearch.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearch.Iconimage")));
-            this.btnSearch.Iconimage_right = null;
-            this.btnSearch.Iconimage_right_Selected = null;
-            this.btnSearch.Iconimage_Selected = null;
-            this.btnSearch.IconZoom = 90D;
-            this.btnSearch.IsTab = false;
-            this.btnSearch.Location = new System.Drawing.Point(253, 13);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnSearch.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSearch.selected = false;
-            this.btnSearch.Size = new System.Drawing.Size(108, 20);
-            this.btnSearch.TabIndex = 33;
-            this.btnSearch.Textcolor = System.Drawing.Color.White;
-            this.btnSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // edtEmployeeID
             // 
@@ -89,6 +63,16 @@
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 31;
             this.label5.Text = "Employee ID";
+            // 
+            // lblEmployeeID
+            // 
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.ForeColor = System.Drawing.Color.Red;
+            this.lblEmployeeID.Location = new System.Drawing.Point(186, 16);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(38, 13);
+            this.lblEmployeeID.TabIndex = 66;
+            this.lblEmployeeID.Text = "Invalid";
             // 
             // btnRefresh
             // 
@@ -117,20 +101,65 @@
             this.btnRefresh.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // lblEmployeeID
+            // btnSearch
             // 
-            this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.ForeColor = System.Drawing.Color.Red;
-            this.lblEmployeeID.Location = new System.Drawing.Point(186, 16);
-            this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(38, 13);
-            this.lblEmployeeID.TabIndex = 66;
-            this.lblEmployeeID.Text = "Invalid";
+            this.btnSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.BorderRadius = 0;
+            this.btnSearch.ButtonText = "Search";
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSearch.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearch.Iconimage")));
+            this.btnSearch.Iconimage_right = null;
+            this.btnSearch.Iconimage_right_Selected = null;
+            this.btnSearch.Iconimage_Selected = null;
+            this.btnSearch.IconZoom = 90D;
+            this.btnSearch.IsTab = false;
+            this.btnSearch.Location = new System.Drawing.Point(253, 13);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnSearch.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSearch.selected = false;
+            this.btnSearch.Size = new System.Drawing.Size(108, 20);
+            this.btnSearch.TabIndex = 33;
+            this.btnSearch.Textcolor = System.Drawing.Color.White;
+            this.btnSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrint.BorderRadius = 0;
+            this.btnPrint.ButtonText = "Print";
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPrint.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPrint.Iconimage")));
+            this.btnPrint.Iconimage_right = null;
+            this.btnPrint.Iconimage_right_Selected = null;
+            this.btnPrint.Iconimage_Selected = null;
+            this.btnPrint.IconZoom = 90D;
+            this.btnPrint.IsTab = false;
+            this.btnPrint.Location = new System.Drawing.Point(515, 13);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPrint.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnPrint.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPrint.selected = false;
+            this.btnPrint.Size = new System.Drawing.Size(108, 20);
+            this.btnPrint.TabIndex = 67;
+            this.btnPrint.Textcolor = System.Drawing.Color.White;
+            this.btnPrint.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // PayrollUIVeiw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.lblEmployeeID);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
@@ -154,5 +183,6 @@
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btnRefresh;
         private System.Windows.Forms.Label lblEmployeeID;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPrint;
     }
 }

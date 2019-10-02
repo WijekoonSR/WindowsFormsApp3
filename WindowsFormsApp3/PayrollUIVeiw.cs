@@ -70,5 +70,11 @@ namespace WindowsFormsApp3
                 lblEmployeeID.Visible = true;
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PayrollUIPaySlip paySlip = new PayrollUIPaySlip();
+            paySlip.ShowDialog();
+        }
     }
 }
