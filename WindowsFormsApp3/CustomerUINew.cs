@@ -212,7 +212,7 @@ namespace WindowsFormsApp3
                         }
                         else
                         {
-                            DialogResult DR = MessageBox.Show("successfully");
+                            DialogResult DR = MessageBox.Show("successfully","Success",MessageBoxButtons.OK);
                             if (DR == DialogResult.OK)
                             {
                                 clearfields();
