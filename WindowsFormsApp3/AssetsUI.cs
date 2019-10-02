@@ -49,7 +49,9 @@ namespace WindowsFormsApp3
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            AssetGenerateReport assetGenerateReport = new AssetGenerateReport();
+            assetGenerateReport.Show();
+            assetGenerateReport.BringToFront();
         }
     }
 }

@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssetGenerateReport));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSearchId = new System.Windows.Forms.TextBox();
             this.btnSrchID = new System.Windows.Forms.Button();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.AssetsRepoerView = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.AssetsMaintenanceGenerateReport1 = new WindowsFormsApp3.AssetsMaintenanceGenerateReport();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,7 +52,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.crystalReportViewer1);
+            this.panel2.Controls.Add(this.AssetsRepoerView);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 56);
             this.panel2.Name = "panel2";
@@ -75,17 +76,17 @@
             this.btnSrchID.UseVisualStyleBackColor = true;
             this.btnSrchID.Click += new System.EventHandler(this.btnSrchID_Click);
             // 
-            // crystalReportViewer1
+            // AssetsRepoerView
             // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.AssetsMaintenanceGenerateReport1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 394);
-            this.crystalReportViewer1.TabIndex = 0;
+            this.AssetsRepoerView.ActiveViewIndex = 0;
+            this.AssetsRepoerView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AssetsRepoerView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AssetsRepoerView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AssetsRepoerView.Location = new System.Drawing.Point(0, 0);
+            this.AssetsRepoerView.Name = "AssetsRepoerView";
+            this.AssetsRepoerView.ReportSource = this.AssetsMaintenanceGenerateReport1;
+            this.AssetsRepoerView.Size = new System.Drawing.Size(800, 394);
+            this.AssetsRepoerView.TabIndex = 0;
             // 
             // AssetGenerateReport
             // 
@@ -94,8 +95,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AssetGenerateReport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AssetGenerateReport";
+            this.Load += new System.EventHandler(this.AssetGenerateReport_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -109,7 +113,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSrchID;
         private System.Windows.Forms.TextBox txtSearchId;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer AssetsRepoerView;
         private AssetsMaintenanceGenerateReport AssetsMaintenanceGenerateReport1;
     }
 }

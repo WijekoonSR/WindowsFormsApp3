@@ -40,8 +40,12 @@ namespace WindowsFormsApp3
             report.Load(Environment.CurrentDirectory + "//AssetsMaintenanceGenerateReport.rpt");
             report.SetDataSource(ds);
 
-            AssetsMaintenanceGenerateReport1.SetDataSource(report);
+            AssetsRepoerView.ReportSource = report;
         }
 
+        private void AssetGenerateReport_Load(object sender, EventArgs e)
+        {
+        
+        }
     }
 }
