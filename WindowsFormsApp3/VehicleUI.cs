@@ -41,5 +41,22 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            VehicleUI vehicleUI = new VehicleUI();
+            vehicleUI.Show();
+            vehicleUI.BringToFront();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

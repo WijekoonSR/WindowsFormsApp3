@@ -454,6 +454,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VehicleDetailsReport.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="VehicleLeasingUI.cs">
       <SubType>UserControl</SubType>
@@ -502,6 +503,12 @@
     </Compile>
     <Compile Include="VehicleUINew.Designer.cs">
       <DependentUpon>VehicleUINew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUIReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleUIReport.Designer.cs">
+      <DependentUpon>VehicleUIReport.cs</DependentUpon>
     </Compile>
     <Compile Include="VehicleUIView.cs">
       <SubType>UserControl</SubType>
@@ -678,6 +685,7 @@
     <EmbeddedResource Include="VehicleDetailsReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>VehicleDetailsReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleLeasingUI.resx">
       <DependentUpon>VehicleLeasingUI.cs</DependentUpon>
@@ -702,6 +710,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleUINew.resx">
       <DependentUpon>VehicleUINew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUIReport.resx">
+      <DependentUpon>VehicleUIReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleUIView.resx">
       <DependentUpon>VehicleUIView.cs</DependentUpon>

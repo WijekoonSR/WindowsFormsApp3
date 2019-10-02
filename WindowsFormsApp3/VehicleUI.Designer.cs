@@ -40,6 +40,8 @@
             this.vehicleUINew1 = new WindowsFormsApp3.VehicleUINew();
             this.vehicleUIEdit1 = new WindowsFormsApp3.VehicleUIEdit();
             this.vehicleUIView1 = new WindowsFormsApp3.VehicleUIView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +132,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.panel8);
@@ -151,6 +155,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1, 63);
             this.panel7.TabIndex = 13;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // panel8
             // 
@@ -208,6 +213,44 @@
             this.vehicleUIView1.Size = new System.Drawing.Size(1069, 585);
             this.vehicleUIView1.TabIndex = 2;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(484, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 63);
+            this.panel2.TabIndex = 15;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnReport
+            // 
+            this.btnReport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReport.BorderRadius = 0;
+            this.btnReport.ButtonText = "Report";
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReport.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReport.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnReport.Iconimage")));
+            this.btnReport.Iconimage_right = null;
+            this.btnReport.Iconimage_right_Selected = null;
+            this.btnReport.Iconimage_Selected = null;
+            this.btnReport.IconZoom = 34D;
+            this.btnReport.IsTab = false;
+            this.btnReport.Location = new System.Drawing.Point(364, 0);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.btnReport.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnReport.selected = false;
+            this.btnReport.Size = new System.Drawing.Size(120, 63);
+            this.btnReport.TabIndex = 14;
+            this.btnReport.Textcolor = System.Drawing.Color.Black;
+            this.btnReport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
             // VehicleUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,5 +281,7 @@
         private VehicleUIView vehicleUIView1;
         private VehicleUIEdit vehicleUIEdit1;
         private VehicleUINew vehicleUINew1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnReport;
     }
 }
