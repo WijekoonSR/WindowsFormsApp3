@@ -145,10 +145,11 @@ namespace WindowsFormsApp3
             command = new SqlCommand(query, sql);
             command.ExecuteNonQuery();
             sql.Close();
+            setIdSql();
             DialogResult dr = MessageBox.Show("Data Submitted", "Success!!", MessageBoxButtons.OK);
             if (dr == DialogResult.OK)
             {
-                setIdSql();
+                clearAllFields();
                 txtVehicleLeasingID.Text = GetID();
             }
         }

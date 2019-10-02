@@ -27,7 +27,6 @@ namespace WindowsFormsApp3
         public CustomerUINew()
         {
             InitializeComponent();
-           
             txtcutomerID.Text = GetID();
         }
 
@@ -212,11 +211,11 @@ namespace WindowsFormsApp3
                         }
                         else
                         {
+                            setIdSql();
                             DialogResult DR = MessageBox.Show("successfully","Success",MessageBoxButtons.OK);
                             if (DR == DialogResult.OK)
                             {
                                 clearfields();
-                                setIdSql();
                                 txtcutomerID.Text =  GetID(); 
                             }
                         }

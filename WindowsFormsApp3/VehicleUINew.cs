@@ -200,11 +200,11 @@ namespace WindowsFormsApp3
                         " values('"+vID+"','" + VehicleType + "','" + Model + "','" + VehicleClass + "','" + EngineType + "', '" + Fueltype + "' ,'" + VehicleCapacity + "','" + Colour + "','" + Weight + "','" + RegDate + "','" + RegNo + "','" + YearOfManufac + "','" + ChassisNo + "')";
                     SqlCommand sqlCommand = new SqlCommand(query, con);
                     sqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("Saved Successfully");
                     con.Close();
 
                     clear();
                     setIdSql();
+                    MessageBox.Show("Saved Successfully");
                     txtVehicleID.Text = GetID();
                 }
             }

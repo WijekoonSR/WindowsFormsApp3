@@ -128,11 +128,11 @@ namespace WindowsFormsApp3
                 string query02 = "Exec AsignStaff'"+department + "','"+ALStream+"','"+ALsub01+"','"+AlSub01sel+"','"+ALsub02+"','"+AlSub02sel+"','"+ALsub03+"','"+AlSub03sel+"','"+ALsub04+"','"+AlSub04sel+"'";
                 SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
                 cmd2.ExecuteNonQuery();*/
+                setIdSql();
                 DialogResult dr = MessageBox.Show("Data Submitted", "Success!!", MessageBoxButtons.OK);
                 if (dr == DialogResult.OK)
                 {
                     clearDet();
-                    setIdSql();
                     txtEmployeeID.Text = GetID();
                 }
 
