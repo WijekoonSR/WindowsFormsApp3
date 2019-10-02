@@ -150,6 +150,15 @@
         rkJggg==
 </value>
   </data>
+  <data name="btnReport.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAK1JREFUSEvt
+        kk0KwkAMhWdTT1UUvJutXkrQk3Rhf/AKLuKLebOYFoQymY32gwehL6Rh8sJvISIV1EIdpXVFOx8OnNPQ
+        zgfDBpuZMNBW/26fvnJj+xKYo/UkrPnBC7qyfQnM4k8Uj/ykfI9cHGy749Yxpg3kGtMzNOdEOx8M622m
+        HKCjlfKgrX52TCfrkRraW+kb08unLcX1ifTIeocYU98jFwfbbjFVtpj+FyG8Abf3eyeeJCnWAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
   <data name="assetsUINew1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZAAAAGmCAYAAABSnNJ8AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
