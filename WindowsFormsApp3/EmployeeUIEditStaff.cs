@@ -70,7 +70,7 @@ namespace WindowsFormsApp3
 
         private void bntUpdate_Click(object sender, EventArgs e)
         {
-            int EmployeeID = (txtEmployeeID.Text).ToString();
+            string EmployeeID = (txtEmployeeID.Text).ToString();
             string fname = txtFName.Text;
             string lname = txtLName.Text;
             string gender = cmbGender.Text;
@@ -119,7 +119,7 @@ namespace WindowsFormsApp3
         {
             try
             {
-                string EmployeeID = (txtEmployeeID.Text.ToString();
+                string EmployeeID = (txtEmployeeID.Text.ToString());
                 sqlConnection.Open();
               //  String sql1 = "Delete From Payroll_Operators where EmployeeID = '" + EmployeeID + "'";
               //  String sql2 = "Delete From Payroll_Operators_Monthly_Salary where EmployeeID = '" + EmployeeID + "'";
