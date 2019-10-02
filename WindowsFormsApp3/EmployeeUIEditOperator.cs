@@ -58,20 +58,28 @@ namespace WindowsFormsApp3
             string EmployeeID = (txtEmployeeID.Text).ToString();
             string Sql = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
             SqlCommand cmd = new SqlCommand(Sql, sqlConnection);
+            SqlCommand cmd2 = new SqlCommand("select * from Vehicle_Operators where EmployeeID = '" + EmployeeID + "'",sqlConnection);
             try
             {
                 sqlConnection.Open();
-
+                SqlDataReader sdr = cmd2.ExecuteReader();
+                if (sdr.HasRows) {
+                    while (sdr.Read())
+                    {
+                        txtLicense.Text = sdr.GetValue(0).ToString();
+                    }
+                }
+                sqlConnection.Close();
+                sqlConnection.Open();
                 using (SqlDataReader read = cmd.ExecuteReader())
                 {
                     while (read.Read())
                     {
-                        txtfname.Text = read.GetValue(1).ToString();
-                        txtLname.Text = read.GetValue(2).ToString();
-                        cmbGender.Text = read.GetValue(12).ToString();
-                        dateDOB.Text = read.GetValue(3).ToString();
+                        txtfname.Text = read["FirstName"].ToString();
+                        txtLname.Text = read["Lastname"].ToString();
+                        cmbGender.Text = read["Gender"].ToString();
+                        dateDOB.Value = Convert.ToDateTime(read["DOB"].ToString()).Date;
                         txtNIC.Text = read.GetValue(4).ToString();
-                        //  txtLicense.Text = read.GetValue()
                         txtContactNum.Text = read.GetValue(5).ToString();
                         txtEmail.Text = read.GetValue(6).ToString();
                         txtAddress01.Text = read.GetValue(7).ToString();
