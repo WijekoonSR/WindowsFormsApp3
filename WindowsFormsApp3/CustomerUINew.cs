@@ -19,7 +19,7 @@ namespace WindowsFormsApp3
         public static string ID;
         //get sring db connection
         private SqlConnection sqlConnection = new SqlConnection(nameServer);
-        string   name, address, email,  EndDate, StartDate,ContactNumber, FaxNumber;
+        string name, address, email, EndDate, StartDate, ContactNumber, FaxNumber, CId;
        
         SqlCommand command;
         String newCustomerID;
@@ -197,11 +197,14 @@ namespace WindowsFormsApp3
                         FaxNumber = txtFaxNumber.Text.ToString();
                         EndDate = dateEndContract.Value.ToString();
                         StartDate = dateStartContract.Value.ToString();
+                        CId = txtcutomerID.Text.ToString();
 
-                        string query = "insert into Customer(name,address,email,ContactNumber,FaxNumber,ContractStartDate,ContractEndDate) " +
-                            "values('" + name + "','" + address + "','" + email + "','" + ContactNumber + "','" + FaxNumber + "','" + Convert.ToDateTime(StartDate) + "','" + Convert.ToDateTime(EndDate) + "')";
+
+                        string query = "insert into Customer(CustomerID,name,address,email,ContactNumber,FaxNumber,ContractStartDate,ContractEndDate) " +
+                            "values('"+CId +"','" + name + "','" + address + "','" + email + "','" + ContactNumber + "','" + FaxNumber + "','" + Convert.ToDateTime(StartDate) + "','" + Convert.ToDateTime(EndDate) + "')";
                         command = new SqlCommand(query, sqlConnection);
                         int chk = command.ExecuteNonQuery();
+                        sqlConnection.Close();
 
                         if (chk == 0)
                         {
@@ -217,7 +220,7 @@ namespace WindowsFormsApp3
                                 txtcutomerID.Text =  GetID(); 
                             }
                         }
-                        sqlConnection.Close();
+                      
                     }
                 }
             }catch(Exception ex)

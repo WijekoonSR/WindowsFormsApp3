@@ -20,7 +20,11 @@ namespace WindowsFormsApp3
 
 
         String Model, VehicleClass, EngineType, Fueltype, VehicleCapacity, Colour, Weight, RegDate, RegNo, ChassisNo, YearOfManufac, VehicleType;
-        
+
+        private void txtVehicleID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         int HiringRate;
         private void VehicleUINew_Load(object sender, EventArgs e)
@@ -56,7 +60,7 @@ namespace WindowsFormsApp3
             {
                 //set when user tries to insert values to db ** confirmed
                 con.Open();
-                SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Employee", con);
+                SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Vehicles", con);
                 com.ExecuteNonQuery();
 
                 con.Close();
@@ -71,7 +75,7 @@ namespace WindowsFormsApp3
             {
                 string ID = null;
                 con.Open();
-                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Employee' ;";
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Vehicles' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, con);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
@@ -79,12 +83,12 @@ namespace WindowsFormsApp3
                     ID = dataReader[0].ToString();
                 }
                 con.Close();
-                return "VL" + (int.Parse(ID));
+                return "VL" + ID;
 
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Customer:getID ");
+                MessageBox.Show(e.Message, "Vehicle:getID ");
                 return "Error";
 
             }
@@ -189,11 +193,11 @@ namespace WindowsFormsApp3
                     RegNo = txtRegistrationNo.Text.ToString();
                     YearOfManufac = txtYearOfManufacture.Text.ToString();
                     ChassisNo = txtChassisNo.Text.ToString();
-                
+                    vID = txtVehicleID.Text.ToString();
 
 
-                    string query = "insert into Vehicles(VehicleType,Model,VehicleClass,EngineNo,FuelType,VehicleCapacity,Colour,Weights,RegistrationDate,RegistrationNo,YearOfManufacture,ChassiNo)" +
-                        " values('" + VehicleType + "','" + Model + "','" + VehicleClass + "','" + EngineType + "', '" + Fueltype + "' ,'" + VehicleCapacity + "','" + Colour + "','" + Weight + "','" + RegDate + "','" + RegNo + "','" + YearOfManufac + "','" + ChassisNo + "')";
+                    string query = "insert into Vehicles(VehicleID,VehicleType,Model,VehicleClass,EngineNo,FuelType,VehicleCapacity,Colour,Weights,RegistrationDate,RegistrationNo,YearOfManufacture,ChassiNo)" +
+                        " values('"+vID+"','" + VehicleType + "','" + Model + "','" + VehicleClass + "','" + EngineType + "', '" + Fueltype + "' ,'" + VehicleCapacity + "','" + Colour + "','" + Weight + "','" + RegDate + "','" + RegNo + "','" + YearOfManufac + "','" + ChassisNo + "')";
                     SqlCommand sqlCommand = new SqlCommand(query, con);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Saved Successfully");

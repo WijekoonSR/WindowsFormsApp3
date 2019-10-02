@@ -71,8 +71,10 @@
             this.txtVehicleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVehicleID.Location = new System.Drawing.Point(825, 32);
             this.txtVehicleID.Name = "txtVehicleID";
+            this.txtVehicleID.ReadOnly = true;
             this.txtVehicleID.Size = new System.Drawing.Size(117, 21);
             this.txtVehicleID.TabIndex = 25;
+            this.txtVehicleID.TextChanged += new System.EventHandler(this.txtVehicleID_TextChanged);
             // 
             // lblYearOfManufacture
             // 

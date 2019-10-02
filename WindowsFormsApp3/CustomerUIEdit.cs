@@ -94,7 +94,7 @@ namespace WindowsFormsApp3
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int CustomerID = int.Parse(txtcutomerID.Text);
+            string CustomerID = txtcutomerID.Text.ToString();
             //SqlConnection sqlConnection = new SqlConnection(name);
             string query_Search = "SELECT * FROM Customer WHERE CustomerID='" +CustomerID+ "'";
             SqlCommand cmd = new SqlCommand(query_Search, sqlConnection);
@@ -106,12 +106,14 @@ namespace WindowsFormsApp3
                 {
                     while (read.Read())
                     {
-                        txtCompanyName.Text = read.GetValue(3).ToString();
-                        txtCompanyAddress.Text = read.GetValue(4).ToString();
-                        txtContactNumber.Text = read.GetValue(5).ToString();
-                        txtEmailAddress.Text = read.GetValue(6).ToString();
-                        txtFaxNumber.Text = read.GetValue(7).ToString();
-                   
+                        txtCompanyName.Text = read["name"].ToString();
+                        txtCompanyAddress.Text = read["address"].ToString();
+                        txtContactNumber.Text = read["ContactNumber"].ToString();
+                        txtEmailAddress.Text = read["email"].ToString();
+                        txtFaxNumber.Text = read["FaxNumber"].ToString();
+                        dateStartContract.Value = Convert.ToDateTime(read["ContractStartDate"]);
+                        dateEndContract.Value = Convert.ToDateTime(read["ContractEndDate"]);
+
                     }
                 }
 

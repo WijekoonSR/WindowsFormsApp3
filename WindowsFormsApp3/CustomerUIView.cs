@@ -30,7 +30,7 @@ namespace WindowsFormsApp3
             try
             {
                // sqlConnection.Open();
-                int SearchID = int.Parse(txtCustomerID.Text);
+                string SearchID = txtCustomerID.Text;
                 String cmd = "SELECT * from Customer where CustomerID = '" + SearchID + "'";
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd, sqlConnection);
                 DataTable dataTable = new DataTable();

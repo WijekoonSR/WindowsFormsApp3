@@ -148,6 +148,29 @@ namespace WindowsFormsApp3
                 return true;
             }
         }
+
+        byte[] ImageToByte(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
+
+
+        private void btnAddPrfPic_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = ofd.FileName;
+                    picUser.Image = Image.FromFile(filename);
+                }
+            }
+
+        }
         private void NewUserUI_Load(object sender, EventArgs e)
         {
         }
@@ -174,27 +197,8 @@ namespace WindowsFormsApp3
 
         }
 
-        private void btnAddPrfPic_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    string filename = ofd.FileName;
-                    picUser.Image = Image.FromFile(filename);
-                }
-            }
 
-        }
-
-        byte[] ImageToByte(Image img)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                return ms.ToArray();
-            }
-        }
+    
 
         private void lblPassword_Click(object sender, EventArgs e)
         {

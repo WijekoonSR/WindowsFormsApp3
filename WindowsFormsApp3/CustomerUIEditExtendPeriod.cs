@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
     {
         string endDate;
         string name = CustomerUINew.nameServer;
-        int id;
+        string id;
         public CustomerUIEditExtendPeriod()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace WindowsFormsApp3
             using (SqlConnection sql = new SqlConnection(name))
             {
                 sql.Open();
-                id = int.Parse(txtCustomerID.Text.ToString());
+                id = txtCustomerID.Text.ToString();
                 string query = "select * from Customer where CustomerID = '" + id + "'";
                 SqlCommand sqlCommand = new SqlCommand(query, sql);
                 SqlDataReader sqlData = sqlCommand.ExecuteReader();
@@ -54,7 +54,7 @@ namespace WindowsFormsApp3
             {
                 sql.Open();
                 string newEndDate = dtpDate.Value.ToString("yyyy/MM/dd");
-                id = int.Parse(txtCustomerID.Text.ToString());
+                id = txtCustomerID.Text.ToString();
                 string query = "update Customer set ContractEndDate= '"+newEndDate+"' where CustomerID = '"+id+"'";
                 SqlCommand sqlCommand = new SqlCommand(query, sql);
                 int chk = sqlCommand.ExecuteNonQuery();

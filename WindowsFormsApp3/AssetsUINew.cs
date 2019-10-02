@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace WindowsFormsApp3
 {
@@ -245,16 +246,14 @@ namespace WindowsFormsApp3
                     OwnerContact = int.Parse(txtOwnContactNew.Text);
 
                     PictureBox picBoxAttachNew1 = picBoxAttachNew;
-                    AttachmentNew = (Bitmap)picBoxAttachNew1.Image;
-
+                    
                     //ID takes only integer values
-                    String ID = txtVehicleID.Text;
-                    ID = Regex.Replace(ID, "[^0-9]", "");
-                    int VehicleID = int.Parse(ID);
+                    String VehicleID = txtVehicleID.Text;
+                   
 
                     String query = "insert into Assets_Maintenance" +
                         "(AssetsMaintenanceID,VehicleID,PurchasedSpareParts,Quantity,PurchaseDate,Price,AttachmentNew,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)" +
-                        " Values('"+AssetsMaintenanceID+"','" + VehicleID + "' ,'" + spareParts + "','" + quantity + "','" + date + "','" + price + "','"+ AttachmentNew+"," + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
+                        " Values('"+AssetsMaintenanceID+"','" + VehicleID + "' ,'" + spareParts + "','" + quantity + "','" + date + "','" + price + "','"+ ConvertImageToBinary(picBoxAttachNew1.Image) + "," + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
 
 
                     sqlCommand = new SqlCommand(query, sqlConnection);
@@ -288,8 +287,17 @@ namespace WindowsFormsApp3
         
 
         }
-        
 
+    
+
+        byte[] ConvertImageToBinary(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
 
         private void ClearFields()
         {

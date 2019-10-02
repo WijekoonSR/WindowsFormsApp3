@@ -67,11 +67,11 @@ namespace WindowsFormsApp3
                 "Important",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if (result == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
                 sqlConnection.Open();
                 string id = txtSearch.Text.ToString();
-                SqlCommand command = new SqlCommand("delete from Booking_Vehicle where VehicleID = '" + id + "'", sqlConnection);
+                SqlCommand command = new SqlCommand("delete from Vehicles where VehicleID = '" + id + "'", sqlConnection);
                 command.ExecuteNonQuery();
                 sqlConnection.Close();
                 getData();
