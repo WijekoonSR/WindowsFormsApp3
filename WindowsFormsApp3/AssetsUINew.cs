@@ -279,8 +279,8 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                        setIdSql();
-                        DialogResult DR = MessageBox.Show("Successfully Entered","Success",MessageBoxButtons.OK);
+                    setIdSql();
+                    DialogResult DR = MessageBox.Show("Successfully Entered","Success",MessageBoxButtons.OK);
                         ClearFields();
                         if (DR == DialogResult.OK)
                         {
@@ -329,6 +329,8 @@ namespace WindowsFormsApp3
                 txtEmail.Clear();
                 txtOwnerName.Clear();
                 txtOwnContactNew.Clear();
+                txtVehicleID.Clear();
+                picBoxAttachNew.Image = null;
             }
             catch (Exception ex)
             {

@@ -83,7 +83,7 @@ namespace WindowsFormsApp3
                     ID = dataReader[0].ToString();
                 }
                 con.Close();
-                return "VL" + ID;
+                return "V" + ID;
 
             }
             catch (Exception e)
