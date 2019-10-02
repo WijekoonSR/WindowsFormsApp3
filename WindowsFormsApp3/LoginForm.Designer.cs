@@ -39,7 +39,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.linkForgotPassword = new System.Windows.Forms.LinkLabel();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.linkRegister = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
@@ -152,17 +151,6 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // linkForgotPassword
-            // 
-            this.linkForgotPassword.AutoSize = true;
-            this.linkForgotPassword.Location = new System.Drawing.Point(49, 362);
-            this.linkForgotPassword.Name = "linkForgotPassword";
-            this.linkForgotPassword.Size = new System.Drawing.Size(89, 13);
-            this.linkForgotPassword.TabIndex = 17;
-            this.linkForgotPassword.TabStop = true;
-            this.linkForgotPassword.Text = "Forgot Password ";
-            this.linkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgotPassword_LinkClicked);
-            // 
             // picClose
             // 
             this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
@@ -194,7 +182,6 @@
             this.ClientSize = new System.Drawing.Size(341, 426);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.picClose);
-            this.Controls.Add(this.linkForgotPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -229,7 +216,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.LinkLabel linkForgotPassword;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.LinkLabel linkRegister;
     }
