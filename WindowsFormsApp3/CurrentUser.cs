@@ -8,18 +8,18 @@ namespace WindowsFormsApp3
 {
     class CurrentUser
     {
-        public static int employeeID;
-        public static int userID;
+        public static string employeeID;
+        public static string userID;
 
-        public static void setID(int eId, int uId) {
+        public static void setID(string eId, string uId) {
             employeeID = eId;
             userID = uId;
         }
 
-        public static int getEId() {
+        public static string getEId() {
             return employeeID;
         }
-        public static int getUId()
+        public static string getUId()
         {
             return userID;
         }

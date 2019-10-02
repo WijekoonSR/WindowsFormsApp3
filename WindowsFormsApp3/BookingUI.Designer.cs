@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingUI));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnReport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnView = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -51,6 +53,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.panel8);
@@ -63,6 +67,44 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 63);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(484, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 63);
+            this.panel5.TabIndex = 15;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReport.BorderRadius = 0;
+            this.btnReport.ButtonText = "Report";
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReport.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReport.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnReport.Iconimage")));
+            this.btnReport.Iconimage_right = null;
+            this.btnReport.Iconimage_right_Selected = null;
+            this.btnReport.Iconimage_Selected = null;
+            this.btnReport.IconZoom = 34D;
+            this.btnReport.IsTab = false;
+            this.btnReport.Location = new System.Drawing.Point(364, 0);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.btnReport.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnReport.selected = false;
+            this.btnReport.Size = new System.Drawing.Size(120, 63);
+            this.btnReport.TabIndex = 14;
+            this.btnReport.Textcolor = System.Drawing.Color.Black;
+            this.btnReport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // panel7
             // 
@@ -273,5 +315,7 @@
         private BookingUIEdit bookingUIEdit1;
         private BookingUIView bookingUIView1;
         private BookingUINew bookingUINew1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnReport;
+        private System.Windows.Forms.Panel panel5;
     }
 }

@@ -66,6 +66,7 @@ namespace WindowsFormsApp3
             string password = txtPassword.Text;
             if (username == "admin" && password == "@!1A2dCvI" || checkUser(username,password)) {
                 MessageBox.Show("Login Successfully!");
+                CurrentUser.setID("admin", "admin");
                 HomeUI BF = new HomeUI();
                 BF.Show();
                 this.Hide();
@@ -74,23 +75,25 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Wrong User Name Or Password", "Invalid !", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private bool checkUser(String userID, String password) {
-            int EmployeeID = 0;
-            int UserID = int.Parse(Regex.Replace(userID, "[^0-9]", ""));
+            sqlConnection.Open();
+            string EmployeeID = null;
             string query = "select * from Users where UserID = @uid and password = @pw";
             SqlCommand com = new SqlCommand(query,sqlConnection);
-            com.Parameters.AddWithValue("@uid", UserID);
+            com.Parameters.AddWithValue("@uid", userID);
             com.Parameters.AddWithValue("@pw", password);
-            if (com.ExecuteNonQuery() < 0)
+            if (com.ExecuteNonQuery() == 0)
             {
+                sqlConnection.Close();
                 return false;
             }
             else
             {
                 SqlDataReader sdr = com.ExecuteReader();
                 while (sdr.Read()) {
-                    EmployeeID = int.Parse(sdr["EmployeeID"].ToString());
+                    EmployeeID = sdr["EmployeeID"].ToString();
                 }
-                CurrentUser.setID(EmployeeID, UserID);
+                sqlConnection.Close();
+                CurrentUser.setID(EmployeeID, userID);
                 return true;
             }
         }

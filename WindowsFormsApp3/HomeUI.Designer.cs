@@ -52,11 +52,20 @@
             this.BookingsButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BankLoansButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.LeasingButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.vehicleLeasingUI1 = new WindowsFormsApp3.VehicleLeasingUI();
+            this.userProfile1 = new WindowsFormsApp3.UserProfile();
+            this.vehicleUI1 = new WindowsFormsApp3.VehicleUI();
+            this.payrollUI1 = new WindowsFormsApp3.PayrollUI();
+            this.employeeUI1 = new WindowsFormsApp3.EmployeeUI();
+            this.customerUI1 = new WindowsFormsApp3.CustomerUI();
+            this.bookingUI1 = new WindowsFormsApp3.BookingUI();
+            this.assetsUI1 = new WindowsFormsApp3.AssetsUI();
             this.panel11 = new System.Windows.Forms.Panel();
             this.UserIcon = new System.Windows.Forms.PictureBox();
             this.InfoIcon = new System.Windows.Forms.PictureBox();
@@ -64,16 +73,6 @@
             this.maximizedIcon = new System.Windows.Forms.PictureBox();
             this.ExitIcon = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.userProfile1 = new WindowsFormsApp3.UserProfile();
-            this.vehicleUI1 = new WindowsFormsApp3.VehicleUI();
-            this.payrollUI1 = new WindowsFormsApp3.PayrollUI();
-            this.employeeUI1 = new WindowsFormsApp3.EmployeeUI();
-            this.customerUI1 = new WindowsFormsApp3.CustomerUI();
-            this.bookingUI2 = new WindowsFormsApp3.BookingUI();
-            this.bookingUI1 = new WindowsFormsApp3.BookingUI();
-            this.bankLoanUI1 = new WindowsFormsApp3.VehicleLeasingUI();
-            this.assetsUI1 = new WindowsFormsApp3.AssetsUI();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
@@ -433,7 +432,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.AssetsButton);
             this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.BankLoansButton);
+            this.panel1.Controls.Add(this.LeasingButton);
             this.panel1.Controls.Add(this.PayrollButton);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.VehicleButton);
@@ -452,33 +451,33 @@
             this.panel1.Size = new System.Drawing.Size(294, 697);
             this.panel1.TabIndex = 9;
             // 
-            // BankLoansButton
+            // LeasingButton
             // 
-            this.BankLoansButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(180)))), ((int)(((byte)(229)))));
-            this.BankLoansButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
-            this.BankLoansButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BankLoansButton.BorderRadius = 0;
-            this.BankLoansButton.ButtonText = "Vehicle Leasing Management";
-            this.BankLoansButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BankLoansButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BankLoansButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.BankLoansButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("BankLoansButton.Iconimage")));
-            this.BankLoansButton.Iconimage_right = null;
-            this.BankLoansButton.Iconimage_right_Selected = null;
-            this.BankLoansButton.Iconimage_Selected = null;
-            this.BankLoansButton.IconZoom = 90D;
-            this.BankLoansButton.IsTab = false;
-            this.BankLoansButton.Location = new System.Drawing.Point(0, 455);
-            this.BankLoansButton.Name = "BankLoansButton";
-            this.BankLoansButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
-            this.BankLoansButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(85)))), ((int)(((byte)(134)))));
-            this.BankLoansButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.BankLoansButton.selected = false;
-            this.BankLoansButton.Size = new System.Drawing.Size(294, 64);
-            this.BankLoansButton.TabIndex = 17;
-            this.BankLoansButton.Textcolor = System.Drawing.Color.White;
-            this.BankLoansButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BankLoansButton.Click += new System.EventHandler(this.BankLoansButton_Click);
+            this.LeasingButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(180)))), ((int)(((byte)(229)))));
+            this.LeasingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
+            this.LeasingButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LeasingButton.BorderRadius = 0;
+            this.LeasingButton.ButtonText = "Vehicle Leasing Management";
+            this.LeasingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LeasingButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LeasingButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.LeasingButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("LeasingButton.Iconimage")));
+            this.LeasingButton.Iconimage_right = null;
+            this.LeasingButton.Iconimage_right_Selected = null;
+            this.LeasingButton.Iconimage_Selected = null;
+            this.LeasingButton.IconZoom = 90D;
+            this.LeasingButton.IsTab = false;
+            this.LeasingButton.Location = new System.Drawing.Point(0, 455);
+            this.LeasingButton.Name = "LeasingButton";
+            this.LeasingButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(14)))), ((int)(((byte)(79)))));
+            this.LeasingButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(85)))), ((int)(((byte)(134)))));
+            this.LeasingButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.LeasingButton.selected = false;
+            this.LeasingButton.Size = new System.Drawing.Size(294, 64);
+            this.LeasingButton.TabIndex = 17;
+            this.LeasingButton.Textcolor = System.Drawing.Color.White;
+            this.LeasingButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeasingButton.Click += new System.EventHandler(this.BankLoansButton_Click);
             // 
             // pictureBox3
             // 
@@ -500,6 +499,18 @@
             this.panel2.Size = new System.Drawing.Size(294, 63);
             this.panel2.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(46, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Thiseni Enterprises";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(20)))), ((int)(((byte)(59)))));
@@ -512,14 +523,13 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.vehicleLeasingUI1);
             this.panel9.Controls.Add(this.userProfile1);
             this.panel9.Controls.Add(this.vehicleUI1);
             this.panel9.Controls.Add(this.payrollUI1);
             this.panel9.Controls.Add(this.employeeUI1);
             this.panel9.Controls.Add(this.customerUI1);
-            this.panel9.Controls.Add(this.bookingUI2);
             this.panel9.Controls.Add(this.bookingUI1);
-            this.panel9.Controls.Add(this.bankLoanUI1);
             this.panel9.Controls.Add(this.assetsUI1);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.panel10);
@@ -528,6 +538,82 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(716, 697);
             this.panel9.TabIndex = 11;
+            // 
+            // vehicleLeasingUI1
+            // 
+            this.vehicleLeasingUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.vehicleLeasingUI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vehicleLeasingUI1.Location = new System.Drawing.Point(0, 63);
+            this.vehicleLeasingUI1.Name = "vehicleLeasingUI1";
+            this.vehicleLeasingUI1.Size = new System.Drawing.Size(716, 634);
+            this.vehicleLeasingUI1.TabIndex = 12;
+            this.vehicleLeasingUI1.Load += new System.EventHandler(this.vehicleLeasingUI1_Load);
+            // 
+            // userProfile1
+            // 
+            this.userProfile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userProfile1.BackColor = System.Drawing.Color.DarkGray;
+            this.userProfile1.Location = new System.Drawing.Point(429, 63);
+            this.userProfile1.Name = "userProfile1";
+            this.userProfile1.Size = new System.Drawing.Size(200, 171);
+            this.userProfile1.TabIndex = 11;
+            this.userProfile1.Load += new System.EventHandler(this.userProfile1_Load);
+            // 
+            // vehicleUI1
+            // 
+            this.vehicleUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.vehicleUI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vehicleUI1.Location = new System.Drawing.Point(0, 63);
+            this.vehicleUI1.Name = "vehicleUI1";
+            this.vehicleUI1.Size = new System.Drawing.Size(716, 634);
+            this.vehicleUI1.TabIndex = 10;
+            this.vehicleUI1.Load += new System.EventHandler(this.vehicleUI1_Load_1);
+            // 
+            // payrollUI1
+            // 
+            this.payrollUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.payrollUI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.payrollUI1.Location = new System.Drawing.Point(0, 63);
+            this.payrollUI1.Name = "payrollUI1";
+            this.payrollUI1.Size = new System.Drawing.Size(716, 634);
+            this.payrollUI1.TabIndex = 9;
+            // 
+            // employeeUI1
+            // 
+            this.employeeUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.employeeUI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeUI1.Location = new System.Drawing.Point(0, 63);
+            this.employeeUI1.Name = "employeeUI1";
+            this.employeeUI1.Size = new System.Drawing.Size(716, 634);
+            this.employeeUI1.TabIndex = 8;
+            // 
+            // customerUI1
+            // 
+            this.customerUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.customerUI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerUI1.Location = new System.Drawing.Point(0, 63);
+            this.customerUI1.Name = "customerUI1";
+            this.customerUI1.Size = new System.Drawing.Size(716, 634);
+            this.customerUI1.TabIndex = 7;
+            // 
+            // bookingUI1
+            // 
+            this.bookingUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.bookingUI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookingUI1.Location = new System.Drawing.Point(0, 63);
+            this.bookingUI1.Name = "bookingUI1";
+            this.bookingUI1.Size = new System.Drawing.Size(716, 634);
+            this.bookingUI1.TabIndex = 5;
+            // 
+            // assetsUI1
+            // 
+            this.assetsUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.assetsUI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.assetsUI1.Location = new System.Drawing.Point(0, 63);
+            this.assetsUI1.Name = "assetsUI1";
+            this.assetsUI1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.assetsUI1.Size = new System.Drawing.Size(716, 634);
+            this.assetsUI1.TabIndex = 3;
             // 
             // panel11
             // 
@@ -604,102 +690,6 @@
             this.ExitIcon.TabStop = false;
             this.ExitIcon.Click += new System.EventHandler(this.pictureBox8_Click_2);
             // 
-            // userProfile1
-            // 
-            this.userProfile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.userProfile1.BackColor = System.Drawing.Color.DarkGray;
-            this.userProfile1.Location = new System.Drawing.Point(429, 63);
-            this.userProfile1.Name = "userProfile1";
-            this.userProfile1.Size = new System.Drawing.Size(200, 171);
-            this.userProfile1.TabIndex = 11;
-            this.userProfile1.Load += new System.EventHandler(this.userProfile1_Load);
-            // 
-            // vehicleUI1
-            // 
-            this.vehicleUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.vehicleUI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vehicleUI1.Location = new System.Drawing.Point(0, 63);
-            this.vehicleUI1.Name = "vehicleUI1";
-            this.vehicleUI1.Size = new System.Drawing.Size(716, 634);
-            this.vehicleUI1.TabIndex = 10;
-            this.vehicleUI1.Load += new System.EventHandler(this.vehicleUI1_Load_1);
-            // 
-            // payrollUI1
-            // 
-            this.payrollUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.payrollUI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.payrollUI1.Location = new System.Drawing.Point(0, 63);
-            this.payrollUI1.Name = "payrollUI1";
-            this.payrollUI1.Size = new System.Drawing.Size(716, 634);
-            this.payrollUI1.TabIndex = 9;
-            // 
-            // employeeUI1
-            // 
-            this.employeeUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.employeeUI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeUI1.Location = new System.Drawing.Point(0, 63);
-            this.employeeUI1.Name = "employeeUI1";
-            this.employeeUI1.Size = new System.Drawing.Size(716, 634);
-            this.employeeUI1.TabIndex = 8;
-            // 
-            // customerUI1
-            // 
-            this.customerUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.customerUI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customerUI1.Location = new System.Drawing.Point(0, 63);
-            this.customerUI1.Name = "customerUI1";
-            this.customerUI1.Size = new System.Drawing.Size(716, 634);
-            this.customerUI1.TabIndex = 7;
-            // 
-            // bookingUI2
-            // 
-            this.bookingUI2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.bookingUI2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookingUI2.Location = new System.Drawing.Point(0, 63);
-            this.bookingUI2.Name = "bookingUI2";
-            this.bookingUI2.Size = new System.Drawing.Size(716, 634);
-            this.bookingUI2.TabIndex = 6;
-            // 
-            // bookingUI1
-            // 
-            this.bookingUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.bookingUI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookingUI1.Location = new System.Drawing.Point(0, 63);
-            this.bookingUI1.Name = "bookingUI1";
-            this.bookingUI1.Size = new System.Drawing.Size(716, 634);
-            this.bookingUI1.TabIndex = 5;
-            // 
-            // bankLoanUI1
-            // 
-            this.bankLoanUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.bankLoanUI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bankLoanUI1.Location = new System.Drawing.Point(0, 63);
-            this.bankLoanUI1.Name = "bankLoanUI1";
-            this.bankLoanUI1.Size = new System.Drawing.Size(716, 634);
-            this.bankLoanUI1.TabIndex = 4;
-            // 
-            // assetsUI1
-            // 
-            this.assetsUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
-            this.assetsUI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.assetsUI1.Location = new System.Drawing.Point(0, 63);
-            this.assetsUI1.Name = "assetsUI1";
-            this.assetsUI1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.assetsUI1.Size = new System.Drawing.Size(716, 634);
-            this.assetsUI1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Thiseni Enterprises";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // HomeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -772,9 +762,7 @@
         private System.Windows.Forms.PictureBox ExitIcon;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private CustomerUI customerUI1;
-        private BookingUI bookingUI2;
         private BookingUI bookingUI1;
-        private VehicleLeasingUI bankLoanUI1;
         private AssetsUI assetsUI1;
         private System.Windows.Forms.Panel SlidePanel;
         private System.Windows.Forms.PictureBox InfoIcon;
@@ -787,8 +775,9 @@
         private PayrollUI payrollUI1;
         private EmployeeUI employeeUI1;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuFlatButton BankLoansButton;
+        private Bunifu.Framework.UI.BunifuFlatButton LeasingButton;
         private System.Windows.Forms.Label label1;
+        private VehicleLeasingUI vehicleLeasingUI1;
     }
 }
 

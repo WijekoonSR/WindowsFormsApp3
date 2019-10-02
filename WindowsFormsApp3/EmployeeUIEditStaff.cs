@@ -148,6 +148,11 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Eror" + ex);
             }
         }
+
+        private void cmbJobTitle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

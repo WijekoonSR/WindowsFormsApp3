@@ -37,7 +37,7 @@ namespace WindowsFormsApp3
         public VehicleUINew()
         {
             InitializeComponent();
-            getVehicleID();
+            txtVehicleID.Text = GetID();
             dropdownVehicleType.AddItem("Excavators");
             dropdownVehicleType.AddItem("Backhoe Loaders");
             dropdownVehicleType.AddItem("Bulldozers");
@@ -50,30 +50,43 @@ namespace WindowsFormsApp3
 
         }
 
-        private void getVehicleID()
+        private void setIdSql()
         {
             try
             {
+                //set when user tries to insert values to db ** confirmed
                 con.Open();
-                String queryCurrentID = "select IDENT_CURRENT('Vehicles')";
+                SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Employee", con);
+                com.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception es) {
+                MessageBox.Show(es.Message);
+            }
+        }
+        private string GetID()
+        {
+            try
+            {
+                string ID = null;
+                con.Open();
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Employee' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, con);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    vID = dataReader[0].ToString();
+                    ID = dataReader[0].ToString();
                 }
                 con.Close();
+                return "VL" + (int.Parse(ID));
 
-                con.Open();
-                SqlCommand chkExistsData = new SqlCommand("select * from Vehicles where VehicleID = 1", con);
-                SqlDataReader SDR = chkExistsData.ExecuteReader();
-                if (SDR.HasRows) txtVehicleID.Text = "B" + (int.Parse(vID) + 1).ToString();
-                else txtVehicleID.Text = "B1";
-                con.Close();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show(ex.Message, "Vehicle UI");
+                MessageBox.Show(e.Message, "Customer:getID ");
+                return "Error";
+
             }
             finally
             {
@@ -83,10 +96,14 @@ namespace WindowsFormsApp3
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            clear();
+        }
+
+        void clear() {
             txtChassisNo.Clear();
             txtEngineType.Clear();
             txtFuelType.Clear();
-            
+
             txtWeight.Clear();
             txtModel.Clear();
             txtRegistrationNo.Clear();
@@ -94,11 +111,9 @@ namespace WindowsFormsApp3
             txtVehicleCapacity.Clear();
             txtVehicleClass.Clear();
             txtYearOfManufacture.Clear();
-           
+
             DateRegistration.Value = DateTime.Now;
             dropdownVehicleType.Text = null;
-
-
         }
 
 
@@ -183,6 +198,10 @@ namespace WindowsFormsApp3
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Saved Successfully");
                     con.Close();
+
+                    clear();
+                    setIdSql();
+                    txtVehicleID.Text = GetID();
                 }
             }
             catch (Exception ex)
