@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.btnSrchID = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.VehicleDetailsReport1 = new WindowsFormsApp3.VehicleDetailsReport();
             this.panel1.SuspendLayout();
@@ -48,23 +48,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 39);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.crystalReportViewer1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 39);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 411);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(34, 12);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(131, 20);
-            this.txtID.TabIndex = 0;
-            // 
             // btnSrchID
             // 
             this.btnSrchID.Location = new System.Drawing.Point(199, 10);
@@ -74,6 +57,24 @@
             this.btnSrchID.Text = "Search";
             this.btnSrchID.UseVisualStyleBackColor = true;
             this.btnSrchID.Click += new System.EventHandler(this.btnSrchID_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(34, 12);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(131, 20);
+            this.txtID.TabIndex = 0;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.crystalReportViewer1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 39);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 411);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // crystalReportViewer1
             // 

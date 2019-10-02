@@ -36,10 +36,16 @@ namespace WindowsFormsApp3
             sql.Open();
             SqlDataAdapter sda = new SqlDataAdapter("select * from Vehicles where  VehicleID = '"+ txtID.Text.ToString()+"'",sql);
             DataSet ds = new DataSet();
-            sda.Fill(ds);
+            sda.Fill(ds,"Vehicles");
             report.Load(Environment.CurrentDirectory + "//VehicleDetailsReport.rpt");
             report.SetDataSource(ds);
+            crystalReportViewer1.ReportSource = report;
             sql.Close();
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

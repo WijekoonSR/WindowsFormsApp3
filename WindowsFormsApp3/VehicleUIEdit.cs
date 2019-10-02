@@ -98,7 +98,7 @@ namespace WindowsFormsApp3
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
-            int VehicleID = int.Parse(txtSearch.Text);
+            String VehicleID = txtSearch.Text;
             try
             {
                 con.Open();
@@ -164,7 +164,7 @@ namespace WindowsFormsApp3
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int VehicleID = int.Parse(txtSearch.Text);
+            String VehicleID = txtSearch.Text;
             con.Open();
 
             Model = txtModel.Text.ToString();
