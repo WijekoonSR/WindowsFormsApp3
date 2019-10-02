@@ -23,27 +23,7 @@ namespace WindowsFormsApp3
 
         private void BookingUIGenerateReport_Load(object sender, EventArgs e)
         {
-            /*
-            SqlConnection cnn = new SqlConnection(@"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True");
-            String query = "select * from Bookings";
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query,sqlConnection);
-            DataSet dataSet = new System.Data.DataSet();
-            sqlDataAdapter.Fill(dataSet);
-            BookingsReport1.SetDataSource(dataSet);*/
-
-           /* SqlConnection cnn = new SqlConnection(@"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True");
-            cnn.Open();
-            sql = "SELECT * FROM Bookings group by ";
-            SqlDataAdapter dscmd = new SqlDataAdapter(sql, cnn);
-            DatabaseDataSet ds = new DatabaseDataSet();// database name from imported values when creating report **left to right**
-            dscmd.Fill(ds);
-            MessageBox.Show(ds.Tables[1].Rows.Count.ToString());
-            cnn.Close();
-
-            BookingsReport objRpt = new BookingsReport();
-            objRpt.SetDataSource(ds.Tables[1]);
-            crystalReportViewer1.ReportSource = objRpt;
-            crystalReportViewer1.Refresh();*/
+          
         }
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)

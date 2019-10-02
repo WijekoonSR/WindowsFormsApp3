@@ -25,26 +25,26 @@ namespace WindowsFormsApp3
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try {
-                int EmployeeID = int.Parse(txtEmployeeID.Text);
+                string EmployeeID = (txtEmployeeID.Text).ToString();
                 sqlConnection.Open();
-                String sql1 = "Delete From Payroll_Operators where EmployeeID = '" + EmployeeID + "'";
-                String sql2 = "Delete From Payroll_Operators_Monthly_Salary where EmployeeID = '" + EmployeeID + "'";
-                String sql3 = "Delete From Payroll_Staff where EmployeeID = '" + EmployeeID + "'";
-                String sql4 = "Delete From Vehicle_Operators where EmployeeID = '" + EmployeeID + "'";
-                String sql5 = "Delete From Employee where EmployeeID = '" + EmployeeID + "'";
+               // String sql1 = "Delete From Payroll_Operators where EmployeeID = '" + EmployeeID + "'";
+               // String sql2 = "Delete From Payroll_Operators_Monthly_Salary where EmployeeID = '" + EmployeeID + "'";
+               // String sql3 = "Delete From Payroll_Staff where EmployeeID = '" + EmployeeID + "'";
+               // String sql4 = "Delete From Vehicle_Operators where EmployeeID = '" + EmployeeID + "'";
+                String sql = "Delete From Employee where EmployeeID = '" + EmployeeID + "'";
                 //String sq4 = "Delete From Vehicle_Operators where EmployeeID = '" + EmployeeID + "'";
 
-                SqlCommand cmd1 = new SqlCommand(sql1, sqlConnection);
-                SqlCommand cmd2 = new SqlCommand(sql2, sqlConnection);
-                SqlCommand cmd3 = new SqlCommand(sql3, sqlConnection);
-                SqlCommand cmd4 = new SqlCommand(sql4, sqlConnection);
-                SqlCommand cmd5 = new SqlCommand(sql5, sqlConnection);
+               // SqlCommand cmd1 = new SqlCommand(sql1, sqlConnection);
+               // SqlCommand cmd2 = new SqlCommand(sql2, sqlConnection);
+               // SqlCommand cmd3 = new SqlCommand(sql3, sqlConnection);
+               // SqlCommand cmd4 = new SqlCommand(sql4, sqlConnection);
+                SqlCommand cmd = new SqlCommand(sql, sqlConnection);
 
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
-                cmd3.ExecuteNonQuery();
-                cmd4.ExecuteNonQuery();
-                cmd5.ExecuteNonQuery();
+                //cmd1.ExecuteNonQuery();
+               // cmd2.ExecuteNonQuery();
+               // cmd3.ExecuteNonQuery();
+               // cmd4.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Deleted");
                 sqlConnection.Close();
@@ -55,7 +55,7 @@ namespace WindowsFormsApp3
 }
         private void button1_Click(object sender, EventArgs e)
         {
-            int EmployeeID = int.Parse(txtEmployeeID.Text);
+            string EmployeeID = (txtEmployeeID.Text).ToString();
             string Sql = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
             SqlCommand cmd = new SqlCommand(Sql, sqlConnection);
             try
@@ -101,7 +101,7 @@ namespace WindowsFormsApp3
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int EmployeeID = int.Parse(txtEmployeeID.Text);
+            string EmployeeID = (txtEmployeeID.Text).ToString();
             string fname = txtfname.Text;
             string lname = txtLname.Text;
             string gender = cmbGender.Text;
