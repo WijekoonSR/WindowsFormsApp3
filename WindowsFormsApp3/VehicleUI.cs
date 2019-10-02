@@ -49,7 +49,7 @@ namespace WindowsFormsApp3
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            VehicleUI vehicleUI = new VehicleUI();
+            VehicleUIReport vehicleUI = new VehicleUIReport();
             vehicleUI.Show();
             vehicleUI.BringToFront();
         }
