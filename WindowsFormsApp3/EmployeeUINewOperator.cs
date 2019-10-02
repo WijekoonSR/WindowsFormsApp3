@@ -126,10 +126,10 @@ namespace WindowsFormsApp3
                  SqlCommand cmd2 = new SqlCommand(query02,sqlConnection);
                  cmd2.ExecuteNonQuery();*/
 
-                setIdSql();
                 DialogResult dr =  MessageBox.Show("Data Submitted","Success!!",MessageBoxButtons.OK);
                 if (dr == DialogResult.OK)
                 {
+                    setIdSql();
                     clearDet();
                     txtEmployeeID.Text = GetID();
                 }
