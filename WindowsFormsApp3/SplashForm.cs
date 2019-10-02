@@ -75,8 +75,9 @@ namespace WindowsFormsApp3
             {
                timer1.Stop();
                LoginForm loginForm = new LoginForm();
-               loginForm.Show();
                this.Hide();
+               loginForm.Show();
+               loginForm.BringToFront();
             }
             
         }

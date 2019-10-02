@@ -20,7 +20,11 @@ namespace WindowsFormsApp3
 
 
         String Model, VehicleClass, EngineType, Fueltype, VehicleCapacity, Colour, Weight, RegDate, RegNo, ChassisNo, YearOfManufac, VehicleType;
-        
+
+        private void txtVehicleID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         int HiringRate;
         private void VehicleUINew_Load(object sender, EventArgs e)
@@ -37,7 +41,7 @@ namespace WindowsFormsApp3
         public VehicleUINew()
         {
             InitializeComponent();
-            getVehicleID();
+            txtVehicleID.Text = GetID();
             dropdownVehicleType.AddItem("Excavators");
             dropdownVehicleType.AddItem("Backhoe Loaders");
             dropdownVehicleType.AddItem("Bulldozers");
@@ -50,30 +54,43 @@ namespace WindowsFormsApp3
 
         }
 
-        private void getVehicleID()
+        private void setIdSql()
         {
             try
             {
+                //set when user tries to insert values to db ** confirmed
                 con.Open();
-                String queryCurrentID = "select IDENT_CURRENT('Vehicles')";
+                SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Vehicles", con);
+                com.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception es) {
+                MessageBox.Show(es.Message);
+            }
+        }
+        private string GetID()
+        {
+            try
+            {
+                string ID = null;
+                con.Open();
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Vehicles' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, con);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    vID = dataReader[0].ToString();
+                    ID = dataReader[0].ToString();
                 }
                 con.Close();
+                return "VL" + ID;
 
-                con.Open();
-                SqlCommand chkExistsData = new SqlCommand("select * from Vehicles where VehicleID = 1", con);
-                SqlDataReader SDR = chkExistsData.ExecuteReader();
-                if (SDR.HasRows) txtVehicleID.Text = "B" + (int.Parse(vID) + 1).ToString();
-                else txtVehicleID.Text = "B1";
-                con.Close();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show(ex.Message, "Vehicle UI");
+                MessageBox.Show(e.Message, "Vehicle:getID ");
+                return "Error";
+
             }
             finally
             {
@@ -83,10 +100,14 @@ namespace WindowsFormsApp3
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            clear();
+        }
+
+        void clear() {
             txtChassisNo.Clear();
             txtEngineType.Clear();
             txtFuelType.Clear();
-            
+
             txtWeight.Clear();
             txtModel.Clear();
             txtRegistrationNo.Clear();
@@ -94,11 +115,9 @@ namespace WindowsFormsApp3
             txtVehicleCapacity.Clear();
             txtVehicleClass.Clear();
             txtYearOfManufacture.Clear();
-           
+
             DateRegistration.Value = DateTime.Now;
             dropdownVehicleType.Text = null;
-
-
         }
 
 
@@ -174,15 +193,19 @@ namespace WindowsFormsApp3
                     RegNo = txtRegistrationNo.Text.ToString();
                     YearOfManufac = txtYearOfManufacture.Text.ToString();
                     ChassisNo = txtChassisNo.Text.ToString();
-                
+                    vID = txtVehicleID.Text.ToString();
 
 
-                    string query = "insert into Vehicles(VehicleType,Model,VehicleClass,EngineNo,FuelType,VehicleCapacity,Colour,Weights,RegistrationDate,RegistrationNo,YearOfManufacture,ChassiNo)" +
-                        " values('" + VehicleType + "','" + Model + "','" + VehicleClass + "','" + EngineType + "', '" + Fueltype + "' ,'" + VehicleCapacity + "','" + Colour + "','" + Weight + "','" + RegDate + "','" + RegNo + "','" + YearOfManufac + "','" + ChassisNo + "')";
+                    string query = "insert into Vehicles(VehicleID,VehicleType,Model,VehicleClass,EngineNo,FuelType,VehicleCapacity,Colour,Weights,RegistrationDate,RegistrationNo,YearOfManufacture,ChassiNo)" +
+                        " values('"+vID+"','" + VehicleType + "','" + Model + "','" + VehicleClass + "','" + EngineType + "', '" + Fueltype + "' ,'" + VehicleCapacity + "','" + Colour + "','" + Weight + "','" + RegDate + "','" + RegNo + "','" + YearOfManufac + "','" + ChassisNo + "')";
                     SqlCommand sqlCommand = new SqlCommand(query, con);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Saved Successfully");
                     con.Close();
+
+                    clear();
+                    setIdSql();
+                    txtVehicleID.Text = GetID();
                 }
             }
             catch (Exception ex)

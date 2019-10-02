@@ -22,8 +22,7 @@ namespace WindowsFormsApp3
             SqlConnection sqlConnection = new SqlConnection(BookingUINew.name);
             sqlConnection.Open();
             string customerID = BookingUINew.customerID;
-            //ID Only takes integers convert and extract it into intger format
-            customerID = Regex.Replace(customerID, "[^0-9]", "");
+
 
             String query = "select * from Customer where CustomerID = '"+ customerID+"'";
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
@@ -32,7 +31,7 @@ namespace WindowsFormsApp3
                 richTxtCxName.Text = dataReader["name"].ToString();
                 txtFrom.Text = dataReader["ContractStartDate"].ToString();
                 txtTo.Text = dataReader["ContractEndDate"].ToString();
-               // chkDate = Convert.ToDateTime(dataReader["ContractEndDate"]).Date; 
+                chkDate = Convert.ToDateTime(dataReader["ContractEndDate"]).Date; 
 
             }
             MessageBox.Show(txtFrom.Text);

@@ -88,6 +88,7 @@ namespace WindowsFormsApp3
 
                 sqlConnection.Open();
                 String VehicleID = txtVehilceID.Text;
+                String eid = txtEmployeeID.Text.ToString();
                 string fname = txtfname.Text;
                 string lname = txtLname.Text;
                 string gender = cmbGender.Text;
@@ -102,17 +103,13 @@ namespace WindowsFormsApp3
                 string postalCode = txtPostalCode.Text;
                 string jobTitle = cmbJobTitle.Text;
 
-                String EID = txtEmployeeID.Text;
-                EID = Regex.Replace(EID, "[^0-9]", "");
-                int ID = int.Parse(EID);
+ 
 
                 String VID = txtVehilceID.Text;
-                VID = Regex.Replace(VID, "[^0-9]", "");
-                int ID2 = int.Parse(EID);
+                
 
-
-                string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
-                   "values('" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
+                string query = "insert into Employee(EmployeeID,FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
+                   "values('"+eid+"','" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
                 SqlCommand cmd = new SqlCommand(query, sqlConnection);
                 cmd.ExecuteNonQuery();
 
@@ -132,7 +129,8 @@ namespace WindowsFormsApp3
 
                 MessageBox.Show("Data Submitted");
                 clearDet();
-                getOpertaorID();
+                setIdSql();
+                txtEmployeeID.Text = GetID();
                 sqlConnection.Close();
             }
         }
@@ -158,13 +156,23 @@ namespace WindowsFormsApp3
         {
             clearDet();
         }
-        private void getOpertaorID()
+
+        private void setIdSql()
+        {
+            //set when user tries to insert values to db ** confirmed
+            sqlConnection.Open();
+            SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Employee", sqlConnection);
+            com.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+        private string GetID()
         {
             try
             {
-                sqlConnection.Open();
                 string ID = null;
-                String queryCurrentID = "select IDENT_CURRENT('Employee')";
+                sqlConnection.Open();
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Employee' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
@@ -172,23 +180,21 @@ namespace WindowsFormsApp3
                     ID = dataReader[0].ToString();
                 }
                 sqlConnection.Close();
-                sqlConnection.Open();
+                return "E" + (int.Parse(ID));
 
-                SqlCommand chkExistsData = new SqlCommand("select * from Employee where EmployeeID = 1", sqlConnection);
-                SqlDataReader SDR = chkExistsData.ExecuteReader();
-                if (SDR.HasRows) txtEmployeeID.Text = "E" + (int.Parse(ID) + 1).ToString();
-                else txtEmployeeID.Text = "E1";
-                sqlConnection.Close();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "BookingUI:getBookingID ");
+                MessageBox.Show(e.Message, "Customer:getID ");
+                return "Error";
+
             }
             finally
             {
                 sqlConnection.Close();
             }
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -196,7 +202,7 @@ namespace WindowsFormsApp3
 
         private void EmployeeUINewOperator_Load(object sender, EventArgs e)
         {
-            getOpertaorID();
+            txtEmployeeID.Text = GetID();
         }
     }
     }

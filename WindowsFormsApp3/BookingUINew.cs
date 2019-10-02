@@ -15,6 +15,8 @@ namespace WindowsFormsApp3
 {
     public partial class BookingUINew : UserControl
     {
+        //id for Bookings
+        string dbId = null;
         //sqlcommands
         private SqlCommand sqlCommand, sqlComTem;
         //connection server string name
@@ -62,7 +64,7 @@ namespace WindowsFormsApp3
                 sqlConnection.Close();
 
                 //get current booking ID to BookingID text field
-                getBookingID();
+                txtBookingID.Text = GetID();
                 dropTable(); // drop ##tblAvailableVehicles table whenever creating new checks on avaiable vehicles
 
 
@@ -77,31 +79,37 @@ namespace WindowsFormsApp3
             }
         }
 
-        private void getBookingID()
+        private void setIdSql()
+        {
+            //set when user tries to insert values to db ** confirmed
+            sqlConnection.Open();
+            SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Bookings", sqlConnection);
+            com.ExecuteNonQuery();
+            
+            sqlConnection.Close();
+        }
+        private string GetID()
         {
             try
             {
+                string ID = null;
                 sqlConnection.Open();
-                string BookingID = null;
-                String queryCurrentID = "select IDENT_CURRENT('Bookings')";
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Bookings' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    BookingID = dataReader[0].ToString();
+                    ID = dataReader[0].ToString();
                 }
                 sqlConnection.Close();
-                sqlConnection.Open();
+                return "B" + (int.Parse(ID));
 
-                SqlCommand chkExistsData = new SqlCommand("select * from Bookings where BookingID = 1", sqlConnection);
-                SqlDataReader SDR = chkExistsData.ExecuteReader();
-                if (SDR.HasRows) txtBookingID.Text = "B" + (int.Parse(BookingID) + 1).ToString();
-                else txtBookingID.Text = "B1";
-                sqlConnection.Close();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "BookingUI:getBookingID ");
+                MessageBox.Show(e.Message, "Booking:getID ");
+                return "Error";
+
             }
             finally
             {
@@ -361,7 +369,10 @@ namespace WindowsFormsApp3
                 Boolean i = validation();
                 if (i == true)
                 {
+
                     sqlConnection.Open();
+
+                    string bookingID = txtBookingID.Text.ToString();
                     string StartDate = dateStartDate.Value.ToString("yyyy/MM/dd");
                     string EndDate = dateEndDate.Value.ToString("yyyy/MM/dd");
                     int WorkingHours = int.Parse(txtWorkingHours.Text);
@@ -386,12 +397,13 @@ namespace WindowsFormsApp3
                     float fee = TotalCharge;
 
                     //ID Only takes integers convert it into intger format
-                    String ID = txtCustomerID.Text;
-                    ID = Regex.Replace(ID, "[^0-9]", "");
-                    int CustomerID = int.Parse(ID);
+                    String CID = txtCustomerID.Text;
+                   // ID = Regex.Replace(ID, "[^0-9]", "");
+                   // int CustomerID = int.Parse(ID);
 
-                    SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,Address ,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
-                        "Values(@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count,@Address, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
+                    SqlCommand sqlCommandInserted = new SqlCommand("Insert into Bookings(BookingID,StartDate,EndDate,WorkingHours,BackhoeType1,BackhoeType1Ratings,BackhoeType1Count,BackhoeType2,BackhoeType2Ratings,BackhoeType2Count,BackhoeType3,BackhoeType3Ratings,BackhoeType3Count,Address ,CallerName,CalledDate,CallerNic,CallerNumber,TotalCharge,CustomerID)  " +
+                        "Values(@BookingID,@StartDate, @EndDate ,@WorkingHours, @BackhoeType1, @BackhoeType1Ratings, @BackhoeType1Count, @BackhoeType2, @BackhoeType2Ratings, @BackhoeType2Count, @BackhoeType3, @BackhoeType3Ratings, @BackhoeType3Count,@Address, @CallerName, @CalledDate, @CallerNic, @CallerNumber, @TotalCharge, @CustomerID )", sqlConnection);
+                    sqlCommandInserted.Parameters.AddWithValue("@BookingID", bookingID);
                     sqlCommandInserted.Parameters.AddWithValue("@startDate", StartDate);
                     sqlCommandInserted.Parameters.AddWithValue("@EndDate", EndDate);
                     sqlCommandInserted.Parameters.AddWithValue("@WorkingHours", WorkingHours);
@@ -410,7 +422,7 @@ namespace WindowsFormsApp3
                     sqlCommandInserted.Parameters.AddWithValue("@CallerNic", CallerNic);
                     sqlCommandInserted.Parameters.AddWithValue("@CallerNumber", CallerNumber);
                     sqlCommandInserted.Parameters.AddWithValue("@TotalCharge", TotalCharge);
-                    sqlCommandInserted.Parameters.AddWithValue("@CustomerID", CustomerID);
+                    sqlCommandInserted.Parameters.AddWithValue("@CustomerID", CID);
 
 
                     //execute sql query
@@ -425,9 +437,10 @@ namespace WindowsFormsApp3
 
                     if (valid > 0)
                     {
+                        setIdSql();
                         MessageBox.Show("Entered Succesfully !", "Booking Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clearAllFields();
-                        getBookingID();
+                        txtBookingID.Text =  GetID();
                     }
                     else
                     {

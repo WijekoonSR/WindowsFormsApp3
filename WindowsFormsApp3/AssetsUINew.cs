@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace WindowsFormsApp3
 {
@@ -18,7 +19,9 @@ namespace WindowsFormsApp3
         public static String server = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
 
         SqlConnection sqlConnection = new SqlConnection(server);
-        String spareParts, date, issuedDate, shopName, address, email, ownerName;
+        String spareParts, date, issuedDate, shopName, address, email, ownerName, AssetsMaintenanceID;
+        int quantity, invoiceNumber, contactNumber, OwnerContact;
+
         string assetsID;
         Bitmap AttachmentNew;
         public AssetsUINew()
@@ -26,7 +29,7 @@ namespace WindowsFormsApp3
             try
             {
                 InitializeComponent();
-                GetCurrentID();
+                txtAssetsID.Text= GetID();
             }
             catch (Exception e)
             {
@@ -36,7 +39,6 @@ namespace WindowsFormsApp3
 
         }
 
-        int quantity, invoiceNumber, contactNumber, OwnerContact;
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
@@ -229,7 +231,7 @@ namespace WindowsFormsApp3
                 else
                 {
                     sqlConnection.Open();
-
+                    AssetsMaintenanceID = txtAssetsID.Text.ToString();
                     spareParts = txtSpareParts.Text.ToString();
                     quantity = int.Parse(txtQuantity.Text);
                     price = float.Parse(txtPrice.Text);
@@ -244,16 +246,14 @@ namespace WindowsFormsApp3
                     OwnerContact = int.Parse(txtOwnContactNew.Text);
 
                     PictureBox picBoxAttachNew1 = picBoxAttachNew;
-                    AttachmentNew = (Bitmap)picBoxAttachNew1.Image;
-
+                    
                     //ID takes only integer values
-                    String ID = txtVehicleID.Text;
-                    ID = Regex.Replace(ID, "[^0-9]", "");
-                    int VehicleID = int.Parse(ID);
+                    String VehicleID = txtVehicleID.Text;
+                   
 
                     String query = "insert into Assets_Maintenance" +
-                        "(VehicleID,PurchasedSpareParts,Quantity,PurchaseDate,Price,AttachmentNew,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)" +
-                        " Values('" + VehicleID + "' ,'" + spareParts + "','" + quantity + "','" + date + "','" + price + "','"+ AttachmentNew+"," + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
+                        "(AssetsMaintenanceID,VehicleID,PurchasedSpareParts,Quantity,PurchaseDate,Price,AttachmentNew,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)" +
+                        " Values('"+AssetsMaintenanceID+"','" + VehicleID + "' ,'" + spareParts + "','" + quantity + "','" + date + "','" + price + "','"+ ConvertImageToBinary(picBoxAttachNew1.Image) + "," + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
 
 
                     sqlCommand = new SqlCommand(query, sqlConnection);
@@ -265,11 +265,12 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                        DialogResult DR = MessageBox.Show("Successfully Entered");
+                        setIdSql();
+                        DialogResult DR = MessageBox.Show("Successfully Entered","Success",MessageBoxButtons.OK);
                         ClearFields();
                         if (DR == DialogResult.OK)
                         {
-                            GetCurrentID();
+                            txtAssetsID.Text= GetID();
                         }
                     }
 
@@ -286,8 +287,17 @@ namespace WindowsFormsApp3
         
 
         }
-        
 
+    
+
+        byte[] ConvertImageToBinary(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
 
         private void ClearFields()
         {
@@ -312,33 +322,38 @@ namespace WindowsFormsApp3
             }
         }
 
-        public void GetCurrentID()
+
+        private void setIdSql()
+        {
+            //set when user tries to insert values to db ** confirmed
+            sqlConnection.Open();
+            SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Assets", sqlConnection);
+            com.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+        private string GetID()
         {
             try
             {
+                string ID = null;
                 sqlConnection.Open();
-                
-                String queryCurrentID = "select  IDENT_CURRENT('Assets_Maintenance')";
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Assets' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    assetsID = dataReader[0].ToString();
+                    ID = dataReader[0].ToString();
                 }
                 sqlConnection.Close();
-                sqlConnection.Open();
-
-                SqlCommand chkExistsData = new SqlCommand("select * from Assets_Maintenance where AssetsMaintenanceID = 1", sqlConnection);
-                SqlDataReader SDR = chkExistsData.ExecuteReader();
-                if (SDR.HasRows) txtAssetsID.Text = "AM" + (int.Parse(assetsID) + 1).ToString();
-                else txtAssetsID.Text = "AM1";
-
-                sqlConnection.Close();
+                return "AM" + (int.Parse(ID));
 
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                    MessageBox.Show(ex.Message, "AssetsUI 4");
+                MessageBox.Show(e.Message, "Assets:getID ");
+                return "Error";
+
             }
             finally
             {

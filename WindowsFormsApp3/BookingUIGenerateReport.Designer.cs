@@ -30,10 +30,11 @@
         {
             this.BookingsReport1 = new WindowsFormsApp3.BookingsReport();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnIdSrch = new System.Windows.Forms.Button();
+            this.txtBookingIdSrch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.txtBookingIdSrch = new System.Windows.Forms.TextBox();
-            this.btnIdSrch = new System.Windows.Forms.Button();
+            this.BookingsReport2 = new WindowsFormsApp3.BookingsReport();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 55);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnIdSrch
+            // 
+            this.btnIdSrch.Location = new System.Drawing.Point(144, 12);
+            this.btnIdSrch.Name = "btnIdSrch";
+            this.btnIdSrch.Size = new System.Drawing.Size(75, 23);
+            this.btnIdSrch.TabIndex = 1;
+            this.btnIdSrch.Text = "button1";
+            this.btnIdSrch.UseVisualStyleBackColor = true;
+            this.btnIdSrch.Click += new System.EventHandler(this.btnIdSrch_Click);
+            // 
+            // txtBookingIdSrch
+            // 
+            this.txtBookingIdSrch.Location = new System.Drawing.Point(28, 12);
+            this.txtBookingIdSrch.Name = "txtBookingIdSrch";
+            this.txtBookingIdSrch.Size = new System.Drawing.Size(100, 20);
+            this.txtBookingIdSrch.TabIndex = 0;
+            this.txtBookingIdSrch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel2
             // 
@@ -59,33 +79,16 @@
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.BookingsReport2;
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 395);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load_1);
-            // 
-            // txtBookingIdSrch
-            // 
-            this.txtBookingIdSrch.Location = new System.Drawing.Point(28, 12);
-            this.txtBookingIdSrch.Name = "txtBookingIdSrch";
-            this.txtBookingIdSrch.Size = new System.Drawing.Size(100, 20);
-            this.txtBookingIdSrch.TabIndex = 0;
-            this.txtBookingIdSrch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // btnIdSrch
-            // 
-            this.btnIdSrch.Location = new System.Drawing.Point(144, 12);
-            this.btnIdSrch.Name = "btnIdSrch";
-            this.btnIdSrch.Size = new System.Drawing.Size(75, 23);
-            this.btnIdSrch.TabIndex = 1;
-            this.btnIdSrch.Text = "button1";
-            this.btnIdSrch.UseVisualStyleBackColor = true;
-            this.btnIdSrch.Click += new System.EventHandler(this.btnIdSrch_Click);
             // 
             // BookingUIGenerateReport
             // 
@@ -111,5 +114,6 @@
         private System.Windows.Forms.Panel panel2;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Button btnIdSrch;
+        private BookingsReport BookingsReport2;
     }
 }

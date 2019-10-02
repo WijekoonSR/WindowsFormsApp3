@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,10 @@ namespace WindowsFormsApp3
     {
        
         Timer timer1 = new Timer();
-
+        private String position;
+        static String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
+        //get sring db connection
+        private SqlConnection sqlConnection = new SqlConnection(name);
         public HomeUI()
         {
             InitializeComponent();
@@ -31,6 +35,93 @@ namespace WindowsFormsApp3
             this.timer1.Interval = 1000;
             this.timer1.Enabled = true;
 
+
+            //For developing
+            position = "Administration";
+            accessLevels();
+            if (position == "Administration" || CurrentUser.getUId() == "admin") { }
+            else if (position == "Assets Maintenance Manager")
+            {
+                assetsUI1.BringToFront();
+                BookingsButton.Hide();
+                CustomerButton.Hide();
+                EmployeeButtton.Hide();
+                VehicleButton.Hide();
+                PayrollButton.Hide();
+                LeasingButton.Hide();
+            }
+            else if (position == "Employee Manager")
+            {
+                employeeUI1.BringToFront();
+                assetsUI1.BringToFront();
+                BookingsButton.Hide();
+                CustomerButton.Hide();
+                VehicleButton.Hide();
+                PayrollButton.Hide();
+                AssetsButton.Hide();
+                LeasingButton.Hide();
+
+            }
+            else if (position == "Vehicle Manager")
+            {
+                vehicleUI1.BringToFront();
+                assetsUI1.BringToFront();
+                BookingsButton.Hide();
+                CustomerButton.Hide();
+                EmployeeButtton.Hide();
+                PayrollButton.Hide();
+                AssetsButton.Hide();
+                LeasingButton.Hide();
+
+            }
+            else if (position == "Customer Manager")
+            {
+                assetsUI1.BringToFront();
+                BookingsButton.Hide();
+                EmployeeButtton.Hide();
+                VehicleButton.Hide();
+                PayrollButton.Hide();
+                AssetsButton.Hide();
+                customerUI1.BringToFront();
+                LeasingButton.Hide();
+
+            }
+            else if (position == "Bookings Manager")
+            {
+                bookingUI1.BringToFront();
+                assetsUI1.BringToFront();
+                CustomerButton.Hide();
+                EmployeeButtton.Hide();
+                VehicleButton.Hide();
+                PayrollButton.Hide();
+                AssetsButton.Hide();
+                LeasingButton.Hide();
+
+            }
+            else if (position == "Payroll Manager")
+            {
+                assetsUI1.BringToFront();
+                BookingsButton.Hide();
+                CustomerButton.Hide();
+                EmployeeButtton.Hide();
+                VehicleButton.Hide();
+                AssetsButton.Hide();
+                payrollUI1.BringToFront();
+                LeasingButton.Hide();
+
+            }
+            else if (position == "Vehicle Leasing Manager")
+            {
+                vehicleLeasingUI1.BringToFront();
+                BookingsButton.Hide();
+                CustomerButton.Hide();
+                EmployeeButtton.Hide();
+                VehicleButton.Hide();
+                PayrollButton.Hide();
+                AssetsButton.Hide();
+            }
+            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -43,7 +134,19 @@ namespace WindowsFormsApp3
         {
             
         }
-                     
+
+        private void accessLevels() {
+            string Eid = CurrentUser.getEId();
+            sqlConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand("select Position from Employee where EmployeeID = @eid", sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@eid", "1");
+            SqlDataReader sdr = sqlCommand.ExecuteReader();
+            while (sdr.Read()) {
+                position = sdr["Position"].ToString();
+            }
+            sqlConnection.Close();
+
+        }
         // Sliding Panels
         private void BookingsButton_Click(object sender, EventArgs e)
         {
@@ -82,9 +185,9 @@ namespace WindowsFormsApp3
 
         private void BankLoansButton_Click(object sender, EventArgs e)
         {
-            SlidePanel.Height = BankLoansButton.Height;
-            SlidePanel.Top = BankLoansButton.Top;
-            bankLoanUI1.BringToFront();
+            SlidePanel.Height = LeasingButton.Height;
+            SlidePanel.Top = LeasingButton.Top;
+            vehicleLeasingUI1.BringToFront();
         }
 
         private void AssetsButton_Click(object sender, EventArgs e)
@@ -107,10 +210,7 @@ namespace WindowsFormsApp3
             //hide user UI
             userProfile1.Hide();
             //message box
-            MessageBox.Show("Designed By :   Wijekoon W.M.S.R " +
-            Environment.NewLine + "(Email - supunrandima10@gmail.com)" +
-            Environment.NewLine +
-            Environment.NewLine + "Developed By :  Wijekoon W.M.S.R " +
+            MessageBox.Show(      "            Developed By :  Wijekoon W.M.S.R " +
             Environment.NewLine + "                            Weerasooriya W.M.C.B." +
             Environment.NewLine + "                            Gunarathna K.A.G.I.P.T." +
             Environment.NewLine + "                            H. Sashini Madushi Pinto" +
@@ -199,6 +299,11 @@ namespace WindowsFormsApp3
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vehicleLeasingUI1_Load(object sender, EventArgs e)
         {
 
         }

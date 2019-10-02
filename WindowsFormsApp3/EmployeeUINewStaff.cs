@@ -20,12 +20,12 @@ namespace WindowsFormsApp3
         public EmployeeUINewStaff()
         {
             InitializeComponent();
-            getStaffID();
+            txtEmployeeID.Text = GetID();
         }
 
         private void EmployeeUINewStaff_Load(object sender, EventArgs e)
         {
-            getStaffID();
+            txtEmployeeID.Text = GetID();
         }
 
         private void txtFName_TextChanged(object sender, EventArgs e)
@@ -103,19 +103,18 @@ namespace WindowsFormsApp3
                 string ALsub04 = txtSubject04.Text;
                 string AlSub04sel = cmbSubject04.Text;
 
-                String EID = txtEmployeeID.Text;
-                EID = Regex.Replace(EID, "[^0-9]", "");
-                int ID = int.Parse(EID);
+                String eid = txtEmployeeID.Text;
+               
 
-                string query = "insert into Employee(FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
-                    "values('" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
+                string query = "insert into Employee(EmployeeID,FirstName,Lastname,Gender,DOB,NIC,ContactNumber,Email,Address01,Address02,City,PostalCode,JobTitle) " +
+                    "values('" + eid + "','" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + NIC + "','" + ContactNum + "','" + email + "','" + address01 + "','" + address02 + "','" + city + "','" + postalCode + "','" + jobTitle + "')";
 
                 //string query2 = "insert into "
                 SqlCommand cmd = new SqlCommand(query, sqlConnection);
                 cmd.ExecuteNonQuery();
 
-                string query02 = "insert into Staff(EmployeeID,Department,ALStream,subjects01,subjects02,subjects03,subjects04,subjects01Grade,subjects02Grade,subjects03Grade,subjects04Grade)"
-                + "values('" + ID + "', '" + department + "','" + ALStream + "','" + ALsub01 + "','" + AlSub01sel + "','" + ALsub02 + "','" + AlSub02sel + "','" + ALsub03 + "','" + AlSub03sel + "','" + ALsub04 + "','" + AlSub04sel + "')";
+                string query02 = "insert into Staff(StaffID,EmployeeID,Department,ALStream,subjects01,subjects02,subjects03,subjects04,subjects01Grade,subjects02Grade,subjects03Grade,subjects04Grade)"
+                + "values('" + eid + "', '" + department + "','" + ALStream + "','" + ALsub01 + "','" + AlSub01sel + "','" + ALsub02 + "','" + AlSub02sel + "','" + ALsub03 + "','" + AlSub03sel + "','" + ALsub04 + "','" + AlSub04sel + "')";
                 SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
                 cmd2.ExecuteNonQuery();
 
@@ -131,7 +130,9 @@ namespace WindowsFormsApp3
                 cmd2.ExecuteNonQuery();*/
                 MessageBox.Show("Data Submitted");
                 clearDet();
-                getStaffID();
+                setIdSql();
+                txtEmployeeID.Text = GetID(); 
+               
             }
         }
         private void btnClear_Click(object sender, EventArgs e)
@@ -165,13 +166,23 @@ namespace WindowsFormsApp3
 
 
         }
-        private void getStaffID()
+
+        private void setIdSql()
+        {
+            //set when user tries to insert values to db ** confirmed
+            sqlConnection.Open();
+            SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Employee", sqlConnection);
+            com.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+        private string GetID()
         {
             try
             {
-                sqlConnection.Open();
                 string ID = null;
-                String queryCurrentID = "select IDENT_CURRENT('Employee')";
+                sqlConnection.Open();
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Employee' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, sqlConnection);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
@@ -179,17 +190,14 @@ namespace WindowsFormsApp3
                     ID = dataReader[0].ToString();
                 }
                 sqlConnection.Close();
-                sqlConnection.Open();
+                return "E" + (int.Parse(ID));
 
-                SqlCommand chkExistsData = new SqlCommand("select * from Employee where EmployeeID = 1", sqlConnection);
-                SqlDataReader SDR = chkExistsData.ExecuteReader();
-                if (SDR.HasRows) txtEmployeeID.Text = "E" + (int.Parse(ID) + 1).ToString();
-                else txtEmployeeID.Text = "E1";
-                sqlConnection.Close();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message, "Customer:getID ");
+                return "Error";
+
             }
             finally
             {

@@ -54,37 +54,46 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
  
-            getCurrentID();
+            txtVehicleLeasingID.Text =  GetID();
         }
 
-        private void getCurrentID() {
+        private void setIdSql()
+        {
+            //set when user tries to insert values to db ** confirmed
+            sql.Open();
+            SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Vehicle_Leasings", sql);
+            com.ExecuteNonQuery();
+
+            sql.Close();
+        }
+        private string GetID()
+        {
             try
             {
+                string ID = null;
                 sql.Open();
-                String queryCurrentID = "select IDENT_CURRENT('Vehicle_Leasings')";
+                String queryCurrentID = "SELECT current_value FROM sys.sequences WHERE name = 'Id_Vehicle_Leasings' ;";
                 SqlCommand command = new SqlCommand(queryCurrentID, sql);
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    newVehicleID = dataReader[0].ToString();
+                    ID = dataReader[0].ToString();
                 }
                 sql.Close();
-                sql.Open();
-                SqlCommand chkExistsData = new SqlCommand("select * from Vehicle_Leasings where VehicleLeasingsID = 1", sql);
-                SqlDataReader SDR = chkExistsData.ExecuteReader();
-                if (SDR.HasRows) txtVehicleLeasingID.Text = "VL" + (int.Parse(newVehicleID) + 1).ToString();
-                else txtVehicleLeasingID.Text = "VL1";
-                sql.Close();
+                return "VL" + (int.Parse(ID));
+
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message, "Customer:getID ");
+                return "Error";
+
             }
-            finally {
+            finally
+            {
                 sql.Close();
             }
         }
-
         public void clearAllFields() {
             txtVid.Clear();
             txtBank.Clear();
@@ -114,9 +123,8 @@ namespace WindowsFormsApp3
         {
             sql.Open();
            
-            String ID = txtVid.Text;
-            ID = Regex.Replace(ID, "[^0-9]", "");
-            int vid = int.Parse(ID);
+            String vid = txtVid.Text;
+            string vLeasingID = txtVehicleLeasingID.Text;
 
             Bank = txtBank.Text.ToString();
             Branch = txtBranch.Text.ToString();
@@ -131,14 +139,16 @@ namespace WindowsFormsApp3
             StartDate = DateStartLeasingDate.Value.ToString("yyyy/MM/DD");
             EndDate = DateEndLeasingDate.Value.ToString("yyyy/MM/DD");
 
-            string query = "insert into Vehicle_Leasings(VehicleID,BankName,Branch,BankCode,AccountHolder,AccountNumber,Year,TotalLeasingAmount,AnnualInterestRate,LeasingPeriod,MonthlyPayment,StartLeasingDate,EndLeasingDate) " +
-                "values('" + vid + "', '" + Bank + "','" + Branch + "','" + BankCode + "','" + AccountHolder + "','" + AccountNumber + "','" + Year + "','" + TotalLeasingAmount + "','" + AnnualInterestRate + "','" + LeasingPeriod + "','" + MonthlyPayment + "','" + StartLeasingDate + "','" + EndLeasingDate + "')";
+            string query = "insert into Vehicle_Leasings(VehicleLeasingsID,VehicleID,BankName,Branch,BankCode,AccountHolder,AccountNumber,Year,TotalLeasingAmount,AnnualInterestRate,LeasingPeriod,MonthlyPayment,StartLeasingDate,EndLeasingDate) " +
+                "values('"+ vLeasingID + "','" + vid + "', '" + Bank + "','" + Branch + "','" + BankCode + "','" + AccountHolder + "','" + AccountNumber + "','" + Year + "','" + TotalLeasingAmount + "','" + AnnualInterestRate + "','" + LeasingPeriod + "','" + MonthlyPayment + "','" + StartLeasingDate + "','" + EndLeasingDate + "')";
 
             command = new SqlCommand(query, sql);
             command.ExecuteNonQuery();
             MessageBox.Show("success");
             sql.Close();
             clearAllFields();
+            setIdSql();
+            txtVehicleLeasingID.Text = GetID();
         }
 
 

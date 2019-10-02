@@ -77,6 +77,20 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+      
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Slider.Left = btnReport.Left;
+            BookingUIGenerateReport bookingUIGenerateReport = new BookingUIGenerateReport();
+            bookingUIGenerateReport.Show();
+            bookingUIGenerateReport.BringToFront();
+        }
     }
    }
            

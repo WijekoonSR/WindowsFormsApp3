@@ -15,8 +15,8 @@ namespace WindowsFormsApp3
     public partial class UserUIEdit : UserControl
     {
         String name = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
-        int userID = CurrentUser.userID;
-        int employeeId = CurrentUser.employeeID;
+        string userID = CurrentUser.userID;
+        string employeeId = CurrentUser.employeeID;
         string filename;
         public UserUIEdit()
         {

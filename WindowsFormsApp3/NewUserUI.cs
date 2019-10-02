@@ -44,14 +44,8 @@ namespace WindowsFormsApp3
                     if (rows > 0 ) {
                        DialogResult dr =  MessageBox.Show("Registered Succefully", "Welcome" + userID,MessageBoxButtons.OK );
                         if (dr == DialogResult.OK) {
-                            //ID Only takes integers convert it into intger format
-                            String ID1 = TxtEmployeeID.Text, ID2 = txtUserID.Text;
-                            ID1 = Regex.Replace(ID1, "[^0-9]", "");
-                            int EmployeeID = int.Parse(ID1);
-
-                            int UserID = int.Parse(Regex.Replace(ID2, "[^0-9]", ""));
-
-                            CurrentUser.setID(EmployeeID, UserID);
+                            
+                            CurrentUser.setID(TxtEmployeeID.Text, txtUserID.Text);
                             HomeUI home = new HomeUI();
                             home.Show();
                             this.Close();
@@ -65,6 +59,7 @@ namespace WindowsFormsApp3
             } 
         }
         private void setIdSql() {
+            //set when user tries to insert values to db ** confirmed
             sqlConnection.Open();
             SqlCommand com = new SqlCommand("select next VALUE FOR  Id_Users", sqlConnection);
             SqlDataReader sdr = com.ExecuteReader();
@@ -87,16 +82,8 @@ namespace WindowsFormsApp3
                     userID = dataReader[0].ToString();
                 }
                 sqlConnection.Close();
-                txtUserID.Text = "U" + (int.Parse(userID) + 1);
+                txtUserID.Text = "U" + (int.Parse(userID));
 
-                /*   sqlConnection.Open();
-
-                   SqlCommand chkExistsData = new SqlCommand("select * from Users", sqlConnection);
-                   SqlDataReader SDR = chkExistsData.ExecuteReader();
-                   if (SDR.HasRows) txtUserID.Text = "U" + (int.Parse(userID) + 1).ToString();
-                   else txtUserID.Text = "U1";
-                   sqlConnection.Close();
-                   */
             }
             catch (Exception e)
             {
@@ -161,6 +148,29 @@ namespace WindowsFormsApp3
                 return true;
             }
         }
+
+        byte[] ImageToByte(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
+
+
+        private void btnAddPrfPic_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = ofd.FileName;
+                    picUser.Image = Image.FromFile(filename);
+                }
+            }
+
+        }
         private void NewUserUI_Load(object sender, EventArgs e)
         {
         }
@@ -187,27 +197,8 @@ namespace WindowsFormsApp3
 
         }
 
-        private void btnAddPrfPic_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    string filename = ofd.FileName;
-                    picUser.Image = Image.FromFile(filename);
-                }
-            }
 
-        }
-
-        byte[] ImageToByte(Image img)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                return ms.ToArray();
-            }
-        }
+    
 
         private void lblPassword_Click(object sender, EventArgs e)
         {

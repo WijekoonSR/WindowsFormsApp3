@@ -15,7 +15,6 @@ namespace WindowsFormsApp3
 {
     public partial class BookingUIGenerateReport : Form
     {
-        String sql;
         ReportDocument rdocument = new ReportDocument();
         public BookingUIGenerateReport()
         {
@@ -74,6 +73,11 @@ namespace WindowsFormsApp3
             rdocument.Load( path+ "//BookingsReport.rpt"); // " C:\Users\Supun Randima\Desktop\Final ITP With Github\WindowsFormsApp3\WindowsFormsApp3\BookingsReport.rpt ");
             rdocument.SetDataSource(dataSet);
             crystalReportViewer1.ReportSource = rdocument;
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
