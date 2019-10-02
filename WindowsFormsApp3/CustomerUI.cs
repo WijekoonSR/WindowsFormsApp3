@@ -26,20 +26,33 @@ namespace WindowsFormsApp3
         private void btnNew_Click_1(object sender, EventArgs e)
         {
             Slider.Left = btnNew.Left;
-            customerUINew1.BringToFront();
+            customerUINew.BringToFront();
         }
 
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
             Slider.Left = btnEdit.Left;
-            customerUIEdit1.BringToFront();
+            customerUIEdit.BringToFront();
         }
 
         private void btnView_Click_1(object sender, EventArgs e)
         {
             Slider.Left = btnView.Left;
-            customerUIView1.BringToFront();
+            customerUIView.BringToFront();
 
+        }
+
+        private void customerUINew2_Load(object sender, EventArgs e)
+        {
+                
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Slider.Left = btnReport.Left;
+            CustomerReport customerReport = new CustomerReport();
+            customerReport.Show();
+            customerReport.BringToFront();
         }
     }
 }
