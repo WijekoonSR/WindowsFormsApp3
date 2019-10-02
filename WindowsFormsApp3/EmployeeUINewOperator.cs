@@ -127,11 +127,13 @@ namespace WindowsFormsApp3
                  cmd2.ExecuteNonQuery();*/
 
 
-                MessageBox.Show("Data Submitted");
-                clearDet();
-                setIdSql();
-                txtEmployeeID.Text = GetID();
-                sqlConnection.Close();
+                DialogResult dr =  MessageBox.Show("Data Submitted","Success!!",MessageBoxButtons.OK);
+                if (dr == DialogResult.OK)
+                {
+                    clearDet();
+                    setIdSql();
+                    txtEmployeeID.Text = GetID();
+                }
             }
         }
         public void clearDet()

@@ -113,7 +113,7 @@ namespace WindowsFormsApp3
                 SqlCommand cmd = new SqlCommand(query, sqlConnection);
                 cmd.ExecuteNonQuery();
 
-                string query02 = "insert into Staff(StaffID,EmployeeID,Department,ALStream,subjects01,subjects02,subjects03,subjects04,subjects01Grade,subjects02Grade,subjects03Grade,subjects04Grade)"
+                string query02 = "insert into Staff(EmployeeID,Department,ALStream,subjects01,subjects02,subjects03,subjects04,subjects01Grade,subjects02Grade,subjects03Grade,subjects04Grade)"
                 + "values('" + eid + "', '" + department + "','" + ALStream + "','" + ALsub01 + "','" + AlSub01sel + "','" + ALsub02 + "','" + AlSub02sel + "','" + ALsub03 + "','" + AlSub03sel + "','" + ALsub04 + "','" + AlSub04sel + "')";
                 SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
                 cmd2.ExecuteNonQuery();
@@ -128,11 +128,14 @@ namespace WindowsFormsApp3
                 string query02 = "Exec AsignStaff'"+department + "','"+ALStream+"','"+ALsub01+"','"+AlSub01sel+"','"+ALsub02+"','"+AlSub02sel+"','"+ALsub03+"','"+AlSub03sel+"','"+ALsub04+"','"+AlSub04sel+"'";
                 SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
                 cmd2.ExecuteNonQuery();*/
-                MessageBox.Show("Data Submitted");
-                clearDet();
-                setIdSql();
-                txtEmployeeID.Text = GetID(); 
-               
+                DialogResult dr = MessageBox.Show("Data Submitted", "Success!!", MessageBoxButtons.OK);
+                if (dr == DialogResult.OK)
+                {
+                    clearDet();
+                    setIdSql();
+                    txtEmployeeID.Text = GetID();
+                }
+
             }
         }
         private void btnClear_Click(object sender, EventArgs e)
