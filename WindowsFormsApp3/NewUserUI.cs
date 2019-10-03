@@ -35,11 +35,11 @@ namespace WindowsFormsApp3
                     string query = "insert into Users(UserID,UserPic,FileName,password,EmployeeID)" +
                         " values(@UserID,@UserPic,@FileName,@password,@EmployeeID)";
                     SqlCommand com = new SqlCommand(query,sqlConnection);
-                    com.Parameters.AddWithValue("@UserID", dbUserId);
+                    com.Parameters.AddWithValue("@UserID", "U" +dbUserId);
                     com.Parameters.AddWithValue("@UserPic", ImageToByte(picUser.Image));
                     com.Parameters.AddWithValue("@FileName", txtFileName.Text.ToString());
                     com.Parameters.AddWithValue("@password", txtPassword.Text.ToString());
-                    com.Parameters.AddWithValue("@EmployeeID",int.Parse(TxtEmployeeID.Text.ToString()));
+                    com.Parameters.AddWithValue("@EmployeeID",TxtEmployeeID.Text.ToString());
                     int rows = com.ExecuteNonQuery();
                     if (rows > 0 ) {
                        DialogResult dr =  MessageBox.Show("Registered Succefully", "Welcome" + userID,MessageBoxButtons.OK );
@@ -135,13 +135,13 @@ namespace WindowsFormsApp3
         private bool checkEmployeeAvaiability()
         {
             sqlConnection.Open();
-            string query = "select * from Employee";
+            string query = "select * from Employee where EmployeeID = @id";
             SqlCommand com = new SqlCommand(query, sqlConnection);
             com.Parameters.AddWithValue("@id", TxtEmployeeID.Text.ToString());
             int rows = com.ExecuteNonQuery();
             MessageBox.Show(rows.ToString());
           sqlConnection.Close();
-            if (rows < 0)
+            if (rows > 0)
             {
                 MessageBox.Show("Employee is Not Avaiable", "Please check Employee ID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtEmployeeID.Focus();

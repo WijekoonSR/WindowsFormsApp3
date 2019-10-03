@@ -37,10 +37,11 @@ namespace WindowsFormsApp3
 
 
             //For developing
-            position = "Administration";
+            //position = "Administration";
             accessLevels();
+
             if (position == "Administration" || CurrentUser.getUId() == "admin") { }
-            else if (position == "Assets Maintenance Manager")
+            else if (position.Trim() == "Assets Maintenace Manager")
             {
                 assetsUI1.BringToFront();
                 BookingsButton.Hide();
@@ -50,7 +51,7 @@ namespace WindowsFormsApp3
                 PayrollButton.Hide();
                 LeasingButton.Hide();
             }
-            else if (position == "Employee Manager")
+            else if (position.Trim() == "Employee Manager")
             {
                 employeeUI1.BringToFront();
                 assetsUI1.BringToFront();
@@ -62,7 +63,7 @@ namespace WindowsFormsApp3
                 LeasingButton.Hide();
 
             }
-            else if (position == "Vehicle Manager")
+            else if (position.Trim() == "Vehicle Manager")
             {
                 vehicleUI1.BringToFront();
                 assetsUI1.BringToFront();
@@ -74,7 +75,7 @@ namespace WindowsFormsApp3
                 LeasingButton.Hide();
 
             }
-            else if (position == "Customer Manager")
+            else if (position.Trim() == "Customer Manager")
             {
                 assetsUI1.BringToFront();
                 BookingsButton.Hide();
@@ -86,7 +87,7 @@ namespace WindowsFormsApp3
                 LeasingButton.Hide();
 
             }
-            else if (position == "Bookings Manager")
+            else if (position.Trim() == "Bookings Manager")
             {
                 bookingUI1.BringToFront();
                 assetsUI1.BringToFront();
@@ -98,7 +99,7 @@ namespace WindowsFormsApp3
                 LeasingButton.Hide();
 
             }
-            else if (position == "Payroll Manager")
+            else if (position.Trim() == "Payroll Manager")
             {
                 assetsUI1.BringToFront();
                 BookingsButton.Hide();
@@ -110,7 +111,7 @@ namespace WindowsFormsApp3
                 LeasingButton.Hide();
 
             }
-            else if (position == "Vehicle Leasing Manager")
+            else if (position.Trim() == "Vehicle Leasing Manager")
             {
                 vehicleLeasingUI1.BringToFront();
                 BookingsButton.Hide();
@@ -138,14 +139,15 @@ namespace WindowsFormsApp3
         private void accessLevels() {
             string Eid = CurrentUser.getEId();
             sqlConnection.Open();
-            SqlCommand sqlCommand = new SqlCommand("select Position from Employee where EmployeeID = @eid", sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@eid", "1");
+            SqlCommand sqlCommand = new SqlCommand("select * from Employee where EmployeeID = @eid", sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@eid", Eid);
             SqlDataReader sdr = sqlCommand.ExecuteReader();
+
             while (sdr.Read()) {
-                position = sdr["Position"].ToString();
+                position = sdr["JobTitle"].ToString();
             }
             sqlConnection.Close();
-
+            MessageBox.Show(Eid,position);
         }
         // Sliding Panels
         private void BookingsButton_Click(object sender, EventArgs e)

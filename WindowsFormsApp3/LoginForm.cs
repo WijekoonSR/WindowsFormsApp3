@@ -64,9 +64,15 @@ namespace WindowsFormsApp3
         private void loginHandler() {
             string username = txtUserName.Text;
             string password = txtPassword.Text;
-            if (username == "admin" && password == "admin" || checkUser(username,password)) {
+            if (username == "admin" && password == "admin" ) {
                 MessageBox.Show("Login Successfully!");
                 CurrentUser.setID("admin", "admin");
+                HomeUI BF = new HomeUI();
+                BF.Show();
+                this.Hide();
+            }
+            else if (checkUser(username, password)){
+                MessageBox.Show("Login Successfully!");
                 HomeUI BF = new HomeUI();
                 BF.Show();
                 this.Hide();
