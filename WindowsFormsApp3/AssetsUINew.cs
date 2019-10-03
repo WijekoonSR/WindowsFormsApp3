@@ -230,7 +230,9 @@ namespace WindowsFormsApp3
 
                 else
                 {
-                    sqlConnection.Open();
+                setIdSql();
+
+                sqlConnection.Open();
                     AssetsMaintenanceID = txtAssetsID.Text.ToString();
                     spareParts = txtSpareParts.Text.ToString();
                     quantity = int.Parse(txtQuantity.Text);
@@ -279,7 +281,6 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                    setIdSql();
                     DialogResult DR = MessageBox.Show("Successfully Entered","Success",MessageBoxButtons.OK);
                         ClearFields();
                         if (DR == DialogResult.OK)

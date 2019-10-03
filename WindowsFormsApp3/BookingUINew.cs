@@ -431,9 +431,9 @@ namespace WindowsFormsApp3
                     sqlConnection.Close();
 
                     //check  whether vehicles have been added to booking
-                    if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1);
-                    else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2);
-                    else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3);
+                    if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1, bookingID);
+                    else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2, bookingID);
+                    else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3, bookingID);
 
                     if (valid > 0)
                     {
@@ -464,7 +464,7 @@ namespace WindowsFormsApp3
 
         // create relation with vehicles and booking database 
         // use assignBooking_Vehicle process to assign values
-        private void insertBooking_vehicle(int count, string Type)
+        private void insertBooking_vehicle(int count, string Type,string bookingId)
         {
             try
             {
@@ -474,7 +474,7 @@ namespace WindowsFormsApp3
                     using (SqlConnection sqlConnection = new SqlConnection(name))
                     {
                         sqlConnection.Open();
-                        sqlCommand = new SqlCommand("exec assignBooking_Vehicle '" + startDate + "', '" + endDate + "', '" + Type + "'", sqlConnection);
+                        sqlCommand = new SqlCommand("exec assignBooking_Vehicle '" + startDate + "', '" + endDate + "', '" + Type + "','"+bookingId+"'", sqlConnection);
                         sqlCommand.ExecuteNonQuery();
                         sqlConnection.Close();
                     }
@@ -566,6 +566,11 @@ namespace WindowsFormsApp3
                 txtCallerName.Focus();
                 return false;
             }
+            else if (!(Regex.IsMatch(txtCallerName.Text.ToString(), @"^[a-zA-Z]+$"))) {
+                MessageBox.Show("Wrong Caller Name");
+                txtCallerName.Focus();
+                return false;
+            }
             else if (txtNIC.Text.ToString() == "") {
                 MessageBox.Show("Insert NIC");
                 txtNIC.Focus();
@@ -582,12 +587,7 @@ namespace WindowsFormsApp3
                 txtCallerTpNo.Focus();
                 return false;
             }
-            else if (dropDownBackhoeTypes1.selectedIndex.Equals(-1))
-            {
-                MessageBox.Show("Insert at least one vehicle type type to make a booking");
-                dropDownBackhoeTypes1.Focus();
-                return false;
-            }
+
             else if (txtRatings1.Text.ToString() == "") {
                 MessageBox.Show("Insert ratings");
                 txtRatings1.Focus();
