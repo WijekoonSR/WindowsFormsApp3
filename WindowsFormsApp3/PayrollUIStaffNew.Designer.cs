@@ -47,7 +47,6 @@ namespace WindowsFormsApp3
             this.edtBasicSalary = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnChangeValue = new System.Windows.Forms.Button();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lberror1 = new System.Windows.Forms.Label();
@@ -58,9 +57,8 @@ namespace WindowsFormsApp3
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePayroll = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSetEmployeeID = new Bunifu.Framework.UI.BunifuFlatButton();
             this.edtPossition = new System.Windows.Forms.TextBox();
-            this.edtDepartment = new System.Windows.Forms.TextBox();
+            this.edtCity = new System.Windows.Forms.TextBox();
             this.edtName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -79,6 +77,9 @@ namespace WindowsFormsApp3
             this.drpFoodAllowance = new Bunifu.Framework.UI.BunifuDropdown();
             this.drpMedicalAllowance = new Bunifu.Framework.UI.BunifuDropdown();
             this.drpHousingAllowance = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSetEmployeeID = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCal = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -217,39 +218,11 @@ namespace WindowsFormsApp3
             // 
             this.btnChangeValue.Location = new System.Drawing.Point(876, 151);
             this.btnChangeValue.Name = "btnChangeValue";
-            this.btnChangeValue.Size = new System.Drawing.Size(75, 23);
+            this.btnChangeValue.Size = new System.Drawing.Size(91, 23);
             this.btnChangeValue.TabIndex = 47;
             this.btnChangeValue.Text = "...";
             this.btnChangeValue.UseVisualStyleBackColor = true;
             this.btnChangeValue.Click += new System.EventHandler(this.btnChangeValue_Click);
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuFlatButton1.ButtonText = "ADD";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(710, 509);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 48);
-            this.bunifuFlatButton1.TabIndex = 42;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // label12
             // 
@@ -365,7 +338,7 @@ namespace WindowsFormsApp3
             // 
             this.groupBox3.Controls.Add(this.btnSetEmployeeID);
             this.groupBox3.Controls.Add(this.edtPossition);
-            this.groupBox3.Controls.Add(this.edtDepartment);
+            this.groupBox3.Controls.Add(this.edtCity);
             this.groupBox3.Controls.Add(this.edtName);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
@@ -378,33 +351,6 @@ namespace WindowsFormsApp3
             this.groupBox3.TabIndex = 45;
             this.groupBox3.TabStop = false;
             // 
-            // btnSetEmployeeID
-            // 
-            this.btnSetEmployeeID.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSetEmployeeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSetEmployeeID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSetEmployeeID.BorderRadius = 0;
-            this.btnSetEmployeeID.ButtonText = "Set";
-            this.btnSetEmployeeID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSetEmployeeID.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSetEmployeeID.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSetEmployeeID.Iconimage")));
-            this.btnSetEmployeeID.Iconimage_right = null;
-            this.btnSetEmployeeID.Iconimage_right_Selected = null;
-            this.btnSetEmployeeID.Iconimage_Selected = null;
-            this.btnSetEmployeeID.IconZoom = 90D;
-            this.btnSetEmployeeID.IsTab = false;
-            this.btnSetEmployeeID.Location = new System.Drawing.Point(213, 19);
-            this.btnSetEmployeeID.Name = "btnSetEmployeeID";
-            this.btnSetEmployeeID.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSetEmployeeID.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnSetEmployeeID.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSetEmployeeID.selected = false;
-            this.btnSetEmployeeID.Size = new System.Drawing.Size(85, 20);
-            this.btnSetEmployeeID.TabIndex = 30;
-            this.btnSetEmployeeID.Textcolor = System.Drawing.Color.White;
-            this.btnSetEmployeeID.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetEmployeeID.Click += new System.EventHandler(this.btnSetEmployeeID_Click);
-            // 
             // edtPossition
             // 
             this.edtPossition.Location = new System.Drawing.Point(635, 19);
@@ -412,12 +358,12 @@ namespace WindowsFormsApp3
             this.edtPossition.Size = new System.Drawing.Size(100, 20);
             this.edtPossition.TabIndex = 29;
             // 
-            // edtDepartment
+            // edtCity
             // 
-            this.edtDepartment.Location = new System.Drawing.Point(903, 19);
-            this.edtDepartment.Name = "edtDepartment";
-            this.edtDepartment.Size = new System.Drawing.Size(100, 20);
-            this.edtDepartment.TabIndex = 28;
+            this.edtCity.Location = new System.Drawing.Point(903, 19);
+            this.edtCity.Name = "edtCity";
+            this.edtCity.Size = new System.Drawing.Size(100, 20);
+            this.edtCity.TabIndex = 28;
             // 
             // edtName
             // 
@@ -440,9 +386,9 @@ namespace WindowsFormsApp3
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(842, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 25;
-            this.label7.Text = "Department";
+            this.label7.Text = "City";
             // 
             // label1
             // 
@@ -630,10 +576,76 @@ namespace WindowsFormsApp3
             this.drpHousingAllowance.TabIndex = 23;
             this.drpHousingAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.drpHousingAllowance_KeyPress);
             // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton1.ButtonText = "ADD";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(710, 509);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 48);
+            this.bunifuFlatButton1.TabIndex = 42;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // btnSetEmployeeID
+            // 
+            this.btnSetEmployeeID.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSetEmployeeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSetEmployeeID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSetEmployeeID.BorderRadius = 0;
+            this.btnSetEmployeeID.ButtonText = "Set";
+            this.btnSetEmployeeID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetEmployeeID.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSetEmployeeID.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSetEmployeeID.Iconimage")));
+            this.btnSetEmployeeID.Iconimage_right = null;
+            this.btnSetEmployeeID.Iconimage_right_Selected = null;
+            this.btnSetEmployeeID.Iconimage_Selected = null;
+            this.btnSetEmployeeID.IconZoom = 90D;
+            this.btnSetEmployeeID.IsTab = false;
+            this.btnSetEmployeeID.Location = new System.Drawing.Point(213, 19);
+            this.btnSetEmployeeID.Name = "btnSetEmployeeID";
+            this.btnSetEmployeeID.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSetEmployeeID.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnSetEmployeeID.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSetEmployeeID.selected = false;
+            this.btnSetEmployeeID.Size = new System.Drawing.Size(85, 20);
+            this.btnSetEmployeeID.TabIndex = 30;
+            this.btnSetEmployeeID.Textcolor = System.Drawing.Color.White;
+            this.btnSetEmployeeID.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetEmployeeID.Click += new System.EventHandler(this.btnSetEmployeeID_Click);
+            // 
+            // btnCal
+            // 
+            this.btnCal.Location = new System.Drawing.Point(876, 189);
+            this.btnCal.Name = "btnCal";
+            this.btnCal.Size = new System.Drawing.Size(91, 23);
+            this.btnCal.TabIndex = 58;
+            this.btnCal.Text = "Calculator";
+            this.btnCal.UseVisualStyleBackColor = true;
+            this.btnCal.Click += new System.EventHandler(this.btnCal_Click);
+            // 
             // PayrollUIStaffNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCal);
             this.Controls.Add(this.btnChangeValue);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.groupBox4);
@@ -690,7 +702,7 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.GroupBox groupBox3;
         private Bunifu.Framework.UI.BunifuFlatButton btnSetEmployeeID;
         private System.Windows.Forms.TextBox edtPossition;
-        private System.Windows.Forms.TextBox edtDepartment;
+        private System.Windows.Forms.TextBox edtCity;
         private System.Windows.Forms.TextBox edtName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -712,5 +724,6 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.Label lblBasicSalary;
         private Label lblSalaryAdvance;
         private Label lblOtherAllowance;
+        private Button btnCal;
     }
 }

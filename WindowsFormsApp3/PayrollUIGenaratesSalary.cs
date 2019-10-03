@@ -104,7 +104,7 @@ namespace WindowsFormsApp3
                         int ETF = Convert.ToInt32(edtETF.Text);
                         int EPF = Convert.ToInt32(edtEPF.Text);
                         int Insurance = Convert.ToInt32(drpInsurance.selectedValue.ToString());
-                        int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                        String EmployeeID = (edtEmployeeID.Text);
                         //int PayrollID = Convert.ToInt32()
 
                         // MessageBox.Show(WokingHours.ToString() + OT.ToString() + OTRate);
@@ -153,8 +153,8 @@ namespace WindowsFormsApp3
                             //edtName.Text = (read["FistName"].ToString());
                             //edtName.Text = "name";
                             edtName.Text = read.GetValue(1).ToString();
-                            edtPossition.Text = read.GetValue(11).ToString();
-                            edtCity.Text = read.GetValue(9).ToString();
+                            edtPossition.Text = read.GetValue(13).ToString();
+                            edtCity.Text = read.GetValue(10).ToString();
 
                         }
                     }
@@ -253,6 +253,12 @@ namespace WindowsFormsApp3
             edtETF.Text = String.Empty;
             edtEPF.Text = String.Empty;
             drpInsurance.selectedIndex = -1;
+        }
+
+        private void btnCal_Click(object sender, EventArgs e)
+        {
+            PayrollUICalculater cal = new PayrollUICalculater();
+            cal.Show();
         }
     }
 }

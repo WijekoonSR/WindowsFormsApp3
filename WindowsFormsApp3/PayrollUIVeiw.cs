@@ -41,7 +41,7 @@ namespace WindowsFormsApp3
             else
             {
 
-                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                String EmployeeID = (edtEmployeeID.Text);
                 string sql1 = "Select * from Payroll_Staff where EmployeeID = '" + EmployeeID + "'";
                 // String sql2 = "Select * from Payroll_Operators_Monthly_Salary where EmployeeID = '" + EmployeeID + "'";
                 SqlDataAdapter sda1 = new SqlDataAdapter(sql1, con);
@@ -63,11 +63,11 @@ namespace WindowsFormsApp3
         {
             if (Regex.IsMatch(edtEmployeeID.Text, @"^[0-9]*$"))
             {
-                lblEmployeeID.Visible = false;
+                lblEmployeeID.Visible = true;
             }
             else
             {
-                lblEmployeeID.Visible = true;
+                lblEmployeeID.Visible = false;
             }
         }
 
