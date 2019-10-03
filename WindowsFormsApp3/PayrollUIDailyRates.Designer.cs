@@ -52,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSetDailyRates = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnChangeOTRates = new System.Windows.Forms.Button();
+            this.btnCal = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -315,10 +316,21 @@
             this.btnChangeOTRates.UseVisualStyleBackColor = true;
             this.btnChangeOTRates.Click += new System.EventHandler(this.btnChangeOTRates_Click);
             // 
+            // btnCal
+            // 
+            this.btnCal.Location = new System.Drawing.Point(865, 194);
+            this.btnCal.Name = "btnCal";
+            this.btnCal.Size = new System.Drawing.Size(91, 23);
+            this.btnCal.TabIndex = 57;
+            this.btnCal.Text = "Calculator";
+            this.btnCal.UseVisualStyleBackColor = true;
+            this.btnCal.Click += new System.EventHandler(this.btnCal_Click);
+            // 
             // PayrollUIDailyRates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCal);
             this.Controls.Add(this.btnChangeOTRates);
             this.Controls.Add(this.btnSetDailyRates);
             this.Controls.Add(this.groupBox4);
@@ -360,5 +372,6 @@
         private System.Windows.Forms.Button btnChangeOTRates;
         private System.Windows.Forms.Label lblOT;
         private System.Windows.Forms.Label lblWorkingHours;
+        private System.Windows.Forms.Button btnCal;
     }
 }

@@ -457,7 +457,6 @@
             // 
             this.txtEmployeeID.Location = new System.Drawing.Point(182, 37);
             this.txtEmployeeID.Name = "txtEmployeeID";
-            this.txtEmployeeID.ReadOnly = true;
             this.txtEmployeeID.Size = new System.Drawing.Size(273, 22);
             this.txtEmployeeID.TabIndex = 97;
             this.txtEmployeeID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);

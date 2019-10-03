@@ -186,6 +186,11 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="CharithaS_Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CharithaS_Data.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CurrentUser.cs" />
     <Compile Include="CustomerReport.cs">
       <SubType>Form</SubType>
@@ -226,6 +231,12 @@
     </Compile>
     <Compile Include="DatabaseDataSet.cs">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeReportForm.Designer.cs">
+      <DependentUpon>EmployeeReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeeUIEditOperator.cs">
       <SubType>UserControl</SubType>
@@ -312,6 +323,11 @@
     <Compile Include="EmployeeUI.Designer.cs">
       <DependentUpon>EmployeeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="IsuruSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IsuruSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +366,12 @@
     </Compile>
     <Compile Include="PayrollUIAddAllowance.Designer.cs">
       <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUICalculater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUICalculater.Designer.cs">
+      <DependentUpon>PayrollUICalculater.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollUIChangeValues.cs">
       <SubType>Form</SubType>
@@ -609,6 +631,10 @@
     <EmbeddedResource Include="CustomerUIView.resx">
       <DependentUpon>CustomerUIView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeReport.rdlc" />
+    <EmbeddedResource Include="EmployeeReportForm.resx">
+      <DependentUpon>EmployeeReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUIEditOperator.resx">
       <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>
     </EmbeddedResource>
@@ -659,6 +685,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIAddAllowance.resx">
       <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUICalculater.resx">
+      <DependentUpon>PayrollUICalculater.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIChangeValues.resx">
       <DependentUpon>PayrollUIChangeValues.cs</DependentUpon>
@@ -772,6 +801,17 @@
     <EmbeddedResource Include="VehicleUIView.resx">
       <DependentUpon>VehicleUIView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CharithaS_Data.xsc">
+      <DependentUpon>CharithaS_Data.xsd</DependentUpon>
+    </None>
+    <None Include="CharithaS_Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CharithaS_Data.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CharithaS_Data.xss">
+      <DependentUpon>CharithaS_Data.xsd</DependentUpon>
+    </None>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
@@ -786,6 +826,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="IsuruSDataSet.xsc">
+      <DependentUpon>IsuruSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IsuruSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IsuruSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IsuruSDataSet.xss">
+      <DependentUpon>IsuruSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>

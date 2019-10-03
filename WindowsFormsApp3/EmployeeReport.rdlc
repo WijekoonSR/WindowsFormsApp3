@@ -2,6 +2,65 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Employee ID :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.20833in</Top>
+        <Left>0.38833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>First Name :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.61667in</Top>
+        <Left>0.38833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
       <Textbox Name="Textbox5">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -9,182 +68,19 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Earmimgs</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.06695in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.23611in</Height>
-        <Width>0.78125in</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Line Name="Line1">
-        <Top>1.34472in</Top>
-        <Left>0.05209in</Left>
-        <Height>0in</Height>
-        <Width>2.99874in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Textbox Name="Textbox7">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Housing Allowance  :</Value>
+                <Value>Last Name :</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.99861in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.35417in</Width>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1in</Top>
+        <Left>0.38833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
         <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox8">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Basic Salary           :</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.54028in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.35417in</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox9">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Medical Allowance   :</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>2.47257in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.35416in</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox10">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Food Allowance       :</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>2.99861in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.35417in</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox11">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Other Allowance      :</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>3.51944in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.35416in</Width>
-        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -202,20 +98,138 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Deduction</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
+                <Value>Gender :</Value>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.06695in</Top>
-        <Left>3.30334in</Left>
-        <Height>0.23611in</Height>
-        <Width>0.78125in</Width>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.43333in</Top>
+        <Left>0.38833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>NIC  :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.35in</Top>
+        <Left>0.38833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contact Number :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.85in</Top>
+        <Left>0.38833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Email  :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.20833in</Top>
+        <Left>3.72083in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Address 01 :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.61667in</Top>
+        <Left>3.72083in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -227,18 +241,36 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line2">
-        <Top>1.34472in</Top>
-        <Left>3.31313in</Left>
-        <Height>0in</Height>
-        <Width>3.40104in</Width>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Address 02 :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1in</Top>
+        <Left>3.72083in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Line>
+      </Textbox>
       <Textbox Name="Textbox12">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -246,18 +278,18 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Salary Advance     :</Value>
+                <Value>City :</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.54028in</Top>
-        <Left>3.42834in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.29166in</Width>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.43333in</Top>
+        <Left>3.72083in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -276,18 +308,18 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Insurance              :</Value>
+                <Value>Postal Code :</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>2.99861in</Top>
-        <Left>3.42833in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.29167in</Width>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.86667in</Top>
+        <Left>3.72083in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -306,18 +338,18 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>EPF                      :</Value>
+                <Value>Job Title :</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>2.47257in</Top>
-        <Left>3.42833in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.29167in</Width>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.35in</Top>
+        <Left>3.72083in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -336,18 +368,18 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ETF                      :</Value>
+                <Value>DOB:</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.99861in</Top>
-        <Left>3.42833in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.29167in</Width>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.86667in</Top>
+        <Left>0.38833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.23333in</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -359,24 +391,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="BasicSalary">
+      <Textbox Name="EmployeeID">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!BasicSalary.Value, "CharithaS")</Value>
+                <Value>=First(Fields!EmployeeID.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>BasicSalary</rd:DefaultName>
-        <Top>1.54028in</Top>
-        <Left>1.94792in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>EmployeeID</rd:DefaultName>
+        <Top>0.20833in</Top>
+        <Left>2.03833in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>13</ZIndex>
         <Style>
@@ -389,24 +421,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="HousingAllowance">
+      <Textbox Name="FirstName">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!HousingAllowance.Value, "CharithaS")</Value>
+                <Value>=First(Fields!FirstName.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>HousingAllowance</rd:DefaultName>
-        <Top>1.99861in</Top>
-        <Left>1.94792in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>FirstName</rd:DefaultName>
+        <Top>0.61667in</Top>
+        <Left>2.03833in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>14</ZIndex>
         <Style>
@@ -419,24 +451,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="MedicalAllowance">
+      <Textbox Name="Lastname">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!MedicalAllowance.Value, "CharithaS")</Value>
+                <Value>=First(Fields!Lastname.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>MedicalAllowance</rd:DefaultName>
-        <Top>2.47257in</Top>
-        <Left>1.94792in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>Lastname</rd:DefaultName>
+        <Top>1in</Top>
+        <Left>2.03833in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>15</ZIndex>
         <Style>
@@ -449,24 +481,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="FoodAllowance">
+      <Textbox Name="Gender">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!FoodAllowance.Value, "CharithaS")</Value>
+                <Value>=First(Fields!Gender.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>FoodAllowance</rd:DefaultName>
-        <Top>2.99861in</Top>
-        <Left>1.94792in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>Gender</rd:DefaultName>
+        <Top>1.43333in</Top>
+        <Left>2.03833in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>16</ZIndex>
         <Style>
@@ -479,24 +511,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="OtherAllowance">
+      <Textbox Name="DOB">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!OtherAllowance.Value, "CharithaS")</Value>
+                <Value>=First(Fields!DOB.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>OtherAllowance</rd:DefaultName>
-        <Top>3.51944in</Top>
-        <Left>1.94792in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>DOB</rd:DefaultName>
+        <Top>1.86667in</Top>
+        <Left>2.03833in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>17</ZIndex>
         <Style>
@@ -509,24 +541,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="SalaryAdvance">
+      <Textbox Name="NIC">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!SalaryAdvance.Value, "CharithaS")</Value>
+                <Value>=First(Fields!NIC.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>SalaryAdvance</rd:DefaultName>
-        <Top>1.54028in</Top>
-        <Left>5.17709in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>NIC</rd:DefaultName>
+        <Top>2.35in</Top>
+        <Left>2.03833in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>18</ZIndex>
         <Style>
@@ -539,24 +571,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="EPF">
+      <Textbox Name="ContactNumber">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!EPF.Value, "CharithaS")</Value>
+                <Value>=First(Fields!ContactNumber.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>EPF</rd:DefaultName>
-        <Top>2.47257in</Top>
-        <Left>5.17709in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>ContactNumber</rd:DefaultName>
+        <Top>2.85in</Top>
+        <Left>2.03833in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>19</ZIndex>
         <Style>
@@ -569,24 +601,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="EPF1">
+      <Textbox Name="Email">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!EPF.Value, "CharithaS")</Value>
+                <Value>=First(Fields!Email.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>EPF1</rd:DefaultName>
-        <Top>1.99861in</Top>
-        <Left>5.17709in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>Email</rd:DefaultName>
+        <Top>0.20833in</Top>
+        <Left>5.61334in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>20</ZIndex>
         <Style>
@@ -599,24 +631,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Insurance">
+      <Textbox Name="Address01">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!Insurance.Value, "CharithaS")</Value>
+                <Value>=First(Fields!Address01.Value, "Isuru")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Insurance</rd:DefaultName>
-        <Top>2.99861in</Top>
-        <Left>5.17709in</Left>
-        <Height>0.23611in</Height>
+        <rd:DefaultName>Address01</rd:DefaultName>
+        <Top>0.61667in</Top>
+        <Left>5.61334in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>21</ZIndex>
         <Style>
@@ -629,177 +661,118 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line3">
-        <Top>1.34472in</Top>
-        <Left>3.05083in</Left>
-        <Height>3.49972in</Height>
-        <Width>0in</Width>
+      <Textbox Name="Address02">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Address02.Value, "Isuru")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Address02</rd:DefaultName>
+        <Top>1in</Top>
+        <Left>5.61334in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Line>
-      <Line Name="Line4">
-        <Top>1.35861in</Top>
-        <Left>3.31313in</Left>
-        <Height>3.48583in</Height>
-        <Width>0in</Width>
+      </Textbox>
+      <Textbox Name="Address021">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Address02.Value, "Isuru")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Address021</rd:DefaultName>
+        <Top>1.43333in</Top>
+        <Left>5.61334in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
         <ZIndex>23</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Line>
-      <Line Name="Line5">
-        <Top>4.84444in</Top>
-        <Height>0in</Height>
-        <Width>3.05083in</Width>
+      </Textbox>
+      <Textbox Name="PostalCode">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PostalCode.Value, "Isuru")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PostalCode</rd:DefaultName>
+        <Top>1.86667in</Top>
+        <Left>5.61334in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
         <ZIndex>24</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Line>
-      <Line Name="Line6">
-        <Top>4.84444in</Top>
-        <Left>3.31313in</Left>
-        <Height>0in</Height>
-        <Width>3.41083in</Width>
+      </Textbox>
+      <Textbox Name="JobTitle">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!JobTitle.Value, "Isuru")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>JobTitle</rd:DefaultName>
+        <Top>2.35in</Top>
+        <Left>5.61334in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
         <ZIndex>25</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line7">
-        <Top>1.34472in</Top>
-        <Left>0.05209in</Left>
-        <Height>3.49972in</Height>
-        <Width>0in</Width>
-        <ZIndex>26</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line8">
-        <Top>1.35861in</Top>
-        <Left>6.71417in</Left>
-        <Height>3.48583in</Height>
-        <Width>0in</Width>
-        <ZIndex>27</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line10">
-        <Top>4.38958in</Top>
-        <Left>1.67583in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>28</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line11">
-        <Top>3.51944in</Top>
-        <Left>5.10417in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>29</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line12">
-        <Top>4.71944in</Top>
-        <Left>1.67583in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>30</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line13">
-        <Top>4.65in</Top>
-        <Left>1.67583in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>31</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line14">
-        <Top>3.95in</Top>
-        <Left>5.05903in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>32</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line15">
-        <Top>3.88056in</Top>
-        <Left>5.05903in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>33</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>TOTAL SALARY     :  </Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve">    </Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>5.08264in</Top>
-        <Left>3.43813in</Left>
-        <Height>0.23611in</Height>
-        <Width>1.35416in</Width>
-        <ZIndex>34</ZIndex>
-        <Style>
-          <Border>
             <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
@@ -808,424 +781,32 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox29">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!OT.Value, "CharithaS")*
-Sum(Fields!OTRate.Value, "CharithaS")+
-Sum(Fields!BasicSalary.Value, "CharithaS")+
-Sum(Fields!HousingAllowance.Value, "CharithaS")+
-Sum(Fields!MedicalAllowance.Value, "CharithaS")+
-Sum(Fields!FoodAllowance.Value, "CharithaS")+
-Sum(Fields!OtherAllowance.Value, "CharithaS")-
-Sum(Fields!SalaryAdvance.Value, "CharithaS")-
-Sum(Fields!EPF.Value, "CharithaS")-
-Sum(Fields!ETF.Value, "CharithaS")-
-Sum(Fields!Insurance.Value, "CharithaS")</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox29</rd:DefaultName>
-        <Top>5.06875in</Top>
-        <Left>5.35292in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
-        <ZIndex>35</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox30">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=+Sum(Fields!BasicSalary.Value, "CharithaS")+
-Sum(Fields!HousingAllowance.Value, "CharithaS")+
-Sum(Fields!MedicalAllowance.Value, "CharithaS")+
-Sum(Fields!FoodAllowance.Value, "CharithaS")+
-Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*Sum(Fields!OTRate.Value, "CharithaS")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox30</rd:DefaultName>
-        <Top>4.41736in</Top>
-        <Left>1.82292in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
-        <ZIndex>36</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox31">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=+Sum(Fields!SalaryAdvance.Value, "CharithaS")+Sum(Fields!EPF.Value, "CharithaS")+Sum(Fields!ETF.Value, "CharithaS")+Sum(Fields!Insurance.Value, "CharithaS")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox31</rd:DefaultName>
-        <Top>3.575in</Top>
-        <Left>5.17709in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
-        <ZIndex>37</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox18">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>OT Horus     :</Value>
-                <Style>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.14757in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.19444in</Height>
-        <Width>1.12264in</Width>
-        <ZIndex>38</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox19">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>OT Rate     :</Value>
-                <Style>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.47049in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.19444in</Height>
-        <Width>1.12264in</Width>
-        <ZIndex>39</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="OTRate">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!OTRate.Value, "CharithaS")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>OTRate</rd:DefaultName>
-        <Top>0.47049in</Top>
-        <Left>1.47792in</Left>
-        <Height>0.19444in</Height>
-        <Width>1in</Width>
-        <ZIndex>40</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox20">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>OT Hours X OT Rate   :</Value>
-                <Style>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.80306in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.19444in</Height>
-        <Width>1.58097in</Width>
-        <ZIndex>41</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox21">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!OT.Value, "CharithaS")*Sum(Fields!OTRate.Value, "CharithaS")</Value>
-                <Style>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.80306in</Top>
-        <Left>1.94792in</Left>
-        <Height>0.19444in</Height>
-        <Width>1.58097in</Width>
-        <ZIndex>42</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="OT">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!OT.Value, "CharithaS")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>OT</rd:DefaultName>
-        <Top>0.14757in</Top>
-        <Left>1.47792in</Left>
-        <Height>0.19444in</Height>
-        <Width>1in</Width>
-        <ZIndex>43</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox23">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>OT Hours X OT Rate   :</Value>
-                <Style>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>3.95in</Top>
-        <Left>0.19334in</Left>
-        <Height>0.24653in</Height>
-        <Width>1.58097in</Width>
-        <ZIndex>44</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox24">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!OT.Value, "CharithaS") * Sum(Fields!OTRate.Value, "CharithaS")</Value>
-                <Style>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>3.95in</Top>
-        <Left>1.94792in</Left>
-        <Height>0.24653in</Height>
-        <Width>1in</Width>
-        <ZIndex>45</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Line Name="Line17">
-        <Top>5.36042in</Top>
-        <Left>5.22792in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>46</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line18">
-        <Top>5.42986in</Top>
-        <Left>5.22792in</Left>
-        <Height>0in</Height>
-        <Width>1.25in</Width>
-        <ZIndex>47</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
     </ReportItems>
-    <Height>14.24601cm</Height>
-    <Style>
-      <Border>
-        <Style>None</Style>
-      </Border>
-      <LeftBorder>
-        <Style>Solid</Style>
-      </LeftBorder>
-      <RightBorder>
-        <Style>Solid</Style>
-      </RightBorder>
-    </Style>
+    <Height>3.33333in</Height>
+    <Style />
   </Body>
-  <Width>17.39636cm</Width>
+  <Width>7.675in</Width>
   <Page>
     <PageHeader>
-      <Height>4.15079cm</Height>
+      <Height>1.26333in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Image Name="Image5">
+        <Image Name="Image1">
           <Source>Embedded</Source>
-          <Value>ReportLogo</Value>
+          <Value>logo</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.01958in</Top>
-          <Left>0.05209in</Left>
-          <Height>1.0325in</Height>
-          <Width>1.06597in</Width>
+          <Top>0.205in</Top>
+          <Left>0.38833in</Left>
+          <Height>1.05833in</Height>
+          <Width>1.43333in</Width>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox3">
+        <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -1236,24 +817,7 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>Verdana</FontFamily>
-                    <FontSize>18pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                    <Color>#1f4e79</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>Verdana</FontFamily>
+                    <FontSize>20pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#1f4e79</Color>
@@ -1265,10 +829,27 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>                     Address                          : 212/A/1, Welivita road, Kaduwela.</Value>
+                  <Value>Address     : 212/A/1,Welivitaroad,Kaduwela.</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>Verdana</FontFamily>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                    <Color>#1f4e79</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tell            : 0112 414317/+94 (77)314 0513</Value>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontFamily>Verdana</FontFamily>
+                    <FontSize>9pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#1f4e79</Color>
@@ -1282,51 +863,11 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>                         Tell                            : 0112 414317/+94 (77)314 0513</Value>
+                  <Value>Email         : ssenterinfo@gmail.com</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>Verdana</FontFamily>
-                    <FontWeight>Normal</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                    <Color>#1f4e79</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Left</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>                         Email                          : ssenterinfo@gmail.com</Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>Verdana</FontFamily>
-                    <FontWeight>Normal</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                    <Color>#1f4e79</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Left</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value xml:space="preserve">
-</Value>
-                  <Style>
-                    <FontFamily />
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value xml:space="preserve">                 </Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>Verdana</FontFamily>
+                    <FontSize>9pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#1f4e79</Color>
@@ -1338,11 +879,11 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.00569in</Top>
-          <Left>1.14584in</Left>
-          <Height>1.05681in</Height>
-          <Width>5.58854in</Width>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.205in</Top>
+          <Left>1.97167in</Left>
+          <Height>1.05833in</Height>
+          <Width>4.64167in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -1354,174 +895,19 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox4">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>PaySlip ID :</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>1.15972in</Top>
-          <Left>5.17583in</Left>
-          <Height>0.23611in</Height>
-          <Width>0.88667in</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="PayrollStaffID">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Sum(Fields!PayrollStaffID.Value, "CharithaS")</Value>
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>PayrollStaffID</rd:DefaultName>
-          <Top>1.15972in</Top>
-          <Left>6.13195in</Left>
-          <Height>0.23611in</Height>
-          <Width>0.55208in</Width>
-          <ZIndex>3</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox17">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Month    :</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>1.13194in</Top>
-          <Left>3.67833in</Left>
-          <Height>0.23611in</Height>
-          <Width>0.70959in</Width>
-          <ZIndex>4</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Months">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=First(Fields!Months.Value, "CharithaS")</Value>
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Months</rd:DefaultName>
-          <Top>1.13194in</Top>
-          <Left>4.4157in</Left>
-          <Height>0.23611in</Height>
-          <Width>0.5543in</Width>
-          <ZIndex>5</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="EmployeeID">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=First(Fields!EmployeeID.Value, "CharithaS")</Value>
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>EmployeeID</rd:DefaultName>
-          <Top>1.0625in</Top>
-          <Height>0.22444in</Height>
-          <Width>1.58097in</Width>
-          <ZIndex>6</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
       </ReportItems>
       <Style>
         <Border>
-          <Style>Solid</Style>
+          <Style>None</Style>
         </Border>
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.06375cm</Height>
+      <Height>2.2in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox22">
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -1533,22 +919,20 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>Verdana</FontFamily>
                     <FontSize>9pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
+                    <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
+              <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.12674in</Top>
-          <Left>0.19334in</Left>
-          <Height>0.64236in</Height>
-          <Width>6.40562in</Width>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0in</Top>
+          <Left>0.24667in</Left>
+          <Height>0.75in</Height>
+          <Width>6.78333in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1562,17 +946,14 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
       </ReportItems>
       <Style>
         <Border>
-          <Style>Solid</Style>
+          <Style>None</Style>
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>25.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>1cm</LeftMargin>
-    <RightMargin>1cm</RightMargin>
-    <TopMargin>1cm</TopMargin>
-    <BottomMargin>1cm</BottomMargin>
-    <ColumnSpacing>1.27cm</ColumnSpacing>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
@@ -1582,96 +963,92 @@ Sum(Fields!OtherAllowance.Value, "CharithaS")+Sum(Fields!OT.Value, "CharithaS")*
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e9e5264a-2f68-4e8a-a287-165bf7e9a89f</rd:DataSourceID>
+      <rd:DataSourceID>3946537f-c03c-4f96-8344-d17d6eb5831b</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="CharithaS_Data">
+    <DataSource Name="IsuruSDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>9ed625b4-06ab-4000-a782-7658d292e514</rd:DataSourceID>
+      <rd:DataSourceID>ea60cba0-0d92-494a-a751-631988206bab</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="CharithaS">
+    <DataSet Name="Isuru">
       <Query>
-        <DataSourceName>CharithaS_Data</DataSourceName>
+        <DataSourceName>IsuruSDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="PayrollStaffID">
-          <DataField>PayrollStaffID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="SalaryDate">
-          <DataField>SalaryDate</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Months">
-          <DataField>Months</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OT">
-          <DataField>OT</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="OTRate">
-          <DataField>OTRate</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BasicSalary">
-          <DataField>BasicSalary</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="HousingAllowance">
-          <DataField>HousingAllowance</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MedicalAllowance">
-          <DataField>MedicalAllowance</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="FoodAllowance">
-          <DataField>FoodAllowance</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="OtherAllowance">
-          <DataField>OtherAllowance</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="SalaryAdvance">
-          <DataField>SalaryAdvance</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="EPF">
-          <DataField>EPF</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ETF">
-          <DataField>ETF</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Insurance">
-          <DataField>Insurance</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="EmployeeID">
           <DataField>EmployeeID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lastname">
+          <DataField>Lastname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Gender">
+          <DataField>Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DOB">
+          <DataField>DOB</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="NIC">
+          <DataField>NIC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ContactNumber">
+          <DataField>ContactNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address01">
+          <DataField>Address01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address02">
+          <DataField>Address02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PostalCode">
+          <DataField>PostalCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Position">
+          <DataField>Position</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobTitle">
+          <DataField>JobTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>CharithaS_Data</rd:DataSetName>
-        <rd:SchemaPath>F:\charitha\Final_ITP\WindowsFormsApp3\WindowsFormsApp3\WindowsFormsApp3\CharithaS_Data.xsd</rd:SchemaPath>
-        <rd:TableName>Payroll_Staff</rd:TableName>
+        <rd:DataSetName>IsuruSDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ISURU PRAMODYA\Documents\GitHub\WindowsFormsApp3\WindowsFormsApp3\IsuruSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Employee</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Payroll_StaffTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>EmployeeTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <EmbeddedImages>
-    <EmbeddedImage Name="ReportLogo">
+    <EmbeddedImage Name="logo">
       <MIMEType>image/jpeg</MIMEType>
       <ImageData>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAK8AsoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
 iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACikooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopKAFooooAKKSloAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACikpaACiiigAooooAKKKKACiiigAopPwpaACiiigAooooAKKKKACiik/CgBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACkzS0UAJS0UUAFFFFABRRRQAUUUUAFFFFABSUtFABRRRQAUlLRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAJS0UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUlLRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFJS0UAFFFFABRRRQAUUUUAJS0UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
@@ -1720,6 +1097,6 @@ QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRR
 FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//2Q==</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>74818949-9906-4d1b-8139-662ad99a1c4c</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>617954f1-77ce-47d1-916f-31fcac5adc35</rd:ReportID>
 </Report>
