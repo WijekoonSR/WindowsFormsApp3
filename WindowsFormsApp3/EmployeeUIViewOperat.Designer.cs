@@ -33,6 +33,7 @@
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.reportBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,10 +85,21 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // reportBtn
+            // 
+            this.reportBtn.Location = new System.Drawing.Point(870, 66);
+            this.reportBtn.Name = "reportBtn";
+            this.reportBtn.Size = new System.Drawing.Size(97, 56);
+            this.reportBtn.TabIndex = 110;
+            this.reportBtn.Text = "Report";
+            this.reportBtn.UseVisualStyleBackColor = true;
+            this.reportBtn.Click += new System.EventHandler(this.reportBtn_Click);
+            // 
             // EmployeeUIViewOperat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.reportBtn);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtEmployeeID);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.TextBox txtEmployeeID;
         private System.Windows.Forms.Label lblEmployeeID;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button reportBtn;
     }
 }

@@ -60,6 +60,12 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void reportBtn_Click(object sender, EventArgs e)
+        {
+            EmployeeReportForm f1 = new EmployeeReportForm();
+            f1.ShowDialog();
+        }
     }
     }
 

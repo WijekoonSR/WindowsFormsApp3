@@ -227,6 +227,12 @@
     <Compile Include="DatabaseDataSet.cs">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeReportForm.Designer.cs">
+      <DependentUpon>EmployeeReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeUIEditOperator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -608,6 +614,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUIView.resx">
       <DependentUpon>CustomerUIView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeReport.rdlc" />
+    <EmbeddedResource Include="EmployeeReportForm.resx">
+      <DependentUpon>EmployeeReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUIEditOperator.resx">
       <DependentUpon>EmployeeUIEditOperator.cs</DependentUpon>
