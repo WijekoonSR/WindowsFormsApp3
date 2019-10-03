@@ -431,9 +431,9 @@ namespace WindowsFormsApp3
                     sqlConnection.Close();
 
                     //check  whether vehicles have been added to booking
-                    if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1);
-                    else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2);
-                    else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3);
+                    if (BackhoeType1Count > 0) insertBooking_vehicle(BackhoeType1Count, Type1, bookingID);
+                    else if (BackhoeType2Count > 0) insertBooking_vehicle(BackhoeType2Count, Type2, bookingID);
+                    else if (BackhoeType3Count > 0) insertBooking_vehicle(BackhoeType3Count, Type3, bookingID);
 
                     if (valid > 0)
                     {
@@ -464,7 +464,7 @@ namespace WindowsFormsApp3
 
         // create relation with vehicles and booking database 
         // use assignBooking_Vehicle process to assign values
-        private void insertBooking_vehicle(int count, string Type)
+        private void insertBooking_vehicle(int count, string Type,string bookingId)
         {
             try
             {
@@ -474,7 +474,7 @@ namespace WindowsFormsApp3
                     using (SqlConnection sqlConnection = new SqlConnection(name))
                     {
                         sqlConnection.Open();
-                        sqlCommand = new SqlCommand("exec assignBooking_Vehicle '" + startDate + "', '" + endDate + "', '" + Type + "'", sqlConnection);
+                        sqlCommand = new SqlCommand("exec assignBooking_Vehicle '" + startDate + "', '" + endDate + "', '" + Type + "','"+bookingId+"'", sqlConnection);
                         sqlCommand.ExecuteNonQuery();
                         sqlConnection.Close();
                     }
