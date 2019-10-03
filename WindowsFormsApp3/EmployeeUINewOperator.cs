@@ -116,22 +116,22 @@ namespace WindowsFormsApp3
 
 
                 sqlConnection.Close();
-                //          sqlConnection.Open();
-                //          string query02 = "insert into Vehicle_Operators(EmployeeID,LicenseNo, VehilceID)" + "values('" +ID+ "','" +licenseNUm+ "', '" + ID2 + "')";
-                //              SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
-                //               cmd2.ExecuteNonQuery();
-                //sqlConnection.Open();
-
+                          sqlConnection.Open();
+                          string query02 = "insert into Vehicle_Operators(EmployeeID ,LicenseNo , VehicleID )" + "values('" +eid+ "','" +licenseNUm+ "', '" + VID + "')";
+                          SqlCommand cmd2 = new SqlCommand(query02, sqlConnection);
+                          cmd2.ExecuteNonQuery();
+                sqlConnection.Close();
                 /* string query02 = "Exec AsignOperators '" + licenseNUm + "'";
                  SqlCommand cmd2 = new SqlCommand(query02,sqlConnection);
                  cmd2.ExecuteNonQuery();*/
 
-
-                MessageBox.Show("Data Submitted");
-                clearDet();
-                setIdSql();
-                txtEmployeeID.Text = GetID();
-                sqlConnection.Close();
+                DialogResult dr =  MessageBox.Show("Data Submitted","Success!!",MessageBoxButtons.OK);
+                if (dr == DialogResult.OK)
+                {
+                    setIdSql();
+                    clearDet();
+                    txtEmployeeID.Text = GetID();
+                }
             }
         }
         public void clearDet()

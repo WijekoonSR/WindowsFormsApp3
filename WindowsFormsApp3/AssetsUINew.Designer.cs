@@ -120,15 +120,6 @@
             // 
             // btnBrowse
             // 
-          //  this.btnAttach.Location = new System.Drawing.Point(283, 245);
-///this.btnAttach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-       //     this.btnAttach.Name = "btnAttach";
-      //      this.btnAttach.Size = new System.Drawing.Size(80, 36);
-//this.btnAttach.TabIndex = 33;
-    //        this.btnAttach.Text = "Attach";
-     //       this.btnAttach.UseVisualStyleBackColor = true;
-     //       this.btnAttach.Visible = false;
-      //      this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
             this.btnBrowse.Location = new System.Drawing.Point(283, 249);
             this.btnBrowse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBrowse.Name = "btnBrowse";
@@ -196,7 +187,7 @@
             this.lblAttachments.AutoSize = true;
             this.lblAttachments.Location = new System.Drawing.Point(61, 258);
             this.lblAttachments.Name = "lblAttachments";
-            this.lblAttachments.Size = new System.Drawing.Size(120, 23);
+            this.lblAttachments.Size = new System.Drawing.Size(114, 23);
             this.lblAttachments.TabIndex = 27;
             this.lblAttachments.Text = "Attachments ";
             // 
@@ -400,6 +391,7 @@
             // picBoxAttachNew
             // 
             this.picBoxAttachNew.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBoxAttachNew.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAttachNew.Image")));
             this.picBoxAttachNew.Location = new System.Drawing.Point(283, 278);
             this.picBoxAttachNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBoxAttachNew.Name = "picBoxAttachNew";

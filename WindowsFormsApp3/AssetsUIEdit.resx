@@ -174,10 +174,30 @@
   <metadata name="directorySearcher17.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>596, 103</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="picBoxAttachEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxISEhUSEhIVFRUXFRUVFxUVFRUVFxUXFRUWFxUXFxUY
+        HSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLiv/2wBDAQoKCg0NDQ4NDQ4tGRUZLSsrKy0tLTctKysr
+        Ky0tLSsrLS0rLSsrKysrKysrKysrKysrKysrKysrKysrKysrKyv/wAARCAC3ARQDASIAAhEBAxEB/8QA
+        FwABAQEBAAAAAAAAAAAAAAAAAAECB//EAB0QAQEBAAEFAQAAAAAAAAAAAAABESECMWFx8BL/xAAVAQEB
+        AAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOz2GpqxRLV1
+        KUFVlQNIGgUtRQRS0ACAJVkTAF1bUXQQhhQSLAgKmiAumpasAUAQEBRFADEACgEgLAPKBoFXDACKmAFR
+        YUAiWKBYUlSAoWgAKCRFpoGoYAYphaBgFBUNKAaAIKlBTExQTBbQEFQCqigBq4CGAABgCKUECqBCwwAM
+        RbQEUgCVSgCaoJpoSAtEUDAgBgigmkooAYgKaaAYgaAukTQUNMAwKYAmqgKlWJIBAWAmLOQAhFSgU0iA
+        uAAmhFAwCwEKLoAL5BBAF1C/cAKlUwBMVKC6ACKICmoUC0UwEqwIBYAAUAMKJgEipFADAEgNAmAAaRFA
+        lAoFCgGiWgKGkAoFoASmgkFATFtCQEWBYAekUCGABUq0sBFoAQtADV1kgLAhABFBI0zFgC4lAAwA4CAB
+        CgBiEoC4AAupoKhaQAIAqYaAYWralAJDCAkKuJgLpS0oAkqgJFwBBcTQWFKgLhgaCw1nFgFgaAFiLoB0
+        1FoBhaAolAMIYgLUxVBIFQGqkTVAhUJQWFgAkWrjOgVQkBNXUw0GksIUCrEtJAMA0FxNIAsEoBKVUAiK
+        n6BaWETQVFMARdWgkDAEWhaAJVtALAACgKlIUECxcwBZCUBDCmgUw0ASKAi6GASBiAspUUBDFBFhiWgu
+        lJC0FiYaAAQEUKAuMqCLSLQSRU0wAIgLAlMASLAAsVKCRaqAEQBYUQC+gAFTphAULU0FpiGgsBQSIKCN
+        IUFtQSUFAoELyAEEUEkMWgAYmgpCUsAoWgBolwFJSFgARQZuDSAAAFACAASJKAC9kAAANUAO5oAGACLE
+        AWEADUoAuoALpUAWpgAshEAaLABAAf/Z
+</value>
+  </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>789, 103</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="picSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAahJREFUWEft

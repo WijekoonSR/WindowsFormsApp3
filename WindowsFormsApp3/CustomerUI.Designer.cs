@@ -30,7 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerUI));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.customerUINew = new WindowsFormsApp3.CustomerUINew();
+            this.customerUIEdit = new WindowsFormsApp3.CustomerUIEdit();
+            this.customerUIView = new WindowsFormsApp3.CustomerUIView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnReport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnView = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -40,9 +45,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.Slider = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.customerUINew1 = new WindowsFormsApp3.CustomerUINew();
-            this.customerUIView1 = new WindowsFormsApp3.CustomerUIView();
-            this.customerUIEdit1 = new WindowsFormsApp3.CustomerUIEdit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -50,18 +52,45 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.customerUINew1);
-            this.panel3.Controls.Add(this.customerUIView1);
-            this.panel3.Controls.Add(this.customerUIEdit1);
+            this.panel3.Controls.Add(this.customerUINew);
+            this.panel3.Controls.Add(this.customerUIEdit);
+            this.panel3.Controls.Add(this.customerUIView);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 63);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1069, 585);
             this.panel3.TabIndex = 8;
             // 
+            // customerUINew
+            // 
+            this.customerUINew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerUINew.Location = new System.Drawing.Point(0, 0);
+            this.customerUINew.Name = "customerUINew";
+            this.customerUINew.Size = new System.Drawing.Size(1069, 585);
+            this.customerUINew.TabIndex = 2;
+            this.customerUINew.Load += new System.EventHandler(this.customerUINew2_Load);
+            // 
+            // customerUIEdit
+            // 
+            this.customerUIEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerUIEdit.Location = new System.Drawing.Point(0, 0);
+            this.customerUIEdit.Name = "customerUIEdit";
+            this.customerUIEdit.Size = new System.Drawing.Size(1069, 585);
+            this.customerUIEdit.TabIndex = 1;
+            // 
+            // customerUIView
+            // 
+            this.customerUIView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerUIView.Location = new System.Drawing.Point(0, 0);
+            this.customerUIView.Name = "customerUIView";
+            this.customerUIView.Size = new System.Drawing.Size(1069, 585);
+            this.customerUIView.TabIndex = 0;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.panel8);
@@ -74,6 +103,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 63);
             this.panel1.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(484, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 63);
+            this.panel5.TabIndex = 15;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReport.BorderRadius = 0;
+            this.btnReport.ButtonText = "Report";
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReport.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReport.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnReport.Iconimage")));
+            this.btnReport.Iconimage_right = null;
+            this.btnReport.Iconimage_right_Selected = null;
+            this.btnReport.Iconimage_Selected = null;
+            this.btnReport.IconZoom = 34D;
+            this.btnReport.IsTab = false;
+            this.btnReport.Location = new System.Drawing.Point(364, 0);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnReport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.btnReport.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnReport.selected = false;
+            this.btnReport.Size = new System.Drawing.Size(120, 63);
+            this.btnReport.TabIndex = 14;
+            this.btnReport.Textcolor = System.Drawing.Color.Black;
+            this.btnReport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // panel7
             // 
@@ -212,30 +278,6 @@
             this.panel2.Size = new System.Drawing.Size(1069, 3);
             this.panel2.TabIndex = 9;
             // 
-            // customerUINew1
-            // 
-            this.customerUINew1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customerUINew1.Location = new System.Drawing.Point(0, 0);
-            this.customerUINew1.Name = "customerUINew1";
-            this.customerUINew1.Size = new System.Drawing.Size(1069, 585);
-            this.customerUINew1.TabIndex = 4;
-            // 
-            // customerUIView1
-            // 
-            this.customerUIView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customerUIView1.Location = new System.Drawing.Point(0, 0);
-            this.customerUIView1.Name = "customerUIView1";
-            this.customerUIView1.Size = new System.Drawing.Size(1069, 585);
-            this.customerUIView1.TabIndex = 3;
-            // 
-            // customerUIEdit1
-            // 
-            this.customerUIEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customerUIEdit1.Location = new System.Drawing.Point(0, 0);
-            this.customerUIEdit1.Name = "customerUIEdit1";
-            this.customerUIEdit1.Size = new System.Drawing.Size(1069, 585);
-            this.customerUIEdit1.TabIndex = 1;
-            // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,5 +312,10 @@
         private System.Windows.Forms.Panel panel2;
         private CustomerUINew customerUINew1;
         private CustomerUIView customerUIView1;
+        private CustomerUINew customerUINew;
+        private CustomerUIEdit customerUIEdit;
+        private CustomerUIView customerUIView;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuFlatButton btnReport;
     }
 }

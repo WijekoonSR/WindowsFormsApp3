@@ -111,6 +111,11 @@ namespace WindowsFormsApp3
                 txtPassword.Focus();
                 return false;
             }
+            else if (txtPassword.Text.ToString().Length < 4 ) {
+                MessageBox.Show("Password must have at least 4 characters");
+                txtPassword.Focus();
+                return false;
+            }
             else if (txtReEnterPW.Text == "")
             {
                 MessageBox.Show("Re-Enter Password");
@@ -130,9 +135,9 @@ namespace WindowsFormsApp3
         private bool checkEmployeeAvaiability()
         {
             sqlConnection.Open();
-            string query = "select * from Employee where Employe ";
+            string query = "select * from Employee";
             SqlCommand com = new SqlCommand(query, sqlConnection);
-            com.Parameters.AddWithValue("@id", int.Parse(TxtEmployeeID.Text.ToString()));
+            com.Parameters.AddWithValue("@id", TxtEmployeeID.Text.ToString());
             int rows = com.ExecuteNonQuery();
             MessageBox.Show(rows.ToString());
           sqlConnection.Close();

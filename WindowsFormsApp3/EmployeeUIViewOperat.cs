@@ -33,7 +33,7 @@ namespace WindowsFormsApp3
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int EmployeeID = int.Parse(txtEmployeeID.Text);
+            string EmployeeID = (txtEmployeeID.Text).ToString();
             string sql = "Select * from  Employee where EmployeeID = '" + EmployeeID + "'";
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
@@ -59,6 +59,12 @@ namespace WindowsFormsApp3
         private void txtEmployeeID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void reportBtn_Click(object sender, EventArgs e)
+        {
+            EmployeeReportForm f1 = new EmployeeReportForm();
+            f1.ShowDialog();
         }
     }
     }

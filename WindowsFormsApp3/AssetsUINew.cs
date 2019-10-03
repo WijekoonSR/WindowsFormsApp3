@@ -19,8 +19,8 @@ namespace WindowsFormsApp3
         public static String server = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
 
         SqlConnection sqlConnection = new SqlConnection(server);
-        String spareParts, date, issuedDate, shopName, address, email, ownerName, AssetsMaintenanceID;
-        int quantity, invoiceNumber, contactNumber, OwnerContact;
+        String spareParts, date, issuedDate, shopName, address, email, ownerName, AssetsMaintenanceID, invoiceNumber, contactNumber, OwnerContact;
+        int quantity;
 
         string assetsID;
         Bitmap AttachmentNew;
@@ -141,8 +141,8 @@ namespace WindowsFormsApp3
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
-            {
+           // try
+           // {
                 if (txtSpareParts.Text == "")
                 {
                     MessageBox.Show("Please Enter the Purchased Spare Part", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -230,33 +230,49 @@ namespace WindowsFormsApp3
 
                 else
                 {
-                    sqlConnection.Open();
+                setIdSql();
+
+                sqlConnection.Open();
                     AssetsMaintenanceID = txtAssetsID.Text.ToString();
                     spareParts = txtSpareParts.Text.ToString();
                     quantity = int.Parse(txtQuantity.Text);
                     price = float.Parse(txtPrice.Text);
                     date = dateNew.Value.ToString("yyyy/MM/dd");
-                    invoiceNumber = int.Parse(txtInvoiceNumber.Text);
+                    invoiceNumber = (txtInvoiceNumber.Text);
                     issuedDate = dateIssued.Value.ToString("yyyy/MM/dd");
                     shopName = txtShopName.Text.ToString();
                     address = txtAddress.Text.ToString();
-                    contactNumber = int.Parse(txtContactNo.Text);
+                    contactNumber = txtContactNo.Text;
                     email = txtEmail.Text.ToString();
                     ownerName = txtOwnerName.Text.ToString();
-                    OwnerContact = int.Parse(txtOwnContactNew.Text);
+                    OwnerContact = txtOwnContactNew.Text;
 
                     PictureBox picBoxAttachNew1 = picBoxAttachNew;
                     
-                    //ID takes only integer values
                     String VehicleID = txtVehicleID.Text;
                    
 
-                    String query = "insert into Assets_Maintenance" +
-                        "(AssetsMaintenanceID,VehicleID,PurchasedSpareParts,Quantity,PurchaseDate,Price,AttachmentNew,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)" +
-                        " Values('"+AssetsMaintenanceID+"','" + VehicleID + "' ,'" + spareParts + "','" + quantity + "','" + date + "','" + price + "','"+ ConvertImageToBinary(picBoxAttachNew1.Image) + "," + invoiceNumber + "', '" + issuedDate + "','" + shopName + "','" + address + "','" + contactNumber + "','" + email + "','" + ownerName + "','" + OwnerContact + "')";
+                    String query = "insert into Assets_Maintenance(AssetsMaintenanceID,VehicleID,PurchasedSpareParts,Quantity,PurchaseDate,Price,AttachmentNew,InvoiceNumber,IssuedDate,ShopName,Address,ContactNumber,Email,OwnerName,OwnerContact)"+
+                        "values(@AssetsMaintenanceID, @VehicleID, @PurchasedSpareParts, @Quantity, @PurchaseDate, @Price, @AttachmentNew, @InvoiceNumber, @IssuedDate, @ShopName, @Address, @ContactNumber, @Email, @OwnerName, @OwnerContact)";
 
 
                     sqlCommand = new SqlCommand(query, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@AssetsMaintenanceID",AssetsMaintenanceID);
+                    sqlCommand.Parameters.AddWithValue("@VehicleID",VehicleID);
+                    sqlCommand.Parameters.AddWithValue("@PurchasedSpareParts",spareParts);
+                    sqlCommand.Parameters.AddWithValue("@Quantity",quantity);
+                    sqlCommand.Parameters.AddWithValue("@PurchaseDate",issuedDate);
+                    sqlCommand.Parameters.AddWithValue("@Price",price);
+                    sqlCommand.Parameters.AddWithValue("@AttachmentNew",ConvertImageToBinary(picBoxAttachNew.Image));
+                    sqlCommand.Parameters.AddWithValue("@InvoiceNumber",invoiceNumber);
+                    sqlCommand.Parameters.AddWithValue("@IssuedDate",issuedDate);
+                    sqlCommand.Parameters.AddWithValue("@ShopName",shopName);
+                    sqlCommand.Parameters.AddWithValue("@Address",address);
+                    sqlCommand.Parameters.AddWithValue("@ContactNumber",contactNumber);
+                    sqlCommand.Parameters.AddWithValue("@Email",email);
+                    sqlCommand.Parameters.AddWithValue("@OwnerName",ownerName);
+                    sqlCommand.Parameters.AddWithValue("@OwnerContact",OwnerContact);
+
                     int m1 = sqlCommand.ExecuteNonQuery();
                     sqlConnection.Close();
                     if (m1 == 0)
@@ -265,8 +281,7 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                        setIdSql();
-                        DialogResult DR = MessageBox.Show("Successfully Entered","Success",MessageBoxButtons.OK);
+                    DialogResult DR = MessageBox.Show("Successfully Entered","Success",MessageBoxButtons.OK);
                         ClearFields();
                         if (DR == DialogResult.OK)
                         {
@@ -275,8 +290,8 @@ namespace WindowsFormsApp3
                     }
 
                 }
-            }
-            catch (Exception ex)
+            //}
+          /*  catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "AssetsUI3 ");
             }
@@ -284,7 +299,7 @@ namespace WindowsFormsApp3
             {
                 sqlConnection.Close();
             }
-        
+        */
 
         }
 
@@ -315,6 +330,8 @@ namespace WindowsFormsApp3
                 txtEmail.Clear();
                 txtOwnerName.Clear();
                 txtOwnContactNew.Clear();
+                txtVehicleID.Clear();
+                picBoxAttachNew.Image = null;
             }
             catch (Exception ex)
             {

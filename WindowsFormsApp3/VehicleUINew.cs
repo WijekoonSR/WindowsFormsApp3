@@ -83,7 +83,7 @@ namespace WindowsFormsApp3
                     ID = dataReader[0].ToString();
                 }
                 con.Close();
-                return "VL" + ID;
+                return "V" + ID;
 
             }
             catch (Exception e)
@@ -200,11 +200,11 @@ namespace WindowsFormsApp3
                         " values('"+vID+"','" + VehicleType + "','" + Model + "','" + VehicleClass + "','" + EngineType + "', '" + Fueltype + "' ,'" + VehicleCapacity + "','" + Colour + "','" + Weight + "','" + RegDate + "','" + RegNo + "','" + YearOfManufac + "','" + ChassisNo + "')";
                     SqlCommand sqlCommand = new SqlCommand(query, con);
                     sqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("Saved Successfully");
                     con.Close();
 
                     clear();
                     setIdSql();
+                    MessageBox.Show("Saved Successfully");
                     txtVehicleID.Text = GetID();
                 }
             }

@@ -25,26 +25,26 @@ namespace WindowsFormsApp3
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try {
-                int EmployeeID = int.Parse(txtEmployeeID.Text);
+                string EmployeeID = (txtEmployeeID.Text).ToString();
                 sqlConnection.Open();
-                String sql1 = "Delete From Payroll_Operators where EmployeeID = '" + EmployeeID + "'";
-                String sql2 = "Delete From Payroll_Operators_Monthly_Salary where EmployeeID = '" + EmployeeID + "'";
-                String sql3 = "Delete From Payroll_Staff where EmployeeID = '" + EmployeeID + "'";
-                String sql4 = "Delete From Vehicle_Operators where EmployeeID = '" + EmployeeID + "'";
-                String sql5 = "Delete From Employee where EmployeeID = '" + EmployeeID + "'";
+               // String sql1 = "Delete From Payroll_Operators where EmployeeID = '" + EmployeeID + "'";
+               // String sql2 = "Delete From Payroll_Operators_Monthly_Salary where EmployeeID = '" + EmployeeID + "'";
+               // String sql3 = "Delete From Payroll_Staff where EmployeeID = '" + EmployeeID + "'";
+               // String sql4 = "Delete From Vehicle_Operators where EmployeeID = '" + EmployeeID + "'";
+                String sql = "Delete From Employee where EmployeeID = '" + EmployeeID + "'";
                 //String sq4 = "Delete From Vehicle_Operators where EmployeeID = '" + EmployeeID + "'";
 
-                SqlCommand cmd1 = new SqlCommand(sql1, sqlConnection);
-                SqlCommand cmd2 = new SqlCommand(sql2, sqlConnection);
-                SqlCommand cmd3 = new SqlCommand(sql3, sqlConnection);
-                SqlCommand cmd4 = new SqlCommand(sql4, sqlConnection);
-                SqlCommand cmd5 = new SqlCommand(sql5, sqlConnection);
+               // SqlCommand cmd1 = new SqlCommand(sql1, sqlConnection);
+               // SqlCommand cmd2 = new SqlCommand(sql2, sqlConnection);
+               // SqlCommand cmd3 = new SqlCommand(sql3, sqlConnection);
+               // SqlCommand cmd4 = new SqlCommand(sql4, sqlConnection);
+                SqlCommand cmd = new SqlCommand(sql, sqlConnection);
 
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
-                cmd3.ExecuteNonQuery();
-                cmd4.ExecuteNonQuery();
-                cmd5.ExecuteNonQuery();
+                //cmd1.ExecuteNonQuery();
+               // cmd2.ExecuteNonQuery();
+               // cmd3.ExecuteNonQuery();
+               // cmd4.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Deleted");
                 sqlConnection.Close();
@@ -55,23 +55,31 @@ namespace WindowsFormsApp3
 }
         private void button1_Click(object sender, EventArgs e)
         {
-            int EmployeeID = int.Parse(txtEmployeeID.Text);
+            string EmployeeID = (txtEmployeeID.Text).ToString();
             string Sql = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
             SqlCommand cmd = new SqlCommand(Sql, sqlConnection);
+            SqlCommand cmd2 = new SqlCommand("select * from Vehicle_Operators where EmployeeID = '" + EmployeeID + "'",sqlConnection);
             try
             {
                 sqlConnection.Open();
-
+                SqlDataReader sdr = cmd2.ExecuteReader();
+                if (sdr.HasRows) {
+                    while (sdr.Read())
+                    {
+                        txtLicense.Text = sdr.GetValue(0).ToString();
+                    }
+                }
+                sqlConnection.Close();
+                sqlConnection.Open();
                 using (SqlDataReader read = cmd.ExecuteReader())
                 {
                     while (read.Read())
                     {
-                        txtfname.Text = read.GetValue(1).ToString();
-                        txtLname.Text = read.GetValue(2).ToString();
-                        cmbGender.Text = read.GetValue(12).ToString();
-                        dateDOB.Text = read.GetValue(3).ToString();
+                        txtfname.Text = read["FirstName"].ToString();
+                        txtLname.Text = read["Lastname"].ToString();
+                        cmbGender.Text = read["Gender"].ToString();
+                        dateDOB.Value = Convert.ToDateTime(read["DOB"].ToString()).Date;
                         txtNIC.Text = read.GetValue(4).ToString();
-                        //  txtLicense.Text = read.GetValue()
                         txtContactNum.Text = read.GetValue(5).ToString();
                         txtEmail.Text = read.GetValue(6).ToString();
                         txtAddress01.Text = read.GetValue(7).ToString();
@@ -101,7 +109,7 @@ namespace WindowsFormsApp3
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int EmployeeID = int.Parse(txtEmployeeID.Text);
+            string EmployeeID = (txtEmployeeID.Text).ToString();
             string fname = txtfname.Text;
             string lname = txtLname.Text;
             string gender = cmbGender.Text;

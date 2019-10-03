@@ -121,6 +121,8 @@ namespace WindowsFormsApp3
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            setIdSql();
+
             sql.Open();
            
             String vid = txtVid.Text;
@@ -144,11 +146,13 @@ namespace WindowsFormsApp3
 
             command = new SqlCommand(query, sql);
             command.ExecuteNonQuery();
-            MessageBox.Show("success");
             sql.Close();
-            clearAllFields();
-            setIdSql();
-            txtVehicleLeasingID.Text = GetID();
+            DialogResult dr = MessageBox.Show("Data Submitted", "Success!!", MessageBoxButtons.OK);
+            if (dr == DialogResult.OK)
+            {
+                clearAllFields();
+                txtVehicleLeasingID.Text = GetID();
+            }
         }
 
 

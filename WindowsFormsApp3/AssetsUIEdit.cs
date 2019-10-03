@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace WindowsFormsApp3
 {
@@ -18,10 +19,10 @@ namespace WindowsFormsApp3
         public static String server = @"Data Source=(localDB)\Backhoe_DB;Initial Catalog=Backhoe;Integrated Security=True";
 
         SqlConnection sqlConnection = new SqlConnection(server);
-        String spareParts, date, issuedDate, shopName, address, email, ownerName;
-        int quantity, invoiceNumber, contactNumber, OwnerContact;
+        String spareParts, date, issuedDate, shopName, address, email, ownerName, AssetsMaintenanceID, invoiceNumber, contactNumber, OwnerContact,vid;
+        int quantity;
         float price;
-
+        Image pic;
         private void picSearch_Click(object sender, EventArgs e)
         {
             sqlConnection.Open();
@@ -31,23 +32,26 @@ namespace WindowsFormsApp3
             SqlDataReader sdr = sqlCommand.ExecuteReader();
 
             while (sdr.Read())
-            {
+            { 
+                vid = sdr["VehicleID"].ToString();
                 spareParts = sdr["PurchasedSpareParts"].ToString();
                 quantity = int.Parse(sdr["Quantity"].ToString());
                 date = sdr["PurchaseDate"].ToString ();
                 price = float.Parse(sdr["Price"].ToString());
-                invoiceNumber = int.Parse(sdr["InvoiceNumber"].ToString());
+                invoiceNumber =sdr["InvoiceNumber"].ToString();
                 issuedDate = sdr["IssuedDate"].ToString();
                 shopName = sdr["ShopName"].ToString();
                 address = sdr["Address"].ToString();
-                contactNumber = int.Parse(sdr["ContactNumber"].ToString ());
+                contactNumber = sdr["ContactNumber"].ToString ();
                 email = sdr["Email"].ToString();
                 ownerName = sdr["OwnerName"].ToString();
-                OwnerContact = int.Parse(sdr["OwnerContact"].ToString()); 
-
+                OwnerContact = sdr["OwnerContact"].ToString();
+                pic = ConvertBinaryToIamge( (byte[])sdr["AttachmentNew"]);
             }
             sqlConnection.Close();
 
+            picBoxAttachEdit.Image = pic;
+            txtVehicleIDEdit.Text = vid;
             txtSpareEdit.Text = spareParts;
             txtQuantityEdit.Text = quantity.ToString ();
             dateEdit.Text = date;
@@ -82,6 +86,32 @@ namespace WindowsFormsApp3
 
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxAttachEdit_Click(object sender, EventArgs e)
+        {
+                    }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+
+                    picBoxAttachEdit.Image = Image.FromFile(ofd.FileName);
+                }
+            }
+        }
+
         private void lblQuantityNew_Click(object sender, EventArgs e)
         {
 
@@ -101,7 +131,7 @@ namespace WindowsFormsApp3
         {
             sqlConnection.Open();
 
-            string deletesql = "delete from Assets_Maintenance where AssetsMaintenanceID = '" + int.Parse(txtAssetsID.Text) + "'";
+            string deletesql = "delete from Assets_Maintenance where AssetsMaintenanceID = '" +txtAssetsID.Text + "'";
             SqlCommand command = new SqlCommand(deletesql,sqlConnection);
             command.ExecuteNonQuery();
             sqlConnection.Close();
@@ -121,21 +151,21 @@ namespace WindowsFormsApp3
                 quantity = int.Parse(txtQuantityEdit.Text);
                 price = float.Parse(txtPriceEdit.Text);
                 date = dateEdit.Value.ToString("yyyy/MM/dd");
-                invoiceNumber = int.Parse(txtInvoiceNumberEdit.Text);
+                invoiceNumber = txtInvoiceNumberEdit.Text;
                 issuedDate = dateIssuedEdit.Value.ToString("yyyy/MM/dd");
                 shopName = txtShopNameEdit.Text.ToString();
                 address = txtAddressEdit.Text.ToString();
-                contactNumber = int.Parse(txtContactNoEdit.Text);
+                contactNumber = txtContactNoEdit.Text;
                 email = txtEmail.Text.ToString();
                 ownerName = txtOwnerEdit.Text.ToString();
-                OwnerContact = int.Parse(txtOwnContactEdit.Text);
+                OwnerContact = txtOwnContactEdit.Text;
 
                 //ID takes only integer values
-                String ID = txtAssetsID.Text;
-                ID = Regex.Replace(ID, "[^0-9]", "");
-                int ID1 = int.Parse(ID);
+                String ID1 = txtAssetsID.Text;
+                
 
-                String query = "Update Assets_Maintenance set PurchasedSpareParts = '" + spareParts + "', Quantity = '" + quantity + "',PurchaseDate = '" + date + "',Price = '" + price + "',InvoiceNumber = '" + invoiceNumber + "', IssuedDate = '" + issuedDate + "', ShopName = '" + shopName + "', Address = '" + address + "',ContactNumber = '" + contactNumber + "', Email ='" + email + "', OwnerName = '" + ownerName + "', OwnerContact = '" + OwnerContact + "'";
+                String query = "Update Assets_Maintenance set PurchasedSpareParts = '" + spareParts + "', Quantity = '" + quantity + "',PurchaseDate = '" + date + "',Price = '" + price 
+                    + "',InvoiceNumber = '" + invoiceNumber + "', IssuedDate = '" + issuedDate + "', ShopName = '" + shopName + "', Address = '" + address + "',ContactNumber = '" + contactNumber + "', Email ='" + email + "', OwnerName = '" + ownerName + "', OwnerContact = '" + OwnerContact + "' where AssetsMaintenanceID = '" + ID1+"'";
 
 
 
@@ -168,6 +198,22 @@ namespace WindowsFormsApp3
             }
         }
 
+        Image ConvertBinaryToIamge(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        byte[] ConvertImageToBinary(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
         private void txtPriceEdit_TextChanged(object sender, EventArgs e)
         {
 
@@ -182,6 +228,9 @@ namespace WindowsFormsApp3
         {
             try
             {
+                picBoxAttachEdit.Image = null;
+                txtAssetsID.Clear();
+                txtVehicleIDEdit.Clear();
                 txtSpareEdit.Clear();
                 txtQuantityEdit.Clear();
                 txtPriceEdit.Clear();
