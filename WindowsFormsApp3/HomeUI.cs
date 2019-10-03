@@ -147,7 +147,6 @@ namespace WindowsFormsApp3
                 position = sdr["JobTitle"].ToString();
             }
             sqlConnection.Close();
-            MessageBox.Show(Eid,position);
         }
         // Sliding Panels
         private void BookingsButton_Click(object sender, EventArgs e)
