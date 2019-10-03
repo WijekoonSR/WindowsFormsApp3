@@ -121,6 +121,8 @@ namespace WindowsFormsApp3
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            setIdSql();
+
             sql.Open();
            
             String vid = txtVid.Text;
@@ -145,7 +147,6 @@ namespace WindowsFormsApp3
             command = new SqlCommand(query, sql);
             command.ExecuteNonQuery();
             sql.Close();
-            setIdSql();
             DialogResult dr = MessageBox.Show("Data Submitted", "Success!!", MessageBoxButtons.OK);
             if (dr == DialogResult.OK)
             {

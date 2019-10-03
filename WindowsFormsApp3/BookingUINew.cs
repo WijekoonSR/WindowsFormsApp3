@@ -566,6 +566,11 @@ namespace WindowsFormsApp3
                 txtCallerName.Focus();
                 return false;
             }
+            else if (!(Regex.IsMatch(txtCallerName.Text.ToString(), @"^[a-zA-Z]+$"))) {
+                MessageBox.Show("Wrong Caller Name");
+                txtCallerName.Focus();
+                return false;
+            }
             else if (txtNIC.Text.ToString() == "") {
                 MessageBox.Show("Insert NIC");
                 txtNIC.Focus();
@@ -582,12 +587,7 @@ namespace WindowsFormsApp3
                 txtCallerTpNo.Focus();
                 return false;
             }
-            else if (dropDownBackhoeTypes1.selectedIndex.Equals(-1))
-            {
-                MessageBox.Show("Insert at least one vehicle type type to make a booking");
-                dropDownBackhoeTypes1.Focus();
-                return false;
-            }
+
             else if (txtRatings1.Text.ToString() == "") {
                 MessageBox.Show("Insert ratings");
                 txtRatings1.Focus();

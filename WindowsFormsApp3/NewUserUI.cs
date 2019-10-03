@@ -111,6 +111,11 @@ namespace WindowsFormsApp3
                 txtPassword.Focus();
                 return false;
             }
+            else if (txtPassword.Text.ToString().Length < 4 ) {
+                MessageBox.Show("Password must have at least 4 characters");
+                txtPassword.Focus();
+                return false;
+            }
             else if (txtReEnterPW.Text == "")
             {
                 MessageBox.Show("Re-Enter Password");
