@@ -318,6 +318,11 @@
     <Compile Include="EmployeeUI.Designer.cs">
       <DependentUpon>EmployeeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="IsuruSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IsuruSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -796,6 +801,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="IsuruSDataSet.xsc">
+      <DependentUpon>IsuruSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IsuruSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IsuruSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IsuruSDataSet.xss">
+      <DependentUpon>IsuruSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>

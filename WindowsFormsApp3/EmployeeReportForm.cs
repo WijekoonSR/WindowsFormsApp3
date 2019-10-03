@@ -20,8 +20,9 @@ namespace WindowsFormsApp3
         private void EmployeeReportForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DatabaseDataSet.Employee' table. You can move, or remove it, as needed.
-            this.EmployeeTableAdapter.Fill(this.DatabaseDataSet.Employee);
+            this.EmployeeTableAdapter.Fill(this.IsuruSDataSet.Employee);
 
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
