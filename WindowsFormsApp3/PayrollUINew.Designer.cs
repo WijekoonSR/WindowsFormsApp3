@@ -114,6 +114,7 @@
             this.payrollUIDailyRates1.Name = "payrollUIDailyRates1";
             this.payrollUIDailyRates1.Size = new System.Drawing.Size(1068, 523);
             this.payrollUIDailyRates1.TabIndex = 44;
+            this.payrollUIDailyRates1.Load += new System.EventHandler(this.payrollUIDailyRates1_Load_1);
             // 
             // PayrollUINew
             // 

@@ -69,7 +69,7 @@ namespace WindowsFormsApp3
                         int WokingHours = Convert.ToInt32(edtWokingHours.Text);
                         int OT = Convert.ToInt32(edtOT.Text);
                         int OTRate = Convert.ToInt32(drpOTRate.selectedValue.ToString());
-                        int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                        String EmployeeID = (edtEmployeeID.Text);
                         //MessageBox.Show(WokingHours.ToString() + OT.ToString() + OTRate);
 
                         String sql = "Insert into Payroll_Operators(SalaryDate, WorkingHours, OT, OTRate, EmployeeID)" + "Values('" + SalaryDate + "','" + WokingHours + "','" + OT + "', '" + OTRate + "', '" + EmployeeID + "')";
@@ -101,7 +101,7 @@ namespace WindowsFormsApp3
             else
             {
                 //String SalaryDate = dateTimePayroll.Value.ToString("yyyy/MM/dd");
-                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                String EmployeeID = (edtEmployeeID.Text);
                 string Sql = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
                 SqlCommand cmd = new SqlCommand(Sql, con);
                 try
@@ -114,8 +114,8 @@ namespace WindowsFormsApp3
                         {
 
                             edtName.Text = read.GetValue(1).ToString();
-                            edtPossition.Text = read.GetValue(11).ToString();
-                            edtCity.Text = read.GetValue(9).ToString();
+                            edtPossition.Text = read.GetValue(13).ToString();
+                            edtCity.Text = read.GetValue(10).ToString();
 
 
                         }
@@ -164,6 +164,12 @@ namespace WindowsFormsApp3
             edtWokingHours.Text = String.Empty;
             edtOT.Text = String.Empty;
            
+        }
+
+        private void btnCal_Click(object sender, EventArgs e)
+        {
+            PayrollUICalculater cal = new PayrollUICalculater();
+            cal.Show();
         }
     }
     }

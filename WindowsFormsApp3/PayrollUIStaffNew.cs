@@ -122,7 +122,7 @@ namespace WindowsFormsApp3
                         int ETF = Convert.ToInt32(edtETF.Text);
                         int EPF = Convert.ToInt32(edtEPF.Text);
                         int Insurance = Convert.ToInt32(drpInsurance.selectedValue.ToString());
-                        int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                        String EmployeeID = (edtEmployeeID.Text);
 
                         // MessageBox.Show( SalaryDate + Months + OT.ToString() + OTRate + BasicSalary.ToString() + HousingAllowance.ToString() + MedicalAllowance.ToString() + FoodAllowance.ToString() + OtherAllowance.ToString()+ SalaryAdvance.ToString() + ETF.ToString() + EPF.ToString() + Insurance.ToString());
 
@@ -167,7 +167,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                string EmployeeID = (edtEmployeeID.Text);
                 string Sql = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
                 SqlCommand cmd = new SqlCommand(Sql, con);
                 try
@@ -181,7 +181,8 @@ namespace WindowsFormsApp3
                             //MessageBox.Show(read["FirstName"].ToString());
                             //edtName.Text = (read["FistName"].ToString());
                             edtName.Text = read.GetValue(1).ToString();
-                            edtPossition.Text = read.GetValue(12).ToString();
+                            edtPossition.Text = read.GetValue(13).ToString();
+                            edtCity.Text = read.GetValue(10).ToString();
                             //edtName.Text = "name";
 
                         }
@@ -365,6 +366,13 @@ namespace WindowsFormsApp3
             edtETF.Text = String.Empty;
             edtEPF.Text = String.Empty;
             drpInsurance.selectedIndex = -1;
+        }
+
+        private void btnCal_Click(object sender, EventArgs e)
+        {
+
+            PayrollUICalculater cal = new PayrollUICalculater();
+            cal.Show();
         }
     }
 }

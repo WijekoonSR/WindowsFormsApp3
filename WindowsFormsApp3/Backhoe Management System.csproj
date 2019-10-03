@@ -179,6 +179,11 @@
       <DependentUpon>AssetsMaintenanceGenerateReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CharithaS_Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CharithaS_Data.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CurrentUser.cs" />
     <Compile Include="CustomerUIEdit.cs">
       <SubType>UserControl</SubType>
@@ -330,6 +335,12 @@
     </Compile>
     <Compile Include="PayrollUIAddAllowance.Designer.cs">
       <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollUICalculater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollUICalculater.Designer.cs">
+      <DependentUpon>PayrollUICalculater.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollUIChangeValues.cs">
       <SubType>Form</SubType>
@@ -620,6 +631,9 @@
     <EmbeddedResource Include="PayrollUIAddAllowance.resx">
       <DependentUpon>PayrollUIAddAllowance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayrollUICalculater.resx">
+      <DependentUpon>PayrollUICalculater.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollUIChangeValues.resx">
       <DependentUpon>PayrollUIChangeValues.cs</DependentUpon>
     </EmbeddedResource>
@@ -728,6 +742,17 @@
     <EmbeddedResource Include="VehicleUIView.resx">
       <DependentUpon>VehicleUIView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CharithaS_Data.xsc">
+      <DependentUpon>CharithaS_Data.xsd</DependentUpon>
+    </None>
+    <None Include="CharithaS_Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CharithaS_Data.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CharithaS_Data.xss">
+      <DependentUpon>CharithaS_Data.xsd</DependentUpon>
+    </None>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>

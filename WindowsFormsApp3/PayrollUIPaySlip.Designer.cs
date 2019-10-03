@@ -30,34 +30,34 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Payroll_StaffBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DatabaseDataSet = new WindowsFormsApp3.DatabaseDataSet();
-            this.Payroll_StaffTableAdapter = new WindowsFormsApp3.DatabaseDataSetTableAdapters.Payroll_StaffTableAdapter();
+            this.CharithaS_Data = new WindowsFormsApp3.CharithaS_Data();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.Payroll_StaffTableAdapter = new WindowsFormsApp3.CharithaS_DataTableAdapters.Payroll_StaffTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Payroll_StaffBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharithaS_Data)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Payroll_StaffBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp3.PayrollUIReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-3, 2);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(853, 375);
-            this.reportViewer1.TabIndex = 0;
             // 
             // Payroll_StaffBindingSource
             // 
             this.Payroll_StaffBindingSource.DataMember = "Payroll_Staff";
-            this.Payroll_StaffBindingSource.DataSource = this.DatabaseDataSet;
+            this.Payroll_StaffBindingSource.DataSource = this.CharithaS_Data;
             // 
-            // DatabaseDataSet
+            // CharithaS_Data
             // 
-            this.DatabaseDataSet.DataSetName = "DatabaseDataSet";
-            this.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.CharithaS_Data.DataSetName = "CharithaS_Data";
+            this.CharithaS_Data.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "CharithaS";
+            reportDataSource1.Value = this.Payroll_StaffBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp3.PayrollUIReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(2, 5);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(747, 445);
+            this.reportViewer1.TabIndex = 0;
             // 
             // Payroll_StaffTableAdapter
             // 
@@ -67,13 +67,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 389);
+            this.ClientSize = new System.Drawing.Size(747, 453);
             this.Controls.Add(this.reportViewer1);
             this.Name = "PayrollUIPaySlip";
             this.Text = "PayrollUIPaySlip";
             this.Load += new System.EventHandler(this.PayrollUIPaySlip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Payroll_StaffBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharithaS_Data)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,7 +82,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource Payroll_StaffBindingSource;
-        private DatabaseDataSet DatabaseDataSet;
-        private DatabaseDataSetTableAdapters.Payroll_StaffTableAdapter Payroll_StaffTableAdapter;
+        private CharithaS_Data CharithaS_Data;
+        private CharithaS_DataTableAdapters.Payroll_StaffTableAdapter Payroll_StaffTableAdapter;
     }
 }

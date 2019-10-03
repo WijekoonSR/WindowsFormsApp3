@@ -44,7 +44,7 @@ namespace WindowsFormsApp3
             else
             {
 
-                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                String EmployeeID = (edtEmployeeID.Text);
                 string Sql1 = "select * from Employee where EmployeeID = '" + EmployeeID + "'";
                 SqlCommand cmd1 = new SqlCommand(Sql1, con);
 
@@ -227,7 +227,7 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Please select Insurdance Value");
             }
-            else if (lblEmployeeID.Visible == true || lblTotalWorkingHours.Visible == true || lblTotalOT.Visible == true || lblBasicSalary.Visible == true || lblHousingAllowance.Visible == true || lblMedicalAllowance.Visible == true || lblFoodAllowance.Visible == true || lblETF.Visible == true || lblEPF.Visible == true || lblOtherAllowance.Visible == true || lblSalaryAdvance.Visible == true || lblInsurance.Visible == true)
+            else if ( lblTotalWorkingHours.Visible == true || lblTotalOT.Visible == true || lblBasicSalary.Visible == true || lblHousingAllowance.Visible == true || lblMedicalAllowance.Visible == true || lblFoodAllowance.Visible == true || lblETF.Visible == true || lblEPF.Visible == true || lblOtherAllowance.Visible == true || lblSalaryAdvance.Visible == true || lblInsurance.Visible == true)
             {
                 MessageBox.Show("inavalid filed available");
             }
@@ -237,7 +237,7 @@ namespace WindowsFormsApp3
             {
                 int TotalWorkingHours = Convert.ToInt32(edtWokingHours.Text);
                 int TotalOT = Convert.ToInt32(edtOT.Text);
-                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                String EmployeeID = (edtEmployeeID.Text);
                 int BasicSalary = Convert.ToInt32(edtBasicSalary.Text);
                 int HousingAllowance = Convert.ToInt32(edtHousingAllowance.Text);
                 int MedicalAllowance = Convert.ToInt32(edtMedicalAllowance.Text);
@@ -279,7 +279,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                int EmployeeID = Convert.ToInt32(edtEmployeeID.Text);
+                String EmployeeID = (edtEmployeeID.Text);
                 try
                 {
                     con.Open();
@@ -442,11 +442,11 @@ namespace WindowsFormsApp3
         {
             if (Regex.IsMatch(edtEmployeeID.Text, @"^[0-9]*$"))
             {
-                lblEmployeeID.Visible = false;
+                lblEmployeeID.Visible = true;
             }
             else
             {
-                lblEmployeeID.Visible = true;
+                lblEmployeeID.Visible = false;
             }
         }
         private void clear()
